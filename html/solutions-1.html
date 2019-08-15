@@ -1,0 +1,812 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:28-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hints to selected activities and exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_background-induction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="solutions-2.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_background-induction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="solutions-2.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link active"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="solutions" id="solutions-1"><h2 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span>
+</h2>
+<section class="introduction" id="introduction-105"><p id="p-3813">Please resist the urge to look at a hint right away.  Try to complete the activity or exercise and only look at the hint for verification or if you are really stuck.</p>
+<p id="p-3814">A technical note: if you are using the pdf version, you can click on the title of the hint to link back to the original activity/exercise.  Those activities/exercises that have hints will display a link [hint] that will take you to the hint.</p></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">1</span> <span class="title">Basic Combinatorics</span>
+</h3>
+<a href="ch_basic-combinatorics.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Pascal's Triangle and Binomial Coefficients</span>
+</h4>
+<a href="sec_counting-binom.html" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">6</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-1-hidden.html" title="Hint 6.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-2-hidden.html" title="Hint 9.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Proofs in Combinatorics</span>
+</h4>
+<a href="sec_basic-proofs.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Two Motivating Examples</span>
+</h5>
+<a href="sec_basic-proofs.html#subsec-basic-proofs-examples" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">11</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-3-hidden.html" title="Hint 11.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">12</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-4-hidden.html" title="Hint 12.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-5-hidden.html" title="Hint 12.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">13</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-6-hidden.html" title="Hint 13.d.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">14</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-7-hidden.html" title="Hint 14.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">15</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-8-hidden.html" title="Hint 15.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">16</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-9-hidden.html" title="Hint 16.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-10-hidden.html" title="Hint 16.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">17</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-11-hidden.html" title="Hint 17.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Interlude: The Sum and Product Principles</span>
+</h5>
+<a href="sec_basic-proofs.html#subsec-sumprod" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">23</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-12-hidden.html" title="Hint 23.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-13-hidden.html" title="Hint 23.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-14-hidden.html" title="Hint 23.d.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">24</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-15-hidden.html" title="Hint 24.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">25</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-16-hidden.html" title="Hint 25.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">26</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-17-hidden.html" title="Hint 26.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">27</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-18-hidden.html" title="Hint 27.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-19-hidden.html" title="Hint 27.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">28</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-20-hidden.html" title="Hint 28.c.1"><span class="type">Hint</span></a></div></article></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">More Proofs</span>
+</h5>
+<a href="sec_basic-proofs.html#subsec-moreproofs" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">31</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-22-hidden.html" title="Hint 31.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">32</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-23-hidden.html" title="Hint 32.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">33</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-24-hidden.html" title="Hint 33.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">34</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-25-hidden.html" title="Hint 34.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">35</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-27-hidden.html" title="Hint 35.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">36</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-28-hidden.html" title="Hint 36.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">37</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-29-hidden.html" title="Hint 37.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">38</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-30-hidden.html" title="Hint 38.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">39</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-31-hidden.html" title="Hint 39.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Non-combinatorial Proofs in Combinatorics</span>
+</h5>
+<a href="sec_basic-proofs.html#subsec-non-comb-proofs" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">41</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-32-hidden.html" title="Hint 41.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Counting with Equivalence</span>
+</h4>
+<a href="sec_basic-quotient.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">The Quotient Principle</span>
+</h5>
+<a href="sec_basic-quotient.html#subsec-quotient" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">43</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-33-hidden.html" title="Hint 43.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-34-hidden.html" title="Hint 43.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">44</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-35-hidden.html" title="Hint 44.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-36-hidden.html" title="Hint 44.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">45</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-37-hidden.html" title="Hint 45.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-38-hidden.html" title="Hint 45.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">46</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-39-hidden.html" title="Hint 46.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-40-hidden.html" title="Hint 46.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">47</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-41-hidden.html" title="Hint 47.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">48</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-42-hidden.html" title="Hint 48.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">When does Order Matter?</span>
+</h5>
+<a href="sec_basic-quotient.html#subsec-ordermatters" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">49</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-43-hidden.html" title="Hint 49.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-44-hidden.html" title="Hint 49.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-45-hidden.html" title="Hint 49.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">50</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-46-hidden.html" title="Hint 50.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">51</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-47-hidden.html" title="Hint 51.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">52</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-48-hidden.html" title="Hint 52.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-49-hidden.html" title="Hint 52.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">57</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-50-hidden.html" title="Hint 57.c.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-51-hidden.html" title="Hint 57.e.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">58</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-52-hidden.html" title="Hint 58.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-53-hidden.html" title="Hint 58.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">59</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-54-hidden.html" title="Hint 59.a.1"><span class="type">Hint</span></a></div></article></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.3</span> <span class="title">More Distribution Problems</span>
+</h5>
+<a href="sec_basic-quotient.html#subsec-moredistributions" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">62</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-55-hidden.html" title="Hint 62.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">63</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-56-hidden.html" title="Hint 63.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">66</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-57-hidden.html" title="Hint 66.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-58-hidden.html" title="Hint 66.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Counting with Recursion</span>
+</h4>
+<a href="sec_basic-recursion.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Finding Recurrence Relations</span>
+</h5>
+<a href="sec_basic-recursion.html#subsec-recursionfinding" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">69</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-61-hidden.html" title="Hint 69.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">70</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-62-hidden.html" title="Hint 70.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">71</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-63-hidden.html" title="Hint 71.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">72</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-64-hidden.html" title="Hint 72.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-65-hidden.html" title="Hint 72.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">73</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-66-hidden.html" title="Hint 73.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">74</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-67-hidden.html" title="Hint 74.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-68-hidden.html" title="Hint 74.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">75</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-69-hidden.html" title="Hint 75.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Using Recurrence Relations</span>
+</h5>
+<a href="sec_basic-recursion.html#subsec-recursionclosed" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">76</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-70-hidden.html" title="Hint 76.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">77</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-71-hidden.html" title="Hint 77.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">79</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-72-hidden.html" title="Hint 79.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">82</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-73-hidden.html" title="Hint 82.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">84</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-74-hidden.html" title="Hint 84.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">85</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-75-hidden.html" title="Hint 85.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-76-hidden.html" title="Hint 85.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">87</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-77-hidden.html" title="Hint 87.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Exploring the Fibonacci Sequence</span>
+</h5>
+<a href="sec_basic-recursion.html#subsec-recursionfibonacci" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">95</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-78-hidden.html" title="Hint 95.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">99</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-79-hidden.html" title="Hint 99.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">102</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-80-hidden.html" title="Hint 102.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">106</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-81-hidden.html" title="Hint 106.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">The Catalan Numbers</span>
+</h4>
+<a href="sec_basic-catalan.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">A Few Counting Problems</span>
+</h5>
+<a href="sec_basic-catalan.html#subsec-catalanprobs" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">110</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-82-hidden.html" title="Hint 110.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">112</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-83-hidden.html" title="Hint 112.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">113</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-84-hidden.html" title="Hint 113.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">114</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-85-hidden.html" title="Hint 114.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">The Catalan Numbers</span>
+</h5>
+<a href="sec_basic-catalan.html#subsec-catalanseq" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">115</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-86-hidden.html" title="Hint 115.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-87-hidden.html" title="Hint 115.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">116</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-88-hidden.html" title="Hint 116.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">117</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-89-hidden.html" title="Hint 117.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-90-hidden.html" title="Hint 117.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">118</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-91-hidden.html" title="Hint 118.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-92-hidden.html" title="Hint 118.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">119</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-93-hidden.html" title="Hint 119.a.1"><span class="type">Hint</span></a></div></article></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span>
+</h3>
+<a href="ch_advanced.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">The Principle of Inclusion and Exclusion: the Size of a Union</span>
+</h4>
+<a href="sec_adv-pie.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.1</span> <span class="title">Unions of two or three sets</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">133</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-94-hidden.html" title="Hint 133.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Unions of an arbitrary number of sets</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">138</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-95-hidden.html" title="Hint 138.b.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-96-hidden.html" title="Hint 138.b.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">The Principle of Inclusion and Exclusion</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">139</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-97-hidden.html" title="Hint 139.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-98-hidden.html" title="Hint 139.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.1.4</span> <span class="title">Application of Inclusion and Exclusion</span>
+</h5>
+<a href="sec_adv-pie.html#subsec_apps-of-pie" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">140</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-99-hidden.html" title="Hint 140.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">141</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-100-hidden.html" title="Hint 141.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-101-hidden.html" title="Hint 141.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">142</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-102-hidden.html" title="Hint 142.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-103-hidden.html" title="Hint 142.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">143</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-104-hidden.html" title="Hint 143.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">146</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-105-hidden.html" title="Hint 146.c.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Generating Functions</span>
+</h4>
+<a href="sec_adv-genfunctions.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Generating functions</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">159</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-108-hidden.html" title="Hint 159.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">161</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-109-hidden.html" title="Hint 161.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">Power series</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">163</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-110-hidden.html" title="Hint 163.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">164</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-111-hidden.html" title="Hint 164.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">165</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-112-hidden.html" title="Hint 165.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">The extended binomial theorem and multisets</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">166</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-113-hidden.html" title="Hint 166.b.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-114-hidden.html" title="Hint 166.b.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">169</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-115-hidden.html" title="Hint 169.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-116-hidden.html" title="Hint 169.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">170</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-117-hidden.html" title="Hint 170.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">171</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-118-hidden.html" title="Hint 171.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-119-hidden.html" title="Hint 171.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">172</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-120-hidden.html" title="Hint 172.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">173</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-121-hidden.html" title="Hint 173.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.6</span> <span class="title">Generating Functions and Recurrence Relations</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">176</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-122-hidden.html" title="Hint 176.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">179</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-123-hidden.html" title="Hint 179.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.7</span> <span class="title">Partial fractions</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">182</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-124-hidden.html" title="Hint 182.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">183</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-125-hidden.html" title="Hint 183.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">185</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-126-hidden.html" title="Hint 185.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">187</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-127-hidden.html" title="Hint 187.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">188</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-128-hidden.html" title="Hint 188.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-129-hidden.html" title="Hint 188.d.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">190</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-130-hidden.html" title="Hint 190.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-131-hidden.html" title="Hint 190.c.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Partitions of Sets</span>
+</h4>
+<a href="sec_adv-stirling.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Stirling Numbers of the Second Kind</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">193</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-132-hidden.html" title="Hint 193.d.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">195</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-133-hidden.html" title="Hint 195.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">196</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-134-hidden.html" title="Hint 196.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">198</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-135-hidden.html" title="Hint 198.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">199</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-136-hidden.html" title="Hint 199.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">201</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-137-hidden.html" title="Hint 201.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-138-hidden.html" title="Hint 201.b.1"><span class="type">Hint</span></a></div></article></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Formulas for Stirling Numbers (of the second kind)</span>
+</h5>
+<a href="sec_adv-stirling.html#subsec-stirlingformulas" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">203</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-139-hidden.html" title="Hint 203.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">204</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-140-hidden.html" title="Hint 204.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-141-hidden.html" title="Hint 204.e.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">205</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-142-hidden.html" title="Hint 205.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">206</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-143-hidden.html" title="Hint 206.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">209</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-144-hidden.html" title="Hint 209.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">211</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-145-hidden.html" title="Hint 211.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-146-hidden.html" title="Hint 211.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">212</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-147-hidden.html" title="Hint 212.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">213</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-148-hidden.html" title="Hint 213.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">214</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-149-hidden.html" title="Hint 214.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Identities with Stirling Numbers</span>
+</h5>
+<a href="sec_adv-stirling.html#subsec-stirlingidentities" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">215</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-150-hidden.html" title="Hint 215.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">217</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-151-hidden.html" title="Hint 217.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Partitions of Integers</span>
+</h4>
+<a href="sec_adv-linearparts.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">Partition numbers</span>
+</h5>
+<a href="sec_adv-linearparts.html#subsec_partition-numbers" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">237</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-152-hidden.html" title="Hint 237.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">239</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-153-hidden.html" title="Hint 239.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">Using Geometry</span>
+</h5>
+<a href="sec_adv-linearparts.html#subsec_linearpartitionsgeom" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">242</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-154-hidden.html" title="Hint 242.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">244</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-155-hidden.html" title="Hint 244.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">247</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-156-hidden.html" title="Hint 247.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">248</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-157-hidden.html" title="Hint 248.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">249</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-158-hidden.html" title="Hint 249.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">250</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-159-hidden.html" title="Hint 250.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">251</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-160-hidden.html" title="Hint 251.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">252</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-161-hidden.html" title="Hint 252.c.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-162-hidden.html" title="Hint 252.d.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">253</span>.</h6>
+<div class="solutions">
+<a data-knowl="./knowl/hint-163-hidden.html" title="Hint 253.1"><span class="type">Hint</span> <span class="codenumber">1</span></a><a data-knowl="./knowl/hint-164-hidden.html" title="Hint 253.2"><span class="type">Hint</span> <span class="codenumber">2</span></a>
+</div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">Partitions into distinct parts</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">255</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-165-hidden.html" title="Hint 255.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">256</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-166-hidden.html" title="Hint 256.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">257</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-167-hidden.html" title="Hint 257.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">258</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-168-hidden.html" title="Hint 258.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">259</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-169-hidden.html" title="Hint 259.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.4.4</span> <span class="title">Using Generating Functions</span>
+</h5>
+<a href="sec_adv-linearparts.html#sec_genfns-int-parts" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">260</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-170-hidden.html" title="Hint 260.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">261</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-171-hidden.html" title="Hint 261.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-172-hidden.html" title="Hint 261.b.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">262</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-173-hidden.html" title="Hint 262.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">263</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-174-hidden.html" title="Hint 263.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">266</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-175-hidden.html" title="Hint 266.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">267</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-176-hidden.html" title="Hint 267.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">269</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-177-hidden.html" title="Hint 269.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h3 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Graph Theory</span>
+</h3>
+<a href="ch_graphtheory.html" class="permalink">¶</a></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Walking Around Graphs</span>
+</h4>
+<a href="sec_paths.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Proofs for Euler Paths and Circuits</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">283</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-178-hidden.html" title="Hint 283.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-179-hidden.html" title="Hint 283.b.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Planar Graphs and Euler's Formula</span>
+</h4>
+<a href="sec_planar.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Interlude: Mathematical Induction</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">291</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-180-hidden.html" title="Hint 291.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-181-hidden.html" title="Hint 291.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-182-hidden.html" title="Hint 291.c.1"><span class="type">Hint</span></a></div></article></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Proof of Euler's formula for planar graphs.</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">293</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-183-hidden.html" title="Hint 293.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Applications of Euler's Formula</span>
+</h4>
+<a href="sec_eulerapps.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.4.1</span> <span class="title">Non-planar Graphs</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">296</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-184-hidden.html" title="Hint 296.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">298</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-185-hidden.html" title="Hint 298.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">299</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-186-hidden.html" title="Hint 299.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.5</span> <span class="title">Coloring</span>
+</h4>
+<a href="sec_coloring.html" class="permalink">¶</a></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.1</span> <span class="title">Coloring in General</span>
+</h5>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">310</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-191-hidden.html" title="Hint 310.a.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">311</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-192-hidden.html" title="Hint 311.b.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-193-hidden.html" title="Hint 311.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">312</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-194-hidden.html" title="Hint 312.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">313</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-195-hidden.html" title="Hint 313.1"><span class="type">Hint</span></a></div></article></section><section class="subsection"><h5 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.5.3</span> <span class="title">Ramsey Theory</span>
+</h5>
+<a href="sec_coloring.html#subsec-" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">318</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-196-hidden.html" title="Hint 318.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">319</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-197-hidden.html" title="Hint 319.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">320</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-198-hidden.html" title="Hint 320.1"><span class="type">Hint</span></a></div></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">321</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-199-hidden.html" title="Hint 321.b.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h4 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.6</span> <span class="title">Matching in Bipartite Graphs</span>
+</h4>
+<a href="sec_matchings.html" class="permalink">¶</a><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">328</span>.</h6>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a data-knowl="./knowl/hint-200-hidden.html" title="Hint 328.c.1"><span class="type">Hint</span></a></div></article></article><article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">329</span>.</h6>
+<div class="solutions"><a data-knowl="./knowl/hint-201-hidden.html" title="Hint 329.1"><span class="type">Hint</span></a></div></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

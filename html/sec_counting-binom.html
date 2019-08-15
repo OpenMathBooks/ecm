@@ -1,0 +1,411 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:13-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pascal's Triangle and Binomial Coefficients</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch_basic-combinatorics.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_basic-proofs.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="ch_basic-combinatorics.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_basic-proofs.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom" class="active">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_counting-binom"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Pascal's Triangle and Binomial Coefficients</span>
+</h2>
+<a href="sec_counting-binom.html" class="permalink">¶</a><p id="p-18">Let's start our investigation of combinatorics by examining Pascal's Triangle.  If you are already familiar with this mathematical object, try to see it with fresh eyes.  Look at the triangle as if you have no idea where it comes from.  What do you notice?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/pascal-large.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<article class="project-like" id="activity-1"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">1</span>.</h6>
+<div class="introduction" id="introduction-2"><p id="p-19">Treating Pascal's Triangle as nothing more than a triangular array of numbers, what do you notice about it?  Are there any patterns to the numbers? Try to find some patterns and then see if you can answer (or have already answered) the following:</p></div>
+<article class="exercise-like" id="task-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-20">How are the entries in the triangle found?  What would the next row down be?</p></article><article class="exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-21">What is the sum of the entries in the \(n\)th row?</p></article><article class="exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-22">What is \(1 - 5 + 10 - 10 + 5 - 1\text{?}\)  What pattern is this an example of, and does it always work?</p></article><article class="exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-23">What is \(1 + 3 + 6 + 10 + 15\text{?}\)  What pattern is this an example of, and does it always work?</p></article><article class="exercise-like" id="task-5"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-24">What is \(1+ 7 + 15 + 10 + 1\text{?}\)  What pattern is this an example of, and does it always work?</p></article><article class="exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-25">Are there any groups of numbers in the triangle that are particularly recognizable?</p></article></article><p id="p-26">We would like to understand why the patterns you discovered above exist, and to prove that they really do exist everywhere in the triangle.  There are at least two ways we can proceed (and we will try to proceed in both ways to maximize our understanding).  First, we can use notation to describe the entries in the triangle, provide a definition for what each entry is, and prove our results entirely based on these definitions.  Second, we can ascribe some <em class="emphasis">meaning</em> to the entries in the triangle, saying what the numbers represent, and then make arguments about those representations.</p>
+<p id="p-27"> The advantage to pursuing both these approaches is that doing so creates a feedback loop.  A fact we establish using pure symbolic manipulation allows us to conclude something about the real world and what these numbers represent.  That helps us understand the applications better, which in turn might help us make arguments about those applications, which can then establish a purely symbolic fact about the triangle.</p>
+<p id="p-28">Let's pause and just for fun consider a few discrete math questions that probably have nothing to do with Pascal's Triangle or each other.  Probably.</p>
+<article class="project-like" id="act-latticepaths"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">2</span>.</h6>
+<div class="introduction" id="introduction-3">
+<p id="p-29">The <dfn class="terminology">integer lattice</dfn> is the set of all points in the Cartesian plane for which both the \(x\) and \(y\) coordinates are integers.</p>
+<p id="p-30">A <dfn class="terminology">lattice path</dfn> is one of the shortest possible paths connecting two points on the lattice, moving only horizontally and vertically. For example, here are three possible lattice paths from the points \((0,0)\) to \((3,2)\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;">
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/lattice-path-1.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/lattice-path-2.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:31.0344827586207%;justify-content:flex-start;"><img src="images/lattice-path-3.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+</div>
+<article class="exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-31">How many lattice paths are there between \((0,0)\) and \((3,1)\text{?}\)  Draw or list them all (you might want to invent some notation for describing a path without drawing it).</p></article><article class="exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-32">How many lattice paths are there between \((0,0)\) and \((2,2)\text{?}\) Draw or list them all to be sure.</p></article><article class="exercise-like" id="task-9"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-33">How many lattice paths are there between \((0,0)\) and \((3,2)\text{?}\) How can you be sure?</p></article></article><article class="project-like" id="activity-3"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">3</span>.</h6>
+<div class="introduction" id="introduction-4">
+<p id="p-34">Recall that a <dfn class="terminology">subset</dfn> \(A\) of a set \(B\) is a set all of whose elements are also elements of \(B\text{;}\) we write \(A \subseteq B\text{.}\)  For example, some of the subsets of \(B = \{1,2,3,4,5\}\) are \(\{2,4,5\}\text{,}\) \(\{1,2,3,4,5\}\) and \(\emptyset\text{.}\)  Recall also that the <dfn class="terminology">cardinality</dfn> of a set is simply the number of elements in it.</p>
+<p id="p-35">Since we will often consider sets of the form \(\{1,2,3,\ldots,n\}\text{,}\) let's adopt the notation \([n]\) for this set.</p>
+</div>
+<article class="exercise-like" id="task-10"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-36">Write out all subsets of \([3] = \{1,2,3\}\text{.}\)  Then group the subsets by cardinality.  How many subsets have cardinality 0?  How many have cardinality 1?  2? 3?</p></article><article class="exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-37">Write out all subsets of \([4]\text{,}\) and determine how many have each possible cardinality.</p></article><article class="exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-38">How many subsets of \([5]\) are there of each cardinality?  Try to answer this questions without writing out all 32 subsets.</p></article></article><article class="project-like" id="activity-4"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">4</span>.</h6>
+<div class="introduction" id="introduction-5">
+<p id="p-39">Some definitions: A <dfn class="terminology">bit</dfn> is either 0 or 1 (bit is short for “binary digit”).  Thus a <dfn class="terminology">bit string</dfn> is a string of bits.  The <dfn class="terminology">length</dfn> of a bit string is the number of bits in the string; the <dfn class="terminology">weight</dfn> of a bit string is the number of 1's in the string (or equivalently, the sum of the bits). A <dfn class="terminology">\(n\)-bit string</dfn> means a bit string of length \(n\text{.}\)</p>
+<p id="p-40">We will write \(\B^n_k\) to mean the set of all \(n\)-bit strings of weight \(k\text{.}\)  So for example, some of the elements in \(\B^5_3\) are,</p>
+<div class="displaymath">
+\begin{equation*}
+11100 \qquad 10101 \qquad 01101.
+\end{equation*}
+</div>
+</div>
+<article class="exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-41">Write out all \(3\)-bit strings.  Group these by weight.  How many strings are there of each weight?</p></article><article class="exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-42">Write out all \(4\)-bit strings.  You might want to use the list you had in the previous part as a starting point (how would you do this?).  Again, group these strings by weight and see how many there are of each type.</p></article><article class="exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-43">How many \(5\)-bit strings of weight 3 are there?  List all of these, and say how they relate to some of the \(4\)-bit strings you found above.</p></article></article><p id="p-44">We are not quite ready to consider the algebraic approach yet, but here is a fun algebra exercise.</p>
+<article class="project-like" id="activity-5"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">5</span>.</h6>
+<div class="introduction" id="introduction-6"><p id="p-45">Multiply out (and collect like terms): \((x+y)^3\text{.}\)  Repeat for \((x+y)^4\) and \((x+y)^5\text{.}\)</p></div>
+<article class="exercise-like" id="task-16"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-46">What is the coefficient of \(x^3y^2\) in the expansion of \((x+y)^5\text{?}\)</p></article><article class="exercise-like" id="task-17"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-47">What are the coefficients of \(x^2y^2\) and \(x^3y\) in the expansion of \((x+y)^4\text{?}\)  How does this relate to the previous question?  Why does this make sense?</p></article><article class="exercise-like" id="task-18"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-48">If you believe the connection between coefficients and Pascal's triangle you have discovered above, find the coefficient of \(x^7y^4\) in the expansion of \((x+y)^{11}\) using Pascal's triangle.</p></article></article><p id="p-49">Hopefully by now you have some questions that are begging to be answered.  Here are two that we will focus on specifically:</p>
+<ol class="decimal">
+<li id="li-4"><p id="p-50">Why are the answers to all the counting questions above the same as each other?</p></li>
+<li id="li-5"><p id="p-51">Why are the answers to all the counting questions above numbers in Pascal's triangle?</p></li>
+</ol>
+<p id="p-52">We could answer the first question by answering the second: if we can say why each answer is a particular entry in Pascal's triangle, then we know two answers will be equal because they are in the same place on the triangle.  But we can do better.  In fact, we should be able to explain why these counting questions correspond to each other without knowing <em class="emphasis">any</em> of the answers.</p>
+<article class="project-like" id="activity-6"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">6</span>.</h6>
+<article class="exercise-like" id="task-19"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-53">Explain why the number of lattice paths from \((0,0)\) to \((k,n-k)\) is the same as number of \(n\)-bit strings of weight \(k\text{.}\) You do not need to give a formal proof here, just explain the idea.</p></article><article class="exercise-like" id="task-20"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-54">Explain why the number of \(n\)-bit strings of weight \(k\) is the same as the number of \(k\)-element subsets of \([n] = \{1,2,3,\ldots, n\}\text{.}\)   Again, an informal argument is fine.</p></article><article class="exercise-like" id="task-21"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-55">Explain why the number of \(k\)-element subsets of \([n]\) is the same as the coefficient of \(x^ky^{n-k}\) in the expansion of \((x+y)^n\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div id="hk-hint-1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-56">This is a little harder.  It might help to notice that there is really nothing special about \([n]\) except that it contains \(n\) elements.  In fact, what can you say about the number of \(k\)-element subsets of <em class="emphasis">any</em> \(n\)-element set?  Then, what \(n\)-element set would we look at when expanding \((x+y)^n\text{?}\)</p></div></div>
+</div></article></article><p id="p-57">Are you satisfied with the explanations you gave above?  Do you think they would count as a formal mathematical proof that the counting questions have the same answer?  One way to make this sort of an argument more precise is to involve precisely defined mathematical objects.</p>
+<article class="project-like" id="activity-7"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">7</span>.</h6>
+<div class="introduction" id="introduction-7"><p id="p-58">Consider functions \(f:X \to Y\) where \(X\) and \(Y\) are finite sets.  In fact, let's say \(X = [4]\text{.}\) If you need a refresher on basic ideas about functions, check out <a href="sec_background-functions.html" class="internal" title="Section B.3: Functions">Section B.3</a>.</p></div>
+<article class="exercise-like" id="task-22"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-59">Can you say anything at all about \(Y\) if you know there is some function \(f:X \to Y\text{?}\)  Give some examples of sets \(Y\) and functions \(f\text{.}\)</p></article><article class="exercise-like" id="task-23"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-60">What if \(f:X \to Y\) is <em class="emphasis">injective</em> (in other words, one-to-one)?  Which of the examples you found above no longer work?  What can you conclude about \(Y\text{?}\)</p></article><article class="exercise-like" id="task-24"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-61">What if \(f:X \to Y\) is <em class="emphasis">surjective</em> (i.e., onto)?  Now what can you say about \(Y\text{?}\)</p></article><article class="exercise-like" id="task-25"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-62">What if \(f:X\to Y\) is <em class="emphasis">bijective</em> (so both injective and surjective)?  State the general principle.</p></article></article><p id="p-63">The previous activity was meant to help you discover what is usually called the <dfn class="terminology">bijection principle</dfn>: <em class="emphasis">Two sets \(X\) and \(Y\) have the same cardinality if and only if there is a bijection \(f:X \to Y\)</em>.</p>
+<p id="p-64">If you want to prove that two sets have the same number of elements, all that is required is to define a function from one set to the other, and prove that the function is a bijection.  For us, those two sets will be the set of outcomes we are counting.  So for example, we can show that the <em class="emphasis">set</em> of \(n\)-bit strings of weight \(k\) has the same cardinality as the <em class="emphasis">set</em> of \(k\)-element subsets of \([n]\text{.}\)  This will prove that the counting questions, “how many \(n\)-bit strings of weight \(k\) are there?” and, “how many \(k\)-element subsets of \([n]\) are there?” have the same answer.</p>
+<p id="p-65"></p>
+<article class="example-like" id="example-1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.1</span>.</h6>
+<p id="p-66">Define a bijection \(f:X \to Y\) where \(X\) is the set of lattice paths from \((0,0)\) to \((k,n-k)\) and \(Y\) is the set of \(n\)-bit strings of weight \(k\text{.}\) Prove that \(f\) really is a bijection.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-67">This really comes down to how to represent the elements of the set \(X\text{.}\) We represent a lattice path from \((0,0)\) to \((k, n-k)\) as a sequence of <em class="emphasis">R</em>'s and <em class="emphasis">U</em>'s, representing a step to the right or a step up.  Note that this means that each lattice path will be a sequence containing a total of \(n\) symbols, of which \(k\) will be <em class="emphasis">R</em>'s.</p>
+<p id="p-68">Now we can define the bijection.  The function \(f\) takes a string of <em class="emphasis">R</em>'s and <em class="emphasis">U</em>'s, and replaces each <em class="emphasis">R</em> with a 1 and each <em class="emphasis">U</em> with a 0.</p>
+<p id="p-69">To prove this is a bijection, there are four things we need to check:</p>
+<ol class="decimal">
+<li id="li-6">That \(f(x)\) is defined for each \(x \in X\) (i.e., every lattice path is sent to some \(n\)-bit string of weight \(k\)).</li>
+<li id="li-7">That \(f(x)\) is <em class="emphasis">uniquely</em> defined for each \(x \in X\) (i.e., no lattice path is sent to more than one bit string).</li>
+<li id="li-8">That every \(y \in Y\) is the image of at least one \(x \in X\) (i.e., that every \(n\)-bit string of weight \(k\) is the output of the function at least once).</li>
+<li id="li-9">That every \(y \in Y\) is the image of at most one \(x \in X\) (i.e., that no \(n\)-bit string of weight \(k\) is the output of the function more than once.)</li>
+</ol>
+<p>The first two conditions guarantee that \(f\) will be a function.  The third says that \(f\) is onto (a surjection).  The fourth says that \(f\) is one-to-one (an injection).</p>
+<p id="p-70">Let's do this.  First, since elements in \(X\) contain \(k\) <em class="emphasis">R</em>'s and \(n-k\) <em class="emphasis">U</em>'s, applying the rule for \(f\) will result in a bit string containing \(k\) 1's and \(n-k\) 0's, for a total length of \(n\text{.}\)  Thus each element of \(X\) will be sent to an element of \(Y\text{.}\)  Further, it is not possible for an element of \(X\) to be sent to more than one element of \(Y\) since our procedure is well defined.</p>
+<p id="p-71">To show that \(f\) is surjective, consider an arbitrary \(y \in Y\text{.}\)  If we replace each 1 with an <em class="emphasis">R</em> and each 0 with a <em class="emphasis">U</em>, then we get an element \(x \in X\) (because of the length of weight of the strings) and then \(f(x) = y\text{.}\)</p>
+<p id="p-72">Finally, to show that \(f\) is injective, consider \(x_1, x_2 \in X\) and suppose \(x_1 \ne x_2\text{.}\)  Then there is a first position in which they differ (a point on the lattice path where one path goes right and the other goes up).  But then this bit will be different in \(f(x_1)\) and \(f(x_2)\text{.}\)</p>
+</div></div>
+</div></article><article class="project-like" id="exploration-1"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8</span>.</h6>
+<p id="p-73">Define a bijection \(f:X \to Y\) where \(X\) is the set of \(n\)-bit strings of weight \(k\) and \(Y\) is set of \(k\)-element subsets of \([n] = \{1,2,3,\ldots, n\}\text{.}\)  Again, prove that \(f\) is a bijection.</p></article><article class="project-like" id="exploration-2"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>.</h6>
+<p id="p-74">Can you now conclude that the number of lattice paths from \((0,0)\) to \((k,n-k)\) is the same as the number of \(k\)-element subsets of \([n]\text{?}\)  Can you easily give the bijection (and be sure it is really a bijection)?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div id="hk-hint-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-75">What can you say about the composition of two bijections?</p></div></div>
+</div></article><p id="p-76">What the example and problems above say is that all these counting questions correspond to each other.  But why do the answers always appear in Pascal's triangle?  To answer this, we need to start with a definition for the numbers in Pascal's triangle.</p>
+<p id="p-77">First, some notation: let's write \(\binom{n}{k}\) for the \(k\)th entry in row \(n\text{.}\)  For both \(n\) and \(k\text{,}\) start counting at 0.  So for example \(\binom{5}{1} = 5\text{,}\) and \(\binom{n}{0} = \binom{n}{n} = 1\) for all \(n\) (or at least the ones we can see).  We will read \(\binom{n}{k}\) as “\(n\) choose \(k\)” for reasons that will become clear soon.</p>
+<p id="p-78">Now we need to decide what \(\binom{n}{k}\) should be defined as.  It is not enough to simply define it as the specific entry in Pascal's triangle, since we haven't yet defined Pascal's triangle (we will want to define Pascal's triangle as the triangle of the numbers \(\binom{n}{k}\)).  Here are some choices:</p>
+<article class="assemblage-like" id="assemblage-1"><h6 class="heading"><span class="title">Possible Definitions for \(\binom{n}{k}\).</span></h6>
+<p id="p-79"> For each integer \(n \ge 0\) and integer \(k\) with \(0 \le k \le n\) the number</p>
+<div class="displaymath">
+\begin{equation*}
+{n\choose k},
+\end{equation*}
+</div>
+<p>read “\(n\) choose \(k\)” is:</p>
+<ol class="decimal">
+<li id="li-10">the number of \(n\)-bit strings of weight \(k\text{,}\) that is, \({n\choose k} = |\B^n_k|\text{.}\)</li>
+<li id="li-11">\({n \choose k}\) is the number of subsets of a set of size \(n\) each with cardinality \(k\text{.}\)</li>
+<li id="li-12">\({n \choose k}\) is the number of lattice paths of length \(n\) containing \(k\) steps to the right.</li>
+<li id="li-13">\({n \choose k}\) is the coefficient of \(x^ky^{n-k}\) in the expansion of \((x+y)^n\text{.}\)</li>
+<li id="li-14">\({n \choose k}\) is the number of ways to select \(k\) objects from a total of \(n\) objects.</li>
+<li id="li-15"><p id="p-80">\(\binom{n}{0} = \binom{n}{n} = 1\) and for all \(n \ge 1\) and \(1 \lt k \lt n\) we have \(\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}\text{.}\)</p></li>
+</ol></article><p id="p-81">You have already proved that choices 1, 2 and 3 are equivalent, and we have good reason to believe these are also equivalent to choice 4.</p>
+<p id="p-82">What about choice 5?  This is new, although not really, as it captures all of the previous four: Each of our counting problems above can be viewed in this way:</p>
+<ul class="disc">
+<li id="li-16"><p id="p-83">How many bit strings have length 5 and weight 3?  We must choose \(3\) of the 5 bits to be 1's.  There are \({5 \choose 3}\) ways to do this, so there are \({5 \choose 3}\) such bit strings.</p></li>
+<li id="li-17"><p id="p-84">How many subsets of \(\{1,2,3,4,5\}\) contain exactly 3 elements?  We must choose \(3\) of the 5 elements to be in our subset.  There are \({5 \choose 3}\) ways to do this, so there are \({5 \choose 3}\) such subsets.</p></li>
+<li id="li-18"><p id="p-85">How many lattice paths are there from (0,0) to (3,2)?  We must choose 3 of the 5 steps to be towards the right.  There are \({5 \choose 3}\) ways to do this, so there are \({5 \choose 3}\) such lattice paths.</p></li>
+<li id="li-19"><p id="p-86">What is the coefficient of \(x^3y^2\) in the expansion of \((x+y)^5\text{?}\)  We must choose 3 of the 5 copies of the binomial to contribute an \(x\text{.}\)  There are \({5 \choose 3}\) ways to do this, so the coefficient is \({5 \choose 3}\text{.}\)</p></li>
+</ul>
+<p id="p-87">In fact, choice 5 is usually taken as the definition of \(\binom{n}{k}\text{,}\) which is why we say \(n\) <em class="emphasis">choose</em> \(k\text{.}\)  Although interestingly enough, the other common name for \(\binom{n}{k}\) is a <dfn class="terminology">binomial coefficient</dfn>, which refers to the coefficients of the binomial \((x+y)^n\text{.}\)</p>
+<p id="p-88">What does all this have to do with Pascal's triangle though?  You might think of the entries in the triangle as the result of adding the two entries above it.  That is, Pascal's triangle contains those numbers described by choice 6 above.</p>
+<article class="assemblage-like" id="assemblage-2"><h6 class="heading"><span class="title">Recurrence relation for \({n \choose k}\).</span></h6>
+<p id="p-89">For any \(n \ge 1\) and \(0 \lt k \lt n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+{n \choose k} = {n-1 \choose k-1} + {n-1 \choose k}.
+\end{equation*}
+</div></article><p id="p-90">The last piece of the puzzle is to connect this definition to all the others.  Of course given the work done above, it would be enough to prove that any one of the models for binomial coefficients match the recurrence for Pascal's triangle, but it is instructive to check all four.</p>
+<article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.2</span>.</h6>
+<p id="p-91">Prove that bit strings satisfy the same recurrence as Pascal's triangle.  That is prove that \(|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-92">Partition the \(n\)-bit strings of weight \(k\) into two disjoint sets: those that start with a 0 and those that start with a 1.  Consider the remainder of each bit string (after that first bit). Each \(n\)-bit string that starts with a 1 ends with an \((n-1)\)-bit string of weight \(k-1\text{.}\)  There are \(|\B^{n-1}_{k-1}|\) of these. Each \(n\)-bit string that starts with a 0 ends with an \((n-1)\)-bit string of weight \(k\text{.}\)  There are \(|\B^{n-1}_k|\) of these.  So all together \(|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}\)</p></div></div>
+</div></article><article class="project-like" id="exploration-3"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">10</span>.</h6>
+<article class="exercise-like" id="task-26"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-93">Prove that subsets satisfy the same recurrence as Pascal's triangle. Make sure you clearly state what you are proving.</p></article><article class="exercise-like" id="task-27"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-94">Prove that lattice paths satisfy the same recurrence as Pascal's triangle.  What exactly do you need to prove here?</p></article><article class="exercise-like" id="task-28"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-95">Prove that binomial coefficients (the actual coefficients of the expansion of the binomial \((x+y)^n\)) satisfy the same recurrence as Pascal's triangle.</p></article></article><p id="p-96">At last we can rest easy that we can use Pascal's triangle to calculate binomial coefficients and as such find numeric values for the answers to counting questions. How many pizza's containing three distinct toppings can you make if the pizza place offers 10 toppings?  Well the answer should be \(\binom{10}{3}\text{,}\) and Pascal's triangle says that is 120.</p></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

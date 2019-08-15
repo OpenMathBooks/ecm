@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:33-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>For the inductive case, fix an arbitrary \(n\) and assume that for all \(k\) with \(0 \le k \le n-1\) we have \(\binom{n-1}{k} = \binom{n-1}{(n-1)-k}\text{.}\)  Consider \(\binom{n}{k}\) for an arbitrary \(0 \le k \lt n\text{.}\)  By the recurssion for Pascal's triangle, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}.
+\end{equation*}
+</div>
+<p>Now apply the induction hypothesis to the right hand side.  We get</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n-1}{k-1} + \binom{n-1}{k} = \binom{n-1}{n-1-(k-1)} + \binom{n-1}{n-1 -k} = \binom{n-1}{n-k} + \binom{n-1}{n-k-1}.
+\end{equation*}
+</div>
+<p>Then using the Pascal recurrence again, we get</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n-1}{n-k} + \binom{n-1}{n-k-1} = \binom{n}{n-k}.
+\end{equation*}
+</div>
+<p>Thus \(\binom{n}{k} = \binom{n}{n-k}\text{,}\) as long as \(0 \le k \lt n\text{.}\)  The case where \(k = n\) is trivial as \(\binom{n}{n} = \binom{n}{0} = 1\text{.}\)</p>
+<span class="incontext"><a href="sec_basic-proofs.html#p-113">in-context</a></span>
+</body>
+</html>

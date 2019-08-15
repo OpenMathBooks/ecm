@@ -1,0 +1,519 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:15-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Catalan Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_basic-recursion.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_advanced.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_basic-recursion.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_advanced.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan" class="active">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_basic-catalan"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">The Catalan Numbers</span>
+</h2>
+<a href="sec_basic-catalan.html" class="permalink">¶</a><section class="introduction" id="introduction-38"><p id="p-657">Let's put all of the techniques we have developed in this chapter to work to solve some deeper counting problems.</p></section><section class="subsection" id="subsec-catalanprobs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.1</span> <span class="title">A Few Counting Problems</span>
+</h3>
+<a href="sec_basic-catalan.html#subsec-catalanprobs" class="permalink">¶</a><p id="p-658">The counting problems in <a data-knowl="./knowl/act-lowerpaths.html" title="Activity 109">Activities 109–114</a> are not supposed to be easy to solve, but you have a lot of combinatorial tools to try.  Say as much as you can about as many as you can before moving on.  At the very least, you should answer the counting problems for small values of \(n\) by writing out the set of outcomes.  In <a href="sec_basic-catalan.html#subsec-catalanseq" class="internal" title="Subsection 1.5.2: The Catalan Numbers">Subsection 1.5.2</a>, we will investigate the problems in more depth and see how to answer them fully.</p>
+<article class="project-like" id="act-lowerpaths"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">109</span>.</h6>
+<p id="p-659">We have already seen how to count lattice paths in <a data-knowl="./knowl/act-latticepaths.html" title="Activity 2">Activities 2</a> and <a data-knowl="./knowl/act-latticepaths2.html" title="Exercise 23">23</a>.  Now consider a variation.</p>
+<p id="p-660">How many paths of length \(2n\text{,}\) consisting of horizontal and vertical segments of unit length, are there from \((0, 0)\) to \((n, n)\) such that the path never goes above the line \(y = x\text{?}\) One such path to \((3, 3)\) is shown in <a data-knowl="./knowl/catalanpathex.html" title="Figure 1.5.1">Figure 1.5.1</a>.</p>
+<figure class="figure-like" id="catalanpathex"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/image-15.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.5.1.</span> One of the acceptable lattice paths from \((0,0)\) to \((3,3)\text{.}\)</figcaption></figure></article><article class="project-like" id="act-hdseq"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">110</span>.</h6>
+<p id="p-662">\(2n\) people stand in line at a old-timey movie theater. Admission is 50 cents, (denoted by H), and the box office starts with no change. \(n\) of the people have H and \(n\) have $1 (denoted D). In how many ways can the \(2n\) people line up so that all can be admitted?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div id="hk-hint-82" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-663">Here we enumerate the number of workable sequences of \(n\) H's and \(n\) D's such that at each point in the sequence the number of H's is not less than the number of D's.  Try writing out all HD sequences and see which ones are acceptable and which are not.</p></div></div>
+</div></article><article class="project-like" id="act-tableau"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">111</span>.</h6>
+<p id="p-665">Insert the integers \(1, 2, \ldots, 2n\) into a 2 by \(n\) rectangle of boxes such that the entries are monotonic in rows and columns.  We will call this an <dfn class="terminology">acceptable tableau insertion</dfn>. How many ways can you do this?</p>
+<p id="p-666">For example, when \(n=3\text{,}\) there are five arrangements:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width" style="width:20%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">1</td>
+<td class="c m b1 r1 l0 t1 lines">2</td>
+<td class="c m b1 r1 l0 t1 lines">3</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">4</td>
+<td class="c m b1 r1 l0 t0 lines">5</td>
+<td class="c m b1 r1 l0 t0 lines">6</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:20%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">1</td>
+<td class="c m b1 r1 l0 t1 lines">2</td>
+<td class="c m b1 r1 l0 t1 lines">4</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">5</td>
+<td class="c m b1 r1 l0 t0 lines">6</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:20%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">1</td>
+<td class="c m b1 r1 l0 t1 lines">2</td>
+<td class="c m b1 r1 l0 t1 lines">5</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0 lines">4</td>
+<td class="c m b1 r1 l0 t0 lines">6</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:20%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">1</td>
+<td class="c m b1 r1 l0 t1 lines">3</td>
+<td class="c m b1 r1 l0 t1 lines">4</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">2</td>
+<td class="c m b1 r1 l0 t0 lines">5</td>
+<td class="c m b1 r1 l0 t0 lines">6</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width" style="width:20%;justify-content:flex-start;"><table>
+<tr>
+<td class="c m b1 r1 l1 t1 lines">1</td>
+<td class="c m b1 r1 l0 t1 lines">3</td>
+<td class="c m b1 r1 l0 t1 lines">5</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">2</td>
+<td class="c m b1 r1 l0 t0 lines">4</td>
+<td class="c m b1 r1 l0 t0 lines">6</td>
+</tr>
+</table></div>
+</div></div></article><article class="project-like" id="act-parenthesize"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">112</span>.</h6>
+<p id="p-668">If we multiply \(n+1\) numbers, say \(a_1a_2\cdots a_n a_{n+1}\text{,}\) we really should put in \(n\) pairs of parentheses since multiplication is a binary operation (and what if multiplication is not associative?).  How many ways can we do this?  For example, when \(n = 3\text{,}\) there are 5 ways:</p>
+<div class="displaymath">
+\begin{equation*}
+(ab)(cd)\quad ((ab)c)d \quad a(b(cd)) \quad (a(bc))d \quad a((bc)d).
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div id="hk-hint-83" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-669">Try working recursively.   For a product of \(n+1\) symbols \(a_{1}a_{2}\ldots a_{n+1}\text{,}\) break it at the \(k\)th symbol:</p>
+<div class="displaymath">
+\begin{equation*}
+(a_{1}a_{2}a_{3}\ldots a_{k})(a_{k + 1}\ldots a_{n+1}).
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="project-like" id="act-traingulations"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">113</span>.</h6>
+<p id="p-670">Consider a convex polygon with \((n+2)\) labeled vertices.  In how many ways can non-intersecting diagonals be inserted so as to decompose the polygon into triangles? For \(n = 3\) the five figures are shown below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-16.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-17.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-18.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-19.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-20.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div id="hk-hint-84" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-671">You might have found a recursion for the sequence of answers in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a>.</p></div></div>
+</div></article><article class="project-like" id="act-rootedtrees"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">114</span>.</h6>
+<p id="p-672">Consider <dfn class="terminology">rooted binary trees</dfn>.  Rooted trees are trees in the graph theory sense, except that one vertex is designated as the root, which puts a natural ordering on the vertices.  Vertices adjacent to the root are its <dfn class="terminology">children</dfn>, and vertices adjacent to those (other than the root) are their children, and so on.  We are looking at <em class="emphasis">binary</em> trees, so each vertex will have either two children (designated the <dfn class="terminology">left child</dfn> and <dfn class="terminology">right child</dfn>) or no children at all (i.e., the vertex is a leaf).</p>
+<p id="p-673">How many rooted binary trees have exactly \(n+1\) leaves?  Note that because we designate children as left or right, the two trees below are counted as distinct.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;"><img src="images/image-21.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;"><img src="images/image-22.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div id="hk-hint-85" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-674">There should be 5 rooted binary trees with 4 leaves (the \(n = 3\) case).</p></div></div>
+</div></article></section><section class="subsection" id="subsec-catalanseq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">The Catalan Numbers</span>
+</h3>
+<a href="sec_basic-catalan.html#subsec-catalanseq" class="permalink">¶</a><p id="p-675">The sequence of Catalan numbers, named after Eugene Catalan who along with Euler discovered many of the properties of these numbers, is the sequence \((C_n)_{n \ge 0}\) starting,</p>
+<div class="displaymath">
+\begin{equation*}
+1, 1, 2, 5, 14, 42, 132, \ldots\text{.}
+\end{equation*}
+</div>
+<p>All of the counting problems above should be answered by Catalan numbers.  Let's investigate this sequence and discover some of its properties.</p>
+<p id="p-676">First, we should make sure that at the very least, all of the counting problems above have the same answer.  This will be hugely helpful, since then we could use any of them as a model to discuss the sequence.</p>
+<p id="p-677">How do you prove that two counting problems have the same answer?  The bijection principle tells us that if there is a bijection between two sets, then the sets have the same size.  So let's find some bijections.</p>
+<article class="example-like" id="act-pathshdseq"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.5.2</span>.</h6>
+<p id="p-678">Find a bijection between the set of lattice paths from \((0,0)\) to \((n,n)\) that do not rise above the line \(y = x\) (as in <a data-knowl="./knowl/act-lowerpaths.html" title="Activity 109">Activity 109</a>) and the set of ways that the movie patrons in <a data-knowl="./knowl/act-hdseq.html" title="Activity 110">Activity 110</a> can line up.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div id="hk-solution-70" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-679">Represent each lattice path as a string of R's and U's.  Represent each way that the movie patrons can line up as a string of H's and D's.  The bijection will send each R to an H and each U to a D.</p>
+<p id="p-680">We need to verify that this bijection is both well defined, and that its inverse is well defined (that the function is injective and surjective).  The key to all of these is to consider what makes a string valid in each case.</p>
+<p id="p-681">First, notice that the lattice paths must have an equal number of R's and U's.  Similarly, the string of movie patrons must have an equal number of H's and D's. Further, every initial substring of R's and U's must have at least as many R's as U's, so that the path does not go above the line \(y=x\text{.}\)  Similarly, the every initial substring of H's and D's (half dollars and dollars) must have at least as many H's as D's, so that change can always be given.  The H's and R's must <em class="emphasis">dominate</em>.</p>
+<p id="p-682">The the conditions on what makes a string valid match up, so every string in one set will match up with exactly one string in the other.</p>
+</div></div>
+</div></article><p id="p-683">Representing the set of outcomes as strings of sequences is useful, because it suggests a bijection between different types of problems.  The strings of paths and movie theater lines from <a data-knowl="./knowl/act-pathshdseq.html" title="Example 1.5.2">Example 1.5.2</a> are called <dfn class="terminology">Dyck words</dfn>.  These are strings of an equal number of two symbols, say \(x\) and \(y\text{,}\) such that no initial segment of the string has more \(y\)'s than \(x\)'s.</p>
+<p id="p-684">We will now see that the number of Dyck words of length \(2n\) is \(C_n\text{.}\)</p>
+<article class="project-like" id="activity-49"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">115</span>.</h6>
+<article class="exercise-like" id="task-133"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-685">Show that the number of acceptable tableau insertions from <a data-knowl="./knowl/act-tableau.html" title="Activity 111">Activity 111</a> is always a Catalan number.  That is, give a bijection between the set of Dyck words of length \(2n\) to the set of ways to insert the numbers 1 through \(2n\) into a \(2\times n\) tableau so that both rows and columns are increasing.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div id="hk-hint-86" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-686">If you put the numbers into the tableau in order, for each number, you must decide to put it in the top row or the bottom row.  Do you have any other choices?  What would constitute a mistake?</p></div></div>
+</div></article><article class="exercise-like" id="task-134"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-687">Show the number of ways to parenthesize a product of \(n+1\) numbers is \(C_n\) (see <a data-knowl="./knowl/act-parenthesize.html" title="Activity 112">Activity 112</a>).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div id="hk-hint-87" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-688">One way to parenthesize the product \(abcd\) is \(a((bc)d)\text{,}\) but this is really \((a((bc)d))\text{,}\) so that the outer set set of parentheses belong with the product of \(a\) and \(((bc)d)\text{.}\)  Further, not that if we wrote this just as \((a((bcd\text{,}\) there would be only one way to insert the right parentheses that would make the product parse correctly.</p></div></div>
+</div></article></article><p id="p-689">Not all of the models for the Catalan numbers are easily represented by Dyck words (or at least not in an obvious way).</p>
+<article class="project-like" id="exploration-67"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">116</span>.</h6>
+<p id="p-690">Demonstrate a bijection between the set of acceptable ways to parenthesize the product of \(n+1\) terms and the set of rooted binary trees with \(n+1\) leaves (see <a data-knowl="./knowl/act-rootedtrees.html" title="Activity 114">Activity 114</a>).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-88" id="hint-88"><span class="type">Hint</span></a><div id="hk-hint-88" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-691">Think about how students are taught to factor numbers.</p></div></div>
+</div></article><p id="p-692">We have now verified that all our sample problems are Catalan numbers, except for the triangulations of polygons problem.  There is a clever way to associate each triangulation with a binary tree, as suggested by <a data-knowl="./knowl/fig-triangulationtree.html" title="Figure 1.5.3">Figure 1.5.3</a>.  However, let's take this opportunity to illustrate another method for proving two problems have the same answers.</p>
+<figure class="figure-like" id="fig-triangulationtree"><div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;">
+          \begin{tikzpicture}
+            \fivegon;
+            \draw (d) -- (a) -- (c);
+            \draw (0,.75) \v -- (-1, 1.3) \v -- (-1.5, 2.5) \vl{$b$};
+            \draw (-1,1.3) -- (-2,.8) \vl{$a$};
+            \draw (0,.75) -- (1,1.2) \v -- (1.5,2.5) \vr{$c$};
+            \draw (1,1.2) -- (2,.7) \vr{$d$};
+          \end{tikzpicture}
+        </div>
+<div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;">
+          \begin{tikzpicture}
+            \draw (0,.75) \v -- (-1, 1.3) \v -- (-1.5, 2.5) \va{$a$};
+            \draw (-1,1.3) -- (-.5,2.5) \va{$b$};
+            \draw (0,.75) -- (1,1.2) \v -- (1.5,2.5) \va{$d$};
+            \draw (1,1.2) -- (.5,2.5) \va{$c$};
+          \end{tikzpicture}
+        </div>
+</div></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.5.3.</span> A triangulation of a 5-gon and associated rooted binary tree.</figcaption></figure><article class="project-like" id="activity-50"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">117</span>.</h6>
+<div class="introduction" id="introduction-39">
+<p id="p-693">Consider the recurrence relation</p>
+<div class="displaymath">
+\begin{equation*}
+C_{n + 1} = \sum_{i = 0}^n C_iC_{n-i} = C_{0}C_{n} + C_{1}C_{n - 1} + \ldots + C_{n}C_{0}
+\end{equation*}
+</div>
+<p>with \(C_0 = 1\text{.}\)</p>
+</div>
+<article class="exercise-like" id="task-135"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-694">Calculate the first 6 values of the sequence from this recurrence relation, to verify that it appears to agree with the Catalan numbers.</p></article><article class="exercise-like" id="task-136"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-696">Prove that the Catalan numbers satisfy the recurrence relation.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-89" id="hint-89"><span class="type">Hint</span></a><div id="hk-hint-89" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-697">Look at rooted binary trees.  What happens when you remove the root?  You could also use the parenthesizing model by asking where “main product” occurs.</p></div></div>
+</div></article><article class="exercise-like" id="task-137"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-701">Prove that the number of triangulations of a convex polygon with \(n+2\) sides also satisfies this recurrence relation (if you haven't already done so in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a>).  Conclude that the triangulations problem is also solved by the Catalan numbers.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-90" id="hint-90"><span class="type">Hint</span></a><div id="hk-hint-90" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-702">Fix an edge of the polygon.  There will be exactly \(n-2\) triangles this edge could be part of.  For each of those, can you count the number of triangles that can be made of what ?</p></div></div>
+</div></article></article><p id="p-704">Next, we would like to find a closed formula for \(C_n\text{.}\)  We can do so using lattice paths.</p>
+<article class="project-like" id="activity-51"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">118</span>.</h6>
+<div class="introduction" id="introduction-40"><p id="p-705">Recall that \(C_n\) gives the number of lattice paths from \((0,0)\) to \((n,n)\) that do not cross the line \(y = x\) (but they may touch this line).  We will compare this to all the lattice paths from \((0,0)\) to \((n,n)\text{.}\)</p></div>
+<article class="exercise-like" id="task-138"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-706">Explain why the number of lattice paths from \((0,0)\) to \((n,n)\) that <em class="emphasis">do</em> cross the line \(y = x\) is the same as the number of lattice paths from \((0,0)\) to \((n,n)\) that touch or cross the line \(y = x + 1\text{.}\)</p></article><article class="exercise-like" id="task-139"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-708">Find a bijection between lattice paths from \((0,0)\) to \((n,n)\) that touch (or cross) the line \(y=x+1\) and lattice paths from \((-1,1)\) to \((n,n)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-91" id="hint-91"><span class="type">Hint</span></a><div id="hk-hint-91" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-709">Given a path from \((0, 0)\) to \((n, n)\) which touches or crosses the line \(y = x + 1\text{,}\) how can you modify the part of the path from \((0, 0)\) to the first touch of \(y = x + 1\) so that the modified path starts instead at \((-1, 1)\text{?}\) The trick is to do this in a systematic way that will give you your bijection.</p></div></div>
+</div></article><article class="exercise-like" id="task-140"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-711">Find a formula for the number of lattice paths from \((0,0)\) to \((n,n)\) that do not cross the line \(y=x\text{.}\) That is, a formula for \(C_n\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-712">A path either touches the line \(y = x + 1\) or it doesn't. This partitions the set of paths into two blocks.</p></div></div>
+</div></article></article><p id="p-714">So \(C_n = \binom{2n}{n} - \binom{2n}{n+1}\text{.}\)  Another formula you might run into is \(C_n = \frac{1}{n+1}\binom{2n}{n}\text{.}\)  Why is this also correct?</p>
+<article class="project-like" id="exploration-68"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">119</span>.</h6>
+<article class="exercise-like" id="task-141"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-715">Prove that \(\binom{2n}{n} - \binom{2n}{n+1} = \frac{1}{n+1}\binom{2n}{n}\) using a method of your choice.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div id="hk-hint-93" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-716">The algebraic formula for \(\binom{n}{k}\) would be appropriate here.</p></div></div>
+</div></article><article class="exercise-like" id="task-142"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-717">Challenge problem: explain the formula \(C_n = \frac{1}{n+1}\binom{2n}{n+1}\) using the quotient principle.  This would give an alternate proof for the closed formula for the Catalan numbers.</p></article></article></section><section class="subsection" id="subsec-catalanproblems"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.5.3</span> <span class="title">More Problems</span>
+</h3>
+<a href="sec_basic-catalan.html#subsec-catalanproblems" class="permalink">¶</a><p id="p-718">Here are a few more activities to practice with the Catalan numbers.</p>
+<article class="project-like" id="exploration-69"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">120</span>.</h6>
+<p id="p-719">Find \(C_6\) and \(C_7\) using both the recursive and closed formulas.</p></article><article class="project-like" id="exploration-70"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">121</span>.</h6>
+<p id="p-720">Show, by example, how the bijection between Dyck words and valid parenthesizing works.  To do this, list the \(C_4 = 14\) valid Dyck words, then list the \(C_4 = 14\) ways to parenthesize \(abcde\text{,}\) in the corresponding order.</p></article><article class="project-like" id="exploration-71"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">122</span>.</h6>
+<div class="introduction" id="introduction-41"><p id="p-722">Here is a way to establish the closed formula for \(C_n\) using Dyck words.  For simplicity, consider Dyck words using the symbols 0 and 1, insisting that no initial segment contains more 1's than 0's.</p></div>
+<article class="exercise-like" id="task-143"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-723">Of all \(2n\)-bit strings of weight \(n\text{,}\) some are Dyck words and some are not.  Explain which are not.  What do all of these have in common?</p></article><article class="exercise-like" id="task-144"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-725">Suppose some initial segment of a bit string contains one more 1 than 0.  If you changed every 1 to a 0 and every 0 to a 1 in this initial segment, how many 0's and how many 1's would the entire bit string have?</p>
+<p id="p-726">The resulting string will have one more 0 and one fewer 1.  That is, if the weight was originally \(n\text{,}\) the weight would now be \(n-1\text{.}\)</p></article><article class="exercise-like" id="task-145"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-727">Describe a bijection between the set of \(2n\)-bit strings of weight \(n-1\) and the set of \(2n\)-bit strings of weight \(n\) that are NOT Dyck words.</p></article><article class="exercise-like" id="task-146"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-729">Why does this prove that \(C_n = \binom{2n}{n} - \binom{2n}{n-1}\text{?}\)</p></article></article><article class="project-like" id="exploration-72"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">123</span>.</h6>
+<p id="p-731">Find a bijection between the ways of parenthesizing \(n+1\) terms and the ways of triangulating a convex polygon with \(n+2\) sides.  Illustrate this by matching up the outcomes for \(n = 3\text{.}\)</p></article><article class="project-like" id="exploration-73"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">124</span>.</h6>
+<p id="p-732">Let \(C_{n} = \frac{1}{n + 1}\binom{2n}{n}\text{.}\) Verify the formula:</p>
+<div class="displaymath">
+\begin{equation*}
+C_{n} = \binom{n}{1} C_{n - 1} - \binom{n - 1}{2} C_{n - 2} + \binom{n - 2}{3} C_{n - 3} - \cdots
+\end{equation*}
+</div></article><p id="p-733">We have considered 6 or 7 different interpretations of Catalan numbers so far.  There are many others.  In fact, Richard P. Stanley includes 66 different interpretations of the Catalan numbers in the book <em class="emphasis">Enumerative Combinatorics: Volume 2</em>.</p>
+<p id="p-734">The remainder of this section contains some examples.  See if you can explain why each of these really are interpretations of \(C_n\text{.}\)</p>
+<article class="project-like" id="exploration-74"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">125</span>.</h6>
+<p id="p-735">A and B each receive \(n\) votes. How many ways are there that the \(2n\) votes can be tallied so that A never trails B.</p></article><article class="project-like" id="exploration-75"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">126</span>.</h6>
+<p id="p-736">Place \(2n\) points on the circumference of a circle and draw \(n\)  non-intersecting chords.  How many ways can you do this?  Equivalently, if \(2n\) people stand in a circle, how many ways can everyone shake hands with one other person so that no one's arms cross?  Assume these people have arbitrarily long arms.</p></article><article class="project-like" id="exploration-76"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">127</span>.</h6>
+<p id="p-738">\(2n\) kids, all of different heights, must line up for a class picture.  They will do this in two equal rows, but for variety, they will take a picture from the front and from the right.  How many ways can the kids line up so that both pictures don't have any taller kid blocking a shorter kid?</p></article><article class="project-like" id="exploration-77"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">128</span>.</h6>
+<p id="p-739">Consider the graph \(P_n\) (a path with \(n\) edges and \(n+1\) vertices).  Call one of the endpoints of the path \(v\text{.}\)  How many walks of length \(2n\) start and stop at \(v\text{?}\)  A walk in a graph is a sequence of adjacent vertices (think of tracing along edges of the graph), that does allow for repeated vertices.</p></article><article class="project-like" id="exploration-78"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">129</span>.</h6>
+<p id="p-741">Draw a \(n\) by \(n\) right triangle using squares on graph paper (a sort of staircase shape, made up of \(\frac{n(n+1)}{2}\) squares).  Shade the squares using exactly \(n\) colors so that each color makes a rectangle (but not all colors are rectangles of the same dimension).  How many ways can this be done?</p></article><article class="project-like" id="exploration-79"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">130</span>.</h6>
+<p id="p-742">If you have \(2n\) toothpicks, you could arrange them into a “mountain range” shape by putting half of the toothpicks angled upward, and the other half angled downward.  Assume the first toothpick starts at sea level, so no valleys dip below that height. In how many ways can this be done?</p>
+<p id="p-743">Alternatively, we can define a <dfn class="terminology">diagonal lattice path</dfn> as one in which each segment travels from \((a,b)\) to \((a+1, b+1)\) or to \((a+1, b-1)\text{.}\)  How many diagonal lattice paths from \((0,0)\) to \((2n,0)\) never dip below the \(x\)-axis?  Such diagonal lattice paths are sometimes called <dfn class="terminology">Dyck paths</dfn> or <dfn class="terminology">Catalan paths</dfn>.</p></article><article class="project-like" id="exploration-80"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">131</span>.</h6>
+<p id="p-744">How many permutations of \([n]\) do not contain three consecutive numbers \(abc\) with \(a \lt b \lt c\text{?}\)  For example, the permutations \(1324\) and \(1423\) are both acceptable, but \(2341\) and \(1342\) are not.</p></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

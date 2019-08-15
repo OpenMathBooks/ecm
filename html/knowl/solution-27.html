@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:37-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.2.14.1</span>.</h6>
+<p>You should try to use bit strings again, but this time think about where the <em class="emphasis">second</em> 1 (from the left) in the bit string could go.  Or for variety, why not try asking about subsets of \([n+2]\text{?}\)</p>
+<p>Let \(S = \{1,2,\ldots,n + 2\}\text{.}\) The number of subsets of \(S\) of size 3 is \(\binom{n + 2}{3}\text{.}\) Each one looks like \(\{a, b, c\}\) with \(a \lt b \lt c\text{.}\) Let's count these by looking at the size of the middle element \(b\text{.}\) If \(b=2\text{,}\) there is one choice for \(a\text{,}\) namely \(a=1\) and \(n\) choices for \(c\) for a total of \(1 \cdot n\text{.}\) If \(b=3\) there are 2 choices for \(a\text{,}\) and \(n - 1\) choices for \(c\) for a total of \(2(n - 1)\text{.}\) If \(b=4\) the total is \(3(n - 2)\text{,}\) and so on. The total derived by looking at cases is \(1 \cdot n + 2\left( n - 1 \right) + 3\left( n - 2 \right) + \ldots + n \cdot 1\) and this must equal \(\binom{n + 2}{3}\) since the cases are disjoint.</p>
+</div>
+<span class="incontext"><a href="sec_basic-proofs.html#solution-27">in-context</a></span>
+</body>
+</html>

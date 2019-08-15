@@ -1,0 +1,536 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:14-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Counting with Equivalence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_basic-proofs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_basic-recursion.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_basic-proofs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_basic-combinatorics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_basic-recursion.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient" class="active">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_basic-quotient"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Counting with Equivalence</span>
+</h2>
+<a href="sec_basic-quotient.html" class="permalink">¶</a><section class="introduction" id="introduction-17"><p id="p-332">So far we have been able to solve our counting problems simply by use of the sum and product principles, together with the fact that the number of \(k\)-element subsets of an \(n\)-element set is \(\binom{n}{k}\) (the values of which can be found in Pascal's triangle). This means that we have always <em class="emphasis">built up</em> the set of outcomes by combining smaller sets of outcomes combined in various ways.</p>
+<p id="p-333">It is often useful to go the other way.  We could purposely over count the number of outcomes, but in a way that we can recover the correct set.</p></section><section class="subsection" id="subsec-quotient"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">The Quotient Principle</span>
+</h3>
+<a href="sec_basic-quotient.html#subsec-quotient" class="permalink">¶</a><p id="p-334">In <a data-knowl="./knowl/act-binomformula.html" title="Exercise 29">Exercise 29</a>, you proved the algebraic formula \(\binom{n}{k} = \frac{n!}{(n-k)!k!}\text{.}\)  However, this was done rather indirectly.  First you proved the identity \(P(n,k) = \binom{n}{k}k!\text{,}\) then wrote \(P(n,k) = \frac{n!}{(n-k)!}\text{,}\) and finally solved for \(\binom{n}{k}\text{.}\)</p>
+<p id="p-335">This approach has the advantage of illustrating the connection between combinations and permutations, but the combinatorial argument that both sides of the identity are equal asked you to count the number of <em class="emphasis">permutations</em> in two ways.  It is instructive to think of this equation in terms of <em class="emphasis">combinations</em> instead.  Let's start with a concrete example.</p>
+<article class="project-like" id="activity-22"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">42</span>.</h6>
+<div class="introduction" id="introduction-18"><p id="p-336">Let's count the number of subsets of \(\{a,b,c,d,e\}\) of size 3.  Of course we already know the answer should be \(\binom{5}{3}\text{,}\) which we can see in Pascal's triangle is equal to 10.  What might you try if you didn't already know this?</p></div>
+<article class="exercise-like" id="task-66"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-337">You might first guess that the answer is \(5\cdot 4 \cdot 3\) since there are 5 choices for which element you put in your subset first, then  4 choices for the next element, and 3 choices for the last element.  Write down all 60 of the outcomes you get by counting the “subsets” this way.<a data-knowl="" class="id-ref" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a><span id="hk-fn-1" class="hidden-content tex2jax_ignore"><span class="footnote">This might seem like a lot of busy work, but your efforts will be rewarded.</span></span></p></article><article class="exercise-like" id="task-67"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-338">One of the subsets we are actually interested in is \(\{a,c,d\}\text{.}\)  How many of the outcomes you listed above correspond to this set?  How many outcomes correspond to the set \(\{c,d,e\}\text{?}\)</p></article><article class="exercise-like" id="task-68"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-339">Explain why every subset corresponds to the same number of permutations.  Then use this to count the total number of subsets correctly.</p></article></article><p id="p-340">Let's look carefully at what we did above.  We had a set of permutations (all 60 of the 3-permutations of the set \(\{a,b,c,d,e\}\)).  Then we noticed that some of these permutations corresponded the the same subset.  Saying that these permutations were related like this feels like defining a equivalence relation.</p>
+<article class="project-like" id="activity-23"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">43</span>.</h6>
+<div class="introduction" id="introduction-19"><p id="p-341">Refer back to your list of 60 3-permutations of \(\{a,b,c,d,e\}\text{.}\)</p></div>
+<article class="exercise-like" id="task-69"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-342">Define an <dfn class="terminology">equivalence relation</dfn> on the permutations you listed so that permutations that “correspond” to the same subset are equivalent.  That is, give a rule that specifies when two permutations are “equivalent”.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span></a><div id="hk-hint-33" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-343">One rule of this type would be, two permutations are equivalent if they start with the same letter.  This is not the one you want though.</p></div></div>
+</div></article><article class="exercise-like" id="task-70"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-344">In any set \(S\text{,}\) if you have an equivalence relation \(\sim\text{,}\) you can <dfn class="terminology">partition</dfn> \(S\) into <dfn class="terminology">equivalence classes</dfn>: sets of elements that are equivalent under \(\sim\) (i.e., sets of the form \(\{x \in S \st x \sim a\} \) for a particular element \(a\)).</p>
+<p id="p-345">Write out the equivalence classes generated by the equivalence relation you gave above.  Explain why these all have the same size.  How many equivalence classes do you have (and how does this relate to the fact that they all have the same size)?</p></article><article class="exercise-like" id="task-71"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-346">Find a bijection between the set of equivalence classes and the set of subsets of \(\{a,b,c,d,e\}\text{.}\)  Why is this important?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-34" id="hint-34"><span class="type">Hint</span></a><div id="hk-hint-34" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-347">You might think about the usual way you would write a subset.  Essentially what this question is asking is for you to pick a representative for each equivalence class.</p></div></div>
+</div></article></article><p id="p-348">This suggests a general approach to solving a counting problem.  Say we want to count the number of elements in a set \(S\text{.}\)  Suppose we can count the size of some set \(T\text{,}\) perhaps containing many more elements than we are actually interested in counting.  Then define an equivalence relation \(\sim\) on \(T\) so that there is a bijection between \(S\) and the set of equivalence classes \(T/\sim\text{.}\)  Then if we know the size of \(T/\sim\text{,}\) we have the size of \(S\text{.}\)</p>
+<p id="p-349">Look at the notation \(T/\sim\) that we used to denote the set of equivalence classes of \(T\) under \(\sim\text{.}\)  This set is sometimes called the <dfn class="terminology">quotient set</dfn> or <dfn class="terminology">quotient space</dfn> of \(T\) by \(\sim\text{.}\)  This is a good name, as you are dividing up a set into parts.  It is also a good name because sometimes we can conclude</p>
+<div class="displaymath">
+\begin{equation*}
+|T/\sim| = |T|/|A|
+\end{equation*}
+</div>
+<p>where \(A\) is one of the equivalence classes under \(\sim\text{.}\)  When can you do this?</p>
+<p id="p-350">Note this is exactly what we did when we counted subsets: we divided the number of permutations by the number of permutations equivalent to each other.  That worked precisely because <em class="emphasis">all the equivalence classes had the same size</em>!</p>
+<p id="p-351">This justifies the <dfn class="terminology">quotient principle</dfn> we now state.</p>
+<article class="assemblage-like" id="assemblage-quotientprinciple"><h6 class="heading"><span class="title">The Quotient Principle.</span></h6>
+<p id="p-352">If we partition a set of size \(p\) into \(q\) blocks, each of size \(r\text{,}\) then \(q = p/r\text{.}\)</p></article><p id="p-353">Like the product principle, the quotient principle is really just a statement about how division works.  Here are a few examples of how you can use it in counting.  In each of the following activities, make sure you can say exactly how the quotient principle could be used.</p>
+<article class="project-like" id="roundtable"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">44</span>.</h6>
+<p id="p-354">In how many ways may \(n\) people sit around a round table? (Assume that when people are sitting around a round table, all that really matters is who is to each person's right. For example, if we can get one arrangement of people around the table from another by having everyone get up and move to the right one place and sit back down, we get an equivalent arrangement of people. Notice that you can get a list from a seating arrangement by marking a place at the table, and then listing the people at the table, starting at that place and moving around to the right.) There are at least two different ways of doing this problem. Try to find them both, especially the one that uses the quotient principle.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-35" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-355">The problem suggests that you think about how to get a list from a seating arrangement. Could every list of n distinct people come from a seating chart? How many lists of n distinct people are there? How many lists could we get from a given seating chart by taking different starting places?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-36" id="hint-36"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-36" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-356">For a different way of doing the problem, suppose that you have chosen one person, say the first one in a list of the people in alphabetical order by name. Now seat that person. Does it matter where they sit? In how many ways can you seat the remaining people? Does it matter where the second person in alphabetical order sits?</p></div></div>
+</div></article><article class="project-like" id="necklace"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">45</span>.</h6>
+<p id="p-358">In how many ways may we string \(n\) distinct beads on a necklace without a clasp? (Perhaps we make the necklace by stringing the beads on a string, and then carefully gluing the two ends of the string together so that the joint can't be seen. Assume someone can pick up the necklace, move it around in space and put it back down, giving an apparently different way of stringing the beads that is equivalent to the first.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-37" id="hint-37"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-37" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-359">How could we get a list of beads from a necklace?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-38" id="hint-38"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-38" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-360">When we cut the necklace and string it out on a table, there are \(2n\) lists of beads we could get. Why is it \(2n\) rather than \(n\text{?}\)</p></div></div>
+</div></article><article class="project-like" id="tennispairings2"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">46</span>.</h6>
+<div class="introduction" id="introduction-20"><p id="p-363">We first gave this problem as <a data-knowl="./knowl/tennispairings1.html" title="Exercise 25">Exercise 25</a>. Now we have several ways to approach the problem. A tennis club has \(2n\) members. We want to pair up the members by twos for singles matches.</p></div>
+<article class="exercise-like" id="task-72"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-364">In how many ways may we pair up all the members of the club? Give at least two solutions different from the one you gave in   <a data-knowl="./knowl/tennispairings1.html" title="Exercise 25">Exercise 25</a>. (You may not have done <a data-knowl="./knowl/tennispairings1.html" title="Exercise 25">Exercise 25</a>. In that case, see if you can find three solutions.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-39" id="hint-39"><span class="type">Hint</span></a><div id="hk-hint-39" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-365">You might first choose the pairs of people. You might also choose to make a list of all the people and then take them by twos from the list.</p></div></div>
+</div></article><article class="exercise-like" id="task-73"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-368">Suppose that in addition to specifying who plays whom, for each pairing we say who serves first.  Now in how many ways may we specify our pairs? Try to find as many solutions as you can.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-40" id="hint-40"><span class="type">Hint</span></a><div id="hk-hint-40" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-369">You might first choose ordered pairs of people, and have the first person in each pair serve first. You might also choose to make a list of all the people and then take them by twos from the list in order.</p></div></div>
+</div></article></article><article class="project-like" id="twocolorsofbeads"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">47</span>.</h6>
+<p id="p-372">In how many ways may we attach two identical red beads and two identical blue beads to the corners of a square (with one bead per corner) free to move around in (three-dimensional) space?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-41" id="hint-41"><span class="type">Hint</span></a><div id="hk-hint-41" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-373">It might be helpful to just draw some pictures of the possible configurations. There aren't that many.</p></div></div>
+</div></article><article class="example-like" id="example-15"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.2</span>.</h6>
+<p id="p-375">We have used the quotient principle to explain the formula \(\binom{n}{k} = \frac{n!}{(n-k)!k!}\) by thinking of this as \(\binom{n}{k} = \frac{P(n,k)}{k!}\text{.}\)  What if we don't involve \(P(n,k)\) at all?</p>
+<p id="p-376">Describe a set of outcomes that has size \(n!\) that can be partitioned into blocks of size \((n-k)!k!\) so that each block corresponds to something \(\binom{n}{k}\) counts.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span></a><div id="hk-solution-38" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-377">Suppose you have \(k\) red balls and \(n-k\) blue balls.  Each ball has a different number printed on it.  Thus there are \(n!\) different ways to arrange the \(n\) balls in a line.  But what if we only care about the color pattern the balls make (perhaps the numbers have been printed in invisible ink and have now vanished).  We can arrange these permutations of all \(n\) balls into blocks, where two permutations are in the same block if and only if they have the same sequence of colors (RRBRB…).  There are \((n-k)!k!\) permutations in each block, since the red balls can be arranged in \(k!\) ways and the blue balls can be arranged in \((n-k)!\) ways.</p>
+<p id="p-378">All this says that the number of two-color patterns of length \(n\) including \(k\) red balls is \(\frac{n!}{(n-k)!k!}\text{.}\)  But of course the answer is also \(\binom{n}{k}\) because of the \(n\) positions, we must choose \(k\) positions to put the identical red balls.</p>
+</div></div>
+</div></article><article class="project-like" id="exploration-25"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">48</span>.</h6>
+<p id="p-379">How many anagrams of the word “anagram” are there? (An anagram is a rearrangement of <em class="emphasis">all</em> of the letters of a word.)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-42" id="hint-42"><span class="type">Hint</span></a><div id="hk-hint-42" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-380">A much easier question would be, how many anagrams of the word “anbgrcm”?  Then use the quotient principle.</p></div></div>
+</div></article></section><section class="subsection" id="subsec-ordermatters"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">When does Order Matter?</span>
+</h3>
+<a href="sec_basic-quotient.html#subsec-ordermatters" class="permalink">¶</a><p id="p-383">One way to distinguish combinations from permutations is by asking whether “order matters”.  Both \(\binom{n}{k}\) and \(P(n,k)\) count the number of ways to select \(k\) objects from \(n\) objects without repeats, but you use the combination \(\binom{n}{k}\) when “order doesn't matter” and the permutation \(P(n,k)\) when “order matters”.  Despite the presence of the scare quotes, this is not a false statement, but we must understand what we mean when we say “order matters”.</p>
+<article class="project-like" id="activity-24"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">49</span>.</h6>
+<div class="introduction" id="introduction-21"><p id="p-384">Each counting question below asks for two answers.  Decide which answer is a combination and which is a permutation, and why that makes sense.</p></div>
+<article class="exercise-like" id="task-74"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-385">An ice-cream shop offers 31 flavors.  How many 3-scoop ice-cream cones are possible, assuming each scoop must be a different flavor?  How many 3-scoop milkshakes are possible, assuming each scoop must be a different flavor?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint</span></a><div id="hk-hint-43" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-386">This is not intended to be a trick question.  In fact, this example would be a good one for thinking about how permutations and combinations are related in general.</p></div></div>
+</div></article><article class="exercise-like" id="task-75"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-387">How many 5-digit numbers are there with distinct, non-zero digits for which the digits must be increasing?  How many are there for which the digits can come in any order?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint</span></a><div id="hk-hint-44" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-388">The point of this question is to push back against your conception of what “order matters” means.  Since you know the answers must be \(\binom{9}{5}\) or \(P(9,5)\text{,}\) you should be able to answer correctly by deciding which set is bigger.</p></div></div>
+</div></article><article class="exercise-like" id="task-76"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-389">How many injective functions \(f:[k] \to [n]\) are there all   together?  How many injective functions \(f:[k] \to [n]\) are there that are (strictly) increasing?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span></a><div id="hk-hint-45" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-390">You might as well assume that \(k \le n\) (otherwise the answers would both be 0).  If you are stuck, write out some examples of each using two-line notation for the functions.  What decisions do you need to make?</p></div></div>
+</div></article></article><article class="project-like" id="exploration-26"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">50</span>.</h6>
+<p id="p-391">The number of \(n\)-bit strings of weight \(k\) is \(\binom{n}{k}\text{,}\) so a combination.  But in determining one bit string from another, all that matters is the order in which the \(k\) 1's and \(n-k\) 0's appear.  So does order matter?  In what sense does it not?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span></a><div id="hk-hint-46" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-392">Think about what \(P(n,k)\) would count when building a bit string.  Why does it make sense to quotient out by \(k!\text{?}\)</p></div></div>
+</div></article><article class="project-like" id="exploration-27"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">51</span>.</h6>
+<p id="p-393">Write a clear sentence or two saying specifically what we mean when we say “order matters” to distinguish between combinations and permutations.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-47" id="hint-47"><span class="type">Hint</span></a><div id="hk-hint-47" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-394">They key here is to think about the set of outcomes that we are counting.  Ask yourself, the order of what?</p></div></div>
+</div></article><p id="p-395">Understanding the role of order in distinguishing outcomes often suggests the use of the quotient principle.  You might say we arrive at combinations by counting permutations and “modding” out by the order.  Each block that corresponds to a single combination is a group of permutations that are only different because of their order.  Let's see if we can apply this to other counting questions.</p>
+<article class="project-like" id="activity-25"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">52</span>.</h6>
+<div class="introduction" id="introduction-22"><p id="p-396">The ice cream shop is down to only 3 flavors.  If you wanted a 3-scoop cone or a 3-scoop shake, made without repeated flavors, there would only be 6 cones possible and only 1 shake.  But what if you allowed repeated flavors?</p></div>
+<article class="exercise-like" id="task-77"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-397">How many 3-scoop cones are possible?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-48" id="hint-48"><span class="type">Hint</span></a><div id="hk-hint-48" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-398">You should be able to use the multiplicative principle and nothing else here.</p></div></div>
+</div></article><article class="exercise-like" id="task-78"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-399">How many 3-scoop shakes are there?  Write all of them down.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-49" id="hint-49"><span class="type">Hint</span></a><div id="hk-hint-49" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-400">Maybe the flavors are chocolate, vanilla, and strawberry.  Some of the outcomes are \(ccv\) and \(csv\text{,}\) but notice that we would not also include \(cvc\) or \(vcs\) because in the blender, order doesn't matter.</p></div></div>
+</div></article><article class="exercise-like" id="task-79"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-401">Why doesn't the quotient principle apply here?  What goes wrong?</p>
+<p id="p-402">List out all 3-scoop cones and form the equivalence classes of shakes to see the issue.</p></article></article><p id="p-403">The previous activity illustrates that you cannot always simply apply the quotient principle to eliminate order mattering.  What we are after in the 3-scoop shakes with possibly repeated flavors is a <dfn class="terminology">multiset</dfn>, which is just like a set only we allow for elements to be in the set multiple times, but we still do not care in what order the elements are listed.  So an example of an \(4\)-element multiset of \([7]\) is \(\{1,3,3,6\}\text{,}\) which is the same multiset as \(\{1,6,3,3\}\) but different from the multiset \(\{1,3,6\}\) (in particular, this multiset only has three elements).</p>
+<p id="p-404">What we tried to do above was to count multisets by first counting sequences with possibly repeated elements, and then divide out by the number of sequences that just differ by the arrangement of a particular multiset.  But this didn't work, because the size of each block was not the same.</p>
+<p id="p-405">However, we would still like to be able to count the number of multisets.  How can we do this?  Is it an application of the quotient principle after all?  To start, let's establish some notation.  The number of \(k\)-element subsets of \([n]\) was given by \(n\) choose \(k\) (written \(\binom{n}{k}\)), so we will say that the number of \(k\)-element <em class="emphasis">multisets</em> of \([n]\) will be <dfn class="terminology">\(n\) multichoose \(k\)</dfn>, and write \(\mchoose{n}{k}\text{.}\)  From what we have seen above, we can say,</p>
+<div class="displaymath">
+\begin{equation*}
+\mchoose{n}{k} \ne \frac{n^k}{k!}
+\end{equation*}
+</div>
+<p>despite the obvious allure of this possibility.</p>
+<p id="p-406">Our question now is, what <em class="emphasis">should</em> be in the numerator if not \(n^k\text{?}\)  First let's get more comfortable with thinking of multisets as a model for counting questions.</p>
+<article class="project-like" id="act_multisetintro"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">53</span>.</h6>
+<div class="introduction" id="introduction-23"><p id="p-407">Explain why each of the following counting problems have an answer in the form \(\mchoose{n}{k}\) (say what \(n\) and \(k\) should be).  That is, show how each of them is counting the number of \(k\)-element multisets of \([n]\) (or a different set of size \(n\)).</p></div>
+<article class="exercise-like" id="task-80"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-408">If you have an unlimited supply of pennies, nickels, dimes and quarters, how many handfuls of 7 coins can you grab?</p></article><article class="exercise-like" id="task-81"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-409">You roll 10 regular 6-sided dice (because you enjoy playing two games of Yahtzee at once).  Assuming the dice are indistinguishable, how many different outcomes are possible?</p></article><article class="exercise-like" id="task-82"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-410">How many functions \(f:[5] \to [7]\) are non-decreasing?  For example, one such function is \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{2 \amp 5 \amp 5 \amp 6 \amp 7}\text{.}\)</p></article></article><article class="project-like" id="act-distributionintro"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">54</span>.</h6>
+<div class="introduction" id="introduction-24"><p id="p-411">Explain why each of the following counting problems are also answered in the form \(\mchoose{n}{k}\) (and say what \(n\) and \(k\) are).  You should be able to explain why all of these are equivalent to each other, and then find a bijection from any of them to the set of \(k\)-element multisets of \([n]\text{.}\)</p></div>
+<article class="exercise-like" id="task-83"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-412">How many non-negative integer solutions are there to the equation \(x_1 + x_2 + x_3 + x_4 = 10\text{?}\)</p></article><article class="exercise-like" id="task-84"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-413">How many ways are there to distribute 7 identical cookies to 5 kids? Some kids might not get any cookies, but you should distribute all 7 cookies.</p></article><article class="exercise-like" id="task-85"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-414">How many ways can you put 10 identical books on the 4 shelves of a bookcase?  Assume each shelf could hold up to 10 books, and that all the books are always shoved all the way to the left (so we are not worried about where the books are on an individual shelf, just which shelf they go on).</p></article></article><p id="p-415">The problems in <a data-knowl="./knowl/act-distributionintro.html" title="Activity 54">Activity 54</a> are sometimes referred to as “distribution problems”, since we are asking for the number of ways to distribute some objects to some recipients.   This is a useful model for the other counting techniques we have seen as well.  For example, a permutation \(P(n,k)\) gives the number of ways to distribute \(n\) distinct objects to \(k\) distinct recipients, so that each recipient gets exactly one object.</p>
+<p id="p-416">The claim implicit in <a data-knowl="./knowl/act-distributionintro.html" title="Activity 54">Activity 54</a> is that the number of ways to distribute \(n\) identical objects to \(k\) distinct recipients (now allowing each recipient to receive any number of objects, including zero) is \(\mchoose{n}{k}\text{.}\)  If this is the case, then we should be able to think of the set of \(k\)-element multisets of \([n]\) as a distribution.</p>
+<article class="project-like" id="activity-28"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">55</span>.</h6>
+<p id="p-417">Consider \(3\)-element multisets of \([5]\text{.}\)  One of these is \(\{1,1,1\}\text{,}\) and another is \(\{2,4,5\}\text{.}\)  How are these two multisets like distributing three objects among 5 recipients?  What are the objects that you are distributing?</p></article><p id="p-418">Now let's consider a related distribution problem, where in some way, order now matters.  In fact, how is it that saying the distribution problems as in <a data-knowl="./knowl/act-distributionintro.html" title="Activity 54">Activity 54</a> are ones for which order doesn't matter?  Look back at our standard example of order mattering or not:</p>
+<article class="project-like" id="activity-29"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">56</span>.</h6>
+<article class="exercise-like" id="task-86"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-419">If \(P(n,k)\) counts the number of ways to distribute \(n\) distinct objects to \(k\) distinct recipients in which each recipient receives exactly one object (do you see why this is?), then what distribution does \(\binom{n}{k}\) count?  Explain what is playing the role of “order mattering” in a distribution problem.</p></article><article class="exercise-like" id="task-87"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-420">We claim that counting the number of ways to distribute \(n\) identical books to \(k\) distinct shelves is counted by \(\mchoose{n}{k}\text{,}\) and this is a situation in which order does not matter (since we are counting multisets).  What would the distribution question be if order did matter?  Explain why the answer to that question is NOT \(n^k\text{.}\) (What distribution does <em class="emphasis">that</em> expression count?)</p></article></article><p id="p-421">Consider the case where the books are distinct instead of identical.  Note also that in the next few activities, the usage of the variables \(k\) and \(n\) are reversed from above.  As you work through these next activities, think about why that choice was made.</p>
+<article class="project-like" id="bookcase"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">57</span>.</h6>
+<div class="introduction" id="introduction-25"><p id="p-422">Suppose we wish to place \(k\) distinct books onto the shelves of a bookcase with \(n\) shelves. For simplicity, assume for now that all of the books would fit on any of the shelves. Also, let's imagine pushing the books on a shelf as far to the left as we can, so that we are only thinking about how the books sit relative to each other, not about the exact places where we put the books. Since the books are distinct, we can think of the first book, the second book and so on.</p></div>
+<article class="exercise-like" id="task-88"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-423">How many places are there where we can place the first book?</p></article><article class="exercise-like" id="task-89"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-425">When we place the second book, if we decide to place it on the shelf that already has a book, does it matter if we place it to the left or right of the book that is already there?</p></article><article class="exercise-like" id="task-90"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-427">How many places are there where we can place the second book?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-50" id="hint-50"><span class="type">Hint</span></a><div id="hk-hint-50" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-428">If you decide to put it on a shelf that already has a book, you have two choices of where to put it on that shelf.</p></div></div>
+</div></article><article class="exercise-like" id="task-91"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-430">Once we have \(i-1\) books placed, if we want to place book \(i\)  on a shelf that already has some books, is sliding it in to the left of all the books already there different from placing it to the right of all the books already or between two books already there?</p></article><article class="exercise-like" id="task-92"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-432">In how many ways may we place the \(i\)th book into the bookcase?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-51" id="hint-51"><span class="type">Hint</span></a><div id="hk-hint-51" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-433">Among all the places you could put books, on all the shelves, how many are to the immediate left of some book? How many other places are there?</p></div></div>
+</div></article><article class="exercise-like" id="task-93"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-435">In how many ways may we place all the books?</p></article></article><p id="p-437">The assignment of which books go to which shelves of a bookcase is simply a function from the books to the shelves. But a function does not determine which book sits to the left of which others on the shelf, and this information is part of how the books are arranged on the shelves. In other words, the order in which the shelves receive their books matters.  Our function must thus assign an ordered list of books to each shelf. We will call such a function an ordered function. More precisely, an <dfn class="terminology">ordered function</dfn> from a set \(S\) to a set \(T\) is a function that assigns an (ordered) list of elements of \(S\) to some, but not necessarily all, elements of \(T\) in such a way that each element of \(S\) appears on one and only one of the lists.<a data-knowl="" class="id-ref" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a><span id="hk-fn-2" class="hidden-content tex2jax_ignore"><span class="footnote">The phrase ordered function is not a standard one, because there is as yet no standard name for the result of an ordered distribution problem.</span></span></p>
+<p id="p-438">We often think of functions as a rule that assigns an output to each input.  However, we could equally well specify a function by giving the complete inverse image of each element of the codomain.  That is, to define a (non-ordered) function \(f:S \to T\text{,}\) we could give the set \(f\inv(t) = \{s \in S \st f(s) = t\}\) for each \(t \in T\text{.}\)  The set of elements sent to \(t\) is a <em class="emphasis">set</em> for a function, but for an ordered function, it is a <em class="emphasis">sequence</em>.</p>
+<article class="theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.3.3</span>.</h6>
+<p id="p-439">The number of ordered functions from a \(k\)-element set to an \(n\)-element set is</p>
+<div class="displaymath">
+\begin{equation*}
+\prod_{i=1}^k (n-1+i) = \frac{(n-1+k)!}{(n-1)!} = P(n-1+k, k).
+\end{equation*}
+</div></article><article class="project-like" id="activity-31"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">58</span>.</h6>
+<article class="exercise-like" id="task-94"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-440">In some sort of manufacturing mishap, your set of magnetic letters contains only the first 7 letters of the alphabet, and for some reason 5 identical exclamation marks.  How many ways can you arrange all 12 magnets in a single line?  (one such line is BG!AD!!!FEC!).</p></article><article class="exercise-like" id="task-95"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-443">What does this question have to do with placing \(7\) distinct books on \(6\) shelves?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-52" id="hint-52"><span class="type">Hint</span></a><div id="hk-hint-52" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-444">Note, there are 5 exclamation marks, but 6 shelves.</p></div></div>
+</div></article><article class="exercise-like" id="task-96"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-447">Oh no! Your 5 year old left the 7 magnetic letters in the oven too long and now they are all identical blobs of plastic.  How many strings of the 12 magnets can you make now?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-53" id="hint-53"><span class="type">Hint</span></a><div id="hk-hint-53" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-448">One such string is *!!***!*!*!, which looks a lot like 01100010101.</p></div></div>
+</div></article><article class="exercise-like" id="task-97"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-450">What sort of distribution problem does the previous task correspond to?  Write a question about books and shelves that has the same answer.</p></article></article><p id="p-452">AHA!  The previous activity suggests that to count multisets, which is the same as counting distributions of identical objects to distinct recipients, we should apply the quotient principle to ordered functions.</p>
+<p id="p-453">What should the equivalence relation be?  Think about bookshelves.  An ordered function is a distribution of distinct books to distinct shelves.  A multiset is a distribution of identical books to distinct shelves.  So we want two ordered functions to be equivalent if their corresponding shelves contain the same number of books (we no longer care what those books are, just how many there are).</p>
+<p id="p-454">Now, given any ordered function, how many ordered functions are in its equivalence class?  We can get any other element in the class by permuting the books (but keeping the numbers in each shelf constant).  There are \(k\) books, so there are \(k!\) ways to permute them.  This is the same for <em class="emphasis">every</em> ordered function, so the equivalence classes all have the same size.</p>
+<p id="p-455">Applying the quotient principle, we arrive at the following.</p>
+<article class="theorem-like" id="thm-multisetsize"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.3.4</span>.</h6>
+<p id="p-456">The number of \(k\)-element multisets of \([n]\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\mchoose{n}{k} = \frac{P(n-1+k, k)}{k!} = \binom{n-1+k}{k}
+\end{equation*}
+</div></article><p id="p-457">It is interesting that the number of \(k\)-element multisets of \([n]\) can be expressed as a binomial coefficient.  This suggests there should be a way to describe a multiset as choosing \(k\) things from a collection of \(n-1+k\) things. Or perhaps thinking about each multiset as a \((n-1+k)\)-bit string of weight \(k\text{.}\)</p>
+<p id="p-458">There is a standard interpretation for this.  We call this approach <dfn class="terminology">stars and bars</dfn> (others use <em class="emphasis">balls and wall</em> or <em class="emphasis">dashes and slashes</em>; the important thing is that it rhymes).  The idea is that we represent each multiset as a string of \(k\) “stars” and \(n-1\) “bars”.  These are really just bit strings in disguise, so the binomial coefficient becomes clear.  The only question is how do multisets correspond to the strings?</p>
+<article class="project-like" id="activity-32"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">59</span>.</h6>
+<div class="introduction" id="introduction-26"><p id="p-459">Consider \(4\)-element multisets of \([3]\text{.}\)  Using the formula above, there are \(\binom{6}{4} = 15\) of these.  There are also \(\binom{6}{4}\) stars and bars strings using \(4\) stars and \(2\) bars.</p></div>
+<article class="exercise-like" id="task-98"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-460">Write out all 15 multisets and all 15 stars and bars strings.  Find a bijection between these that makes sense.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span></a><div id="hk-hint-54" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-461">The multiset \(\{1,2, 2, 3\}\) should correspond to the string \(*|**|*\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="task-99"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-462">Why does it make sense that there are only 2 bars in these diagrams, but 3 elements that can go into the multiset?</p></article><article class="exercise-like" id="task-100"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-463">What would go wrong if we used 3 bars and 3 stars (that is, confused \(n\) and \(k\))?  Why does \(*||**|\) not make sense as a multiset here?</p></article></article><p id="p-464">Thinking of these distribution problems as “stars and bars problems” can make solving them very quick.  The key step is deciding what part of the problem the stars correspond to, and what the bars correspond do.  The remaining exercises here should give you some practice with this.</p>
+<article class="project-like" id="exploration-28"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">60</span>.</h6>
+<p id="p-465">Each of the counting problems below can be solved with stars and bars. For each, say what outcome the string</p>
+<div class="displaymath">
+\begin{equation*}
+***|*||**|
+\end{equation*}
+</div>
+<p>represents, if there are the correct number of stars and bars for the problem. Otherwise, say why the diagram does not represent any outcome, and what a correct diagram would look like.</p>
+<ol class="decimal">
+<li id="li-36"><p id="p-466">How many ways are there to select a handful of 6 jellybeans from a jar that contains 5 different flavors?</p></li>
+<li id="li-37"><p id="p-467">How many ways can you distribute 5 identical lollipops to 6 kids?</p></li>
+<li id="li-38"><p id="p-468">How many 6-letter words can you make using the 5 vowels in increasing order?</p></li>
+<li id="li-39"><p id="p-469">How many solutions are there to the equation \(x_1 + x_2 + x_3 + x_4 = 6\text{.}\)</p></li>
+</ol></article><article class="project-like" id="act_multisetoutro"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">61</span>.</h6>
+<div class="introduction" id="introduction-27"><p id="p-475">In <a data-knowl="./knowl/act_multisetintro.html" title="Activity 53">Activity 53</a> and <a data-knowl="./knowl/act-distributionintro.html" title="Activity 54">Activity 54</a> you considered some counting questions we claimed could be expressed as multisets.  Now solve each of these using stars and bars and the formula in <a data-knowl="./knowl/thm-multisetsize.html" title="Theorem 1.3.4">Theorem 1.3.4</a>.  Be sure to clearly state which part of the problem corresponds to the stars and which to the bars, and why this makes sense.</p></div>
+<article class="exercise-like" id="task-101"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-476">If you have an unlimited supply of pennies, nickels, dimes and quarters, how many handfuls of 7 coins can you grab?</p></article><article class="exercise-like" id="task-102"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-477">How many non-negative integer solutions are there to the equation \(x_1 + x_2 + x_3 + x_4 = 10\text{?}\)</p></article><article class="exercise-like" id="task-103"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-478">You roll 10 regular 6-sided dice (because you enjoy playing two games of Yahtzee at once).  Assuming the dice are indistinguishable, how many different outcomes are possible?</p></article><article class="exercise-like" id="task-104"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-479">How many ways are there to distribute 7 identical cookies to 5 kids? Some kids might not get any cookies, but you should distribute all 7 cookies.</p></article><article class="exercise-like" id="task-105"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-480">How many functions \(f:[5] \to [7]\) are non-decreasing?  For example, one such function is \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{2 \amp 5 \amp 5 \amp 6 \amp 7}\text{.}\)</p></article><article class="exercise-like" id="task-106"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-481">How many ways can you put 10 identical books on the 4 shelves of a bookcase?  Assume each shelf could hold up to 10 books, and that all the books are always shoved all the way to the left (so we are not worried about where the books are on an individual shelf, just which shelf they go on).</p></article></article></section><section class="subsection" id="subsec-moredistributions"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.3</span> <span class="title">More Distribution Problems</span>
+</h3>
+<a href="sec_basic-quotient.html#subsec-moredistributions" class="permalink">¶</a><p id="p-482">Both multisets and ordered functions allowed some of the recipients to receive nothing (or for some elements of \([n]\) to not be included in the multiset).  What if we didn't want to allow this?</p>
+<article class="project-like" id="bookcaseeveryshelf"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">62</span>.</h6>
+<p id="p-483">Suppose we wish to place the books in <a data-knowl="./knowl/bookcase.html" title="Activity 57">Activity 57</a> (satisfying the assumptions we made there) so that each shelf gets at least one book. Now in how many ways may we place the books? (Hint: how can you make sure that each shelf gets at least one book before you start the process described in <a data-knowl="./knowl/bookcase.html" title="Activity 57">Activity 57</a>?)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span></a><div id="hk-hint-55" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-484">How can you make sure that each shelf gets at least one book before you start the process described in <a data-knowl="./knowl/bookcase.html" title="Activity 57">Activity 57</a>?</p></div></div>
+</div></article><p id="p-486">The previous activity is an example of what we might call an <dfn class="terminology">ordered surjection</dfn>.  Just like we did with ordered functions, we can apply the quotient principle to count distributions where the objects being distributed are no longer distinct.</p>
+<article class="project-like" id="exploration-30"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">63</span>.</h6>
+<p id="p-487">In how many ways may we put \(k\) identical books onto \(n\) shelves if each shelf must get at least one book?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span></a><div id="hk-hint-56" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-488">We already know how to place \(k\) distinct books onto \(n\) distinct shelves so that each shelf gets at least one. Suppose we replace the distinct books with identical ones. If we permute the distinct books before replacement, does that affect the final outcome? There are other ways to solve this problem.</p></div></div>
+</div></article><article class="example-like" id="compositionagian"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.5</span>.</h6>
+<p id="p-490">A <dfn class="terminology">composition</dfn> of the integer \(k\) into \(n\) parts is a list of \(n\) positive integers that add to \(k\text{.}\)  How many compositions are there of an integer \(k\) into \(n\) parts?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span></a><div id="hk-solution-53" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-491">There is a bijection between compositions of \(k\) into \(n\) parts and arrangements of \(k\) identical books on \(n\) shelves so that each shelf gets a book. Namely, the number of books on shelf \(i\) is the \(i\)th element of the list. Thus the number of compositions of \(k\) into \(n\) parts is \(\binom{k-1}{n-1}\text{.}\)</p></div></div>
+</div></article><article class="example-like" id="example-17"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.3.6</span>.</h6>
+<p id="p-492">The answer in <a data-knowl="./knowl/compositionagian.html" title="Example 1.3.5">Example 1.3.5</a> can be expressed as a binomial coefficient. This means it should be possible to interpret a composition as a subset of some set. Find a bijection between compositions of \(k\) into \(n\) parts and certain subsets of some set.  Explain explicitly how to get the composition from the subset and the subset from the composition.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span></a><div id="hk-solution-54" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-493">If we line up \(k\) identical books, there are \(k-1\) places in between two books. If we choose \(n-1\) of these places and slip dividers into those places, then we have a first clump of books, a second clump of books, and so on. The \(i\)th element of our list is the number of books in the \(i\)th clump. Clearly using books is irrelevant; we could line up any \(k\) identical objects and make the same argument. Our bijection is between compositions and \((n-1)\)-element subsets of the set of \(k-1\) spaces between our objects.</p></div></div>
+</div></article><article class="project-like" id="act-comp-dist"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">64</span>.</h6>
+<p id="p-494">Explain the connection between compositions of \(k\) into \(n\) parts and the problem of distributing \(k\) identical objects to \(n\) recipients so that each recipient gets at least one.</p></article><article class="project-like" id="exploration-32"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">65</span>.</h6>
+<div class="introduction" id="introduction-28"><p id="p-496">The previous exercise suggests that you can represent compositions as stars and bars strings as well.</p></div>
+<article class="exercise-like" id="task-107"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-497">Consider the composition of 5 into 3 parts: \(1+3+1\text{.}\)  This is like giving 1 apple to the first kid, 3 to the second, and 1 to the last.  What stars and bars string would you use for this?</p></article><article class="exercise-like" id="task-108"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-498">Explain why \(*||****\) does not represent any composition.  What must be true of a stars and bars string for it to correspond to a composition?</p></article><article class="exercise-like" id="task-109"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-499">Use your classification of valid stars and bars strings to justify that there are \(\binom{k-1}{n-1}\) compositions of \(k\) into \(n\) parts.</p></article></article><p id="p-500">So far, we have only considered distribution problems in which the recipients are distinct.  There are plenty of situations where we would want to consider recipients identical.  For example, a problem we will take up in <a href="ch_advanced.html" class="internal" title="Chapter 2: Advanced Combinatorics">Chapter 2</a> is how many ways we can partition an integer.  For example, we could partition 5 as \(4+1\) or \(3+1+1\text{,}\) but we would not want to also count \(1+4\) or \(1+3+1\) (doing so would be creating a <em class="emphasis">composition</em>, which we have already considered).  We can think of the integer partition problem as distributing the 5 units that make up 5 into some number of identical bins.</p>
+<p id="p-501">Here is another example, which we already have the tools to address.</p>
+<article class="project-like" id="brokenpermutation"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">66</span>.</h6>
+<p id="p-502">In how many ways may we stack \(k\) distinct books into \(n\) identical boxes so that there is a stack in every box? There are two distinct ways to answer this question.  Find them both.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-57" id="hint-57"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-57" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-503">Imagine taking a stack of \(k\) books, and breaking it up into stacks to put into the boxes in the same order they were originally stacked. If you are going to use \(n\) boxes, in how many places will you have to break the stack up into smaller stacks, and how many ways can you do this?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-58" id="hint-58"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-58" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-504">How many different bookcase arrangements correspond to the same way of stacking \(k\) books into \(n\) boxes so that each box has at least one book?</p></div></div>
+</div></article><p id="p-507">We can think of stacking books into identical boxes as partitioning the books and then ordering the blocks of the partition. This turns out not to be a useful computational way of visualizing the problem because the number of ways to order the books in the various stacks depends on the sizes of the stacks and not just the number of stacks. However this way of thinking actually led to the first hint in <a data-knowl="./knowl/brokenpermutation.html" title="Exercise 66">Exercise 66</a>. Instead of dividing a set up into non-overlapping parts, we may think of dividing a <em class="emphasis">permutation</em> (thought of as a list) of our \(k\) objects up into \(n\) ordered blocks. We will say that a set of ordered lists of elements of a set \(S\) is a <dfn class="terminology">broken permutation</dfn>   of \(S\) if each element of \(S\) is in one and only one of these lists.<a data-knowl="" class="id-ref" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a><span id="hk-fn-3" class="hidden-content tex2jax_ignore"><span class="footnote">The phrase broken permutation is not standard, because there is no standard name for the solution to this kind  of distribution problem.</span></span> The number of broken permutations of a \(k\)-element set with \(n\) blocks is denoted by \(L(k,n)\text{.}\) The number \(L(k,n)\) is called a <dfn class="terminology">Lah Number</dfn> and, from our solution to <a data-knowl="./knowl/brokenpermutation.html" title="Exercise 66">Exercise 66</a>, is equal to \(k!\binom{k-1}{n-1}/n!\text{.}\)</p>
+<p id="p-508">The Lah numbers are the solution to the question “In how many ways may we distribute \(k\) distinct objects to \(n\) identical recipients if order matters and each recipient must get at least one?”</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

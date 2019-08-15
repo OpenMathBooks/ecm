@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:37:11-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.4.10</span>.</h6>
+<p>The generating function for the number of partitions of an integer into parts of any size is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-x^2)(1-x^3) \cdots} = (1+x+x^2+x^3+\cdots)(1+x^2+x^4+\cdots)(1+x^3+\cdots)\cdots\text{.}
+\end{equation*}
+</div>
+<p>The coefficient of \(x^4\) is 5.  Where does this come from exactly?</p>
+<p>First notice that the \(x^4\) in the second factor is really \(x^{2\cdot 2}\text{.}\)  That is, while the first factor's \(x^4\) represents using four 1's, the second factor's \(x^4\) comes from \((x^2)^2\) so represents using two 2's. The fourth factor's \(x^4\) means one 4.</p>
+<p>Here are all the ways of forming \(x^4\) using the first four factors (we would never need anything beyond this), and their corresponding partition.</p>
+<div class="displaymath">
+\begin{align*}
+1\cdot1 \cdot 1 \cdot  x^4 \amp \leftrightarrow  (4) \\
+x\cdot 1 \cdot x^3\cdot 1 \amp \leftrightarrow  (3,1) \\
+1 \cdot x^4 \cdot 1\cdot 1 \amp \leftrightarrow  (2,2) \\
+x^2\cdot x^2\cdot 1 \cdot 1 \amp \leftrightarrow  (2,1,1) \\
+x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1) 
+\end{align*}
+</div></article><span class="incontext"><a href="sec_adv-linearparts.html#genfunpartitions">in-context</a></span>
+</body>
+</html>

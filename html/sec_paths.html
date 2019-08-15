@@ -1,0 +1,364 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:19-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Walking Around Graphs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_gt-intro.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_graphtheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_planar.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_gt-intro.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_graphtheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_planar.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths" class="active">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_paths"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Walking Around Graphs</span>
+</h2>
+<a href="sec_paths.html" class="permalink">¶</a><section class="introduction" id="introduction-73"><article class="project-like" id="investigation-5"><h6 class="heading">
+<span class="type">Puzzle</span> <span class="codenumber">281</span>.</h6>
+<p id="p-1533">On the table rest 8 dominoes, as shown below.  If you were to line them up in a single row, so that any two sides touching had matching numbers, what would the sum of the two end numbers be?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:1.25%;margin-right:1.25%;">
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-66.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-67.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-68.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-69.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-70.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-71.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-72.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:10.2564102564103%;justify-content:flex-start;"><img src="images/image-73.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><p id="p-1534">How might you use graph theory to solve the puzzle above?  One thing to try would be to create a graph consisting of six vertices, one for each value that appears on the dominoes.  Then connect the vertices if their numbers belong to the same domino.  This seems reasonable, but then how would you represent the line of matched up dominoes the puzzle requests?</p>
+<p id="p-1535">Say you start with domino \((4,6)\text{.}\)  That is an edge in our graph.  Next we need to place a domino with a 6 on it (or a 4, but let's say the 4 will be an endpoint).  This amounts to selecting another edge, one that is incident to the vertex 6.  Say we pick \((6,5)\text{.}\)  The edge we must select after that will need to be incident to vertex 5.  And so on.</p>
+<p id="p-1536">The edges we select in the graph need to be linked up.  It makes sense to think about the selection of edges as traveling through the graph, moving along edges from vertex to vertex.  Let's capture this notion carefully.</p>
+<article class="definition-like" id="def-walk"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.1</span>.</h6>
+<p id="p-1537">A <dfn class="terminology">walk</dfn> in a graph \(G = (V,E)\) is a sequence of vertices \(v_0, v_1, v_2, \ldots, v_n\) such that \(\{v_i, v_{i+1}\} \in E\) for all \(0 \le i \lt n\text{.}\)  That is, consecutive vertices in the sequence are adjacent in the graph.</p>
+<p id="p-1538">A <dfn class="terminology">trail</dfn> is a walk that does not repeat any edges.  If the trail starts and ends at the same vertex (i.e., \(v_1 = v_n\)) then it is called a <dfn class="terminology">circuit</dfn></p>
+<p id="p-1539">A <dfn class="terminology">path</dfn> is a trail that does not repeat any vertices, except perhaps for \(v_0 = v_n\text{.}\)  In the case that \(v_0 = v_n\text{,}\) the path is called a <dfn class="terminology">cycle</dfn>.</p></article><p id="p-1540">Do these definitions capture what a walk/trail/path should mean in a graph?  All three of these describe ways in which to move around in the graph, perhaps tracing along the edges without lifting up your pencil.</p>
+<p id="p-1541">Note: some sources give slightly different definitions for these concepts.  For example, sometimes a walk is defined as a alternating sequence of vertices and edges \(v_1e_1v_2e_2v_3\cdots e_{n-1}v_n\) with the requirement that \(v_i\) is incident to \(e_i\text{,}\) which is incident to \(v_{i+1}\text{.}\)  We have not named our edges, so this definition would not make sense.  Another common way to define <em class="emphasis">path</em> is as a subgraph isomorphic to \(P_n\) for some \(n\text{.}\)  This is almost equivalent to our definition, except that we allow our paths to possibly be isomorphic to \(C_n\) for some \(n\) as well.  Some sources use <em class="emphasis">path</em> where we use <em class="emphasis">walk</em> and use <em class="emphasis">simple path</em> where we use <em class="emphasis">path</em>.</p>
+<p id="p-1542">Walks and paths are useful for considering all sorts of graph theoretic concepts.  For example, you might want to find the <dfn class="terminology">distance</dfn> between two vertices.  This would be defined as the shortest path starting at one and ending at the other (where the <dfn class="terminology">length</dfn> of a path is the number of edges in it).  If you have a notion of distance, you can define the <em class="emphasis">center</em> and <em class="emphasis">radius</em> of a graph.  Graphs are <em class="emphasis">connected</em> provided between any two vertices, there is a path (or equivalently, a walk).</p></section><section class="subsection" id="subsec_eulerpaths"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Euler paths and circuits</span>
+</h3>
+<a href="sec_paths.html#subsec_eulerpaths" class="permalink">¶</a><p id="p-1543">To solve the domino problem, as well as the Bridges of Königsberg, we need to consider walks that use every edge exactly once.</p>
+<article class="definition-like" id="def-eulerpath"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2.2</span>.</h6>
+<p id="p-1544">A walk in a graph that uses every edge exactly once is called an <dfn class="terminology">Euler path</dfn>.  An Euler path that starts and ends at the same vertex is called an <dfn class="terminology">Euler circuit</dfn>.</p></article><p id="p-1545">Although it is tradition, <em class="emphasis">Euler path</em> is a bad name.  These should be called an <dfn class="terminology">Euler trail</dfn> or <dfn class="terminology">Euler walk</dfn>, since by our definitions, an Euler path is usually not a path at all.  An Euler circuit is also sometimes called an <dfn class="terminology">Euler tour</dfn>.</p>
+<article class="project-like" id="activity-118"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">282</span>.</h6>
+<div class="introduction" id="introduction-74"><p id="p-1546">Our goal is to find a quick way to check whether a graph (or multigraph) has an Euler path or circuit.</p></div>
+<article class="exercise-like" id="task-254"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1547">Which of the graphs/multigraphs below have Euler paths? Which have Euler circuits?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0.75%;margin-right:0.75%;">
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:flex-end;"><img src="images/image-74.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:18.2741116751269%;justify-content:flex-end;"><img src="images/image-75.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:36.5482233502538%;justify-content:flex-end;"><img src="images/image-76.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:22.3350253807107%;justify-content:flex-end;"><img src="images/image-77.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></article><article class="exercise-like" id="task-255"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1548">List the degrees of each vertex of the (multi)graphs above. Is there a connection between degrees and the existence of Euler paths and circuits?</p></article><article class="exercise-like" id="task-256"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1549">Is it possible for a graph with a degree 1 vertex to have an Euler circuit? If so, draw one. If not, explain why not. What about an Euler path?</p></article><article class="exercise-like" id="task-257"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1550">What if every vertex of the graph has degree 2. Is there an Euler path? An Euler circuit? Draw some graphs.</p></article><article class="exercise-like" id="task-258"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1551">Below is <em class="emphasis">part</em> of a graph. Even though you can only see some of the vertices, can you deduce whether the graph will have an Euler path or circuit?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:23%;margin-right:23%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-78.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article></article><p id="p-1552">So what does it take for a graph to have an Euler path or circuit?  Of course if a graph is not connected, there is no hope of finding such a path or circuit. For the rest of this section, assume all the graphs discussed are connected.</p>
+<p id="p-1553">The bridges of Königsberg problem is really a question about the existence of Euler paths. There will be a route that crosses every bridge exactly once if and only if the multigraph below has an Euler path:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:39%;margin-right:39%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-79.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1554">This graph is small enough that we could actually check every possible walk that does not reuse edges, and in doing so convince ourselves that there is no Euler path (let alone an Euler circuit). On small graphs which do have an Euler path, it is usually not difficult to find one. Our goal is to find a quick way to check whether a graph has an Euler path or circuit, even if the graph is quite large.</p>
+<p id="p-1555">One way to guarantee that a graph does <em class="emphasis">not</em> have an Euler circuit is to include a “spike,” a vertex of degree 1.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:38.5%;margin-right:38.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-80.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1556">The vertex \(a\) has degree 1, and if you try to make an Euler circuit, you see that you will get stuck at the vertex. It is a dead end. That is, unless you start there. But then there is no way to return, so there is no hope of finding an Euler circuit. There is however an Euler path. It starts at the vertex \(a\text{,}\) then loops around the triangle. You will end at the vertex of degree 3.</p>
+<p id="p-1557">You run into a similar problem whenever you have a vertex of any odd degree. If you start at such a vertex, you will not be able to end there (after traversing every edge exactly once). After using one edge to leave the starting vertex, you will be left with an even number of edges emanating from the vertex. Half of these could be used for returning to the vertex, the other half for leaving. So you return, then leave. Return, then leave. The only way to use up all the edges is to use the last one by leaving the vertex. On the other hand, if you have a vertex with odd degree that you do not start a path at, then you will eventually get stuck at that vertex. The path will use pairs of edges incident to the vertex to arrive and leave again. Eventually all but one of these edges will be used up, leaving only an edge to arrive by, and none to leave again.</p>
+<p id="p-1558">What all this says is that if a graph has an Euler path and two vertices with odd degree, then the Euler path must start at one of the odd degree vertices and end at the other. In such a situation, every other vertex <em class="emphasis">must</em> have an even degree since we need an equal number of edges to get to those vertices as to leave them. How could we have an Euler circuit? The graph could not have any odd degree vertex as an Euler path would have to start there or end there, but not both. Thus for a graph to have an Euler circuit, all vertices must have even degree.</p>
+<p id="p-1559">So there is clearly a connection between the parity of vertex degrees and Euler paths and circuits.  Here are two theorems the describe that connection.</p>
+<article class="theorem-like" id="thm-eulercircuit"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.3</span>.</h6>
+<p id="p-1560">A connected graph has an Euler circuit if and only if the degree of every vertex is even.</p></article><article class="theorem-like" id="thm-eulerpath"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.2.4</span>.</h6>
+<p id="p-1561">A connected graph has an Euler path if and only if there are at most two vertices with odd degree.</p></article><p id="p-1562">Note that these theorems answer the bridges of Königsberg problem.  The graph has all four vertices with odd degree, there is no Euler path through the graph.  Thus there is no way for the townspeople to cross every bridge exactly once.</p></section><section class="subsection" id="subsection-34"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Proofs for Euler Paths and Circuits</span>
+</h3>
+<p id="p-1563">Let's try to prove <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorems 3.2.3</a> and <a data-knowl="./knowl/thm-eulerpath.html" title="Theorem 3.2.4">Theorem 3.2.4</a>.  Actually, we really only need to prove one of these, and the other one should follow from it.</p>
+<article class="project-like" id="activity-119"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">283</span>.</h6>
+<div class="introduction" id="introduction-75"><p id="p-1564">Suppose we have already proved <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorem 3.2.3</a>, that a graph has an Euler circuit if and only if every vertex has even degree.  Suppose now we want to prove <a data-knowl="./knowl/thm-eulerpath.html" title="Theorem 3.2.4">Theorem 3.2.4</a>, that a graph has an Euler path if and only if it has at most two odd degree vertices.</p></div>
+<article class="exercise-like" id="task-259"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1565">Given a graph with an Euler path, how can you get a graph that definitely has an Euler circuit?  How did this affect the number of odd degree vertices?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-178" id="hint-178"><span class="type">Hint</span></a><div id="hk-hint-178" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1566">Add something to your graph so you can “finish” the Euler path.  Don't forget to consider the case that the start and end vertex are already adjacent.</p></div></div>
+</div></article><article class="exercise-like" id="task-260"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1570">Given a graph with at most two odd degree vertices, build a graph that has only even degree vertices.  If you have an Euler circuit of your new graph, what would that Euler circuit become if you looked at your original graph?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-179" id="hint-179"><span class="type">Hint</span></a><div id="hk-hint-179" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1571">If there are no odd degree vertices, you are done.  If there are two, you could connect them with an edge, except maybe they are already adjacent.  What could you do then?</p></div></div>
+</div></article><article class="exercise-like" id="task-261"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1574">What do each of the above tasks demonstrate?  That is, write a proof of <a data-knowl="./knowl/thm-eulerpath.html" title="Theorem 3.2.4">Theorem 3.2.4</a> assuming <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorem 3.2.3</a>.  Make sure you specify how each “direction” (implication and converse) of the proof is established by the tasks above.</p></article></article><p id="p-1577">Good, so we only need to prove <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorem 3.2.3</a>.</p>
+<article class="project-like" id="activity-120"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">284</span>.</h6>
+<p id="p-1578">Which of the two implications will be easier to prove?  State both implications and say specifically what it would take to prove each.  Say what would be required both for doing a direct proof and a proof by contrapositive.</p></article><article class="project-like" id="activity-121"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">285</span>.</h6>
+<p id="p-1579">Suppose you had a graph and were given an Euler circuit for that graph.  How might you represent that Euler circuit?  If you listed each edge in order, where each edge was given as a pair of vertices, how many times would each vertex appear in the list?  What have you just shown?</p></article><p id="p-1582">The other direction is harder.  If you know every vertex has even degree, you must now show there is an Euler circuit.  One thing you could do is to give a procedure for building one.  But then you must prove that this procedure is correct.  We will come back to this question when we look at mathematical induction.</p></section><section class="subsection" id="subsection-35"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Hamilton Paths</span>
+</h3>
+<p id="p-1583">Suppose you wanted to tour Königsberg in such a way where you visit each land mass (the two islands and both banks) exactly once. This can be done. In graph theory terms, we are asking whether there is a path which visits every vertex exactly once. Such a path is called a <dfn class="terminology">Hamilton path</dfn> (or <dfn class="terminology">Hamiltonian path</dfn>).  We could also consider <dfn class="terminology">Hamilton cycles</dfn>, which are Hamilton paths which start and stop at the same vertex.</p>
+<article class="example-like" id="example-46"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.2.5</span>.</h6>
+<p id="p-1584">Determine whether the graphs below have a Hamilton path.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-81.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-82.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-219" id="solution-219"><span class="type">Solution</span></a><div id="hk-solution-219" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-1585">The graph on the left has a Hamilton path (many different ones, actually), as shown here:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-83.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="p-1586">The graph on the right does not have a Hamilton path.  You would need to visit each of the “outside” vertices, but as soon as you visit one, you get stuck.  Note that this graph does not have an Euler path, although there are graphs with Euler paths but no Hamilton paths.</p>
+</div></div>
+</div></article><p id="p-1587">It appears that finding Hamilton paths would be easier because graphs often have more edges than vertices, so there are fewer requirements to be met. However, nobody knows whether this is true. There is no known simple test for whether a graph has a Hamilton path. For small graphs this is not a problem, but as the size of the graph grows, it gets harder and harder to check whether there is a Hamilton path. In fact, this is an example of a question which as far as we know is too difficult for computers to solve; it is an example of a problem which is NP-complete.</p>
+<p id="p-1588">While a complete classification for which graphs have Hamilton paths is hard, there are some simpler things we can say.  The following is one example.</p>
+<article class="project-like" id="activity-122"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">286</span>.</h6>
+<div class="introduction" id="introduction-76">
+<p id="p-1589">Consider the following graph:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:36%;margin-right:36%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-84.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</div>
+<article class="exercise-like" id="task-262"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1590">Find a Hamilton path.  Can your path be extended to a Hamilton cycle?</p></article><article class="exercise-like" id="task-263"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1592">Is the graph bipartite? If so, how many vertices are in each “part”?</p></article><article class="exercise-like" id="task-264"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1594">Use your answer to part (b) to prove that the graph has no Hamilton cycle.</p></article><article class="exercise-like" id="task-265"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1597">Suppose you have a bipartite graph \(G\) in which one part has at least two more vertices than the other.  Prove that \(G\) does not have a Hamilton path.</p></article></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

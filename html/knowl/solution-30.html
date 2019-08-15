@@ -1,0 +1,27 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:37-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">39.1</span>.</h6>
+<p>The right-hand side, \(n!\text{,}\) gives the number of permutations of \(n\) objects. So the left-hand side must provide the same enumeration. The left side partitions the permutations according to how many elements are deranged (and the rest fixed). The term \(\binom{n}{i} d_{i} = \binom{n}{n - i} d_{i}\) gives the number of permutations of \(n\) where \(n - i\) elements are fixed and the remaining \(i\) elements are deranged. Summing over all \(i\) yields</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{n} d_{0} + \binom{n}{n - 1} d_{1} + \cdots + \binom{n}{0} d_{n} = \binom{n}{0} d_{0} + \binom{n}{1} d_{1} + \cdots + \binom{n}{n} d_{n} = n!
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec_basic-proofs.html#solution-30">in-context</a></span>
+</body>
+</html>

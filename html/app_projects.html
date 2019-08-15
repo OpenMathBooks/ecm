@@ -1,0 +1,661 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:22-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Group Projects</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="backmatter.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ch_background.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="backmatter.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ch_background.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link active">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="appendix" id="app_projects"><h2 class="heading hide-type">
+<span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title">Group Projects</span>
+</h2>
+<a href="app_projects.html" class="permalink">¶</a><section class="introduction" id="introduction-94"><ol id="p-1879" class="decimal">
+<li id="li-84">Paths and Binomial Coefficients</li>
+<li id="li-85">On Triangular Number</li>
+<li id="li-86">Fibonacci Numbers</li>
+<li id="li-87">Generalized Pascal Triangles</li>
+<li id="li-88">A Pascal-like Triangle of Eulerian Numbers</li>
+<li id="li-89">Leibniz Harmonic Triangle</li>
+<li id="li-90">The Twelve Days of Christmas</li>
+</ol></section><section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 1: Paths and Binomial Coefficients</span>
+</h3>
+<article class="exercise-like" id="ex-count-paths"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1880">A path consists of vertical and horizontal line segments of length 1. Determine the number of paths</p>
+<ol class="lower-alpha">
+<li id="li-91"><p id="p-1881">of length 7 from the origin \(\left( 0,0 \right)\) and \((4,3)\) .</p></li>
+<li id="li-92"><p id="p-1882">of length \(a + b\) from \(\left( 0,0 \right)\) and \((a,b)\) .</p></li>
+</ol></article><article class="exercise-like" id="ex-paths-on-lines"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1883">A lattice point in the plane is a point \((m,n)\) with \(m,n \in \Z\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-93"><p id="p-1884">How many paths of length 4 are there from \((0,0)\) to lattice points on the line \(y = - x + 4\) ?</p></li>
+<li id="li-94"><p id="p-1885">Determine the number of paths of length 10 from \((0,0)\) to the lattice points on \(y = 10 - x\) .</p></li>
+</ol></article><article class="exercise-like" id="exercise-3"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1886">Give a geometrical (path argument) for the identity \(2^{n} =
+\binom{n}{0}
++
+\binom{n}{1}
++ \ldots +
+\binom{n}{n}\) using the idea in <a data-knowl="./knowl/ex-paths-on-lines.html" title="Exercise A.2">Exercise A.2</a>.</p></article><article class="exercise-like" id="exercise-4"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1887">Generalize <a data-knowl="./knowl/ex-count-paths.html" title="Exercise A.1">Exercise A.1</a> to three dimensions; introduce obstructions; use inclusion-exclusion.</p></article><article class="exercise-like" id="exercise-5"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1888">Give a path proof for \(\binom{n}{k}
+=
+\binom{n - 1}{k}
++
+\binom{n - 1}{k - 1}\) .</p></article><article class="exercise-like" id="exercise-6"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1889">How many lattice paths from \(\left( 0,0 \right)\) to all lattice points on the line \(x + 2y = n\) are there?</p></article><article class="exercise-like" id="ex-paths-to-plane"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-1890">Determine the number of lattice paths from \(\left( 0,0,0 \right)\) to lattice points on that portion of the plane \(x + y + z = 2\) that lies in the first octant.</p></article><article class="exercise-like" id="exercise-8"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-1891">Generalize <a data-knowl="./knowl/ex-paths-to-plane.html" title="Exercise A.7">Exercise A.7</a>.</p></article><article class="exercise-like" id="exercise-9"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-1892">Determine the number of lattice paths from \(\left( 0,0 \right)\) to \((n,n)\) that do not cross over (they may touch) the line \(y = x\text{.}\)</p></article></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 2: On Triangular Numbers</span>
+</h3>
+<section class="introduction" id="introduction-95"><p id="p-1893">Let \(T_{n} = \frac{n\left( n + 1 \right)}{2}\) denote the \(n^{\text{th}}\) triangular number.</p></section><article class="exercise-like" id="exercise-10"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1894">Give a geometric interpretation for \(T_{n} + T_{n + 1} = \left( n + 1 \right)^{2}.\)</p></article><article class="exercise-like" id="exercise-11"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1895">Verify that \(T_{n} + T_{m} + mn = T_{m + n}\) algebraically.</p></article><article class="exercise-like" id="exercise-12"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1896">Give a geometric interpretation of the formula in Problem 2.</p></article><article class="exercise-like" id="exercise-13"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1897">Verify that \(T_{n}^{2} + T_{n - 1}^{2} = T_{n^{2}}\) .</p></article><article class="exercise-like" id="exercise-14"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1898">Verify the following:</p>
+<ol class="lower-alpha">
+<li id="li-95"><p id="p-1899">\(3T_{n} + T_{n + 1} = T_{2n + 1}\)</p></li>
+<li id="li-96"><p id="p-1900">\(3T_{n} + T_{n - 1} = T_{2n}\) (also give a geometrical proof)</p></li>
+</ol></article><article class="exercise-like" id="exercise-15"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1901">Determine the values \(T_{6},T_{66},T_{666},T_{6666},\ldots\) . Make a general statement and prove it.</p></article><article class="exercise-like" id="exercise-16"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-1902">Determine the formula for \(T_{3} + T_{6} + T_{9} + \ldots + T_{3n}.\)</p></article><article class="exercise-like" id="exercise-17"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-1903">Verify:</p>
+<ol class="lower-alpha">
+<li id="li-97"><p id="p-1904">\(1 + 3 + 6 + 10 + 15 = 1^{2} + 3^{2} + 5^{2}\)</p></li>
+<li id="li-98"><p id="p-1905">\(1 + 3 + 6 + 10 + 15 + 21 = 2^{2} + 4^{2} + 6^{2}\)</p></li>
+<li id="li-99"><p id="p-1906">Generalize and prove your generalization.</p></li>
+</ol></article></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 3: Fibonacci</span>
+</h3>
+<article class="exercise-like" id="exercise-18"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1907">Briefly address history.</p></article><article class="exercise-like" id="exercise-19"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1908">Using a variety of proof methods (geometric, induction, matrices, recursion, telescoping sum) prove identities such as:</p>
+<ol class="lower-alpha">
+<li id="li-100"><p id="p-1909">\(F_{1} + F_{2} + \ldots + F_{n} = F_{n + 2} - 1\)</p></li>
+<li id="li-101"><p id="p-1910">\(F_{1}^{2} + F_{2}^{2} + \ldots + F_{n}^{2} = F_{n}F_{n + 1}\)</p></li>
+<li id="li-102"><p id="p-1911">\(F_{n + 1}^{2} - F_{n}F_{n + 2} = \left( - 1 \right)^{n}\)</p></li>
+<li id="li-103"><p id="p-1912">\(F_{n + 2} = \binom{n + 1}{0} + \binom{n}{1} + \binom{n - 1}{2} + \cdots\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-20"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1913">Prove the “Binet Formula,” \(F_{n} = \frac{\alpha^{n} - \beta^{n}}{\alpha - \beta}\) , where \(\alpha,\beta\) satisfy \(x^{2} - x - 1 = 0\) .</p>
+<ol class="lower-alpha">
+<li id="li-104"><p id="p-1914">By induction.</p></li>
+<li id="li-105"><p id="p-1915">Using generating series.</p></li>
+</ol></article><article class="exercise-like" id="exercise-21"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1916">Use the Binet Formula to prove,</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{n}{0}F_{0} + \binom{n}{1} F_{1} + \ldots + \binom{n}{n}F_{0} = F_{2n}.
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-22"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1917">Investigate the geometric interpretations of the \(F_{n}\) .</p></article><article class="exercise-like" id="exercise-23"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1918">Prove that,</p>
+<div class="displaymath">
+\begin{equation*}
+F_{n} = \left\lbrack \binom{n}{1}  + \binom{n}{3} 5 + \binom{n}{5} 5^{2}\ldots \right\rbrack + \left\lbrack \binom{n}{0}  + \binom{n}{2}  + \binom{n}{4}  + \ldots \right\rbrack.
+\end{equation*}
+</div></article><article class="exercise-like" id="exercise-24"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-1919">Let \(Q =\begin{pmatrix}1 \amp 1 \\ 1 \amp 0\end{pmatrix}\) . Prove:</p>
+<ol class="lower-alpha">
+<li id="li-106"><p id="p-1920">\(Q^{n} = \begin{pmatrix} F_{n + 1} \amp F_{n}\\ F_{n} \amp F_{n - 1} \end{pmatrix}\) .</p></li>
+<li id="li-107"><p id="p-1921">\(Q^{2} = Q + I\text{;}\) use \(Q^{2n}\) to prove the identity in Problem 4.</p></li>
+<li id="li-108"><p id="p-1922">Use \(Q^{2n + 1} = Q^{n}Q^{n + 1}\) to show \(F_{2n + 1} = F_{n + 1}^{2} + F_{n}^{2}\) and other identities.</p></li>
+</ol></article><article class="exercise-like" id="exercise-25"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-1923">Show that if \(x^{2} = x + 1\) then \(x^{n} = F_{n}x + F_{n - 1}\) for \(n \geq 2\) . Use this result to prove the Binet Formula, namely that \(F_{n} = \frac{\alpha^{n} - \beta^{n}}{\alpha - \beta}\) .</p></article><article class="exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-1924">Investigate Lucas, Tribonacci, Tetranacci numbers.</p></article><section class="conclusion" id="conclusion-3"><p id="p-1925">References: The Fibonacci Quarterly; The Golden Section by Garth E. Runion; The Divine Proportion by H.E. Huntley</p></section></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 4: Generalized Pascal Triangles</span>
+</h3>
+<article class="exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1926">Expand \({\left( 1 + x + x^{2} \right)}^{2}\text{,}\) \(\left( 1 + x + x^{2} \right)^{3}\text{,}\) and \(\left( 1 + x + x^{2} \right)^{4}\text{.}\)</p></article><article class="exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1927">Organize the coefficients as in the following triangle:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">19</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div></div></div></article><article class="exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1928">Investigate the properties of this triangle:</p>
+<ol class="lower-alpha">
+<li id="li-109"><p id="p-1929">Produce the next row.</p></li>
+<li id="li-110"><p id="p-1930">Give a recursion that produces elements in this triangle.</p></li>
+<li id="li-111"><p id="p-1931">What are the row sums? Prove it!</p></li>
+<li id="li-112"><p id="p-1932">What is the sum \(1^{2} + 2^{2} + 3^{2} + 2^{2} + 1^{2}\) ? Generalize and prove.</p></li>
+<li id="li-113"><p id="p-1933">Is there a hockey stick theorem?</p></li>
+</ol></article><article class="exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1934">Investigate 3-dimensional versions of \(\left( 1 + x + x^{2} \right)^{n}\) and \(\left( x + y + z \right)^{n}.\)</p></article><article class="exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1935">Investigate \(\left( 1 + x + x^{2} + x^{3} \right)^{n}\) .</p></article><article class="exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1936">Investigate \(\left( 1 + x + x^{2} + \ldots + x^{k} \right)^{n}\) .</p></article><article class="exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-1937">Where do the “Fibonacci” numbers get involved in the Pascal triangle?</p></article><article class="exercise-like" id="exercise-34"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-1938">Where do the “Tribonacci” numbers appear in the triangle in Problem 2?</p></article></section><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 5: A Pascal-like Triangle of Eulerian Numbers</span>
+</h3>
+<article class="exercise-like" id="exercise-35"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1939">Show algebraically and geometrically that \(\binom{n}{2}
++
+\binom{n + 1}{2}
+= n^{2}\) .</p></article><article class="exercise-like" id="exercise-36"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1940">Show that \(\binom{n}{3}
++ 4
+\binom{n + 1}{3}
++
+\binom{n + 2}{3}
+= n^{3}\) .</p></article><article class="exercise-like" id="exercise-37"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1941">Use Problem 1 and the hockey stick theorem to find a nice formula for \(1^{2} + 2^{2} + 3^{2} + \ldots + n^{2}\) . Contrast with the version usually seen in calculus.</p></article><article class="exercise-like" id="exercise-38"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1942">Use Problem 2 to find a nice formula for \(1^{3} + 2^{3} + 3^{3} + \ldots + n^{3}\) .</p></article><article class="exercise-like" id="exercise-39"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1943">Express \(n^{4}\) as in Problems 1 and 2.</p></article><article class="exercise-like" id="exercise-40"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1944">Use Problem 5 to find a nice formula for \(1^{4} + 2^{4} + 3^{4} + \ldots + n^{4}\) .</p></article><article class="exercise-like" id="exercise-41"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-1945">Here is an alternate way of accomplishing Problem 6:  Find integers \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+1^{4} + 2^{4} + 3^{4} + \ldots + n^{4} = a\binom{n + 1}{5}  + b\binom{n + 2}{5}  + c\binom{n + 3}{5}  + d\binom{n + 4}{5}
+\end{equation*}
+</div>
+<p>using \(n=1, 2, 3, 4\text{.}\) This sometimes referred to as “Polynomial Fitting.”</p></article><article class="exercise-like" id="exercise-42"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-1946">Express \(n^{5}\) as in Problems 1 and 2.</p></article><article class="exercise-like" id="exercise-43"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-1947">Express \(1^{5} + 2^{5} + 3^{5} + \ldots + n^{5}\) as a sum of multiples of binomial coefficients.</p></article><article class="exercise-like" id="exercise-44"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-1948">In Problems 1, 2, 5, and 7, \(n^{2},n^{3},n^{4},\) and \(n^{5}\) were expressed as sums of binomial coefficients with integer coefficients. Arrange these expressions in a Pascal-like triangle, concentrating on these integer coefficients. The coefficients are called Eulerian numbers.</p></article><article class="exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="p-1949">Investigate the properties of this triangle. Include a discussion of row sums, how entries are found, and a possible recursion. Use \(\begin{bmatrix}
+n\\
+k
+\end{bmatrix}\) for notation.</p></article></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 6: The Leibniz Harmonic Triangle</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{1}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{2}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{3}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{6}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{3}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{4}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{12}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{12}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{4}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{5}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{20}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{30}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{20}\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\frac{1}{5}\)</td>
+</tr>
+</table></div></div></div>
+<article class="exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1950">State the rule used to form each entry, and produce the next two rows.</p></article><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1951">What are the “initial conditions” needed to generate the entries?</p></article><article class="exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1952">Use \(\begin{bmatrix} n\\ k \end{bmatrix}\) as the notation for entries and state properties analogous to those found in the Pascal Triangle. Include closed formulas for each entry, row sums (alternating also), hockey stick theorem, hexagon property, sum of squares of row entries, etc. Indicate how partial fractions help in verifying the (infinite) hockey stick theorem.</p></article><article class="exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1953">See if you can find any papers on this topic. Check <em class="emphasis">Pi Mu Epsilon Journal</em>, <em class="emphasis">The Mathematical Gazette</em>, <em class="emphasis">Mathematics Magazine</em>, <em class="emphasis">Delta-Undergraduate Mathematics Journal</em>, etc.</p></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</span>
+</h3>
+<section class="introduction" id="introduction-96"><p id="p-1954">According to the song, <em class="emphasis">The Twelve Days Of Christmas</em> the “true love” received the following number of (not so practical) gifts:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Day's Gift</td>
+<td class="l m b2 r0 l0 t0 lines">Number received</td>
+<td class="l m b2 r0 l0 t0 lines">Total</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">First</td>
+<td class="l m b0 r0 l0 t0 lines">\(1 \times 12\)</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Second</td>
+<td class="l m b0 r0 l0 t0 lines">\(2 \times 11\)</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Third</td>
+<td class="l m b0 r0 l0 t0 lines">\(3 \times 10\)</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Fourth</td>
+<td class="l m b0 r0 l0 t0 lines">\(4 \times 9\)</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Fifth</td>
+<td class="l m b0 r0 l0 t0 lines">\(5 \times 8\)</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Sixth</td>
+<td class="l m b0 r0 l0 t0 lines">\(6 \times 7\)</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Seventh</td>
+<td class="l m b0 r0 l0 t0 lines">\(7 \times 6\)</td>
+<td class="l m b0 r0 l0 t0 lines">42</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Eighth</td>
+<td class="l m b0 r0 l0 t0 lines">\(8 \times 5\)</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Ninth</td>
+<td class="l m b0 r0 l0 t0 lines">\(9 \times 4\)</td>
+<td class="l m b0 r0 l0 t0 lines">36</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Tenth</td>
+<td class="l m b0 r0 l0 t0 lines">\(10 \times 3\)</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Eleventh</td>
+<td class="l m b0 r0 l0 t0 lines">\(11 \times 2\)</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Twelfth</td>
+<td class="l m b0 r0 l0 t0 lines">\(12 \times 1\)</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">Grand Total = 364</td>
+</tr>
+</table></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">9</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+</tr>
+</table></div></div></div>
+<p id="p-1955">The first five rows of a triangle are given above.</p></section><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-1956">Make the next few rows.</p></article><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-1957">Where have you seen this triangle before?</p></article><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-1958">Experiment with factoring each integer in the 6th row. Repeat with other rows.</p></article><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-1959">What are the entries in row 12?</p></article><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-1960">Where does the expression \(1 \cdot n + 2\left( n - 1 \right) + 3\left( n - 2 \right) + \cdots + n \cdot 1\) show up in the triangle?</p></article><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-1961">Explain why \(1 \cdot n + 2\left( n - 1 \right) + 3\left( n - 2 \right) + \cdots + n \cdot 1 =
+\binom{n + 2}{3}\) .</p></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

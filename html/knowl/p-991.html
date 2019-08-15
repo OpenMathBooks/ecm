@@ -1,0 +1,60 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:57-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Now, \(f(x) = a_0 + a_1x + a_2x^2 + \cdots = \sum_{n=0}^\infty a_nx^n\) has derivative</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = a_1 + 2a_2x + 3a_3x^2 + \cdots = \sum_{n=0}^\infty (n+1)a_{n+1}x^n
+\end{equation*}
+</div>
+<p>and further</p>
+<div class="displaymath">
+\begin{equation*}
+xf'(x) = a_1x + 2a_2x^2 + 3a_3x^3 + \cdots = \sum_{n=0}^\infty na_nx^n\text{.}
+\end{equation*}
+</div>
+<p>Using the recurrence above, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty (n+1)a_{n+1}x^n = 4\sum_{n=0}^\infty na_nx^n + 2\sum_{n=0}^\infty a_nx^n\text{.}
+\end{equation*}
+</div>
+<p>This means</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = 4xf'(x) + 2f(x)
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f'(x)}{f(x)} = \frac{2}{1-4x}\text{.}
+\end{equation*}
+</div>
+<p>Now integrate!  We get</p>
+<div class="displaymath">
+\begin{equation*}
+\ln f(x) = -\frac{1}{2}\ln(1-4x) + c\text{.}
+\end{equation*}
+</div>
+<p>Since \(a_0 =1\text{,}\) it must be \(c = 0\text{.}\)  Finally then, by exponentiating, we arrive at</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{\sqrt{1-4x}}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec_adv-genfunctions.html#p-991">in-context</a></span>
+</body>
+</html>

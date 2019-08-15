@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:44-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>From the recurrence relation we have \(a_n - 3a_{n-1} - 4a_{n-2} = 0\text{.}\)  We transform this into the characteristic equation \(x^2 - 3x - 4 = 0\text{.}\) This has roots \(x = 4\) and \(x = -1\text{.}\)  So we guess that the closed formula for \(a_n\) will be \(a_n = \alpha 4^n + \beta (-1)^n\text{.}\)</p>
+<p>To find \(\alpha\) and \(\beta\text{,}\) we use the initial conditions.   When \(n = 1\) we have \(3 = 4\alpha -\beta\text{.}\)  When \(n = 2\) we have \(13 = 16\alpha + \beta\text{.}\)  It is easy to solve this system of two equations and two unknowns (simply adding them together eliminates the \(\beta\)).  We find \(\alpha = \frac{4}{5}\) and \(\beta = \frac{1}{5}\text{.}\)</p>
+<p>Thus the closed formula is</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{4}{5} 4^n + \frac{1}{5} (-1)^n\text{.}
+\end{equation*}
+</div>
+</div></body>
+</html>

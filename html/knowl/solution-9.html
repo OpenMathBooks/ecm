@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:33-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">15.1</span>.</h6>
+<p>The base case is trivial: \(\binom{0}{0} = 1 = 2^0\text{.}\)  Now fix \(n \gt 0\) and assume \(\sum_{k=0}^{n-1} \binom{n-1}{k} 2^{n-1}\text{.}\)</p>
+<p>Consider the case for \(n\text{.}\)  This is easier to see when written out.</p>
+<div class="displaymath">
+\begin{align*}
+\binom{n}{0} + \binom{n}{1} \amp + \cdots + \binom{n}{n-1}  + \binom{n}{n} = \\
+\binom{n-1}{0} + \left[\binom{n-1}{0} + \binom{n-1}{1}\right] \amp + \cdots + \left[\binom{n-1}{n-2} + \binom{n-1}{n-1}\right] + \binom{n-1}{n-1}.
+\end{align*}
+</div>
+<p>We have replaced \(\binom{n}{0}\) with \(\binom{n-1}{0}\) and \(\binom{n}{n}\) with \(\binom{n-1}{n-1}\) since they are all 1.  Every other term is replaced using the Pascal recurrence.</p>
+<p>But notice now that for every \(k\text{,}\) we have \(\binom{n-1}{k}\) appearing exactly twice.  So if we group like terms and factor out a 2, we get</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{k=0}^n \binom{n}{k} = 2 \sum_{k=0}^{n-1} \binom{n-1}{k} = 2 \cdot 2^{n-1} = 2^n.
+\end{equation*}
+</div>
+<p>This completes the inductive case, and therefore the proof.</p>
+</div>
+<span class="incontext"><a href="sec_basic-proofs.html#solution-9">in-context</a></span>
+</body>
+</html>

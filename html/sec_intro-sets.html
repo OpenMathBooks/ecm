@@ -1,0 +1,814 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:25-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_background-statements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_background.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_background-functions.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_background-statements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_background.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_background-functions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets" class="active">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_intro-sets"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">B.2</span> <span class="title">Sets</span>
+</h2>
+<a href="sec_intro-sets.html" class="permalink">¶</a><section class="introduction" id="Ehu"><p id="HEQ">The most fundamental objects we will use in our studies (and really in all of math) are <em class="emphasis">sets</em>. Much of what follows might be review, but it is very important that you are fluent in the language of set theory. Most of the notation we use below is standard, although some might be a little different than what you have seen before.</p>
+<p id="nLZ">For us, a <dfn class="terminology">set</dfn>  will simply be an unordered collection of objects. Two examples: we could consider the set of all actors who have played <em class="emphasis">The Doctor</em> on <em class="emphasis">Doctor Who</em>,  or the set of natural numbers between 1 and 10 inclusive. In the first case, Tom Baker is a element (or member) of the set, while Idris Elba, among many others, is not an element of the set. Also, the two examples are of different sets. Two sets are equal exactly if they contain the exact same elements. For example, the set containing all of the vowels in the declaration of independence is precisely the same set as the set of vowels in the word “questionably” (namely, all of them); we do not care about order or repetitions, just whether the element is in the set or not.</p></section><section class="subsection" id="RBf"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">B.2.1</span> <span class="title">Notation</span>
+</h3>
+<a href="sec_intro-sets.html#RBf" class="permalink">¶</a><p id="MoJ">We need some notation to make talking about sets easier. Consider,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{1, 2, 3\}\text{.}
+\end{equation*}
+</div>
+<p id="svS">This is read, “\(A\) is the set containing the elements 1, 2 and 3.” We use curly braces “\(\{,~~ \}\)” to enclose elements of a set. Some more notation:</p>
+<div class="displaymath">
+\begin{equation*}
+a \in \{a, b, c\}\text{.}
+\end{equation*}
+</div>
+<p id="YDb">The symbol “\(\in\)” is read “is in” or “is an element of.” Thus the above means that \(a\) is an element of the set containing the letters \(a\text{,}\) \(b\text{,}\) and \(c\text{.}\) Note that this is a true statement. It would also be true to say that \(d\) is not in that set:</p>
+<div class="displaymath">
+\begin{equation*}
+d \not\in \{a, b, c\}\text{.}
+\end{equation*}
+</div>
+<p id="EKk">Be warned: we write “\(x \in A\)” when we wish to express that one of the elements of the set \(A\) is \(x\text{.}\) For example, consider the set,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{1, b, \{x, y, z\}, \emptyset\}\text{.}
+\end{equation*}
+</div>
+<p id="kRt">This is a strange set, to be sure. It contains four elements: the number 1, the letter b, the set \(\{x,y,z\}\text{,}\) and the empty set \(\emptyset = \{ \}\text{,}\) the set containing no elements. Is \(x\) in \(A\text{?}\) The answer is no. None of the four elements in \(A\) are the letter \(x\text{,}\) so we must conclude that \(x \notin A\text{.}\) Similarly, consider the set \(B = \{1,b\}\text{.}\) Even though the elements of \(B\) are elements of \(A\text{,}\) we cannot say that the <em class="emphasis">set</em> \(B\) is one of the elements of \(A\text{.}\) Therefore \(B \notin A\text{.}\) (Soon we will see that \(B\) is a <em class="emphasis">subset</em> of \(A\text{,}\) but this is different from being an <em class="emphasis">element</em> of \(A\text{.}\))</p>
+<p id="QYC">We have described the sets above by listing their elements. Sometimes this is hard to do, especially when there are a lot of elements in the set (perhaps infinitely many). For instance, if we want \(A\) to be the set of all even natural numbers, would could write,</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{0, 2, 4, 6, \ldots\}\text{,}
+\end{equation*}
+</div>
+<p>but this is a little imprecise. A better way would be</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{x \in \N \st \exists n\in \N ( x = 2 n)\}\text{.}
+\end{equation*}
+</div>
+<p id="xfL">Let's look at this carefully.  First, there are some new symbols to digest: “\(\N\)” is the symbol usually used to denote that <dfn class="terminology">natural numbers</dfn>, which we will take to be the set \(\{0, 1, 2, 3, \ldots\}\text{.}\)   Next, the colon, “:”, is read <em class="emphasis">such that</em>; it separates the elements that are in the set from the condition that the elements in the set must satisfy. So putting this all together, we would read the set as, “the set of all \(x\) in the natural numbers, such that there exists some \(n\) in the natural numbers for which \(x\) is twice \(n\text{.}\)” In other words, the set of all natural numbers, that are even.  Here is another way to write the same set.</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{x \in \N \st x\text{ is even} \}\text{.}
+\end{equation*}
+</div>
+<p id="dmU">Note: Sometimes mathematicians use \(|\) or \(\backepsilon\) for the “such that” symbol instead of the colon. Also, there is a fairly even split between mathematicians about whether \(0\) is an element of the natural numbers, so be careful there.</p>
+<p id="Jud">This notation is usually called <dfn class="terminology">set builder notation</dfn>. It tells use how to <em class="emphasis">build</em> a set by telling us pricisely the condition elements must meet to gain access (the condition is the logical statement after the “\(\st\)” symbol).  Reading and comprehending sets written in this way takes practice. Here are some more examples:</p>
+<article class="example-like" id="Csh"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.1</span>.</h6>
+<p id="SdV">Describe each of the following sets both in words and by listing out enough elements to see the pattern.</p>
+<ol id="yle" class="decimal">
+<li id="Dcb">\(\{x \st x + 3 \in \N\}\text{.}\)</li>
+<li id="jjk">\(\{x \in \N \st x + 3 \in \N\}\text{.}\)</li>
+<li id="Pqt">\(\{x \st x \in \N \vee -x \in \N\}\text{.}\)</li>
+<li id="vxC">\(\{x \st x \in \N \wedge -x \in \N\}\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-koD" id="koD"><span class="type">Solution</span></a><div id="hk-koD" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="cDa" class="decimal">
+<li id="bEL"><p id="Glc">This is the set of all numbers which are 3 less than a natural number (i.e., that if you add 3 to them, you get a natural number). The set could also be written as \(\{-3, -2, -1, 0, 1, 2, \ldots\}\) (note that 0 is a natural number, so \(-3\) is in this set because \(-3 + 3 = 0\)).</p></li>
+<li id="HLU"><p id="msl">This is the set of all natural numbers which are 3 less than a natural number. So here we just have \(\{0, 1, 2,3 \ldots\}\text{.}\)</p></li>
+<li id="nTd"><p id="Szu">This is the set of all integers  (positive and negative whole numbers, written \(\Z\)). In other words, \(\{\ldots, -2, -1, 0, 1, 2, \ldots\}\text{.}\)</p></li>
+<li id="Uam"><p id="yGD">Here we want all numbers \(x\) such that \(x\) and \(-x\) are natural numbers. There is only one: 0. So we have the set \(\{0\}\text{.}\)</p></li>
+</ol></div></div>
+</div></article><p id="pBm">There is also a subtle variation on set builder notation.  While the condition is generally given after the “such that”, sometimes it is hidden in the first part.  Here is an example.</p>
+<article class="example-like" id="izq"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.2</span>.</h6>
+<p id="esn">List a few elements in the sets below and describe them in words.  The set \(\Z\) is the set of <dfn class="terminology">integers</dfn>; positive and negative whole numbers.</p>
+<ol class="decimal">
+<li id="Ahv"><p id="eNM">\(A = \{x \in \Z \st x^2 \in \N\}\)</p></li>
+<li id="goE"><p id="KUV">\(B = \{x^2 \st x \in \N\}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-QvM" id="QvM"><span class="type">Solution</span></a><div id="hk-QvM" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="IKj" class="decimal">
+<li id="MvN"><p id="rce">The set of integers that pass the condition that their square is a natural number.  Well, every integer, when you square it, gives you a non-negative integer, so a natural number.  Thus \(A = \Z = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\}\text{.}\)</p></li>
+<li id="sCW">
+<p id="Xjn">Here we are looking for the set of all \(x^2\)s where \(x\) is a natural number.  So this set is simply the set of perfect squares.  \(B = \{0, 1, 4, 9, 16, \ldots\}\text{.}\)</p>
+<p id="Dqw">Another way we could have written this set, using more strict set builder notation, would be as \(B = \{x \in \N \st x = n^2 \text{ for some } n \in \N\}\text{.}\)</p>
+</li>
+</ol></div></div>
+</div></article><p id="VIv">We already have a lot of notation, and there is more yet. Below is a handy chart of symbols. Some of these will be discussed in greater detail as we move forward.</p>
+<article class="assemblage-like" id="qdP"><h6 class="heading"><span class="title">Special sets.</span></h6>
+<dl id="Aar" class="description-list-narrow">
+<dt id="vcd">\(\emptyset\)</dt>
+<dd><p id="jxF">The <dfn class="terminology">empty set</dfn> is the set which contains no elements.  </p></dd>
+<dt id="bjm">\(\U\)</dt>
+<dd><p id="PEO">The <dfn class="terminology">universe set</dfn> is the set of all elements. </p></dd>
+<dt id="Hqv">\(\N\)</dt>
+<dd><p id="vLX">The set of natural numbers. That is, \(\N = \{0, 1, 2, 3\ldots\}\text{.}\)  </p></dd>
+<dt id="nxE">\(\Z\)</dt>
+<dd><p id="bTg">The set of integers. That is, \(\Z = \{\ldots, -2, -1, 0, 1, 2, 3, \ldots\}\text{.}\)  </p></dd>
+<dt id="TEN">\(\Q\)</dt>
+<dd><p id="Iap">The set of rational numbers.  </p></dd>
+<dt id="zLW">\(\R\)</dt>
+<dd><p id="ohy">The set of real numbers.  </p></dd>
+<dt id="fTf">\(\pow(A)\)</dt>
+<dd><p id="UoH">The <dfn class="terminology">power set</dfn> of any set \(A\) is the set of all subsets of \(A\text{.}\)  </p></dd>
+</dl></article><article class="assemblage-like" id="WkY"><h6 class="heading"><span class="title">Set Theory Notation.</span></h6>
+<dl id="ghA" class="description-list-narrow">
+<dt id="Mao">\(\{, \}\)</dt>
+<dd><p id="AvQ">We use these <dfn class="terminology">braces</dfn> to enclose the elements of a set. So \(\{1,2,3\}\) is the set containing 1, 2, and 3. </p></dd>
+<dt id="shx">\(\st\)</dt>
+<dd><p id="gCZ">\(\{x \st x &gt; 2\}\) is the set of all \(x\) <dfn class="terminology">such that</dfn> \(x\) is greater than 2. </p></dd>
+<dt id="YoG">\(\in\)</dt>
+<dd><p id="MKi">\(2 \in \{1,2,3\}\) asserts that 2 is <dfn class="terminology">an element of</dfn> the set \(\{1,2,3\}\text{.}\) </p></dd>
+<dt id="EvP">\(\not\in\)</dt>
+<dd><p id="sRr">\(4 \notin \{1,2,3\}\) because 4 <dfn class="terminology">is not an element of</dfn> the set \(\{1,2,3\}\text{.}\)</p></dd>
+<dt id="kCY">\(\subseteq\)</dt>
+<dd><p id="YYA">\(A \subseteq B\) asserts that <dfn class="terminology">\(A\) is a subset of \(B\)</dfn>: every element of \(A\) is also an element of \(B\text{.}\) </p></dd>
+<dt id="QKh">\(\subset\)</dt>
+<dd><p id="FfJ">\(A \subset B\) asserts that <dfn class="terminology">\(A\) is a proper subset of \(B\)</dfn>: every element of \(A\) is also an element of \(B\text{,}\) but \(A \ne B\text{.}\) </p></dd>
+<dt id="wRq">\(\cap\)</dt>
+<dd><p id="lmS">\(A \cap B\) is the <dfn class="terminology">intersection of \(A\) and \(B\)</dfn>: the set containing all elements which are elements of both \(A\) and \(B\text{.}\)  </p></dd>
+<dt id="cYz">\(\cup\)</dt>
+<dd><p id="Rub">\(A \cup B\) is the <dfn class="terminology">union of \(A\) and \(B\)</dfn>: is the set containing all elements which are elements of \(A\) or \(B\) or both.  </p></dd>
+<dt id="JfI">\(\times\)</dt>
+<dd><p id="xBk">\(A \times B\) is the <dfn class="terminology">Cartesian product of \(A\) and \(B\)</dfn>: the set of all ordered pairs \((a,b)\) with \(a \in A\) and \(b \in B\text{.}\) </p></dd>
+<dt id="pmR">\(\setminus\)</dt>
+<dd><p id="dIt">\(A \setminus B\) is <dfn class="terminology">\(A\) set-minus \(B\)</dfn>: the set containing all elements of \(A\) which are not elements of \(B\text{.}\) </p></dd>
+<dt id="Vua">\(\bar{A}\)</dt>
+<dd><p id="JPC">The <dfn class="terminology">complement of \(A\)</dfn> is the set of everything which is not an element of \(A\text{.}\) </p></dd>
+<dt id="BBj">\(\card{A}\)</dt>
+<dd><p id="pWL">The <dfn class="terminology">cardinality (or size) of \(A\)</dfn> is the number of elements in \(A\text{.}\)  </p></dd>
+</dl></article><article class="project-like" id="OGz"><h6 class="heading">
+<span class="type">Puzzle</span> <span class="codenumber">333</span>.</h6>
+<ol id="TTi" class="decimal">
+<li id="YKf">
+<p id="YhC">Find the cardinality of each set below.</p>
+<ol class="lower-alpha">
+<li id="EoL">\(A = \{3,4,\ldots, 15\}\text{.}\)</li>
+<li id="ERo">\(B = \{n \in \N \st 2 \lt n \le 200\}\text{.}\)</li>
+<li id="kYx">\(C = \{n \le 100 \st n \in \N \wedge \exists m \in \N (n = 2m+1)\}\text{.}\)</li>
+</ol>
+</li>
+<li id="hIs"><p id="WdU">Find two sets \(A\) and \(B\) for which \(|A| = 5\text{,}\) \(|B| = 6\text{,}\) and \(|A\cup B| = 9\text{.}\) What is \(|A \cap B|\text{?}\)</p></li>
+<li id="NPB"><p id="Cld">Find sets \(A\) and \(B\) with \(|A| = |B|\) such that \(|A\cup B| = 7\) and \(|A \cap B| = 3\text{.}\) What is \(|A|\text{?}\)</p></li>
+<li id="tWK"><p id="ism">Let \(A = \{1,2,\ldots, 10\}\text{.}\) Define \(\mathcal{B}_2 = \{B \subseteq A \st |B| = 2\}\text{.}\) Find \(|\mathcal{B}_2|\text{.}\)</p></li>
+<li id="adT">For any sets \(A\) and \(B\text{,}\) define \(AB = \{ab \st a\in A \wedge b \in B\}\text{.}\) If \(A = \{1,2\}\) and \(B = \{2,3,4\}\text{,}\) what is \(|AB|\text{?}\) What is \(|A \times B|\text{?}\)</li>
+</ol></article></section><section class="subsection" id="xIo"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">B.2.2</span> <span class="title">Relationships Between Sets</span>
+</h3>
+<p id="BPE">We have already said what it means for two sets to be equal: they have exactly the same elements. Thus, for example,</p>
+<div class="displaymath">
+\begin{equation*}
+\{1, 2, 3\} = \{2, 1, 3\}\text{.}
+\end{equation*}
+</div>
+<p id="hWN">(Remember, the order the elements are written down in does not matter.) Also,</p>
+<div class="displaymath">
+\begin{equation*}
+\{1, 2, 3\} = \{1, 1+1, 1+1+1\} = \{I, II, III\} = \{1, 2, 3, 1+2\}
+\end{equation*}
+</div>
+<p>since these are all ways to write the set containing the first three positive integers (how we write them doesn't matter, just what they are).</p>
+<p id="OdW">What about the sets \(A = \{1, 2, 3\}\) and \(B = \{1, 2, 3, 4\}\text{?}\) Clearly \(A \ne B\text{,}\) but notice that every element of \(A\) is also an element of \(B\text{.}\) Because of this we say that \(A\) is a <em class="emphasis">subset</em>  of \(B\text{,}\) or in symbols \(A \subset B\) or \(A \subseteq B\text{.}\) Both symbols are read “is a subset of.” The difference is that sometimes we want to say that \(A\) is either equal to or is a subset of \(B\text{,}\) in which case we use \(\subseteq\text{.}\) This is analogous to the difference between \(\lt\) and \(\le\text{.}\)</p>
+<article class="example-like" id="uNI"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.3</span>.</h6>
+<p id="Kzw">Let \(A = \{1, 2, 3, 4, 5, 6\}\text{,}\) \(B = \{2, 4, 6\}\text{,}\) \(C = \{1, 2, 3\}\) and \(D = \{7, 8, 9\}\text{.}\) Determine which of the following are true, false, or meaningless.</p>
+<ol id="qGF" class="decimal cols3">
+<li id="RfG">\(A \subset B\text{.}\)</li>
+<li id="xmP">\(B \subset A\text{.}\)</li>
+<li id="dtY">\(B \in C\text{.}\)</li>
+<li id="JBh">\(\emptyset \in A\text{.}\)</li>
+<li id="pIq">\(\emptyset \subset A\text{.}\)</li>
+<li id="VPz">\(A \lt D\text{.}\)</li>
+<li id="BWI">\(3 \in C\text{.}\)</li>
+<li id="idR">\(3 \subset C\text{.}\)</li>
+<li id="Ola">\(\{3\} \subset C\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-wCV" id="wCV"><span class="type">Solution</span></a><div id="hk-wCV" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="oRs" class="decimal">
+<li id="usj"><p id="Ozv">False. For example, \(1\in A\) but \(1 \notin B\text{.}\)</p></li>
+<li id="azs"><p id="uGE">True. Every element in \(B\) is an element in \(A\text{.}\)</p></li>
+<li id="GGB"><p id="aNN">False. The elements in \(C\) are 1, 2, and 3. The <em class="emphasis">set</em> \(B\) is not equal to 1, 2, or 3.</p></li>
+<li id="mNK"><p id="GUW">False. \(A\) has exactly 6 elements, and none of them are the empty set.</p></li>
+<li id="SUT"><p id="ncf">True. Everything in the empty set (nothing) is also an element of \(A\text{.}\) Notice that the empty set is a subset of every set.</p></li>
+<li id="zcc"><p id="Tjo">Meaningless. A set cannot be less than another set.</p></li>
+<li id="fjl"><p id="zqx">True. \(3\) is one of the elements of the set \(C\text{.}\)</p></li>
+<li id="Lqu"><p id="fxG">Meaningless. \(3\) is not a set, so it cannot be a subset of another set.</p></li>
+<li id="rxD"><p id="LEP">True. \(3\) is the only element of the set \(\{3\}\text{,}\) and is an element of \(C\text{,}\) so every element in \(\{3\}\) is an element of \(C\text{.}\)</p></li>
+</ol></div></div>
+</div></article><p id="ulf">In the example above, \(B\) is a subset of \(A\text{.}\) You might wonder what other sets are subsets of \(A\text{.}\) If you collect all these subsets of \(A\) into a new set, we get a set of sets. We call the set of all subsets of \(A\) the <dfn class="terminology">power set</dfn>  of \(A\text{,}\) and write it \(\pow(A)\text{.}\)</p>
+<article class="example-like" id="aUR"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.4</span>.</h6>
+<p id="WNO">Let \(A = \{1,2,3\}\text{.}\) Find \(\pow(A)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-cKe" id="cKe"><span class="type">Solution</span></a><div id="hk-cKe" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="UYB">\(\pow(A)\) is a set of sets, all of which are subsets of \(A\text{.}\) So</p>
+<div class="displaymath">
+\begin{equation*}
+\pow(A) = \{ \emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1, 3\}, \{2,3\}, \{1,2,3\}\}\text{.}
+\end{equation*}
+</div>
+<p id="BfK">Notice that while \(2 \in A\text{,}\) it is wrong to write \(2 \in \pow(A)\) since none of the elements in \(\pow(A)\) are numbers! On the other hand, we do have \(\{2\} \in \pow(A)\) because \(\{2\} \subseteq A\text{.}\)</p>
+<p id="hmT">What does a subset of \(\pow(A)\) look like? Notice that \(\{2\} \not\subseteq \pow(A)\) because not everything in \(\{2\}\) is in \(\pow(A)\text{.}\) But we do have \(\{ \{2\} \} \subseteq \pow(A)\text{.}\) The only element of \(\{\{2\}\}\) is the set \(\{2\}\) which is also an element of \(\pow(A)\text{.}\) We could take the collection of all subsets of \(\pow(A)\) and call that \(\pow(\pow(A))\text{.}\) Or even the power set of that set of sets of sets.</p>
+</div></div>
+</div></article><p id="aso">Another way to compare sets is by their <em class="emphasis">size</em>. Notice that in the example above, \(A\) has 6 elements and \(B\text{,}\) \(C\text{,}\) and \(D\) all have 3 elements. The size of a set is called the set's <dfn class="terminology">cardinality</dfn> .  We would write \(|A| = 6\text{,}\) \(|B| = 3\text{,}\) and so on. For sets that have a finite number of elements, the cardinality of the set is simply the number of elements in the set. Note that the cardinality of \(\{ 1, 2, 3, 2, 1\}\) is 3. We do not count repeats (in fact, \(\{1, 2, 3, 2, 1\}\) is exactly the same set as \(\{1, 2, 3\}\)). There are sets with infinite cardinality, such as \(\N\text{,}\) the set of rational numbers (written \(\mathbb Q\)), the set of even natural numbers, and the set of real numbers (\(\mathbb R\)). It is possible to distinguish between different infinite cardinalities, but that is beyond the scope of this text. For us, a set will either be infinite, or finite; if it is finite, the we can determine its cardinality by counting elements.</p>
+<article class="example-like" id="Hca"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.5</span>.</h6>
+<ol id="CUX" class="decimal">
+<li id="XEM"><p id="rLY">Find the cardinality of \(A = \{23, 24, \ldots, 37, 38\}\text{.}\)</p></li>
+<li id="DLV"><p id="XTh">Find the cardinality of \(B = \{1, \{2, 3, 4\}, \emptyset\}\text{.}\)</p></li>
+<li id="jTe"><p id="Eaq">If \(C = \{1,2,3\}\text{,}\) what is the cardinality of \(\pow(C)\text{?}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-IRn" id="IRn"><span class="type">Solution</span></a><div id="hk-IRn" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="Nuc" class="decimal">
+<li id="Qan"><p id="khz">Since \(38 - 23 = 15\text{,}\) we can conclude that the cardinality of the set is \(|A| = 16\) (you need to add one since 23 is included).</p></li>
+<li id="whw"><p id="QoI">Here \(|B| = 3\text{.}\) The three elements are the number 1, the set \(\{2,3,4\}\text{,}\) and the empty set.</p></li>
+<li id="coF"><p id="wvR">We wrote out the elements of the power set \(\pow(C)\) above, and there are 8 elements (each of which is a set). So \(\card{\pow(C)} = 8\text{.}\) (You might wonder if there is a relationship between \(\card{A}\) and \(\card{\pow(A)}\) for all sets \(A\text{.}\) This is a good question which we consider in to in <a href="ch_basic-combinatorics.html" class="internal" title="Chapter 1: Basic Combinatorics">Chapter 1</a>.)</p></li>
+</ol></div></div>
+</div></article></section><section class="subsection" id="dPx"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">B.2.3</span> <span class="title">Operations On Sets</span>
+</h3>
+<p id="Gzx">Is it possible to add two sets? Not really, however there is something similar. If we want to combine two sets to get the collection of objects that are in either set, then we can take the <dfn class="terminology">union</dfn>  of the two sets. Symbolically,</p>
+<div class="displaymath">
+\begin{equation*}
+C = A \cup B\text{,}
+\end{equation*}
+</div>
+<p>read, “\(C\) is the union of \(A\) and \(B\text{,}\)” means that the elements of \(C\) are exactly the elements which are either an element of \(A\) or an element of \(B\) (or an element of both). For example, if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cup B = \{1, 2, 3, 4\}\text{.}\)</p>
+<p id="mGG">The other common operation on sets is <dfn class="terminology">intersection</dfn>.  We write,</p>
+<div class="displaymath">
+\begin{equation*}
+C = A \cap B
+\end{equation*}
+</div>
+<p>and say, “\(C\) is the intersection of \(A\) and \(B\text{,}\)” when the elements in \(C\) are precisely those both in \(A\) and in \(B\text{.}\) So if \(A = \{1, 2, 3\}\) and \(B = \{2, 3, 4\}\text{,}\) then \(A \cap B = \{2, 3\}\text{.}\)</p>
+<p id="SNP">Often when dealing with sets, we will have some understanding as to what “everything” is. Perhaps we are only concerned with natural numbers. In this case we would say that our <dfn class="terminology">universe</dfn> is \(\N\text{.}\) Sometimes we denote this universe by \(\U\text{.}\) Given this context, we might wish to speak of all the elements which are <em class="emphasis">not</em> in a particular set. We say \(B\) is the <dfn class="terminology">complement</dfn>  of \(A\text{,}\) and write,</p>
+<div class="displaymath">
+\begin{equation*}
+B = \bar A
+\end{equation*}
+</div>
+<p>when \(B\) contains every element not contained in \(A\text{.}\) So, if our universe is \(\{1, 2,\ldots, 9, 10\}\text{,}\) and \(A = \{2, 3, 5, 7\}\text{,}\) then \(\bar A = \{1, 4, 6, 8, 9,10\}\text{.}\)</p>
+<p id="yUY">Of course we can perform more than one operation at a time. For example, consider</p>
+<div class="displaymath">
+\begin{equation*}
+A \cap \bar B\text{.}
+\end{equation*}
+</div>
+<p id="fch">This is the set of all elements which are both elements of \(A\) and not elements of \(B\text{.}\) What have we done? We've started with \(A\) and removed all of the elements which were in \(B\text{.}\) Another way to write this is the <dfn class="terminology">set difference</dfn>:  </p>
+<div class="displaymath">
+\begin{equation*}
+A \cap \bar B = A \setminus B\text{.}
+\end{equation*}
+</div>
+<p id="Ljq">It is important to remember that these operations (union, intersection, complement, and difference) on sets produce other sets. Don't confuse these with the symbols from the previous section (element of and subset of). \(A \cap B\) is a set, while \(A \subseteq B\) is true or false. This is the same difference as between \(3 + 2\) (which is a number) and \(3 \le 2\) (which is false).</p>
+<article class="example-like" id="njj"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.6</span>.</h6>
+<p id="jcg">Let \(A = \{1, 2, 3, 4, 5, 6\}\text{,}\) \(B = \{2, 4, 6\}\text{,}\) \(C = \{1, 2, 3\}\) and \(D = \{7, 8, 9\}\text{.}\) If the universe is \(\U = \{1, 2, \ldots, 10\}\text{,}\) find:</p>
+<ol class="decimal cols3">
+<li id="IvO">\(A \cup B\text{.}\)</li>
+<li id="oCX">\(A \cap B\text{.}\)</li>
+<li id="UKg">\(B \cap C\text{.}\)</li>
+<li id="ARp">\(A \cap D\text{.}\)</li>
+<li id="gYy">\(\bar{B \cup C}\text{.}\)</li>
+<li id="NfH">\(A \setminus B\text{.}\)</li>
+<li id="tmQ">\((D \cap \bar C) \cup \bar{A \cap B}\text{.}\)</li>
+<li id="ZtZ">\(\emptyset \cup C\text{.}\)</li>
+<li id="lIr">\(\emptyset \cap C\text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-oYw" id="oYw"><span class="type">Solution</span></a><div id="hk-oYw" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="tBl" class="decimal">
+<li id="RPA">\(A \cup B = \{1, 2, 3, 4, 5, 6\} = A\) since everything in \(B\) is already in \(A\text{.}\)</li>
+<li id="xWJ">\(A \cap B = \{2, 4, 6\} = B\) since everything in \(B\) is in \(A\text{.}\)</li>
+<li id="edS">\(B \cap C = \{2\}\) as the only element of both \(B\) and \(C\) is 2.</li>
+<li id="Klb">\(A \cap D = \emptyset\) since \(A\) and \(D\) have no common elements.</li>
+<li id="qsk">\(\bar{B \cup C} = \{5, 7, 8, 9, 10\}\text{.}\) First we find that \(B \cup C = \{1, 2, 3, 4, 6\}\text{,}\) then we take everything not in that set.</li>
+<li id="Wzt">\(A \setminus B = \{1, 3, 5\}\) since the elements 1, 3, and 5 are in \(A\) but not in \(B\text{.}\) This is the same as \(A \cap \bar B\text{.}\)</li>
+<li id="CGC">\((D \cap \bar C) \cup \bar{A \cap B} = \{1, 3, 5, 7, 8, 9, 10\}\text{.}\) The set contains all elements that are either in \(D\) but not in \(C\) (i.e., \(\{7,8,9\}\)), or not in both \(A\) and \(B\) (i.e., \(\{1,3,5,7,8,9,10\}\)).</li>
+<li id="iNL">\(\emptyset \cup C = C\) since nothing is added by the empty set.</li>
+<li id="OUU">\(\emptyset \cap C = \emptyset\) since nothing can be both in a set and in the empty set.</li>
+</ol></div></div>
+</div></article><p id="rqz">Having notation like this is useful.  We will often want to add or remove elements from sets, and our notation allows us to do so precisely.</p>
+<article class="example-like" id="Tqs"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.7</span>.</h6>
+<p id="Pjp">If \(A = \{1,2,3\}\text{,}\) then we can describe the set we get by adding the number 4 as \(A \cup \{4\}\text{.}\)  If we want to express the set we get by removing the number 2 from \(A\) we can do so by writing \(A \setminus \{2\}\text{.}\)</p>
+<p id="vqy">Careful though.  If you add an element to the set, you get a new set!  So you would have \(B = A \cup \{4\}\) and then correctly say that \(B\) contains 4, but \(A\) does not.</p></article><p id="XxI">You might notice that the symbols for union and intersection slightly resemble the logic symbols for “or” and “and.” This is no accident. What does it mean for \(x\) to be an element of \(A\cup B\text{?}\) It means that \(x\) is an element of \(A\) <em class="emphasis">or</em> \(x\) is an element of \(B\) (or both). That is,</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A \cup B \qquad \Iff \qquad x \in A \vee x \in B\text{.}
+\end{equation*}
+</div>
+<p id="DER">Similarly,</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A \cap B \qquad \Iff \qquad x \in A \wedge x \in B\text{.}
+\end{equation*}
+</div>
+<p id="jMa">Also,</p>
+<div class="displaymath">
+\begin{equation*}
+x \in \bar A \qquad \Iff \qquad \neg (x \in A)\text{.}
+\end{equation*}
+</div>
+<p>which says \(x\) is an element of the complement of \(A\) if \(x\) is not an element of \(A\text{.}\)</p>
+<p id="PTj">There is one more way to combine sets which will be useful for us: the <dfn class="terminology">Cartesian product</dfn>,  \(A \times B\text{.}\)  This sounds fancy but is nothing you haven't seen before. When you graph a function in calculus, you graph it in the Cartesian plane. This is the set of all ordered pairs of real numbers \((x,y)\text{.}\) We can do this for <em class="emphasis">any</em> pair of sets, not just the real numbers with themselves.</p>
+<p id="was">Put another way, \(A \times B = \{(a,b) \st a \in A \wedge b \in B\}\text{.}\) The first coordinate comes from the first set and the second coordinate comes from the second set. Sometimes we will want to take the Cartesian product of a set with itself, and this is fine: \(A \times A = \{(a,b) \st a, b \in A\}\) (we might also write \(A^2\) for this set). Notice that in \(A \times A\text{,}\) we still want <em class="emphasis">all</em> ordered pairs, not just the ones where the first and second coordinate are the same. We can also take products of 3 or more sets, getting ordered triples, or quadruples, and so on.</p>
+<article class="example-like" id="zxB"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">B.2.8</span>.</h6>
+<p id="bxH">Let \(A = \{1,2\}\) and \(B = \{3,4,5\}\text{.}\) Find \(A \times B\) and \(A \times A\text{.}\) How many elements do you expect to be in \(B \times B\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-VfF" id="VfF"><span class="type">Solution</span></a><div id="hk-VfF" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="ZIu">\(A \times B = \{(1,3), (1,4), (1,5), (2,3), (2,4), (2,5)\}\text{.}\)</p>
+<p id="FPD">\(A \times A = A^2 = \{(1,1), (1,2), (2,1), (2,2)\}\text{.}\)</p>
+<p id="lWM">\(|B\times B| = 9\text{.}\) There will be 3 pairs with first coordinate \(3\text{,}\) three more with first coordinate \(4\text{,}\) and a final three with first coordinate \(5\text{.}\)</p>
+</div></div>
+</div></article></section><section class="subsection" id="JWG"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">B.2.4</span> <span class="title">Venn Diagrams</span>
+</h3>
+<p id="chB">There is a very nice visual tool we can use to represent operations on sets. A <dfn class="terminology">Venn diagram</dfn> displays sets as intersecting circles.  We can shade the region we are talking about when we carry out an operation. We can also represent cardinality of a particular set by putting the number in the corresponding region.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:8%;margin-right:8%;">
+<div class="sbspanel" style="width:40.4761904761905%;justify-content:flex-start;"><img src="images/two-set-venn-empty.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:40.4761904761905%;justify-content:flex-start;"><img src="images/three-set-empty.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<p id="IoK">Each circle represents a set. The rectangle containing the circles represents the universe. To represent combinations of these sets, we shade the corresponding region. For example, we could draw \(A \cap B\) as:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33%;margin-right:33%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/two-set-cap.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="ovT">Here is a representation of \(A \cap \bar B\text{,}\) or equivalently \(A \setminus B\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:33%;margin-right:33%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/two-set-a-minus-b.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="UDc">A more complicated example is \((B \cap C) \cup (C \cap \bar A)\text{,}\) as seen below.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:37%;margin-right:37%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/three-set-complicated.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+<p id="AKl">Notice that the shaded regions above could also be arrived at in another way. We could have started with all of \(C\text{,}\) then excluded the region where \(C\) and \(A\) overlap outside of \(B\text{.}\) That region is \((A \cap C) \cap \bar B\text{.}\) So the above Venn diagram also represents \(C \cap \bar{\left((A\cap C)\cap \bar B\right)}\text{.}\) So using just the picture, we have determined that</p>
+<div class="displaymath">
+\begin{equation*}
+(B \cap C) \cup (C \cap \bar A) = C \cap \bar{\left((A\cap C)\cap \bar B\right)}\text{.}
+\end{equation*}
+</div></section><section class="exercises" id="DAA"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">B.2.5</span> <span class="title">Exercises</span>
+</h3>
+<a href="sec_intro-sets.html#DAA" class="permalink">¶</a><article class="exercise-like" id="AUc"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<p id="p-2679">Let \(A = \{1, 4, 9\}\) and \(B = \{1, 3, 6, 10\}\text{.}\) Find each of the following sets.</p>
+<ol class="lower-alpha">
+<li id="li-658"><p id="p-2680">\(A \cup B\text{.}\)</p></li>
+<li id="li-659"><p id="p-2682">\(A \cap B\text{.}\)</p></li>
+<li id="li-660"><p id="p-2684">\(A \setminus B\text{.}\)</p></li>
+<li id="li-661"><p id="p-2686">\(B \setminus A\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-296" id="solution-296"><span class="type">Solution</span></a><div id="hk-solution-296" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-2692" class="lower-alpha">
+<li id="li-662"><p id="p-2693">3.</p></li>
+<li id="li-663"><p id="p-2694">3.</p></li>
+<li id="li-664"><p id="p-2695">1.</p></li>
+<li id="li-665"><p id="p-2696">1.</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="hbl"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<p id="p-2712">Find the least element of each of the following sets, if there is one.</p>
+<ol class="lower-alpha">
+<li id="li-674"><p id="p-2713">\(\{n \in \N \st n^2 - 3 \ge 2\}\text{.}\)</p></li>
+<li id="li-675"><p id="p-2715">\(\{n \ge 0 \st n^2 - 5 \in \N\}\text{.}\)</p></li>
+<li id="li-676"><p id="p-2717">\(\{n^2+1 \st n \in \N\}\text{.}\)</p></li>
+<li id="li-677"><p id="p-2719">\(\{n \in \N \st n = k^2 + 1 \text{ for some } k \in \N\}\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-298" id="solution-298"><span class="type">Solution</span></a><div id="hk-solution-298" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-2725" class="lower-alpha">
+<li id="li-678"><p id="p-2726">This is the set \(\{3, 4, 5, \ldots \}\) since we need each element to be a natural number whose square is at least three more than 2. Since \(3^2 - 3 = 6\) but \(2^2 - 3 = 1\) we see that the first such natural number is 3.</p></li>
+<li id="li-679">
+<p id="p-2727">Here we don’t specify that \(n\) must be a whole number at first, but the condition we place on it, that \(n^2 - 5 \in \N\) does guarantee this (since square a non-integer always gives a non-integer, as does subtracting 5 from a non-integer). So in fact, we get the same set as we did in the previous part, and the smallest non-negative number for which \(n^2 - 5\) is a natural numbers is 3.</p>
+<p id="p-2728">Note that if we didn’t specify \(n \ge 0\) then any integer less than \(-3\) would also be in the set, so there would not be a least element.</p>
+</li>
+<li id="li-680"><p id="p-2729">This is the set \(\{1, 2, 5, 10, \ldots\}\text{,}\) namely the set of numbers that are the <em class="emphasis">result</em> of squaring and adding 1 to a natural number. (\(0^2 + 1 = 1\text{,}\) \(1^2 + 1 = 2\text{,}\) \(2^2 + 1 = 5\) and so on.) Thus the least element of the set is 1.</p></li>
+<li id="li-681"><p id="p-2730">Now we are looking for natural numbers that are equal to taking some natural number, squaring it and adding 1. That is, \(\{1, 2, 5, 10, \ldots\}\text{,}\) the same set as the previous part. So again, the least element is 1.</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="Niu"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-2742">Find the following cardinalities:</p>
+<ol class="lower-alpha">
+<li id="li-688"><p id="p-2743">\(|A|\) when \(A = \{4,5,6,\ldots,37\}\text{.}\)</p></li>
+<li id="li-689"><p id="p-2745">\(|A|\) when \(A = \{x \in \Z \st -2 \le x \le 100\}\text{.}\)</p></li>
+<li id="li-690"><p id="p-2747">\(|A \cap B|\) when \(A = \{x \in \N \st x \le 20\}\) and \(B = \{x \in \N \st x \mbox{ is prime} \}\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-300" id="solution-300"><span class="type">Solution</span></a><div id="hk-solution-300" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-2752" class="lower-alpha">
+<li id="li-691"><p id="p-2753">34. Note that \(37-4 = 33\text{,}\) but this calculation would not include 4 itself.</p></li>
+<li id="li-692"><p id="p-2754">103. Again, you could compute this by \(100-(-2)+1\text{,}\) or simply count: 100 numbers from 1 through 100, plus -2, -1, and 0.</p></li>
+<li id="li-693"><p id="p-2755">8. There are 8 primes not greater than 20: \(\{2, 3, 5, 7, 11, 13, 17, 19\}\text{.}\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="tpD"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<p id="p-2759">Find a set of largest possible size that is a subset of both \(\{1, 2, 3, 4, 5\}\) and \(\{2, 4, 6, 8,10\}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-302" id="solution-302"><span class="type">Solution</span></a><div id="hk-solution-302" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2762">\(\{2,4\}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="ZwM"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-2766">Find a set of smallest possible size that has both \(\{1,2,3,4,5\}\) and \(\{2,4,6,8,10\}\) as subsets.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-304" id="solution-304"><span class="type">Solution</span></a><div id="hk-solution-304" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2769">\(\{1,2,3,4,5,6,8,10\}\)</p></div></div>
+</div></article><article class="exercise-like" id="FDV"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-2772">Let \(A = \{n \in \N \st 20 \le n \lt 50\}\) and \(B = \{n \in \N \st 10 \lt n \le 30\}\text{.}\) Suppose \(C\) is a set such that \(C \subseteq A\) and \(C \subseteq B\text{.}\) What is the largest possible cardinality of \(C\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-306" id="solution-306"><span class="type">Solution</span></a><div id="hk-solution-306" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2773">11.</p></div></div>
+</div></article><article class="exercise-like" id="lLe"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-2778">Let \(A = \{1,2,3,4,5\}\) and \(B = \{2, 3, 4\}\text{.}\) How many sets \(C\) have the property that \(C \subseteq A\) and \(B \subseteq C\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-205" id="hint-205"><span class="type">Hint</span></a><div id="hk-hint-205" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2780">You should be able to write all of them out. Don’t forget \(A\) and \(B\text{,}\) which are also candidates for \(C\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-308" id="solution-308"><span class="type">Solution</span></a><div id="hk-solution-308" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2782">There will be exactly 4 such sets: \(\{2, 3, 4\}\text{,}\) \(\{1,2,3,4\}\text{,}\) \(\{2,3,4,5\}\) and \(\{1,2,3,4,5\}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="RSn"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<p id="p-2793">Let \(A = \{1,2,3,4,5\}\text{,}\) \(B = \{3,4,5,6,7\}\text{,}\) and \(C = \{2,3,5\}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-702"><p id="p-2794">Find \(A \cap B\text{.}\)</p></li>
+<li id="li-703"><p id="p-2796">Find \(A \cup B\text{.}\)</p></li>
+<li id="li-704"><p id="p-2798">Find \(A \setminus B\text{.}\)</p></li>
+<li id="li-705"><p id="p-2800">Find \(A \cap \overline{(B \cup C)}\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-310" id="solution-310"><span class="type">Solution</span></a><div id="hk-solution-310" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-2806" class="lower-alpha">
+<li id="li-706"><p id="p-2807">\(A \cap B = \{3,4,5\}\text{.}\)</p></li>
+<li id="li-707"><p id="p-2808">\(A \cup B = \{1,2,3,4,5,6,7\}\text{.}\)</p></li>
+<li id="li-708"><p id="p-2809">\(A \setminus B = \{1,2\}\text{.}\)</p></li>
+<li id="li-709"><p id="p-2810">\(A \cap \overline{(B \cup C)} = \{1\}\text{.}\)</p></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="xZw"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<p id="p-2820">Let \(A = \{x \in \N \st 4 \le x \lt 12\}\) and \(B = \{x \in \N \st x \text{ is even}\}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-714"><p id="p-2821">Find \(A \cap B\text{.}\)</p></li>
+<li id="li-715"><p id="p-2823">Find \(A \setminus B\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-312" id="solution-312"><span class="type">Solution</span></a><div id="hk-solution-312" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-2827" class="lower-alpha">
+<li id="li-716"><p id="p-2828">\(A \cap B\) will be the set of natural numbers that are both at least 4 and less than 12, and even. That is, \(A \cap B = \{x \in \N \st 4\le x \lt 12 \wedge x \text{ is even}\} = \{4, 6, 8, 10\}\text{.}\)</p></li>
+<li id="li-717">
+<p id="p-2829">\(A \setminus B\) is the set of all elements that are in \(A\) but not \(B\text{.}\) So this is \(\{x \in \N \st 4 \le x \lt 12 \wedge x \text{ is odd}\} = \{5,7,9,11\}\text{.}\)</p>
+<p id="p-2830">Note this is the same set as \(A \cap \overline{B}\text{.}\)</p>
+</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="egF"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="iXP">Let \(A = \{x \in \N \st 3 \le x \le 13\}\text{,}\) \(B = \{x \in \N \st x \mbox{ is even} \}\text{,}\) and \(C = \{x \in \N \st x \mbox{ is odd} \}\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="jeT"><p id="yCm">Find \(A \cap B\text{.}\)</p></li>
+<li id="Pmc"><p id="eJv">Find \(A \cup B\text{.}\)</p></li>
+<li id="vtl"><p id="KQE">Find \(B \cap C\text{.}\)</p></li>
+<li id="bAu"><p id="qXN">Find \(B \cup C\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="KnO"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<p id="PeY">Find an example of sets \(A\) and \(B\) such that \(A\cap B = \{3, 5\}\) and \(A \cup B = \{2, 3, 5, 7, 8\}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-muY" id="muY"><span class="type">Solution</span></a><div id="hk-muY" class="hidden-content tex2jax_ignore"><div class="solution"><p id="ftp">For example, \(A = \{2,3,5,7,8\}\) and \(B = \{3,5\}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="quX"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<p id="vmh">Find an example of sets \(A\) and \(B\) such that \(A \subseteq B\) and \(A \in B\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-SCh" id="SCh"><span class="type">Solution</span></a><div id="hk-SCh" class="hidden-content tex2jax_ignore"><div class="solution"><p id="rHH">For example, \(A = \{1,2,3\}\) and \(B = \{1,2,3,4,5,\{1,2,3\}\}\)</p></div></div>
+</div></article><article class="exercise-like" id="WCg"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<p id="btq">Recall \(\Z = \{\ldots,-2,-1,0, 1,2,\ldots\}\) (the integers). Let \(\Z^+ = \{1, 2, 3, \ldots\}\) be the positive integers. Let \(2\Z\) be the even integers, \(3\Z\) be the multiples of 3, and so on.</p>
+<ol class="lower-alpha">
+<li id="HHD"><p id="XeW">Is \(\Z^+ \subseteq 2\Z\text{?}\) Explain.</p></li>
+<li id="nOM"><p id="Dmf">Is \(2\Z \subseteq \Z^+\text{?}\) Explain.</p></li>
+<li id="TVV"><p id="jto">Find \(2\Z \cap 3\Z\text{.}\) Describe the set in words, and using set notation.</p></li>
+<li id="Ade"><p id="PAx">Express \(\{x \in \Z \st \exists y\in \Z (x = 2y \vee x = 3y)\}\) as a union or intersection of two sets already described in this problem.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-yJq" id="yJq"><span class="type">Solution</span></a><div id="hk-yJq" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="XOQ" class="lower-alpha">
+<li id="gkn"><p id="vHG">No.</p></li>
+<li id="Mrw"><p id="bOP">No.</p></li>
+<li id="syF">\(2\Z \cap 3\Z\) is the set of all integers which are multiples of both 2 and 3 (so multiples of 6). Therefore \(2\Z \cap 3\Z = \{x \in \Z \st \exists y\in \Z(x = 6y)\}\text{.}\)</li>
+<li id="YFO">\(2\Z \cup 3\Z\text{.}\)</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="CJp"><h6 class="heading"><span class="codenumber">14.</span></h6>
+<p id="HAz">Let \(A_2\) be the set of all multiples of 2 except for \(2\text{.}\) Let \(A_3\) be the set of all multiples of 3 except for 3. And so on, so that \(A_n\) is the set of all multiples of \(n\) except for \(n\text{,}\) for any \(n \ge 2\text{.}\) Describe (in words) the set \(\bar{A_2 \cup A_3 \cup A_4 \cup \cdots}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-eQz" id="eQz"><span class="type">Hint</span></a><div id="hk-eQz" class="hidden-content tex2jax_ignore"><div class="solution"><p id="oNb">It might help to think about what the union \(A_2 \cup A_3\) is first.  Then think about what numbers are <em class="emphasis">not</em> in that union.  What will happen when you also include \(A_5\text{?}\)</p></div></div>
+</div></article><article class="exercise-like" id="iQy"><h6 class="heading"><span class="codenumber">15.</span></h6>
+<p id="nHI">Draw a Venn diagram to represent each of the following:</p>
+<ol class="lower-alpha">
+<li id="EMX">\(A \cup \bar B\)</li>
+<li id="kUg">\(\bar{(A \cup B)}\)</li>
+<li id="Rbp">\(A \cap (B \cup C)\)</li>
+<li id="xiy">\((A \cap B) \cup C\)</li>
+<li id="dpH">\(\bar A \cap B \cap \bar C\)</li>
+<li id="JwQ">\((A \cup B) \setminus C\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-KXI" id="KXI"><span class="type">Solution</span></a><div id="hk-KXI" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="DVZ" class="lower-alpha cols2">
+<li id="pDZ">
+<p id="HVY">\(A \cup \bar B\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-or-not-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="VLi">
+<p id="odh">\(\bar{(A \cup B)}\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/not-A-or-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="BSr">
+<p id="Ukq">\(A \cap (B \cup C)\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-and-B-or-C.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="hZA">
+<p id="Arz">\((A \cap B) \cup C\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-and-B-cup-C.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="OgJ">
+<p id="gyI">\(\bar A \cap B \cap \bar C\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/not-A-cap-B-cap-not-C.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+<li id="unS">
+<p id="MFR">\((A \cup B) \setminus C\text{:}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/A-or-B-less-C.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
+</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="OXH"><h6 class="heading"><span class="codenumber">16.</span></h6>
+<p id="TOR">Describe a set in terms of \(A\) and \(B\) (using set notation) which has the following Venn diagram:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/not-A-and-B.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="veQ"><h6 class="heading"><span class="codenumber">17.</span></h6>
+<p id="zWa">Let \(A = \{a, b, c, d\}\text{.}\) Find \(\pow(A)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-Xma" id="Xma"><span class="type">Hint</span></a><div id="hk-Xma" class="hidden-content tex2jax_ignore"><div class="solution"><p id="UUk">We are looking for a set containing 16 sets.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-reR" id="reR"><span class="type">Solution</span></a><div id="hk-reR" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="kdi">
+\begin{align*}
+\pow(A) = \{\amp \emptyset, \{a\}, \{b\}, \{c\}, \{d\}, \{a,b\}, \{a,c\}, \{a,d\}, \{b,c\}, \{b,d\},\\
+\amp \{c,d\} \{a,b,c\}, \{a,b,d\}, \{a,c,d\}, \{b,c,d\}, \{a,b,c,d\}\}\text{.}
+\end{align*}
+</div></div></div>
+</div></article><article class="exercise-like" id="blZ"><h6 class="heading"><span class="codenumber">18.</span></h6>
+<p id="p-2867">Let \(A = \{1,2,\ldots, 10\}\text{.}\) How many subsets of \(A\) contain exactly one element (i.e., how many singleton subsets are there)?</p>
+<p id="p-2869">How many doubleton subsets (containing exactly two elements) are there?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-209" id="hint-209"><span class="type">Hint</span></a><div id="hk-hint-209" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-2871">Write these out, or at least start to and look for a pattern.</p></div></div>
+</div></article><article class="exercise-like" id="Hti"><h6 class="heading"><span class="codenumber">19.</span></h6>
+<p id="EFT">Let \(A = \{1,2,3,4,5,6\}\text{.}\) Find all sets \(B \in \pow(A)\) which have the property \(\{2,3,5\} \subseteq B\text{.}\)</p></article><article class="exercise-like" id="nAr"><h6 class="heading"><span class="codenumber">20.</span></h6>
+<p id="kNc">Find an example of sets \(A\) and \(B\) such that \(|A| = 4\text{,}\) \(|B| = 5\text{,}\) and \(|A \cup B| = 9\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-jAs" id="jAs"><span class="type">Solution</span></a><div id="hk-jAs" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Qkr">For example, \(A = \{1,2,3,4\}\) and \(B = \{5,6,7,8,9\}\) gives \(A \cup B = \{1,2,3,4,5,6,7,8,9\}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="THA"><h6 class="heading"><span class="codenumber">21.</span></h6>
+<p id="QUl">Find an example of sets \(A\) and \(B\) such that \(|A| = 3\text{,}\) \(|B| = 4\text{,}\) and \(|A \cup B| = 5\text{.}\)</p></article><article class="exercise-like" id="zOJ"><h6 class="heading"><span class="codenumber">22.</span></h6>
+<p id="xbu">Are there sets \(A\) and \(B\) such that \(|A| = |B|\text{,}\) \(|A\cup B| = 10\text{,}\) and \(|A\cap B| = 5\text{?}\) Explain.</p></article><article class="exercise-like" id="fVS"><h6 class="heading"><span class="codenumber">23.</span></h6>
+<p id="p-2883">Let \(A = \{2, 4, 6, 8\}\text{.}\) Suppose \(B\) is a set with \(|B| = 5\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="li-745"><p id="p-2884">What are the smallest and largest possible values of \(|A \cup B|\text{?}\) Explain.</p></li>
+<li id="li-746"><p id="p-2885">What are the smallest and largest possible values of \(|A \cap B|\text{?}\) Explain.</p></li>
+<li id="li-747"><p id="p-2886">What are the smallest and largest possible values of \(|A \times B|\text{?}\) Explain.</p></li>
+</ol></article><article class="exercise-like" id="Mdb"><h6 class="heading"><span class="codenumber">24.</span></h6>
+<p id="JpM">Let \(X = \{n \in \N \st 10 \le n \lt 20\}\text{.}\) Find examples of sets with the properties below and very briefly explain why your examples work.</p>
+<ol class="lower-alpha">
+<li id="SQC"><p id="liB">A set \(A \subseteq \N\) with \(|A| = 10\) such that \(X \setminus A = \{10, 12, 14\}\text{.}\)</p></li>
+<li id="yXL"><p id="RpK">A set \(B \in \pow(X)\) with \(|B| = 5\text{.}\)</p></li>
+<li id="feU"><p id="xwT">A set \(C \subseteq \pow(X)\) with \(|C| = 5\text{.}\)</p></li>
+<li id="Lmd"><p id="dEc">A set \(D \subseteq X \times X\) with \(|D| = 5\)</p></li>
+<li id="rtm"><p id="JLl">A set \(E \subseteq X\) such that \(|E| \in E\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="skk"><h6 class="heading"><span class="codenumber">25.</span></h6>
+<p id="pwV">Let \(A\text{,}\) \(B\) and \(C\) be sets.</p>
+<ol class="lower-alpha">
+<li id="XAv"><p id="pSu">Suppose that \(A \subseteq B\) and \(B \subseteq C\text{.}\) Does this mean that \(A \subseteq C\text{?}\) Prove your answer. Hint: to prove that \(A \subseteq C\) you must prove the implication, “for all \(x\text{,}\) if \(x \in A\) then \(x \in C\text{.}\)”</p></li>
+<li id="DHE"><p id="VZD">Suppose that \(A \in B\) and \(B \in C\text{.}\) Does this mean that \(A \in C\text{?}\) Give an example to prove that this does NOT always happen (and explain why your example works). You should be able to give an example where \(|A| = |B| = |C| = 2\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="Yrt"><h6 class="heading"><span class="codenumber">26.</span></h6>
+<p id="VEe">In a regular deck of playing cards there are 26 red cards and 12 face cards. Explain, using sets and what you have learned about cardinalities, why there are only 32 cards which are either red or a face card.</p></article><article class="exercise-like" id="EyC"><h6 class="heading"><span class="codenumber">27.</span></h6>
+<p id="BLn">Find an example of a set \(A\) with \(|A| = 3\) which contains only other sets and has the following property: for all sets \(B \in A\text{,}\) we also have \(B \subseteq A\text{.}\) Explain why your example works. (FYI: sets that have this property are called <dfn class="terminology">transitive</dfn>.)</p></article><article class="exercise-like" id="kFL"><h6 class="heading"><span class="codenumber">28.</span></h6>
+<p id="hSw">Consider the sets \(A\) and \(B\text{,}\) where \(A = \{3, |B|\}\) and \(B = \{1, |A|, |B|\}\text{.}\)  What are the sets?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-PHB" id="PHB"><span class="type">Solution</span></a><div id="hk-PHB" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="wrA">We need to be a little careful here.  If \(B\) contains 3 elements, then \(A\) contains just the number 3 (listed twice).  So that would make \(|A| = 1\text{,}\) which would make \(B = \{1, 3\}\text{,}\) which only has 2 elements.  Thus \(|B| \ne 3\text{.}\)  This means that \(|A| = 2\text{,}\) so \(B\) contains at least the elements 1 and 2.  Since \(\card{B} \ne 3\text{,}\) we must have \(\card{B} = 2\text{,}\) which agrees with the definition of \(B\text{.}\)</p>
+<p id="cyJ">Therefore it must be that \(A = \{2,3\}\) and \(B = \{1, 2\}\)</p>
+</div></div>
+</div></article><article class="exercise-like" id="QMU"><h6 class="heading"><span class="codenumber">29.</span></h6>
+<p id="NZF">Explain why there is no set \(A\) which satisfies \(A = \{2, \card{A}\}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-vOK" id="vOK"><span class="type">Hint</span></a><div id="hk-vOK" class="hidden-content tex2jax_ignore"><div class="solution"><p id="hiC">It looks like you should be able to define the set \(A\) like this.  But consider the two possible values for \(\card{A}\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="wUd"><h6 class="heading"><span class="codenumber">30.</span></h6>
+<p id="ugO">Find all sets \(A\text{,}\) \(B\text{,}\) and \(C\) which satisfy the following.</p>
+<div class="displaymath">
+\begin{align*}
+A = \amp \{1, \card{B}, \card{C}\}\\
+B = \amp \{2, \card{A}, \card{C}\}\\
+C = \amp \{1, 2, \card{A}, \card{B}\}\text{.}
+\end{align*}
+</div></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

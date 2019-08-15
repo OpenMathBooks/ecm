@@ -1,0 +1,64 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:58-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.6</span>.</h6>
+<p>Let's return to our familiar recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_1 = 3\) and \(a_2 = 13\text{.}\)</p>
+<p>In <a data-knowl="./knowl/eg_char-roots.html" title="Example 1.4.4">Example 1.4.4</a> we used the characteristic root technique to find the closed formula</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{4}{5} 4^n + \frac{1}{5} (-1)^n \text{.}
+\end{equation*}
+</div>
+<p>In <a data-knowl="./knowl/eg_genfun-recursion.html" title="Example 2.2.3">Example 2.2.3</a> we found that the generating function for the sequence was</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{1-3x - 4x^2}\text{.}
+\end{equation*}
+</div>
+<p>We can use partial fractions to reconcile these two results.</p>
+<p>Note that the denominator factors as \((1+x)(1-4x)\text{.}\)  We write</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-3x-4x^2} = \frac{c}{1+x}+\frac{d}{1-4x}
+\end{equation*}
+</div>
+<p>and solve for \(c\) and \(d\text{.}\)  This is done by finding a common denominator and equating the numerators to get</p>
+<div class="displaymath">
+\begin{equation*}
+1 = c(1-4x) + d(1+x)
+\end{equation*}
+</div>
+<p>Note that if \(x = -1\) this gives use \(1 = 5c\) so \(c = \frac{1}{5}\text{.}\)  Similarly, if \(x = \frac{1}{4}\) we find \(1 = \frac{5}{4}d\) so \(d = \frac{4}{5}\text{.}\)  (These constants should look familiar.)</p>
+<p>So what?  The generating function for \(a_n\) can now be expressed as the sum of two generating functions: \(\frac{1/5}{1+x}\) and \(\frac{4/5}{1-4x}\text{.}\)  What's more, these generating functions have nice power series:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1/5}{1+x} = \frac{1}{5}\left( 1-x+x^2-x^3+\cdots +(-1)^nx^n+\cdots\right)\text{;}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{4/5}{(1-4x)} = \frac{4}{5} \left(1+4x + 16x^2 + \cdots + 4^nx^n+ \cdots \right)\text{.}
+\end{equation*}
+</div>
+<p>Both of these were found by substituting a value (either \(-x\) or \(4x\)) into the power series for \(\frac{1}{1-x}\text{.}\)</p>
+<p>Since \(a_n\) is the coefficient of \(x^n\text{,}\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{1}{5}(-1)^n + \frac{4}{5}4^n
+\end{equation*}
+</div>
+<p>as expected.</p></article><span class="incontext"><a href="sec_adv-genfunctions.html#example-29">in-context</a></span>
+</body>
+</html>

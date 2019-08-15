@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:55-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>In general, we have some generating function \(f(x) = a_0 + a_1x + a_2x^2 + \cdots\text{.}\)  In this case, we know that \(a_1 = 3\) and \(a_2 = 13\text{;}\) we can find \(a_3 = 51\) and, by working backwards, \(a_0 = 1\text{.}\)  Having these values makes writing the following out a little clearer.</p>
+<p>In addition to \(f(x)\) we will also consider \(3x\cdot f(x)\) and \(4x^2 f(x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x) = \amp 1 + 3x + 13x^2 + 51 x^3 + \cdots \\
+3x f(x) = \amp 3x + 9x^2 + 39x^3 + 153 x^4 +  \\
+4x^2 f(x) = \amp 4x^2 + 12x^3 + 52x^4 + 204 x^5 +  
+\end{align*}
+</div>
+<p>Now subtract: \(f(x) - 3xf(x) - 4x^2f(x) = 1\text{.}\)  That's it.  Everything else on the right and side cancels.  Why?  Well, if you consider the \(x^n\) term, it will be \(a_n x^n - 3a_{n-1}x^n - 4a_{n-2}x^n\text{.}\)  The recurrence relation tells us that the coefficient will be zero!</p>
+<p>Simplifying this a bit more, we find \([1- 3x - 4x^2]f(x) = 1\text{,}\) or that the generating function for the sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{1-3x-4x^2}\text{.}
+\end{equation*}
+</div>
+<p>Now the question becomes, why does this help?  We would like to find a closed formula for \(a_n\text{.}\)  Right now, we just know that \(a_n\) is the coefficient of \(x^n\) in the power series for \(\frac{1}{1-3x-4x^2}\text{.}\)  We will come back to this in the next subsection.</p>
+</div></body>
+</html>

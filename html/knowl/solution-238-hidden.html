@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:37:22-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Case 1: Each face is a triangle. Let \(f\) be the number of faces. There are then \(3f/2\) edges. Using Euler's formula we have \(v - 3f/2 + f = 2\) so \(v = 2 + f/2\text{.}\) Now each vertex has the same degree, say \(k\text{.}\) So the number of edges is also \(kv/2\text{.}\) Putting this together gives</p>
+<div class="displaymath">
+\begin{equation*}
+e = \frac{3f}{2} = \frac{k(2+f/2)}{2}
+\end{equation*}
+</div>
+<p>which says</p>
+<div class="displaymath">
+\begin{equation*}
+k = \frac{6f}{4+f}
+\end{equation*}
+</div>
+<p>We need \(k\) and \(f\) to both be positive integers. Note that \(\frac{6f}{4+f}\) is an increasing function for positive \(f\text{,}\) and has a horizontal asymptote at 6. Thus the only possible values for \(k\) are 3, 4, and 5. Each of these are possible. To get \(k = 3\text{,}\) we need \(f = 4\) (this is the tetrahedron). For \(k = 4\) we take \(f = 8\) (the octahedron). For \(k = 5\) take \(f = 20\) (the icosahedron). Thus there are exactly three regular polyhedra with triangles for faces.</p>
+</div></body>
+</html>

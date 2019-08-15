@@ -1,0 +1,1100 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:17-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Generating Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://webwork-dev.aimath.org/webwork2_files/js/apps/MathView/mathview.css" rel="stylesheet">
+<script src="https://webwork-dev.aimath.org/webwork2_files/js/vendor/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(  \def\negchoose#1#2{\genfrac{[}{]}{0pt}{}{#1}{#2}_{-1}}
+  \newcommand{\mchoose}[2]{\left(\!\binom{#1}{#2}\!\right)}
+  \newcommand{\cycle}[1]{\arraycolsep 5 pt
+  \left(\begin{array}#1\end{array}\right)}
+  \newcommand{\importantarrow}{\Rightarrow}
+  \newcommand{\qchoose}[2]{\left[{#1\atop#2}\right]_q}
+  \newcommand{\bp}{
+  \begin{enumerate}{\setcounter{enumi}{\value{problemnumber}}}}
+  \newcommand{\ep}{\setcounter{problemnumber}{\value{enumi}}
+  \end{enumerate}}
+  \newcommand{\ignore}[1]{}
+  \renewcommand{\bottomfraction}{.8}
+  \renewcommand{\topfraction}{.8}
+  \newcommand{\apple}{\text{🍎}}
+  \newcommand{\ap}{\apple}
+  \newcommand{\banana}{\text{🍌}}
+  \newcommand{\ba}{\banana}
+  \newcommand{\pear}{\text{🍐}}
+  \newcommand{\pe}{\pear}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Orb}{Orb}
+  \newcommand{\F}{\mathcal{F}}
+\newcommand{\alert}{\fbox}
+\def\d{\displaystyle}
+\def\course{Math 228}
+\newcommand{\f}[1]{\mathfrak #1}
+\newcommand{\s}[1]{\mathscr #1}
+\def\N{\mathbb N}
+\def\B{\mathbf{B}}
+\def\circleA{(-.5,0) circle (1)}
+\def\Z{\mathbb Z}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\Q{\mathbb Q}
+\def\circleB{(.5,0) circle (1)}
+\def\R{\mathbb R}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\C{\mathbb C}
+\def\circleC{(0,-1) circle (1)}
+\def\F{\mathbb F}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\A{\mathbb A}
+\def\twosetbox{(-2,-1.5) rectangle (2,1.5)}
+\def\X{\mathbb X}
+\def\threesetbox{(-2,-2.5) rectangle (2,1.5)}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\U{\mathcal U}
+\def\pow{\mathcal P}
+\def\inv{^{-1}}
+\def\nrml{\triangleleft}
+\def\st{:}
+\def\~{\widetilde}
+\def\rem{\mathcal R}
+\def\sigalg{$\sigma$-algebra }
+\def\Gal{\mbox{Gal}}
+\def\iff{\leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+\def\And{\bigwedge}
+\def\entry{\entry}
+\def\AAnd{\d\bigwedge\mkern-18mu\bigwedge}
+\def\Vee{\bigvee}
+\def\VVee{\d\Vee\mkern-18mu\Vee}
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\Fi{\Leftarrow}
+\def\var{\mbox{var}}
+\def\Th{\mbox{Th}}
+\def\entry{\entry}
+\def\sat{\mbox{Sat}}
+\def\con{\mbox{Con}}
+\def\iffmodels{\bmodels\models}
+\def\dbland{\bigwedge \!\!\bigwedge}
+\def\dom{\mbox{dom}}
+\def\rng{\mbox{range}}
+\def\isom{\cong}
+\DeclareMathOperator{\wgt}{wgt}
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=4pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+\def\circleA{(-.5,0) circle (1)}
+\def\circleAlabel{(-1.5,.6) node[above]{$A$}}
+\def\circleB{(.5,0) circle (1)}
+\def\circleBlabel{(1.5,.6) node[above]{$B$}}
+\def\circleC{(0,-1) circle (1)}
+\def\circleClabel{(.5,-2) node[right]{$C$}}
+\def\twosetbox{(-2,-1.4) rectangle (2,1.4)}
+\def\threesetbox{(-2.5,-2.4) rectangle (2.5,1.4)}
+\def\ansfilename{practice-answers}
+\def\shadowprops{{fill=black!50,shadow xshift=0.5ex,shadow yshift=0.5ex,path fading={circle with fuzzy edge 10 percent}}}
+\newcommand{\hexbox}[3]{
+  \def\x{-cos{30}*\r*#1+cos{30}*#2*\r*2}
+  \def\y{-\r*#1-sin{30}*\r*#1}
+  \draw (\x,\y) +(90:\r) -- +(30:\r) -- +(-30:\r) -- +(-90:\r) -- +(-150:\r) -- +(150:\r) -- cycle;
+  \draw (\x,\y) node{#3};
+}
+\newcommand{\card}[1]{\left| #1 \right|}
+\newcommand{\twoline}[2]{\begin{pmatrix}#1 \\ #2 \end{pmatrix}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://discrete.openmathbooks.org/ecm/" target="_blank"><img src="images/cover.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="ecm.html"><span class="title">Exploring Combinatorial Mathematics</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec_adv-pie.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="ch_advanced.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec_adv-stirling.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec_adv-pie.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="ch_advanced.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec_adv-stirling.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface.html" data-scroll="preface">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_basic-combinatorics.html" data-scroll="ch_basic-combinatorics"><span class="codenumber">1</span> <span class="title">Basic Combinatorics</span></a><ul>
+<li><a href="sec_counting-binom.html" data-scroll="sec_counting-binom">Pascal's Triangle and Binomial Coefficients</a></li>
+<li><a href="sec_basic-proofs.html" data-scroll="sec_basic-proofs">Proofs in Combinatorics</a></li>
+<li><a href="sec_basic-quotient.html" data-scroll="sec_basic-quotient">Counting with Equivalence</a></li>
+<li><a href="sec_basic-recursion.html" data-scroll="sec_basic-recursion">Counting with Recursion</a></li>
+<li><a href="sec_basic-catalan.html" data-scroll="sec_basic-catalan">The Catalan Numbers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_advanced.html" data-scroll="ch_advanced"><span class="codenumber">2</span> <span class="title">Advanced Combinatorics</span></a><ul>
+<li><a href="sec_adv-pie.html" data-scroll="sec_adv-pie">The Principle of Inclusion and Exclusion: the Size of a Union</a></li>
+<li><a href="sec_adv-genfunctions.html" data-scroll="sec_adv-genfunctions" class="active">Generating Functions</a></li>
+<li><a href="sec_adv-stirling.html" data-scroll="sec_adv-stirling">Partitions of Sets</a></li>
+<li><a href="sec_adv-linearparts.html" data-scroll="sec_adv-linearparts">Partitions of Integers</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_graphtheory.html" data-scroll="ch_graphtheory"><span class="codenumber">3</span> <span class="title">Graph Theory</span></a><ul>
+<li><a href="sec_gt-intro.html" data-scroll="sec_gt-intro">Definitions</a></li>
+<li><a href="sec_paths.html" data-scroll="sec_paths">Walking Around Graphs</a></li>
+<li><a href="sec_planar.html" data-scroll="sec_planar">Planar Graphs and Euler's Formula</a></li>
+<li><a href="sec_eulerapps.html" data-scroll="sec_eulerapps">Applications of Euler's Formula</a></li>
+<li><a href="sec_coloring.html" data-scroll="sec_coloring">Coloring</a></li>
+<li><a href="sec_matchings.html" data-scroll="sec_matchings">Matching in Bipartite Graphs</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link">
+<a href="app_projects.html" data-scroll="app_projects"><span class="codenumber">A</span> <span class="title">Group Projects</span></a><ul>
+<li><a href="exercises-1.html" data-scroll="exercises-1">Project 1: Paths and Binomial Coefficients</a></li>
+<li><a href="exercises-2.html" data-scroll="exercises-2">Project 2: On Triangular Numbers</a></li>
+<li><a href="exercises-3.html" data-scroll="exercises-3">Project 3: Fibonacci</a></li>
+<li><a href="exercises-4.html" data-scroll="exercises-4">Project 4: Generalized Pascal Triangles</a></li>
+<li><a href="exercises-5.html" data-scroll="exercises-5">Project 5: A Pascal-like Triangle of Eulerian Numbers</a></li>
+<li><a href="exercises-6.html" data-scroll="exercises-6">Project 6: The Leibniz Harmonic Triangle</a></li>
+<li><a href="exercises-7.html" data-scroll="exercises-7">Project 7: The Twelve Days of Christmas (in the Discrete Math Style)</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch_background.html" data-scroll="ch_background"><span class="codenumber">B</span> <span class="title">Background Material</span></a><ul>
+<li><a href="sec_background-statements.html" data-scroll="sec_background-statements">Mathematical Statements</a></li>
+<li><a href="sec_intro-sets.html" data-scroll="sec_intro-sets">Sets</a></li>
+<li><a href="sec_background-functions.html" data-scroll="sec_background-functions">Functions</a></li>
+<li><a href="sec_background-logic.html" data-scroll="sec_background-logic">Propositional Logic</a></li>
+<li><a href="sec_background-proofs.html" data-scroll="sec_background-proofs">Proofs</a></li>
+<li><a href="sec_background-induction.html" data-scroll="sec_background-induction">Induction</a></li>
+</ul>
+</li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">C</span> <span class="title">Hints to selected activities and exercises</span></a></li>
+<li class="link"><a href="solutions-2.html" data-scroll="solutions-2"><span class="codenumber">D</span> <span class="title">Solutions to selected exercises</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl"><span class="codenumber">E</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="appendix-4.html" data-scroll="appendix-4"><span class="codenumber">F</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_adv-genfunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Generating Functions</span>
+</h2>
+<a href="sec_adv-genfunctions.html" class="permalink">¶</a><section class="introduction" id="introduction-47"><p id="p-844">In this section we will consider how to use polynomials to help us solve counting problems.  Why would we even think there would be a connection here?</p>
+<article class="project-like" id="activity-60"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">150</span>.</h6>
+<div class="introduction" id="introduction-48"><p id="p-845">Suppose you have two number cubes with non-standard labels.  The first has 1's on four sides and 2's on the remaining two sides, while the second cube has two 1's and four 2's. You will roll the pair of dice and compute the sum of the numbers rolled.</p></div>
+<article class="exercise-like" id="task-167"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-846">How many ways could you roll a 2?  What about a 3?  4?  You should be able to answer these questions by making a \(6\times 6\) addition table (with a lot of repeated row and column headers), but make sure you also think about how the sum and product principles are being used.</p></article><article class="exercise-like" id="task-168"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-847">Expand the polynomial \((4x + 2x^2)(2x + 4x^2)\text{.}\)  Do this by hand, keeping track of what you get before and after you “group like terms.”</p></article><article class="exercise-like" id="task-169"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-848">How are the two tasks above related?  What is going on here?</p></article></article><article class="project-like" id="act_genfun-twodice"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">151</span>.</h6>
+<div class="introduction" id="introduction-49"><p id="p-849">A standard problem to use when introducing probability is to ask for the probability of rolling a particular sum on two regular number cubes (dice numbered 1 through 6).  Students might not immediately see that some sums are more likely to occur than others.  You can illustrate this by creating a table.</p></div>
+<article class="exercise-like" id="task-170"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-850">Complete the standard addition table used to count the number of ways each sum of two regular dice can be achieved.  What would you do with the entries in the table to find the number of ways to roll an 8, for example?</p></article><article class="exercise-like" id="task-171"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-851">How is the table above related to what you would get if you complete the table below?</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines">\(​x\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(​x^2\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(x^3\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(x^4\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(x^5\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(x^6\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x^2\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x^3\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x^4\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x^5\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(x^6\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></div></div>
+<p id="p-852">In particular, what should the operation on the table be to make the correspondence relevant?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-106" id="hint-106"><span class="type">Hint</span></a><div id="hk-hint-106" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-853">If you were to treat this as an addition table, then you would have entries like \(x^2+x^3\text{.}\)  But the corresponding table for the dice has a 5 in that position.</p></div></div>
+</div></article><article class="exercise-like" id="task-172"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-854">What do each of the tasks above have to do with expanding \((x+x^2 + \cdots +x^6)^2\)</p></article></article><article class="project-like" id="exploration-91"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">152</span>.</h6>
+<div class="introduction" id="introduction-50"><p id="p-855">Using the connection between dice and polynomials, we can find interesting ways to label dice without modifying probabilities.</p></div>
+<article class="exercise-like" id="task-173"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-856">Show algebraically that \(x+x^2 + x^3 + x^4 + x^5 + x^6 = x(1+x+x^2)(1+x)(1-x+x^2)\text{.}\)  Try to do this by factoring instead of multiplying out the right-hand side.</p></article><article class="exercise-like" id="task-174"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-857">Multiply out the polynomial \(x(x+1)(x^2+x+1)\) and also \(x(x+1)(x^2+x+1)(x^2-x+1)^2\text{.}\)</p></article><article class="exercise-like" id="task-175"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-858">Explain how the previous two parts together allow you to find another way to label dice so that the probability of throwing any number 2 to 12 is the same as for standard dice.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-107" id="hint-107"><span class="type">Hint</span></a><div id="hk-hint-107" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-859">The new labeling will be \(\{1,2, 2, 3, 3, 4\}\) and \(\{1, 3, 4, 5, 6, 8\}\text{.}\)  These are called Sicherman dice.  Now explain how the polynomials prove that the probabilities for these dice will match standard dice.</p></div></div>
+</div></article></article><article class="project-like" id="activity-62"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">153</span>.</h6>
+<div class="introduction" id="introduction-51"><p id="p-860">It is also possible to multiply infinite polynomials (i.e., power series).  As long as we are only interested in the first few terms, we can find these by multiplying a small number of terms from the two infinite polynomials.  Multiply the following series out through at least \(x^7\text{.}\)</p></div>
+<article class="exercise-like" id="task-176"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-861">Multiply \((1+x+x^2+x^3 + \cdots)(1+ x + x^2 + x^3+ \cdots)\text{.}\)</p></article><article class="exercise-like" id="task-177"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-862">Multiply \((1+x+x^2 + x^3 + \cdots)(x + 2x^2 + 3x^3 + 4x^4 + \cdots)\text{.}\)</p></article><article class="exercise-like" id="task-178"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-863">What is going on here?  Where have we seen the coefficients of these polynomials before?</p></article></article></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Visualizing Counting with Pictures</span>
+</h3>
+<p id="p-864">Suppose you are going to choose three pieces of fruit from among apples, pears and bananas for a snack.  We can symbolically represent all your choices as</p>
+<div class="displaymath">
+\begin{equation*}
+\ap\ap\ap+\pe\pe\pe+\ba\ba\ba+\ap\ap\pe+\ap\ap\ba+\ap\pe\pe +\pe\pe\ba
++\ap\ba\ba+\pe\ba\ba+\ap\pe\ba.
+\end{equation*}
+</div>
+<p>Here we are using a picture of a piece of fruit to stand for taking a piece of that fruit. Thus \(\ap\) stands for taking an apple, \(\ap\pe\) for taking an apple and a pear, and \(\ap\ap\) for taking two apples.  You can think of the plus sign as standing for the “exclusive or,” that is, \(\ap+\ba\) would stand for “I take an apple or a banana but not both.” To say “I take both an apple and a banana,” we would write \(\ap\ba\text{.}\) We can extend the analogy to mathematical notation by condensing our statement that we take three pieces of fruit to</p>
+<div class="displaymath">
+\begin{equation*}
+\ap^3+\pe^3+\ba^3+\ap^2\pe+\ap^2\ba +\ap\pe^2+\pe^2\ba+
+\ap\ba^2+\pe\ba^2 +\ap\pe\ba.
+\end{equation*}
+</div>
+<p id="p-865">In this notation \(\ap^3\) stands for taking a multiset of three apples, while \(\ap^2\ba\) stands for taking a multiset of two apples and a banana, and so on. What our notation is really doing is giving us a convenient way to list all three element multisets chosen from the set \(\{\ap,\pe,\ba\}\text{.}\)<a data-knowl="" class="id-ref" data-refid="hk-fn-4" id="fn-4"><sup> 1 </sup></a><span id="hk-fn-4" class="hidden-content tex2jax_ignore"><span class="footnote">This approach was inspired by George Pólya's paper “Picture Writing,” in the December, 1956 issue of the <span class="booktitle">American Mathematical Monthly</span>, page 689. While we are taking a somewhat more formal approach than Pólya, it is still completely in the spirit of his work.</span></span></p>
+<p id="p-866">Suppose now that we plan to choose between one and three apples, between one and two pears, and between one and two bananas. In a somewhat clumsy way we could describe our fruit selections as</p>
+<div class="displaymath">
+\begin{align}
+\ap\pe\ba\amp+\ap^2\pe\ba\amp+\cdots\amp+\ap^2\pe^2\ba
+\amp+\cdots \amp+
+\ap^2\pe^2\ba^2             \notag\\
+\amp+\ap^3\pe\ba\amp+
+\cdots \amp+\ap^3\pe^2\ba\amp+\cdots \amp+
+\ap^3\pe^2\ba^2.\label{uptothreefruits}\tag{2.3}
+\end{align}
+</div>
+<article class="project-like" id="twopiecesoffruit"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">154</span>.</h6>
+<p id="p-867">Using an \(A\) in place of the picture of an apple, a \(P\) in place of the picture of a pear, and a \(B\) in place of the picture of a banana, write out the formula similar to <a data-knowl="./knowl/uptothreefruits.html" title="Equation 2.3">Formula (2.3)</a> without any dots for left out terms. (You may use pictures instead of letters if you prefer, but it gets tedious quite quickly!) Now expand the product \((A+A^2+A^3)(P+P^2)(B+B^2)\) and compare the result with your formula.</p></article><article class="project-like" id="activity-64"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">155</span>.</h6>
+<p id="p-870">Substitute \(x\) for all of \(A\text{,}\) \(P\) and \(B\) (or for the corresponding pictures) in the formula you got in <a data-knowl="./knowl/twopiecesoffruit.html" title="Activity 154">Activity 154</a> and expand the result in powers of \(x\text{.}\) Give an interpretation of the coefficient of \(x^n\text{.}\)</p></article><p id="p-872">If we were to expand the formula</p>
+<div class="displaymath">
+\begin{equation}
+(\ap+\ap^2+\ap^3)(\pe+\pe^2)(\ba+\ba^2).\label{threefruitsagain}\tag{2.4}
+\end{equation}
+</div>
+<p>we would get <a data-knowl="./knowl/uptothreefruits.html" title="Equation 2.3">Formula (2.3)</a>. Thus <a data-knowl="./knowl/uptothreefruits.html" title="Equation 2.3">Formula (2.3)</a> and <a data-knowl="./knowl/threefruitsagain.html" title="Equation 2.4">Formula (2.4)</a> each describe the number of multisets we can choose from the set \(\{\ap,\pe,\ba\}\) in which \(\apple\) appears between 1 and three times and \(\pear\) and \(\banana\) each appear once or twice. We interpret <a data-knowl="./knowl/uptothreefruits.html" title="Equation 2.3">Formula (2.3)</a> as describing each individual multiset we can choose, and we interpret <a data-knowl="./knowl/threefruitsagain.html" title="Equation 2.4">Formula (2.4)</a> as saying that we first decide how many apples to take, and then decide how many pears to take, and then decide how many bananas to take. At this stage it might seem a bit magical that doing ordinary algebra with the second formula yields the first, but in fact we could define addition and multiplication with these pictures more formally so we could explain in detail why things work out. However since the pictures are for motivation, and are actually difficult to write out on paper, it doesn't make much sense to work out these details. We will see an explanation in another context later on.</p></section><section class="subsection" id="picturefunction"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Picture functions</span>
+</h3>
+<a href="sec_adv-genfunctions.html#picturefunction" class="permalink">¶</a><p id="p-873">As you've seen, in our descriptions of ways of choosing fruits, we've treated the pictures of the fruit as if they are variables. You've also likely noticed that it is much easier to do algebraic manipulations with letters rather than pictures, simply because it is time consuming to draw the same picture over and over again, while we are used to writing letters quickly. In the theory of generating functions, we associate variables or polynomials or even power series with members of a set. There is no standard language describing how we associate variables with members of a set, so we shall invent<a data-knowl="" class="id-ref" data-refid="hk-fn-5" id="fn-5"><sup> 2 </sup></a><span id="hk-fn-5" class="hidden-content tex2jax_ignore"><span class="footnote">We are really adapting language introduced by George Pólya.</span></span> some. By a <dfn class="terminology">picture</dfn> of a member of a set we will mean a variable, or perhaps a product of powers of variables (or even a sum of products of powers of variables). A function that assigns a picture \(P(s)\) to each member \(s\) of a set \(S\) will be called a <dfn class="terminology">picture function</dfn> . The <dfn class="terminology">picture enumerator</dfn> for a picture function \(P\) defined on a set \(S\) will be</p>
+<div class="displaymath">
+\begin{equation*}
+E_P(S) = \sum_{s: s\in S}  P(s).
+\end{equation*}
+</div>
+<p id="p-874">We choose this language because the picture enumerator lists, or enumerates, all the elements of \(S\) according to their pictures. Thus <a data-knowl="./knowl/uptothreefruits.html" title="Equation 2.3">Formula (2.3)</a> is the picture enumerator the set of all multisets of fruit with between one and three apples, one and two pears, and one and two bananas.</p>
+<article class="project-like" id="zerotothreeapples"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">156</span>.</h6>
+<p id="p-875">How would you write down a polynomial in the variable \(A\) that says you should take between zero and three apples?</p></article><article class="project-like" id="zerotothreefruits"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">157</span>.</h6>
+<p id="p-877">How would you write down a picture enumerator that says we take between zero and three apples, between zero and three pears, and between zero and three bananas?</p></article><p id="p-879">Notice that when we used \(A^2\) to stand for taking two apples, and \(P^3\) to stand for taking three pears, then we used the product \(A^2P^3\) to stand for taking two apples and three pears. Thus we have chosen the picture of the ordered pair (2 apples, 3 pears) to be the product of the pictures of a multiset of two apples and a multiset of three pears.</p>
+<article class="project-like" id="exploration-94"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">158</span>.</h6>
+<p id="p-880">Show that if \(S_1\) and \(S_2\) are sets with picture functions \(P_1\) and \(P_2\) defined on them, and if we define the picture of an ordered pair \((x_1,x_2)\in S_1\times S_2\) to be \(P((x_1,x_2))= P_1(x_1)P_2(x_2)\text{,}\) then the picture enumerator of \(P\) on the set \(S_1\times S_2\) is \(E_{P_1}(S_1)E_{P_2}(S_2)\text{.}\) We call this the <dfn class="terminology">product principle for picture enumerators</dfn>.</p></article></section><section class="subsection" id="subsection-20"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">Generating functions</span>
+</h3>
+<article class="example-like" id="example-24"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.1</span>.</h6>
+<p id="p-882">Suppose you are going to choose a snack of between zero and three apples, between zero and three pears, and between zero and three bananas. Write down a polynomial in one variable \(x\) such that the coefficient of \(x^n\) is the number of ways to choose a snack with \(n\) pieces of fruit.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span></a><div id="hk-solution-108" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-883">We have a polynomial in three variables \(A\text{,}\) \(P\) and \(B\) for this situation:</p>
+<div class="displaymath">
+\begin{equation*}
+(1+A +A^2 +A^3)(1+P+P^2+P^3)(1+B+B^2+B^3)\text{.}
+\end{equation*}
+</div>
+<p>Now we substitute \(x\) for each of those variables to get</p>
+<div class="displaymath">
+\begin{equation*}
+(1+x+x^2+x^3)^3
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="project-like" id="exploration-95"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">159</span>.</h6>
+<p id="p-884">Suppose an apple costs 20 cents, a banana costs 25 cents, and a pear costs 30 cents. What should you substitute for \(A\text{,}\) \(P\text{,}\) and \(B\) in <a data-knowl="./knowl/zerotothreefruits.html" title="Exercise 157">Exercise 157</a> in order to get a polynomial in which the coefficient of \(x^n\) is the number of ways to choose a selection of fruit that costs \(n\) cents?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-108" id="hint-108"><span class="type">Hint</span></a><div id="hk-hint-108" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-885">For example, to get the cost of the fruit selection \(AP B\) you would want to get \(x^{20} x^{25} x^{30} = x^{75}\text{.}\)</p></div></div>
+</div></article><article class="project-like" id="exploration-96"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">160</span>.</h6>
+<p id="p-887">Suppose an apple has 40 calories, a pear has 60 calories, and a banana has 80 calories. What should you substitute for \(A\text{,}\) \(P\text{,}\) and \(B\) in <a data-knowl="./knowl/zerotothreefruits.html" title="Exercise 157">Exercise 157</a> in order to get a polynomial in which the coefficient of \(x^n\) is the number of ways to choose a selection of fruit with a total of \(n\) calories?</p></article><article class="project-like" id="reprovingbinomialtheorem"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">161</span>.</h6>
+<p id="p-889">We are going to choose a subset of the set \(\{1,2,\ldots, n\}\text{.}\) Suppose we use \(x_1\) to be the picture of choosing 1 to be in our subset. What is the picture enumerator for either choosing 1 or not choosing 1? Suppose that for each \(i\) between 1 and \(n\text{,}\) we use \(x_i\) to be the picture of choosing \(i\) to be in our subset. What is the picture enumerator for either choosing \(i\) or not choosing \(i\) to be in our subset? What is the picture enumerator for all possible choices of subsets of \([n]\text{?}\) What should we substitute for \(x_i\) in order to get a polynomial in \(x\) such that the coefficient of \(x^k\) is the number of ways to choose a \(k\)-element subset of \(n\text{?}\) What theorem have we just reproved (a special case of)?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-109" id="hint-109"><span class="type">Hint</span></a><div id="hk-hint-109" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-890">Consider the example with \(n = 2\text{.}\) Then we have two variables, \(x_1\) and \(x_2\) .  Forgetting about \(x_2\) , what sum says we either take \(x_1\) or we don't? Forgetting about \(x_1\) , what sum says we either take \(x_2\) or we don't? Now what product says we either take \(x_1\) or we don't <em class="emphasis">and</em> we either take \(x_2\) or we don't?</p></div></div>
+</div></article><p id="p-892">In <a data-knowl="./knowl/reprovingbinomialtheorem.html" title="Exercise 161">Exercise 161</a> we see that we can think of the process of expanding the polynomial \((1+x)^n\) as a way of “generating” the binomial coefficients \(\binom{n}{k}\) as the coefficients of \(x^k\) in the expansion of \((1+x)^n\text{.}\) For this reason, we say that \((1+x)^n\) is the “generating function” for the binomial coefficients \(\binom{n}{k}\text{.}\) More generally, the <dfn class="terminology">generating function</dfn> for a sequence \(a_i\text{,}\) defined for \(i\) with \(0\le i\le n\) is the expression \(\sum_{i=0}^n a_ix^i = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n\text{,}\) and the <dfn class="terminology">generating function</dfn> for the sequence \(a_i\) with \(i\ge 0\) is the expression \(\sum_{i=0}^\infty a_ix^i\text{.}\)</p>
+<article class="example-like" id="example-25"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.2</span>.</h6>
+<p id="p-893">The generating function for the sequence \(1, 2, 4, 8, \ldots\) is</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 2x + 4x^2 + 8x^3 + \cdots
+\end{equation*}
+</div>
+<p>which we will see later can be expressed as</p>
+<div class="displaymath">
+\begin{equation*}
+1+(2x) + (2x)^2 + (2x)^3 + \cdots = \frac{1}{1-2x}\text{.}
+\end{equation*}
+</div>
+<p id="p-894">The sequence \(1, 3, 5, 7,\ldots\) has generating function</p>
+<div class="displaymath">
+\begin{equation*}
+1+3x + 5x^2 +7x^3 + \cdots = \frac{1+x}{(1-x)^2}\text{.}
+\end{equation*}
+</div>
+<p>We will soon see why you can write the infinite series in this nice way.</p></article><p id="p-895">Generating functions for infinite sequences are examples of power series. In calculus it is important to think about whether a power series converges in order to determine whether or not it represents a function. In a nice twist of language, even though we use the phrase generating function as the name of a power series in combinatorics, we don't require the power series to actually represent a function in the usual sense, and so we don't have to worry about convergence.<a data-knowl="" class="id-ref" data-refid="hk-fn-6" id="fn-6"><sup> 3 </sup></a><span id="hk-fn-6" class="hidden-content tex2jax_ignore"><span class="footnote">In the evolution of our current mathematical terminology, the word function evolved through several meanings, starting with very imprecise meanings and ending with our current rather precise meaning.  The terminology “generating function” may be thought of as an example of one of the earlier usages of the term function.</span></span> Instead we think of a power series as a convenient way of representing the terms of a sequence of numbers of interest to us. The only justification for saying that such a representation is convenient is because of the way algebraic properties of power series capture some of the important properties of some sequences that are of combinatorial importance. The remainder of this chapter is devoted to giving examples of how the algebra of power series reflects combinatorial ideas.</p>
+<p id="p-896">Because we choose to think of power series as strings of symbols that we manipulate by using the ordinary rules of algebra and we choose to ignore issues of convergence, we have to avoid manipulating power series in a way that would require us to add infinitely many real numbers. For example, we cannot make the substitution of \(y+1\) for \(x\) in the power series \(\sum_{i=0}^\infty x^i\text{,}\) because in order to interpret \(\sum_{i=0}^\infty (y+1)^i\) as a power series we would have to apply the binomial theorem to each of the \((y+1)^i\) terms, and then collect like terms, giving us infinitely many ones added together as the coefficient of \(y^0\text{,}\) and in fact infinitely many numbers added together for the coefficient of any \(y^i\text{.}\) (On the other hand, it would be fine to substitute \(y+y^2\) for \(x\text{.}\) Can you see why?)</p></section><section class="subsection" id="subsection-21"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">Power series</span>
+</h3>
+<p id="p-897">For now, most of our uses of power series will involve just simple algebra. Since we use power series in a different way in combinatorics than we do in calculus, we should review a bit of the algebra of power series.</p>
+<article class="project-like" id="coeffinproduct"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">162</span>.</h6>
+<p id="p-898">Multiply out the polynomial \((a_0 +a_1x+a_2x^2)(b_0+b_1x+b_2x^2+b_3x^3)\text{.}\) What is the coefficient of \(x^2\text{?}\) What is the coefficient of \(x^4\text{?}\)</p></article><article class="project-like" id="coeffinproduct1"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">163</span>.</h6>
+<p id="p-900">In <a data-knowl="./knowl/coeffinproduct.html" title="Activity 162">Activity 162</a> why is there a \(b_0\) and a \(b_1\) in your expression for the coefficient of \(x^2\) but there is not a \(b_0\) or a \(b_1\) in your expression for the coefficient of \(x^4\text{?}\) What is the coefficient of \(x^4\) in</p>
+<div class="displaymath">
+\begin{equation*}
+(a_0+a_1x+a_2x^2+a_3x^3+a_4x^4)(b_0+b_1x+b_2x^2
++b_3x^3+b_4x^4)?
+\end{equation*}
+</div>
+<p id="p-901">Express this coefficient in the form</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=0}^4 \mbox{ something} ,
+\end{equation*}
+</div>
+<p>where the something is an expression you need to figure out. Now suppose that \(a_3=0\text{,}\) \(a_4=0\) and \(b_4=0\text{.}\) To what is your expression equal after you substitute these values? In particular, what does this have to do with <a data-knowl="./knowl/coeffinproduct.html" title="Activity 162">Activity 162</a>?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-110" id="hint-110"><span class="type">Hint</span></a><div id="hk-hint-110" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-902">For the last two questions, try multiplying out something simpler first, say \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) . If this problem seems difficult the part that seems to cause students the most problems is converting the expression they get for a product like this into summation notation. If you are having this kind of problem, expand the product \((a_0 + a_1 x + a_2 x^2 )(b_0 + b_1 x + b_2 x^2 )\) and then figure out what the coefficient of \(x^2\) is. Try to write that in summation notation.</p></div></div>
+</div></article><article class="project-like" id="coeffinproduct2"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">164</span>.</h6>
+<p id="p-905">The point of the <a data-knowl="./knowl/coeffinproduct.html" title="Activity 162">Problems 162</a> and <a data-knowl="./knowl/coeffinproduct1.html" title="Activity 163">Activity 163</a> is that so long as we are willing to assume \(a_i=0\) for \(i&gt;n\) and \(b_j =0\) for \(j&gt;m\text{,}\) then there is a very nice formula for the coefficient of \(x^k\) in the product</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{i=0}^n a_ix^i\right)\left(\sum_{j=0}^m b_jx^j\right).
+\end{equation*}
+</div>
+<p>Write down this formula explicitly.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-111" id="hint-111"><span class="type">Hint</span></a><div id="hk-hint-111" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-906">Write down the formulas for the coefficients of \(x^0\text{,}\) \(x^1\text{,}\) \(x^2\) and \(x^3\) in</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{i=0}^n a_ix^i\right)\left(\sum_{j=0}^m b_jx^j\right)\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="project-like" id="coeffinpowerseries"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">165</span>.</h6>
+<p id="p-908">Assuming that the rules you use to do arithmetic with polynomials apply to power series, write down a formula for the coefficient of \(x^k\) in the product</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{i=0}^\infty a_ix^i\right)\left(\sum_{j=0}^\infty
+b_jx^j\right)\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-112" id="hint-112"><span class="type">Hint</span></a><div id="hk-hint-112" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-909">How is this problem different from <a data-knowl="./knowl/coeffinproduct2.html" title="Activity 164">Activity 164</a>? Is this an important difference from the point of view of the coefficient of \(x^k\text{?}\)</p></div></div>
+</div></article><p id="p-911">We use the expression you obtained in <a data-knowl="./knowl/coeffinpowerseries.html" title="Activity 165">Activity 165</a> to <em class="emphasis">define</em> the product of power series. That is, we define the product</p>
+<div class="displaymath">
+\begin{equation*}
+\left(\sum_{i=0}^\infty a_ix^i\right)\left(\sum_{j=0}^\infty
+b_jx^j\right)
+\end{equation*}
+</div>
+<p>to be the power series \(\sum_{k=0}^\infty c_k x^k\text{,}\) where \(c_k\) is the expression you found in <a data-knowl="./knowl/coeffinpowerseries.html" title="Activity 165">Activity 165</a>. Since you derived this expression by using the usual rules of algebra for polynomials, it should not be surprising that the product of power series satisfies these rules.<a data-knowl="" class="id-ref" data-refid="hk-fn-7" id="fn-7"><sup> 4 </sup></a><span id="hk-fn-7" class="hidden-content tex2jax_ignore"><span class="footnote">Technically we should explicitly state these rules and prove that they are all valid for power series multiplication, but it seems like overkill at this point to do so!</span></span></p></section><section class="subsection" id="subsection-22"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">The extended binomial theorem and multisets</span>
+</h3>
+<p id="p-912">The binomial theorem tells us how to expand the binomial \((1+x)^n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(1+x)^n = \binom{n}{0} + \binom{n}{1}x + \binom{n}{2}x^2 + \cdots + \binom{n}{n}x^n\text{.}
+\end{equation*}
+</div>
+<p>This works for any positive integer \(n\text{.}\)</p>
+<p id="p-913">We will now consider the <em class="emphasis">extended</em> binomial theorem, which tells us what to do if \(n\) is a negative integer.  In particular, we will see how to expand \((1+x)^{-n} = \frac{1}{(1+x)^n}\) (here taking \(n\) positive again).</p>
+<p id="p-914">Although we could use calculus-like tricks to manipulate series directly (and we will demonstrate this in a bit), let's first try to develop the formula combinatorially using generating functions.  After all, \((1+x)^n\) is the generating function for the number \(k\)-element subsets of \([n]\) (you should be able to say why for two good reasons now).</p>
+<p id="p-915">What happens when we instead count the number of \(k\)-element <em class="emphasis">multisets</em> of \([n]\text{?}\)  Remember, we saw in <a data-knowl="./knowl/thm-multisetsize.html" title="Theorem 1.3.4">Theorem 1.3.4</a> that this can be expressed as the binomial coefficeint \(\mchoose{n}{k} = \binom{n+k-1}{k}\text{.}\)  Let's put this into a generating function.</p>
+<article class="project-like" id="activity-69"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">166</span>.</h6>
+<div class="introduction" id="introduction-52"><p id="p-916">Suppose that \(i\) is an integer between 1 and \(n\text{.}\)</p></div>
+<article class="exercise-like" id="task-179"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-917">What is the generating function in which the coefficient of \(x^k\) is \(1\text{?}\) This series is an example of what is called an <dfn class="terminology">infinite geometric series</dfn>.</p></article><article class="exercise-like" id="task-180"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-919">Express the generating function in which the coefficient of \(x^k\) is the number of \(k\)-element multisets chosen from \([n]\) as a <em class="emphasis">power</em> of a power series.</p>
+<p id="p-920">Note, it is useful to interpret the coefficient 1 as the number of multisets of size \(k\) chosen from the <em class="emphasis">singleton</em> set \(\{i\}\text{.}\) Namely, there is only one way to choose a multiset of size \(k\) from \(\{i\}\text{:}\) choose \(i\) exactly \(k\) times.</p>
+<p id="p-921">What does this, together with the binomial coefficient for multisets tell you about what this generating function equals?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-113" id="hint-113"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-113" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-922">You might try applying the product principle for generating functions to an appropriate power of the generating function you got in the first part of this problem.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-114" id="hint-114"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-114" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-923">In <a data-knowl="./knowl/thm-multisetsize.html" title="Theorem 1.3.4">Theorem 1.3.4</a> we have a formula for the number of \(k\)-element multisets chosen from an \(n\)-element set. Suppose you use this formula for \(a_k\) in \(\sum_{k=0}^\infty a_kx^k\text{.}\) What do you get the generating function for?</p></div></div>
+</div></article></article><article class="project-like" id="activity-70"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">167</span>.</h6>
+<p id="p-925">Compute the product \((1-x)\sum_{k=0}^n x^k = (1-x)(1+x+x^2+\cdots+x^n)\text{.}\)  Then compute the product \((1-x)\sum_{k=0}^\infty x^k\text{.}\)</p></article><p id="p-927">Another way to arrive at the conclusion of the previous activity is the following.  Set \(S = 1 + x + x^2 + \cdots\text{.}\)  Then \(xS = x + x^2 + x^3 + \cdots\text{.}\)  Consider the difference \(S - xS\text{.}\)  Combining like terms we find \(S-xS = (1-x)S = 1\text{,}\) as every power of \(x\) cancels except the first.  Therefore we find</p>
+<div class="displaymath">
+\begin{equation*}
+1 + x + x^2 + \cdots = \frac{1}{1-x}\text{.}
+\end{equation*}
+</div>
+<article class="project-like" id="multisetgenfn"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">168</span>.</h6>
+<p id="p-928">Express the generating function for the number of multisets of size \(k\) chosen from \([n]\) (where \(n\) is fixed but \(k\) can be any nonnegative integer) as a 1 over something relatively simple.</p></article><p id="p-931">We can now put this all together to get a special case of the extended binomial theorem.</p>
+<article class="project-like" id="negnchoosek"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">169</span>.</h6>
+<p id="p-932">Find a formula for \((1+x)^{-n} = \frac{1}{(1+x)^n}\) as a power series whose coefficients involve binomial coefficients.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-115" id="hint-115"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-115" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-933">The only tricky thing here is that we have \(\frac{1}{(1+x)^n}\) instead of \(\frac{1}{(1-x)^n}\) which we know something about already. Note that \(1 + x = 1 - (-x)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-116" id="hint-116"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-116" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-934">Can you see a way to use <a data-knowl="./knowl/multisetgenfn.html" title="Activity 168">Activity 168</a>?</p></div></div>
+</div></article><p id="p-936">For variety, here is another way you can get to the extended binomial theorem.</p>
+<article class="project-like" id="activity-73"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">170</span>.</h6>
+<div class="introduction" id="introduction-53">
+<p id="p-937">We start with the geometric series</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x} = 1 + x + x^2 + x^3+ \cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="exercise-like" id="task-181"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-938">What happens if we take a derivative of both sides?  Do this to get a power series for \(\frac{1}{(1-x)^2}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-117" id="hint-117"><span class="type">Hint</span></a><div id="hk-hint-117" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-939">You will get</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)^2} = 1 + 2x + 3x^2 + 4x^3 + \cdots\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise-like" id="task-182"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-940">Take another derivative and divide both sides by 2 to get a power series for \(\frac{1}{(1-x)^3}\text{.}\)  Then write the coefficients in the power series as binomial coefficients (use the factorial formula).</p></article><article class="exercise-like" id="task-183"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-941">Prove, by mathematical induction on \(n\) that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)^{n}} = \binom{n-1}{0} + \binom{n}{1}x + \binom{n+1}{2}x^2 + \cdots + \binom{n+k-1}{k}x^k+ \cdots\text{.}
+\end{equation*}
+</div></article><article class="exercise-like" id="task-184"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-942">Finally, substitute \(-x\) for \(x\) on both sides.</p></article></article><p id="p-943">We used generating functions for multisets to get the extended binomial theorem, but these generating functions are useful in themselves.  We close with a few counting problems related to these.</p>
+<article class="project-like" id="candygenfn"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">171</span>.</h6>
+<p id="p-945">Write down the generating function for the number of ways to distribute identical pieces of candy to three children so that no child gets more than 4 pieces. Write this generating function as a quotient of polynomials. Using both the extended binomial theorem and the original binomial theorem, find out in how many ways we can pass out exactly ten pieces.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-118" id="hint-118"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-118" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-946">Look for a power of a polynomial to get started.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-119" id="hint-119"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-119" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-947">The polynomial referred to in the first hint is a quotient of two polynomials.  The power of the denominator can be written as a power series.</p></div></div>
+</div></article><article class="project-like" id="exploration-99"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">172</span>.</h6>
+<p id="p-950">Another way to count the number of ways to distribute 10 identical pieces of candy to 3 children so no child gets more than 4 is to use the Principle of Inclusion and Exclusion.  Do this, and compare this calculation to what you found in <a data-knowl="./knowl/candygenfn.html" title="Exercise 171">Exercise 171</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-120" id="hint-120"><span class="type">Hint</span></a><div id="hk-hint-120" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-951">You should have solved this problem more in general in <a data-knowl="./knowl/act_restrictedmultisetspie.html" title="Exercise 140">Exercise 140</a>.</p></div></div>
+</div></article><article class="project-like" id="exploration-100"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">173</span>.</h6>
+<p id="p-953">What is the generating function for the number of multisets chosen from an \(n\)-element set so that each element appears at least \(j\) times and less than \(m\) times? Write this generating function as a quotient of polynomials, then as a product of a polynomial and a power series.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-121" id="hint-121"><span class="type">Hint</span></a><div id="hk-hint-121" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-954">Interpret <a data-knowl="./knowl/candygenfn.html" title="Exercise 171">Exercise 171</a> in terms of multisets.</p></div></div>
+</div></article></section><section class="subsection" id="subsection-23"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.6</span> <span class="title">Generating Functions and Recurrence Relations</span>
+</h3>
+<p id="p-956">Recall that a recurrence relation for a sequence \(a_n\) expresses \(a_n\) in terms of values \(a_i\) for \(i\lt n\text{.}\) For example, the equation \(a_i=3a_{i-1} +2^i\) is a first order linear constant coefficient recurrence.</p>
+<p id="p-957">Algebraic manipulations with generating functions can sometimes reveal the solutions to a recurrence relation.</p>
+<article class="example-like" id="eg_genfun-recursion"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.3</span>.</h6>
+<p id="p-958">Find a generating functions for the recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial conditions \(a_1 = 3\) and \(a_2 = 13\) (this is the same recurrence relation we solved using the characteristic root technique in <a data-knowl="./knowl/eg_char-roots.html" title="Example 1.4.4">Example 1.4.4</a>).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div id="hk-solution-124" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-959">In general, we have some generating function \(f(x) = a_0 + a_1x + a_2x^2 + \cdots\text{.}\)  In this case, we know that \(a_1 = 3\) and \(a_2 = 13\text{;}\) we can find \(a_3 = 51\) and, by working backwards, \(a_0 = 1\text{.}\)  Having these values makes writing the following out a little clearer.</p>
+<p id="p-960">In addition to \(f(x)\) we will also consider \(3x\cdot f(x)\) and \(4x^2 f(x)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+f(x) = \amp 1 + 3x + 13x^2 + 51 x^3 + \cdots \\
+3x f(x) = \amp 3x + 9x^2 + 39x^3 + 153 x^4 +  \\
+4x^2 f(x) = \amp 4x^2 + 12x^3 + 52x^4 + 204 x^5 +  
+\end{align*}
+</div>
+<p>Now subtract: \(f(x) - 3xf(x) - 4x^2f(x) = 1\text{.}\)  That's it.  Everything else on the right and side cancels.  Why?  Well, if you consider the \(x^n\) term, it will be \(a_n x^n - 3a_{n-1}x^n - 4a_{n-2}x^n\text{.}\)  The recurrence relation tells us that the coefficient will be zero!</p>
+<p id="p-961">Simplifying this a bit more, we find \([1- 3x - 4x^2]f(x) = 1\text{,}\) or that the generating function for the sequence is</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{1-3x-4x^2}\text{.}
+\end{equation*}
+</div>
+<p id="p-962">Now the question becomes, why does this help?  We would like to find a closed formula for \(a_n\text{.}\)  Right now, we just know that \(a_n\) is the coefficient of \(x^n\) in the power series for \(\frac{1}{1-3x-4x^2}\text{.}\)  We will come back to this in the next subsection.</p>
+</div></div>
+</div></article><article class="project-like" id="secondordernonhomo"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">174</span>.</h6>
+<p id="p-963">Find the generating function for the solutions to the recurrence</p>
+<div class="displaymath">
+\begin{equation*}
+a_i=5a_{i-1}-6a_{i-2}\text{.}
+\end{equation*}
+</div></article><p id="p-964">Of course there is no need to use generating functions to solve recurrences like the ones above, since we could use the characteristic root technique.  It gets more interesting when we consider recurrence relations for which the characteristic root technique fails.</p>
+<article class="project-like" id="substituteandsolve"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">175</span>.</h6>
+<div class="introduction" id="introduction-54"><p id="p-965">Consider the recurrence relation \(a_i=3a_{i-1} + 3^i\) with initial term \(a_0 = 1\text{.}\)</p></div>
+<article class="exercise-like" id="task-185"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-966">Write out the first few terms of the sequence.  Then write down the generating series \(f(x) = a_0 + a_1x + a_2x^2 + \cdots\) (that is, just substitute in the right values for \(a_i\)). </p></article><article class="exercise-like" id="task-186"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-967">Write out the series for \(3x f(x)\text{.}\)  Does it make sense why \(3x\) is the right thing to multiply by?</p></article><article class="exercise-like" id="task-187"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-968">Now subtract \(f(x) - 3xf(x)\) to get a series for \((1-3x)\cdot f(x)\text{.}\)  Show how this proves that the generating function for \((a_n)\) is</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{(1-3x)^2}\text{.}
+\end{equation*}
+</div></article><article class="exercise-like" id="task-188"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-969">Now explain why the coefficient of \(x^n\) is \(\binom{n+1}{1}3^n\) and what that tells us about the sequence \((a_n)\text{.}\)</p></article></article><article class="project-like" id="exploration-102"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">176</span>.</h6>
+<p id="p-970">Use the previous approach to solve the recurrence relation \(a_i=3a_{i-1} + 2^i\text{.}\)  Do this in general, for any initial value \(a_0\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-122" id="hint-122"><span class="type">Hint</span></a><div id="hk-hint-122" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-971">You may run into a product of the form \(\sum_{i=0}^\infty a^ix^i\sum_{j=0}^\infty b^jx^j\text{.}\) Note that in the product, the coefficient of \(x^k\) is \(\sum_{i=0}^k a^ib^{k-i} = \sum_{i=0}^k \frac{a^i}{b^i}\text{.}\)</p></div></div>
+</div></article><article class="project-like" id="exploration-103"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">177</span>.</h6>
+<p id="p-973">Suppose we deposit $5000 in a savings certificate that pays ten percent interest and also participate in a program to add $1000 to the certificate at the end of each year (from the end of the first year on) that follows (also subject to interest.) Assuming we make the $5000 deposit at the end of year 0, and letting \(a_i\) be the amount of money in the account at the end of year \(i\text{,}\) write a recurrence for the amount of money the certificate is worth at the end of year \(n\text{.}\) Solve this recurrence. How much money do we have in the account (after our year-end deposit) at the end of ten years?  At the end of 20 years?</p></article><p id="p-975">The sequence of problems that follows (culminating in <a data-knowl="./knowl/solveFibonacci.html" title="Exercise 188">Exercise 188</a>) describes a number of hypotheses we might make about a fictional population of rabbits. We use the example of a rabbit population for historic reasons; our goal is a classical sequence of numbers called Fibonacci numbers. When Fibonacci<a data-knowl="" class="id-ref" data-refid="hk-fn-8" id="fn-8"><sup> 5 </sup></a><span id="hk-fn-8" class="hidden-content tex2jax_ignore"><span class="footnote">Apparently Leanardo de Pisa was given the name Fibonacci posthumously. It is a shortening of “son of Bonacci” in Italian.</span></span> introduced them, he did so with a fictional population of rabbits.</p>
+<article class="project-like" id="secondorderintroduction"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">178</span>.</h6>
+<p id="p-976">Suppose we start (at the end of month 0) with 10 pairs of baby rabbits, and that after baby rabbits mature for one month they begin to reproduce, with each pair producing two new pairs at the end of each month afterwards. Suppose further that over the time we observe the rabbits, none die.</p>
+<p id="p-977">Let \(a_n\) be the number of rabbits we have at the end of month \(n\text{.}\) So we have \(a_0 = 10\text{,}\) \(a_1 = 10\text{,}\) \(a_2 = 30\text{,}\) and so on.  Show that \(a_n=a_{n-1} + 2a_{n-2}\text{.}\) This is an example of a <dfn class="terminology">second order</dfn> <em class="emphasis">linear</em> recurrence with constant coefficients.</p>
+<p id="p-978">Using a method similar to that of <a data-knowl="./knowl/substituteandsolve.html" title="Activity 175">Activity 175</a>, show that</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{i=0}^\infty a_ix^i = \frac{10}{1-x-2x^2}.
+\end{equation*}
+</div>
+<p>This gives us the generating function for the sequence \(a_i\) giving the population in month \(i\text{;}\) shortly we shall see a method for converting this to a solution to the recurrence.</p></article><article class="project-like" id="originalFibonacci"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">179</span>.</h6>
+<p id="p-980">In Fibonacci's original problem, each pair of mature rabbits produces one new pair at the end of each month, but otherwise the situation is the same as in <a data-knowl="./knowl/secondorderintroduction.html" title="Exercise 178">Exercise 178</a>.  Assuming that we start with one pair of baby rabbits (at the end of month 0), find the generating function for the number of pairs of rabbits we have at the end of \(n\) months.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-123" id="hint-123"><span class="type">Hint</span></a><div id="hk-hint-123" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-981">Our recurrence becomes \(a_n = a_{n-1} + a_{n-2}\text{,}\) which of course is the Fibonacci recurrence.</p></div></div>
+</div></article><article class="project-like" id="exploration-106"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">180</span>.</h6>
+<p id="p-983">Use long division on \(\dfrac{x}{1-x-x^2}\) and see what pops out.</p></article><p id="p-984">In the next section we will see how to use the generating functions for these recursions to find closed formulas for the sequence, including a closed formula for the Fibonacci numbers.  While we are here though, consider the following example of another reason why having a generating function for the Fibonacci numbers is useful.</p>
+<article class="example-like" id="example-27"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.4</span>.</h6>
+<p id="p-985">Use generating functions to prove the identity \(F_{n+1} = \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \cdots \) (note this is a finite sum).</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div id="hk-solution-129" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-986">Start with the generating function for the sequence \(1, 1, 2, 3, 5\text{,}\) which we saw in <a data-knowl="./knowl/originalFibonacci.html" title="Exercise 179">Exercise 179</a> is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x-x^2} = 1 + x + 2x^2 + \cdots + F_{n+1}x^n+ \cdots\text{.}
+\end{equation*}
+</div>
+<p>Of course we also have</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x} = 1 + x + x^2 + \cdots
+\end{equation*}
+</div>
+<p>and this is almost the same thing.  In fact, if we replace \(x\) with \(x+x^2\) we get the Fibonacci generating function:</p>
+<div class="displaymath">
+\begin{align*}
+\frac{1}{1-(x+x^2)} = \amp 1 + (x+x^2) + (x+x^2)^2 + \cdots \\
+= \amp 1 + x(1+x) + x^2(1+x)^2 + x^3(1+x)^3 + \cdots\text{.}
+\end{align*}
+</div>
+<p>Now use the binomial theorem on each of the \((1+x)^n\) terms and distribute:</p>
+<div class="displaymath">
+\begin{align*}
+1 + x + x^2 + (x^2 +\amp 2x^3 + x^4)\\
++ (\amp x^3 + 3x^4 + 3x^5 + x^6)\\
+\amp + (x^4 + 4x^5 + 6x^6 + 4x^7 + x^8) + \cdots \text{.}
+\end{align*}
+</div>
+<p>Look at the coefficient of \(x^4\text{,}\) for example.  We have \(F_5 = 1 + 3 + 1 = \binom{4}{0} + \binom{3}{1} + \binom{2}{2}\text{.}\)  It should be clear that this works in general: the coefficient of \(x^n\) will be \(F_{n+1}\) on the one hand, and \(\binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2}+ \cdots\) on the other.</p>
+</div></div>
+</div></article><p id="p-987">We also point out that there are other techniques for getting the generating function for a sequence other than the “differencing” we have used above.  We illustrate this with an extreme example.</p>
+<article class="example-like" id="example-28"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.5</span>.</h6>
+<p id="p-988">Find the generating function for the sequence \((a_n)\) where \(a_n = \binom{2n}{n}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span></a><div id="hk-solution-130" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-989">We have seen that the power series \(1 + x + x^2 + \cdots \) can be written as \(\frac{1}{1-x}\text{.}\)  Here we wish to find a nice expression for</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{1}{0} + \binom{2}{1}x + \binom{4}{2}x^2 + \binom{6}{3}x^3+ \cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-990">First we note a sort of recurrence: \((n+1)a_{n+1} = (4n+2)a_n\text{.}\)  To verify this use the factorial formula for \(\binom{n}{k}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(n+1)a_{n+1} = (n+1)\binom{2n+2}{n+1} = (n+1)\frac{(2n+2)(2n+1)}{(n+1)!(n+1)!}(2n)! = (4n+2)\binom{2n}{n} \text{.}
+\end{equation*}
+</div>
+<p id="p-991">Now, \(f(x) = a_0 + a_1x + a_2x^2 + \cdots = \sum_{n=0}^\infty a_nx^n\) has derivative</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = a_1 + 2a_2x + 3a_3x^2 + \cdots = \sum_{n=0}^\infty (n+1)a_{n+1}x^n
+\end{equation*}
+</div>
+<p>and further</p>
+<div class="displaymath">
+\begin{equation*}
+xf'(x) = a_1x + 2a_2x^2 + 3a_3x^3 + \cdots = \sum_{n=0}^\infty na_nx^n\text{.}
+\end{equation*}
+</div>
+<p>Using the recurrence above, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty (n+1)a_{n+1}x^n = 4\sum_{n=0}^\infty na_nx^n + 2\sum_{n=0}^\infty a_nx^n\text{.}
+\end{equation*}
+</div>
+<p>This means</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = 4xf'(x) + 2f(x)
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f'(x)}{f(x)} = \frac{2}{1-4x}\text{.}
+\end{equation*}
+</div>
+<p>Now integrate!  We get</p>
+<div class="displaymath">
+\begin{equation*}
+\ln f(x) = -\frac{1}{2}\ln(1-4x) + c\text{.}
+\end{equation*}
+</div>
+<p>Since \(a_0 =1\text{,}\) it must be \(c = 0\text{.}\)  Finally then, by exponentiating, we arrive at</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{\sqrt{1-4x}}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-24"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.7</span> <span class="title">Partial fractions</span>
+</h3>
+<p id="p-992">The generating functions you found in the previous section all can be expressed in terms of the reciprocal of a quadratic polynomial. However without a power series representation, the generating function doesn't tell us what the sequence is. It turns out that whenever you can factor a polynomial into linear factors (and over the complex numbers such a factorization always exists) you can use that factorization to express the reciprocal in terms of power series.</p>
+<article class="project-like" id="simplifysumoffractions"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">181</span>.</h6>
+<p id="p-993">Express \(\frac{1}{x-3} + \frac{2}{x-2}\) as a single fraction.</p></article><article class="project-like" id="partialfractionsintro"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">182</span>.</h6>
+<p id="p-995">In <a data-knowl="./knowl/simplifysumoffractions.html" title="Activity 181">Activity 181</a> you see that when we added numerical multiples of the reciprocals of first degree polynomials we got a fraction in which the denominator is a quadratic polynomial. This will always happen unless the two denominators are multiples of each other, because their least common multiple will simply be their product, a quadratic polynomial. This leads us to ask whether a fraction whose denominator is a quadratic polynomial can always be expressed as a sum of fractions whose denominators are first degree polynomials. Find numbers \(c\) and \(d\) so that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{5x+1}{(x-3)(x+5)} = \frac{c}{x-3} + \frac{d}{x+5}.
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-124" id="hint-124"><span class="type">Hint</span></a><div id="hk-hint-124" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath" id="p-996">
+\begin{equation*}
+\frac{5x+1}{(x-3)(x-5)} = \frac{cx+5c+dx-3d}{(x-3)(x-5)}
+\end{equation*}
+</div>
+<p>gives us</p>
+<div class="displaymath">
+\begin{align*}
+5x \amp = cx+dx\\
+1 \amp= 5c-3d\text{.}
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="project-like" id="partialfractions1"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">183</span>.</h6>
+<p id="p-998">In <a data-knowl="./knowl/partialfractionsintro.html" title="Activity 182">Activity 182</a> you may have simply guessed at values of \(c\) and \(d\text{,}\) or you may have solved a system of equations in the two unknowns \(c\) and \(d\text{.}\) Given constants \(a\text{,}\) \(b\text{,}\) \(r_1\text{,}\) and \(r_2\) (with \(r_1\not= r_2\)), write down a system of equations we can solve for \(c\) and \(d\) to write</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{ax+b}{(x-r_1)(x-r_2)} = \frac{c}{x-r_1} + \frac{d}{x-r_2}\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-125" id="hint-125"><span class="type">Hint</span></a><div id="hk-hint-125" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-999">To have</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{ax+b}{(x-r_1)(x-r_2)} = \frac{c}{x-r_1} + \frac{d}{x-r_2}
+\end{equation*}
+</div>
+<p>we must have</p>
+<div class="displaymath">
+\begin{equation*}
+cx-r_2c+dx-r_1d =ax+b\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><p id="p-1001">Writing down the equations in <a data-knowl="./knowl/partialfractions1.html" title="Activity 183">Activity 183</a> and solving them is called the <dfn class="terminology">method of partial fractions</dfn>. This method will let you find power series expansions for generating functions of the type you found in <a data-knowl="./knowl/secondorderintroduction.html" title="Exercise 178">Problems 178</a> to <a data-knowl="./knowl/secondordernonhomo.html" title="Exercise 174">Exercise 174</a>. However you have to be able to factor the quadratic polynomials that are in the denominators of your generating functions.</p>
+<article class="example-like" id="example-29"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.2.6</span>.</h6>
+<p id="p-1002">Let's return to our familiar recurrence relation \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial terms \(a_1 = 3\) and \(a_2 = 13\text{.}\)</p>
+<p id="p-1003">In <a data-knowl="./knowl/eg_char-roots.html" title="Example 1.4.4">Example 1.4.4</a> we used the characteristic root technique to find the closed formula</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{4}{5} 4^n + \frac{1}{5} (-1)^n \text{.}
+\end{equation*}
+</div>
+<p>In <a data-knowl="./knowl/eg_genfun-recursion.html" title="Example 2.2.3">Example 2.2.3</a> we found that the generating function for the sequence was</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{1-3x - 4x^2}\text{.}
+\end{equation*}
+</div>
+<p>We can use partial fractions to reconcile these two results.</p>
+<p id="p-1004">Note that the denominator factors as \((1+x)(1-4x)\text{.}\)  We write</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-3x-4x^2} = \frac{c}{1+x}+\frac{d}{1-4x}
+\end{equation*}
+</div>
+<p>and solve for \(c\) and \(d\text{.}\)  This is done by finding a common denominator and equating the numerators to get</p>
+<div class="displaymath">
+\begin{equation*}
+1 = c(1-4x) + d(1+x)
+\end{equation*}
+</div>
+<p>Note that if \(x = -1\) this gives use \(1 = 5c\) so \(c = \frac{1}{5}\text{.}\)  Similarly, if \(x = \frac{1}{4}\) we find \(1 = \frac{5}{4}d\) so \(d = \frac{4}{5}\text{.}\)  (These constants should look familiar.)</p>
+<p id="p-1005">So what?  The generating function for \(a_n\) can now be expressed as the sum of two generating functions: \(\frac{1/5}{1+x}\) and \(\frac{4/5}{1-4x}\text{.}\)  What's more, these generating functions have nice power series:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1/5}{1+x} = \frac{1}{5}\left( 1-x+x^2-x^3+\cdots +(-1)^nx^n+\cdots\right)\text{;}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\frac{4/5}{(1-4x)} = \frac{4}{5} \left(1+4x + 16x^2 + \cdots + 4^nx^n+ \cdots \right)\text{.}
+\end{equation*}
+</div>
+<p>Both of these were found by substituting a value (either \(-x\) or \(4x\)) into the power series for \(\frac{1}{1-x}\text{.}\)</p>
+<p id="p-1006">Since \(a_n\) is the coefficient of \(x^n\text{,}\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+a_n = \frac{1}{5}(-1)^n + \frac{4}{5}4^n
+\end{equation*}
+</div>
+<p>as expected.</p></article><article class="project-like" id="exploration-107"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">184</span>.</h6>
+<p id="p-1007">Use the method of partial fractions to convert the generating function \(\frac{10}{1-x-2x^2}\) from <a data-knowl="./knowl/secondorderintroduction.html" title="Exercise 178">Exercise 178</a> into the sum of two nicer generating functions. Use this to find a formula for \(a_n\text{.}\)</p></article><article class="project-like" id="exploration-108"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">185</span>.</h6>
+<p id="p-1009">Find the value of \(a_{40}\) in the power series</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{x-2}{3-4x +x^2} = a_0 + a_1x + a_2x^2 + \cdots + a_{40}x^{40}+\cdots.
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-126" id="hint-126"><span class="type">Hint</span></a><div id="hk-hint-126" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1010">\(3-4x+x^2 = (1-x)(3-x)\text{.}\)  The power series for \(\frac{A}{1-x}\) should be easy to express, but \(\frac{B}{3-x}\) might make more sense written as \(\frac{B/3}{1-\frac{1}{3}x}\text{.}\)</p></div></div>
+</div></article><article class="project-like" id="factorFibonacci"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">186</span>.</h6>
+<p id="p-1011">Use the quadratic formula to find the solutions to \(x^2+x-1=0\text{,}\) and use that information to factor \(x^2+x-1\text{.}\)</p></article><article class="project-like" id="fractionFibonacci"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">187</span>.</h6>
+<p id="p-1013">Use the factors you found in <a data-knowl="./knowl/factorFibonacci.html" title="Exercise 186">Exercise 186</a> to write</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{x^2+x-1}
+\end{equation*}
+</div>
+<p>in the form</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{c}{x-r_1} + \frac{d}{x-r_2}.
+\end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-127" id="hint-127"><span class="type">Hint</span></a><div id="hk-hint-127" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1014">You can save yourself a tremendous amount of frustrating algebra if you arbitrarily choose one of the solutions and call it \(r_1\) and call the other solution \(r_2\) and solve the problem using these algebraic symbols in place of the actual roots.<a data-knowl="" class="id-ref" data-refid="hk-fn-9" id="fn-9"><sup> 6 </sup></a><span id="hk-fn-9" class="hidden-content tex2jax_ignore"><span class="footnote">We use the words roots and solutions interchangeably.</span></span> Not only will you save yourself some work, but you will get a formula you could use in other problems. When you are done, substitute in the actual values of the solutions and simplify.</p></div></div>
+</div></article><article class="project-like" id="solveFibonacci"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">188</span>.</h6>
+<article class="exercise-like" id="task-189"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1016">Use the partial fractions decomposition you found in <a data-knowl="./knowl/fractionFibonacci.html" title="Exercise 187">Exercise 187</a> to write the generating function you found in <a data-knowl="./knowl/originalFibonacci.html" title="Exercise 179">Exercise 179</a> in the form</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty a_nx^i
+\end{equation*}
+</div>
+<p>and use this to give an explicit formula for \(a_n\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-128" id="hint-128"><span class="type">Hint</span></a><div id="hk-hint-128" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1017">Once again it will save a lot of tedious algebra if you use the symbols \(r_1\) and \(r_2\) for the solutions as in <a data-knowl="./knowl/fractionFibonacci.html" title="Exercise 187">Exercise 187</a> and substitute the actual values of the solutions once you have a formula for \(a_n\) in terms of \(r_1\) and \(r_2\text{.}\)</p></div></div>
+</div></article><article class="exercise-like" id="task-190"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1019">When we have \(a_0=1\) and \(a_1=1\text{,}\) i.e. when we start with one pair of baby rabbits, the numbers \(a_n\) are called <dfn class="terminology">Fibonacci Numbers</dfn>.  Use either the recurrence or your final formula to find \(a_2\) through \(a_8\text{.}\)  Are you amazed that your general formula produces integers, or for that matter produces rational numbers?  Why does the recurrence equation tell you that the Fibonacci numbers are all integers?</p></article><article class="exercise-like" id="task-191"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1021">Explain why there is a real number \(b\) such that, for large values of \(n\text{,}\) the value of the \(n\)th Fibonacci number is almost exactly (but not quite) some constant times \(b^n\text{.}\) (Find \(b\) and the constant.)</p></article><article class="exercise-like" id="task-192"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1023">Find an algebraic explanation (not using the recurrence equation) of what happens to make the square roots of 5 go away.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-129" id="hint-129"><span class="type">Hint</span></a><div id="hk-hint-129" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1024">Think about how the binomial theorem might help you.</p></div></div>
+</div></article><article class="exercise-like" id="task-193"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1026">As a challenge (which the authors have not yet done), see if you can find a way to show algebraically (not using the recurrence relation, but rather the formula you get by removing the square roots of five) that the formula Binet for the Fibonacci numbers yields integers.</p></article></article><article class="project-like" id="activity-78"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">189</span>.</h6>
+<p id="p-1028">Solve the recurrence \(a_n= 4a_{n-1} - 4a_{n-2}\text{.}\)  You did this already in <a data-knowl="./knowl/ex_char-rep-root.html" title="Exercise 89">Exercise 89</a> using the characteristic root technique, but there you had to be careful of the repeated root.  How does that manifest itself here?</p></article><p id="p-1030">The point of the previous exercise is to notice how generating functions illustrate where the extra factor of \(n\) comes from in the general form \(a_n = \alpha r^n + \beta n r^n\) you get for a closed formula when using the characteristic root technique on a recurrence that gives you a repeated root \(r\text{.}\)  For any \(r\text{,}\) we have the power series</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-rx)^2} = 1 + 2(rx) + 3(rx)^2 + \cdots + (n+1)(rx)^n + \cdots\text{,}
+\end{equation*}
+</div>
+<p>using the extended binomial theorem and substituting \(rx\) for \(x\text{.}\)  The coefficient of \(x^n\) is then \((n+1)r^n = r^n + nr^n\text{.}\)</p>
+<article class="paragraphs" id="paragraphs-6"><h5 class="heading"><span class="title">Catalan Numbers.</span></h5>
+<article class="project-like" id="CatalanRecurrence"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">190</span>.</h6>
+<div class="introduction" id="introduction-55">
+<p id="p-1031">Recall the recurrence for the Catalan numbers is</p>
+<div class="displaymath">
+\begin{equation*}
+C_n = \sum_{i=1}^{n-1} C_{i-1}C_{n-i}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="exercise-like" id="task-194"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1032">Use \(C_0 = 1\) and compute \(C_1, C_2, C_3, C_4, C_5\text{.}\)</p></article><article class="exercise-like" id="task-195"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1033">Show that if we use \(y\) to stand for the power series \(\sum_{n=0}^\infty c_nx^n\text{,}\) then we can find \(y\) by solving a quadratic equation. Find \(y\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-130" id="hint-130"><span class="type">Hint</span></a><div id="hk-hint-130" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1034">Does the right-hand side of the recurrence remind you of some products you have worked with?</p></div></div>
+</div></article><article class="exercise-like" id="task-196"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1036">Taylor's theorem from calculus tells us that the extended binomial theorem</p>
+<div class="displaymath">
+\begin{equation*}
+(1+x)^r = \sum_{i=0}^\infty \binom{r}{i}x^i
+\end{equation*}
+</div>
+<p>holds for any number real number \(r\text{,}\) where \(\binom{r}{i}\) is defined to be</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{P(r,i)}{i!} = \frac{r(r-1)\cdots(r-i+1)}{i!}\text{.}
+\end{equation*}
+</div>
+<p>Use this and your solution for \(y\) (note that of the two possible values for \(y\) that you get from the quadratic formula, only one gives an actual power series) to get a formula for the Catalan numbers.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-131" id="hint-131"><span class="type">Hint</span></a><div id="hk-hint-131" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-1037">
+\begin{equation*}
+\frac{1\cdot 3\cdot 5\cdots (2i-3)}{i!} = \frac{(2i-2)!}{(i-1)!2^i i!}\text{.}
+\end{equation*}
+</div></div></div>
+</div></article></article></article></section><section class="conclusion" id="conclusion-2"><article class="paragraphs" id="paragraphs-7"><h5 class="heading"><span class="title">Summary of Generating Functions.</span></h5>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Sequence:</td>
+<td class="l m b0 r0 l0 t0 lines">Power Series:</td>
+<td class="l m b0 r0 l0 t0 lines">Generating Function:</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, 1, 1, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+x+x^2+x^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1039">
+\begin{equation*}
+\displaystyle\frac{1}{1-x}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, 2, 4, 8,\ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+2x+(2x)^2+(2x)^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1040">
+\begin{equation*}
+\displaystyle\frac{1}{1-2x}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, -1, 1, -1, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1-x+x^2-x^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1041">
+\begin{equation*}
+\displaystyle\frac{1}{1+x}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0, 3, 3^2, 3^3,\ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(3x+(3x)^2+(3x)^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1042">
+\begin{equation*}
+\displaystyle\frac{3x}{1-3x}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, a, a^2,\ldots \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+ax+(ax)^2+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1043">
+\begin{equation*}
+\displaystyle\frac{1}{1-ax}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, 2, 3, 4, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+2x+3x^2+4x^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1044">
+\begin{equation*}
+\displaystyle\frac{1}{(1-x)^2}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0, 1, 2, 3, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(x+2x^2+3x^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1045">
+\begin{equation*}
+\displaystyle\frac{x}{(1-x)^2}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1,0, 2, 0, 3,0, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+2x^2+3x^4+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1046">
+\begin{equation*}
+\displaystyle\frac{1}{(1-x^2)^2}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\binom{n}{0}, \binom{n}{1}, \binom{n}{2}, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\binom{n}{0}+\binom{n}{1}x+\binom{n}{2}x^2+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1047">
+\begin{equation*}
+\displaystyle(1+x)^n
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\binom{2}{2}, \binom{3}{2}, \binom{4}{2}, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\binom{2}{2}+\binom{3}{2}x+\binom{4}{2}x^2+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1048">
+\begin{equation*}
+\displaystyle\frac{1}{(1-x)^3}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, -2, 3,-4, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1-2x+3x^2-4x^3+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1049">
+\begin{equation*}
+\displaystyle\frac{1}{(1+x)^2}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, 2(2), 3(2^2), \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+2(2x)+3(2x)^2+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1050">
+\begin{equation*}
+\displaystyle\frac{1}{(1-2x)^2}
+\end{equation*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1, 1, \frac{1}{2!}, \frac{1}{3!}, \ldots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots\)</td>
+<td class="l m b0 r0 l0 t0" style="max-width:150px;"><div class="displaymath" id="p-1051">
+\begin{equation*}
+e^x
+\end{equation*}
+</div></td>
+</tr>
+</table></div></div></div></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

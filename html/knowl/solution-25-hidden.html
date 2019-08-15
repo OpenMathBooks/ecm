@@ -1,0 +1,49 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:36-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We use the “reverse and add technique”, which we will see in <a href="sec_basic-recursion.html#subsec-recursionclosed" class="internal" title="Subsection 1.4.2: Using Recurrence Relations">Subsection 1.4.2</a> is usually reserved for summing arithmetic sums.  Surprisingly, it works here.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">\(S  =\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">\(\binom{n}{1}^2+2\binom{n}{2}^2+3\binom{n}{3}^2 + \)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots +(n-1)\binom{n}{n-1}^2+n\binom{n}{n}^2\)</td>
+</tr>
+<tr>
+<td class="r m b1 r0 l0 t0 lines">\(+ \quad S  =\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(n\binom{n}{n}^2 + \)</td>
+<td class="l m b1 r0 l0 t0 lines">\((n-1)\binom{n}{n-1}^2+ \cdots +\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(2\binom{n}{2}^2+\binom{n}{1}^2\)</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines">\(2S  =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(n\binom{n}{0}^2 + \)</td>
+<td class="l m b0 r0 l0 t0 lines">\(n\binom{n}{1}^2 + n\binom{n}{2}^2+ n\binom{n}{3}^2 + \)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots + n\binom{n}{n-1}^2+n\binom{n}{n}^2\)</td>
+</tr>
+</table></div></div></div>
+<p>This uses the identity \(\binom{n}{k} = \binom{n}{n-k}\text{.}\)  Now factor out an \(n\) to get</p>
+<div class="displaymath">
+\begin{equation*}
+2S = n\left[\binom{n}{0}^{2} + \binom{n}{1}^{2} + \binom{n}{2}^{2} + \ldots + \binom{n}{n}^{2}\right]\text{.}
+\end{equation*}
+</div>
+<p>Apply the identity in <a data-knowl="./knowl/eg_binom-squares-sum.html" title="Example 1.2.12">Example 1.2.12</a> and divide by 2 to get</p>
+<div class="displaymath">
+\begin{equation*}
+S = \frac{n}{2}\binom{2n}{n}\text{.}
+\end{equation*}
+</div>
+</div></body>
+</html>

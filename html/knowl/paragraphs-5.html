@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:50-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="paragraphs"><h5 class="heading"><span class="title">Counting surjective functions.</span></h5>
+<p>There are six surjective functions  \(f:[3]\to [2]\text{,}\) which happens to be \(2^3 - 2\text{.}\)  This makes sense because there are eight functions all together, but two are not surjective (do you see why?).</p>
+<p>Consider functions \(f:[3]\to [3]\text{.}\)  Since each element of the domain has three potential images, there are \(3^3\) such functions.  If we only count the injective (one-to-one) functions, we will find \(3! = 6\text{.}\)  Since the size of the domain and codomain are equal, this is also the number of surjective functions (since every injective function is surjective in this case).</p>
+<p>However, when the size of the codomain is larger than the size of the domain, there will be no injections and plenty of surjections.  To see how to count surjections in general, let's explore the case above where we know the answer already.</p>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">147</span>.</h6>
+<div class="introduction">Write out all 27 functions \(f:[3] \to [3]\text{.}\)  You could use two-line notation here, but to save space, perhaps just write the bottom line.  So the function that sends 1 to 1, 2 to 3 and 3 to 3 can be represented as (1,3,3).</div>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>Circle the functions you found above that are surjective.  Verify that there are just 6.</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>There are various ways that a function might fail to be surjective.  One way is for 1 to not be in the range.  How many functions are there like this (identify them)?  Does this number make sense?  Check this is the same number of functions that do not include 2 in the range.</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>How many functions do not have 1 or 2 in the range?  Does this number make sense as well?</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p>Explain what all this has to do with the expression</p>
+<div class="displaymath">
+\begin{equation*}
+3^3 - \left[ \binom{3}{1}2^3 - \binom{3}{2}1^3 + \binom{3}{3}0^3\right]\text{.}
+\end{equation*}
+</div></article></article><p>Let's generalize!</p>
+<article class="project-like"><h6 class="heading">
+<span class="type">Activity</span> <span class="codenumber">148</span>.</h6>
+<p>Given a function \(f\) from the \(k\)-element set \(K\) to the \(n\)-element set \([n]\text{,}\) we say \(f\) is in the set \(A_i\) if \(f(x)\not= i\) for any \(x\) in \(K\text{.}\)</p>
+<p>How many of these sets does a surjective function belong to?</p>
+<p>Use this to find the number of functions from a \(k\)-element set onto an \(n\)-element set?</p></article><article class="project-like"><h6 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">149</span>.</h6>
+<div class="introduction"><p>If we roll a die eight times, we get a sequence of 8 numbers, the number of dots on top on the first roll, the number on the second roll, and so on.</p></div>
+<article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p>What is the number of ways of rolling the die eight times so that each of the numbers one through six appears at least once in our sequence? To get a numerical answer, you will likely need a computer algebra package.</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p>What is the probability that we get a sequence in which all six numbers between one and six appear? To get a numerical answer, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p>How many times do we have to roll the die to have probability at least one half that all six numbers appear in our sequence? To answer this question, you will likely need a computer algebra package, programmable calculator, or spreadsheet.</p></article></article></article><span class="incontext"><a href="sec_adv-pie.html#paragraphs-5">in-context</a></span>
+</body>
+</html>

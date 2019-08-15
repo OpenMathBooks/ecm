@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:37:05-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.3.8.1</span>.</h6>
+<p>We recognize that each cube on the left-hand side can be expressed as \(\binom{x}{1} + 6 \binom{x}{2} + 6\binom{x}{3}\text{.}\)  Thus</p>
+<div class="displaymath">
+\begin{align*}
+1^3 + 2^3 + \cdots + n^3 = \amp \sum_{x=1}^n \left(\binom{x}{1} + 6 \binom{x}{2} + 6\binom{x}{3}\right)\\
+= \amp \sum_{x=1}^n \binom{x}{1} + 6 \sum_{x=1}^n \binom{x}{2} + 6 \sum_{x=1}^n \binom{x}{3}\text{.}
+\end{align*}
+</div>
+<p>Now each of the three sums of binomial coefficients can be simplified using the Hockey Stick Theorem, to get</p>
+<div class="displaymath">
+\begin{align*}
+=  \amp \binom{n+1}{2} + 6 \binom{n+1}{3} + 6 \binom{n+1}{4} \\
+= \amp \binom{n+1}{2} + 6\left(\binom{n+1}{3}+\binom{n+1}{4}\right) \\
+= \amp \binom{n+1}{2} + 6\binom{n+2}{4} 
+\end{align*}
+</div>
+<p>where the last step uses the Pascal triangle recurrence.</p>
+<p>Finally, write these last two binomial coefficients using the factorial formula and simplify:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{n(n+1)}{2} + \frac{(n+2)(n+1)n(n-1)}{4} = \left(\frac{n(n+1)}{2}\right)^2\text{.}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec_adv-stirling.html#solution-170">in-context</a></span>
+</body>
+</html>

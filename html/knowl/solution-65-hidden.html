@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:44-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>If we collect some initial data we see that the sequence of partial sums is \(0, 1, 2, 4, 7, 12, 20, \ldots\text{.}\)  We might recognize these numbers as always one less than a Fibonacci number, and guess that</p>
+<div class="displaymath">
+\begin{equation*}
+F_0 + F_1 + F_2 + \cdot + F_n = F_{n+2} - 1.
+\end{equation*}
+</div>
+<p>We could prove this by induction, but for fun, here is a clever observation that finishes the problem: \(F_k = F_{k+2} - F_{k+1}\) (just rearrange the recurrence relation).  Now replace each term after \(F_0\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+F_0 + (F_3 - F_2) + (F_4 - F_3) + (F_5 - F_4) + \cdots + (F_{n+1} - F_n)+ (F_{n+2} - F_{n+1})\text{.}
+\end{equation*}
+</div>
+<p>Almost every term cancels (telescopes) leaving only</p>
+<div class="displaymath">
+\begin{equation*}
+-F_1 + F_{n+2}
+\end{equation*}
+</div>
+<p>which is of course what we are looking for.</p>
+</div></body>
+</html>

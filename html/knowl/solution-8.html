@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-15T14:36:33-06:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.2.4.1</span>.</h6>
+<p>\(\binom{n}{k}\) counts the number of \(n\)-bit strings of weight \(k\text{.}\)  This is because of the \(n\) bits, we must choose \(k\) to be 1's, which can be done in \(\binom{n}{k}\) ways.  The number of \(n\)-bit strings of weight \(k\) is also \(\binom{n}{n-k}\text{,}\) since of the \(n\) bits, we must choose \(n-k\) to be 0's (making the remaining \(k\) 1's), which can be done in \(\binom{n}{n-k}\) ways.  Thus \(\binom{n}{k} = \binom{n}{n-k}\text{.}\)</p>
+<p>The above is a complete proof, but really \(\binom{n}{k}\) can be thought of as <em class="emphasis">defined</em> as the size of the set \(\B^n_k\text{.}\)  But then \(\binom{n}{n-k}\) is the size of the set \(\B^n_{n-k}\text{.}\)  So what we are really saying here is that \(|\B^n_k| = |\B^n_{n-k}|\text{,}\) which is true because the function that switches 0's to 1's and 1's to 0's in a bit string is a bijection between these two sets.</p>
+</div>
+<span class="incontext"><a href="sec_basic-proofs.html#solution-8">in-context</a></span>
+</body>
+</html>
