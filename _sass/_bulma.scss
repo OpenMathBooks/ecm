@@ -1,0 +1,48 @@
+//import initial variables:
+@import "bulma/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update turquoise:
+// $turquoise: #00a092;
+// $yellow-light: #E9C46A;
+// $white-ter: #FFFBFA;
+// // Add dark red for header
+$red-dark: #4C141D;
+$gray-dark: #21201E;
+// $turquoise-dark: darken($turquoise, 15%);
+// $green-light: #252D49;
+// $orange: #ee6a18;
+// $green: #425c41;
+// Update blue
+// $blue: #72d0eb
+// // Add pink and its invert
+// $pink: #ffb3b3
+// $pink-invert: #fff
+// // Add a serif family
+// $family-serif: "Merriweather", "Georgia", serif
+
+// 3. Set the derived variables
+// $dark: darken( $truquoise, 5%);
+$info: $red-dark;
+$dark: $gray-dark;
+// $warning: $yellow-light;
+// $info: $green-light;
+// Try a different background:
+$body-background-color: $white-ter;
+$background: $white-ter;
+// $text: $white-ter;
+// // Use the new pink as the primary color
+// $primary: $pink
+// $primary-invert: $pink-invert
+// // Use the existing orange as the danger color
+// $danger: $orange
+// // Use the new serif family
+// $family-primary: $family-serif
+
+// 4. Import the rest of Bulma
+@import 'bulma/utilities/all';
+@import 'bulma/base/all';
+@import 'bulma/elements/all';
+@import 'bulma/components/all';
+@import 'bulma/grid/all';
+@import 'bulma/layout/all';

@@ -1,0 +1,9 @@
+# Site wide config:
+
+title: "Exploring Combinatorial Mathematics"
+description: "Richard Grassl & Oscar Levin"
+
+footer: "&#169; Copyright 2019 Oscar Levin"
+
+sass:
+  style: compressed
