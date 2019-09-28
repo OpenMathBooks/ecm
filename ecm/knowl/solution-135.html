@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:58-06:00    *-->
+<!--*    on 2019-09-28T11:07:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,8 +14,16 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">186.1</span>.</h6>
-<p>\(r_1=\frac{-1+\sqrt{5}}{2}\text{,}\) \(r_2 = \frac{-1-\sqrt{5}}{2}\text{.}\) These roots give us the equation \(x^2+x-1=(x-\frac{-1+\sqrt{5}}{2})(x-\frac{-1-\sqrt{5}}{2})\text{.}\)</p>
+<span class="type">Solution</span> <span class="codenumber">184.1</span>.</h6>
+<p>\(\frac{10}{(1-x-2x^2)}=\frac{10}{(1-2x)(1+x)} = \frac{c}{1-2x} +\frac{d}{1+x}\text{.}\) This gives us the equations \(c+d=10\) and \(c-2d=0\text{.}\) Thus \(3d=10\text{,}\) so \(d=\frac{10}{3}\text{,}\) and \(c=2d\) so \(c=\frac{20}{3}\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{align*}
+\sum_{i=0}^\infty a_ix^i  \amp=  \frac{10}{1-x-2x^2}\\
+\amp= \frac{20/3}{1-2x} + \frac{10/3}{1+x}\\
+\amp= \frac{20}{3}\sum_{i=0}^\infty (2x)^i + \frac{10}{3}\sum_{i=0}^\infty (-1)^ix^i\text{.}
+\end{align*}
+</div>
+<p>Thus \(a_i=\frac{20}{3}2^i +\frac{10}{3}(-1)^i\text{.}\)</p>
 </div>
 <span class="incontext"><a href="sec_adv-genfunctions.html#solution-135">in-context</a></span>
 </body>

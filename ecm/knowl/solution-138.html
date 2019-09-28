@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:59-06:00    *-->
+<!--*    on 2019-09-28T11:07:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,8 +14,31 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">188.b.1</span>.</h6>
-<p>Using the recurrence, the Fibonacci numbers from \(a_0\) to \(a_8\) are 1, 1, 2, 3, 5, 8, 13, 21, 34. The recurrence says each term is the sum of the two preceding terms, and since the first two terms are integers, all the sums must be integers.</p>
+<span class="type">Solution</span> <span class="codenumber">188.a.1</span>.</h6>
+<div class="displaymath">
+\begin{align*}
+\sum_{n=0}^\infty a_nx^n  \amp= \frac{1}{1-x-x^2}= -\frac{1}{x^2+x-1}\\
+\amp= \frac{1}{\sqrt{5}}\cdot\frac{1}{r_1-x} -\frac{1}{\sqrt{5}}\cdot\frac{1}{r_2-x}\\
+\amp= \frac{1}{r_1\sqrt{5}}\cdot\frac{1}{1-x/r_1} -\frac{1}{r_2\sqrt{5}}\cdot\frac{1}{1-x/r_2}\\
+\amp= \frac{1}{r_1\sqrt{5}}\sum_{n=0}^\infty\left(\frac{x}{r_1}\right)^n
+-\frac{1}{r_2\sqrt{5}}\sum_{n=0}^\infty  \left(\frac{x}{r_2}\right)^n
+\end{align*}
+</div>
+<p>This gives us that</p>
+<div class="displaymath">
+\begin{align*}
+a_n \amp= \frac{1}{\sqrt{5}\cdot r_1^{n+1}}
++\frac{1}{\sqrt{5}\cdot r_2^{n+1}}\\
+\amp= \frac{2^{n+1}}{\sqrt{5}(-1+\sqrt{5})^{n+1}}
++
+\frac{2^{n+1}}{\sqrt{5}(-1-\sqrt{5})^{n+1}}\\
+\amp= \frac{2^{n+1}(1+\sqrt{5})^{n+1}}{\sqrt{5}\cdot
+4^{n+1}}-
+\frac{2^{n+1}(1-\sqrt{5})^{n+1}}{\sqrt{5}\cdot4^{n+1}}\\
+\amp= \frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-
+\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}.
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="sec_adv-genfunctions.html#solution-138">in-context</a></span>
 </body>

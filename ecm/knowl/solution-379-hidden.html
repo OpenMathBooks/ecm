@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:38:24-06:00    *-->
+<!--*    on 2019-09-28T11:08:18-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,8 +12,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>Again, start by understanding the dynamics of the problem. What does increasing \(n\) do? Let's try with a few examples. If \(n = 1\text{,}\) then yes, \(6^1 - 1 = 5\) is a multiple of 5. What does incrementing \(n\) to 2 look like? We get \(6^2 - 1 = 35\text{,}\) which again is a multiple of 5. Next, \(n = 3\text{:}\) but instead of just finding \(6^3 - 1\text{,}\) what did the increase in \(n\) do? We will still subtract 1, but now we are multiplying by another 6 first. Viewed another way, we are multiplying a number which is one more than a multiple of 5 by 6 (because \(6^2 - 1\) is a multiple of 5, so \(6^2\) is one more than a multiple of 5). What do numbers which are one more than a multiple of 5 look like? They must have last digit 1 or 6. What happens when you multiply such a number by 6? Depends on the number, but in any case, the last digit of the new number must be a 6. And then if you subtract 1, you get last digit 5, so a multiple of 5.</p>
-<p>The point is, every time we multiply by just one more six, we still get a number with last digit 6, so subtracting 1 gives us a multiple of 5. Now the formal proof:</p>
-<article class="hiddenproof"><a data-knowl="./knowl/proof-27-hidden.html" title="Proof B.6.2.1.1"><h6 class="heading"><span class="type">Proof.</span></h6></a></article>
+<p>First, let's think inductively about this equation. In fact, we know this is true for other reasons (reverse and add comes to mind). But why might induction be applicable? The left-hand side adds up the numbers from 1 to \(n\text{.}\) If we know how to do that, adding just one more term (\(n+1\)) would not be that hard. For example, if \(n = 100\text{,}\) suppose we know that the sum of the first 100 numbers is \(5050\) (so \(1 + 2 + 3 + \cdots + 100 = 5050\text{,}\) which is true). Now to find the sum of the first 101 numbers, it makes more sense to just add 101 to 5050, instead of computing the entire sum again. We would have \(1 + 2 + 3 + \cdots + 100 + 101 = 5050 + 101 = 5151\text{.}\) In fact, it would always be easy to add just one more term. This is why we should use induction.</p>
+<p>Now the formal proof:</p>
+<article class="hiddenproof"><a data-knowl="./knowl/proof-26-hidden.html" title="Proof B.6.1.1.1"><h6 class="heading"><span class="type">Proof.</span></h6></a></article>
 </div></body>
 </html>

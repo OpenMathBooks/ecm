@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:57-06:00    *-->
+<!--*    on 2019-09-28T11:07:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>\(\frac{x-2 +2(x-3)}{(x-3)(x-2)}=\frac{3x-8}{x^2-5x+6}\)</p></div></body>
+<body><div class="solution">
+<p>We have seen that the power series \(1 + x + x^2 + \cdots \) can be written as \(\frac{1}{1-x}\text{.}\)  Here we wish to find a nice expression for</p>
+<div class="displaymath">
+\begin{equation*}
+\binom{1}{0} + \binom{2}{1}x + \binom{4}{2}x^2 + \binom{6}{3}x^3+ \cdots\text{.}
+\end{equation*}
+</div>
+<p>First we note a sort of recurrence: \((n+1)a_{n+1} = (4n+2)a_n\text{.}\)  To verify this use the factorial formula for \(\binom{n}{k}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(n+1)a_{n+1} = (n+1)\binom{2n+2}{n+1} = (n+1)\frac{(2n+2)(2n+1)}{(n+1)!(n+1)!}(2n)! = (4n+2)\binom{2n}{n} \text{.}
+\end{equation*}
+</div>
+<p>Now, \(f(x) = a_0 + a_1x + a_2x^2 + \cdots = \sum_{n=0}^\infty a_nx^n\) has derivative</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = a_1 + 2a_2x + 3a_3x^2 + \cdots = \sum_{n=0}^\infty (n+1)a_{n+1}x^n
+\end{equation*}
+</div>
+<p>and further</p>
+<div class="displaymath">
+\begin{equation*}
+xf'(x) = a_1x + 2a_2x^2 + 3a_3x^3 + \cdots = \sum_{n=0}^\infty na_nx^n\text{.}
+\end{equation*}
+</div>
+<p>Using the recurrence above, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\sum_{n=0}^\infty (n+1)a_{n+1}x^n = 4\sum_{n=0}^\infty na_nx^n + 2\sum_{n=0}^\infty a_nx^n\text{.}
+\end{equation*}
+</div>
+<p>This means</p>
+<div class="displaymath">
+\begin{equation*}
+f'(x) = 4xf'(x) + 2f(x)
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f'(x)}{f(x)} = \frac{2}{1-4x}\text{.}
+\end{equation*}
+</div>
+<p>Now integrate!  We get</p>
+<div class="displaymath">
+\begin{equation*}
+\ln f(x) = -\frac{1}{2}\ln(1-4x) + c\text{.}
+\end{equation*}
+</div>
+<p>Since \(a_0 =1\text{,}\) it must be \(c = 0\text{.}\)  Finally then, by exponentiating, we arrive at</p>
+<div class="displaymath">
+\begin{equation*}
+f(x) = \frac{1}{\sqrt{1-4x}}\text{.}
+\end{equation*}
+</div>
+</div></body>
 </html>

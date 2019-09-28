@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116pt" height="72pt" viewBox="0 0 116 72" version="1.1">
 <g id="surface1">
-<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.0009375 70.865313 L 56.692344 39.685625 L 28.348594 -0.001875 L -14.174844 -0.001875 L -56.694375 42.521563 L 0.0009375 70.865313 " transform="matrix(1,0,0,-1,58.21,71.67)"/>
-<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 56.692344 39.685625 L -56.694375 42.521563 L 28.348594 -0.001875 " transform="matrix(1,0,0,-1,58.21,71.67)"/>
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -0.0010625 70.868125 L 56.69425 39.684531 L 28.346594 0.0009375 L -14.172938 0.0009375 L -56.692469 42.520469 L -0.0010625 70.868125 " transform="matrix(1,0,0,-1,58.587,71.665)"/>
+<path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 56.69425 39.684531 L -56.692469 42.520469 L 28.346594 0.0009375 " transform="matrix(1,0,0,-1,58.587,71.665)"/>
 </g>
 </svg>

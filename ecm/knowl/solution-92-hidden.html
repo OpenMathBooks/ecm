@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:49-06:00    *-->
+<!--*    on 2019-09-28T11:07:19-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,6 +11,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>From calculus, we know that \(e^x=\sum_{j=0}^\infty \frac{x^j}{j!}\text{.}\) Substituting \(x=-1\) gives us \(e^{-1}=\sum_{j=0}^\infty
-\frac{(-1)^j}{j!}\) which is the limit as \(n\) becomes infinite of the probability in the solution to <a data-knowl="./knowl/hatcheck.html" title="Exercise 138">Exercise 138</a>. Thus the probability approaches \(1/e\text{.}\)</p></div></body>
+<body><div class="solution">
+<p>Subtracting from 1 to get the probability that no student gets the correct backpack gives us</p>
+<div class="displaymath">
+\begin{equation*}
+1-\sum_{s=1}^n  \frac{(-1)^{s-1}}{s!} = \sum_{s=0}^n \frac{(-1)^s}{s!}.
+\end{equation*}
+</div>
+</div></body>
 </html>

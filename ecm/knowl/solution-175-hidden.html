@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:06-06:00    *-->
+<!--*    on 2019-09-28T11:07:27-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>The number of compositions of \(k\) into \(n\) parts is \(\binom{k-1}{n-1}\text{.}\) We can divide the compositions into blocks, where two compositions are in the same block if and only if one is a rearrangement of the other. Then the blocks correspond bijectively to partitions of \(k\) into \(n\) parts. However we cannot compute the number of blocks by dividing by the number of compositions per block since the number of compositions per block ranges from \(1\) to \(n!\text{.}\)  But then if we divide the number of compositions by \(n!\) we will get a number less than the number of blocks because \(n!\) times the number of blocks would be, by the sum principle, greater than the number of partitions.</p></div></body>
+<body><div class="solution"><p>There is a bijection between partitions of \(k\) into \(n\) parts and lists, in nonincreasing order, of \(n\) positive integers that add to \(k\text{,}\) because each multiset of numbers that adds to \(k\) can be listed in nonincreasing order in exactly one way.</p></div></body>
 </html>

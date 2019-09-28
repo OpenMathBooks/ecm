@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:02-06:00    *-->
+<!--*    on 2019-09-28T11:07:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,38 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution">
-<p>We need \(S(9,3)\text{.}\) Thus we need to extend our table for four more rows, but only out to the column labeled 3. These rows are,</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
-<tr>
-<td class="l m b0 r1 l0 t0 lines">6</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-<td class="l m b0 r0 l0 t0 lines">31</td>
-<td class="l m b0 r0 l0 t0 lines">90</td>
-<td class="l m b0 r0 l0 t0 lines">…</td>
-</tr>
-<tr>
-<td class="l m b0 r1 l0 t0 lines">7</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-<td class="l m b0 r0 l0 t0 lines">63</td>
-<td class="l m b0 r0 l0 t0 lines">101</td>
-<td class="l m b0 r0 l0 t0 lines">…</td>
-</tr>
-<tr>
-<td class="l m b0 r1 l0 t0 lines">8</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-<td class="l m b0 r0 l0 t0 lines">127</td>
-<td class="l m b0 r0 l0 t0 lines">966</td>
-<td class="l m b0 r0 l0 t0 lines">…</td>
-</tr>
-<tr>
-<td class="l m b0 r1 l0 t0 lines">9</td>
-<td class="l m b0 r0 l0 t0 lines">1</td>
-<td class="l m b0 r0 l0 t0 lines">255</td>
-<td class="l m b0 r0 l0 t0 lines">3025</td>
-<td class="l m b0 r0 l0 t0 lines">…</td>
-</tr>
-</table></div></div></div>
-<p>Thus there are 3025 ways to distribute the sandwiches into the lunch bags.</p>
-</div></body>
+<body><div class="solution"><p>\(L(k,n)\) is the number of broken permutations of a \(k\)-element set into \(n\) parts. Either \(k\) is in an ordered block with other numbers, or it is in a block by itself. If it is with other elements, it can go after any of the \(k-1\) other elements, or it can go at the beginning of any of the \(n\) blocks. If it is by itself, deleting it gives a broken permutation of a \(k-1\)-element set into \(n-1\) blocks. Thus \(L(k,n)=L(k-1,n-1) + (n+k-1)L(k-1,n)\text{.}\)</p></div></body>
 </html>

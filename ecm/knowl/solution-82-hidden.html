@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:48-06:00    *-->
+<!--*    on 2019-09-28T11:07:19-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>We can describe a walk starting at \(v\) as a Dyck word: use \(a\) for each step away from \(v\) and \(t\) for each stem toward \(v\text{.}\)  Since \(v\) is an endpoint of the path, no initial segment of this path can contain more \(t\)'s than \(a\)'s, so every path is a unique Dyck word.  Similarly, given any Dyck word on these symbols, we have a unique path starting and ending at \(v\) (there are \(n\) \(a\)'s in our words, so the farthest away you can go from \(v\) is \(a\) steps away, and the path has length \(a\)).</p></div></body>
+<body><div class="solution"><p>To see these are counted by the Catalan numbers, it is enough to verify that they satisfy the same recurrence relation as the Catalan numbers.  Fix one of the \(2n\) points and draw a chord to an acceptable second point (this will need to be an odd number of points away, so that all the points on either side of the chord can be matched up).  This creates two new “circles”, for which you can compute the number of non-intersecting chords using the smaller Catalan numbers, getting the recurrence.</p></div></body>
 </html>

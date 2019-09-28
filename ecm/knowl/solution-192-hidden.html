@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:10-06:00    *-->
+<!--*    on 2019-09-28T11:07:29-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>Suppose \(\lambda\) is a partition of \(k\) into \(n\) distinct parts. Either 1 is one of those parts or not. Thus if we subtract 1 from each part, we either get a partition of \(k-n\) into \(n-1\) parts or a partition of \(k-n\) into \(n\) parts. If \(\lambda\) and \(\lambda'\) are different partitions of \(k\) into \(n\) distinct parts, they go to different partitions. Each partition of \(k-n\) into \(n-1\) parts or \(n\) parts can be gotten in this way from a corresponding partition of \(k\) into \(n\) parts. Thus we have a bijective correspondence and \(q_n(k)=q_{n-1}(k-n) + q_{n}(k-n)\text{.}\)</p></div></body>
+<body><div class="solution"><p>The number of partitions of \(k\) into \(n\) parts is equal to the number of partitions of \(k+\binom{n}{2}\) into n distinct parts.  The bijection from partitions of \(k\) with \(n\) parts to partitions of \(k+\binom{n}{2}\) with \(n\) distinct parts that proves this is the one that takes a partition \(\lambda_n\lambda_{n-1}\cdots\lambda_1\) of \(k\) with \(\lambda_i&gt;\lambda_{i+1}\) and adds \(i-1\) to \(\lambda_i\) to get \(\lambda'_i\text{.}\) Then \(\lambda'\) is a partition into distinct parts, and the number it partitions is \(k+1+2+\cdots+n-1=k+\binom{n}{2}\text{.}\) The proof that it is a bijection is the fact that subtracting \(n-i\) from the \(i\)\/th part of a partition of \(k\) into distinct parts yields a partition of \(k\text{,}\) because part \(i+j\) is at least \(j\) smaller than part \(i\text{.}\)</p></div></body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:02-06:00    *-->
+<!--*    on 2019-09-28T11:07:24-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>The number of partitions of \([k]\) into \(n\) parts in which \(k\) is in a block with other elements of \([k]\) is equal \(n\) times the number of partitions of \([k-1]\) into \(n\) blocks, because \(k\) could be in any of the \(n\) parts, and since it is in a block with other elements of \([k-1]\text{,}\) removing it leaves a partition of \([k-1]\) into \(n\) blocks. The number of partitions of \([k]\) into \(n\) blocks in which \(k\) is in a block by itself is the number of partitions of \([k]\) into \(n-1\) blocks, because you can get any such partition by deleting the block containing \(k\) from a partition of \([k]\) in which \(k\) is in a block by itself. Thus \(S(k,n) = S(k-1,n-1) + nS(k-1,n)\text{.}\)</p></div></body>
+<body><div class="solution"><p>If a partition has \(k-1\) parts, then one part has two elements, so once we choose those two elements from the \(k\) elements, we are done.  Therefore \(S(k,k-1) = \binom{k}{2}\text{.}\)</p></div></body>
 </html>

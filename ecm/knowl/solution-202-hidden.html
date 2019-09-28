@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:12-06:00    *-->
+<!--*    on 2019-09-28T11:07:31-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,15 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution">
-<p>\(\displaystyle\prod_{i=1}^\infty 1+x^i=\prod_{i=1}^n \frac{1-x^{2i}}{1-x^i}=\frac{\prod_{i=1}^\infty1-x^{2i}}{\prod_{j=1}^\infty 1-x^j} =\prod_{i=j}^\infty \frac{1}{1-x^{2j-1}}\text{,}\) because all the terms in the numerator cancel with alternate terms in the denominator leaving only terms with odd powers of \(x\text{.}\) But</p>
-<div class="displaymath">
-\begin{align*}
-\amp \prod_{j=1}^\infty\frac{1}{1-x^{2j-1}} =  \prod_{j=1}^\infty \sum_{i=0}^\infty (x^{2j-1})^i\\
-=\amp (1+x+x^{2\cdot1}+\cdots)(1+x^3+x^{2\cdot3}+\cdots)(1
-+x^5+x^{2\cdot5}+\cdots)\cdots,
-\end{align*}
-</div>
-<p>which is the generating function for partitions of integers into parts that are odd numbers.</p>
-</div></body>
+<body><div class="solution"><p>In the generating function \(\displaystyle\prod_{i=1}^\infty \sum_{j=0}^\infty x^{2ij}\text{,}\) we may interpret the \(2ij\) in \(x^{2ji}\) the value of using \(2i\) as a part \(j\) times or as the value of using \(i\) as a part \(2j\) times. Therefore this is the generating function both for the number of partitions of integers into parts that are even and the number of partitions into parts that are used an even number of times. Therefore the number of partitions of \(n\) in which each part is even equals the number of partitions of \(n\) in which each part is used an even number of times. In <a data-knowl="./knowl/partition-even-mult-even-use.html" title="Activity 250">Activity 250</a> we got the same result bijectively.</p></div></body>
 </html>

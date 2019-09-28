@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:19-06:00    *-->
+<!--*    on 2019-09-28T11:06:56-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -313,7 +313,7 @@ G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c
 </div>
 <p>equal?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-207" id="solution-207"><span class="type">Solution</span></a><div id="hk-solution-207" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1449">No.  Here the vertex sets of each graph are equal, which is a good start.  Also, both graphs have two edges.  In the first graph, we have edges \(\{a,b\}\) and \(\{b,c\}\text{,}\) while in the second graph we have edges	\(\{a,c\}\) and 	\(\{c,b\}\text{.}\)  Now we do have \(\{b,c\} = \{c,b\}\text{,}\) so that is not the problem.  The issue is that \(\{a,b\} \ne \{a,c\}\text{.}\)  Since the edge sets of the two graphs are not equal (as sets), the graphs are not equal (as graphs).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span></a><div id="hk-solution-208" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1449">No.  Here the vertex sets of each graph are equal, which is a good start.  Also, both graphs have two edges.  In the first graph, we have edges \(\{a,b\}\) and \(\{b,c\}\text{,}\) while in the second graph we have edges	\(\{a,c\}\) and 	\(\{c,b\}\text{.}\)  Now we do have \(\{b,c\} = \{c,b\}\text{,}\) so that is not the problem.  The issue is that \(\{a,b\} \ne \{a,c\}\text{.}\)  Since the edge sets of the two graphs are not equal (as sets), the graphs are not equal (as graphs).</p></div></div>
 </div></article><p id="p-1450">Even if two graphs are not <em class="emphasis">equal</em>, they might be <em class="emphasis">basically</em> the same. The graphs in the previous example could be drawn like this:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-46.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="p-1451">Graphs that are basically the same (but perhaps not equal) are called <dfn class="terminology">isomorphic</dfn>. We will give a precise definition of this term after a quick example:</p>
@@ -326,7 +326,7 @@ G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c
 </blockquote>
 <p id="p-1455">Are these graphs the same?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-208" id="solution-208"><span class="type">Solution</span></a><div id="hk-solution-208" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span></a><div id="hk-solution-209" class="hidden-content tex2jax_ignore"><div class="solution">
 <p id="p-1456">The two graphs are NOT equal. It is enough to notice that \(V_1 \ne V_2\) since \(a \in V_1\) but \(a \notin V_2\text{.}\) However, both of these graphs consist of three vertices with edges connecting every pair of vertices. We can draw them as follows:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
 <div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-end;"><img src="images/image-47.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -345,7 +345,7 @@ G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c
 <p id="p-1463">\(V_1 = \{a,b,c,d\}\text{,}\) \(E_1 = \{\{a,b\}, \{a,c\}, \{a,d\}, \{c,d\}\}\)</p>
 <p id="p-1464">\(V_2 = \{a,b,c,d\}\text{,}\) \(E_2 = \{\{a,b\}, \{a,c\}, \{b,c\}, \{c,d\}\}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-209" id="solution-209"><span class="type">Solution</span></a><div id="hk-solution-209" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-210" id="solution-210"><span class="type">Solution</span></a><div id="hk-solution-210" class="hidden-content tex2jax_ignore"><div class="solution">
 <p id="p-1465">The graphs are NOT equal, since \(\{a,d\} \in E_1\) but \(\{a,d\} \notin E_2\text{.}\) However, since both graphs contain the same number of vertices and same number of edges, they <em class="emphasis">might</em> be isomorphic (this is not enough in most cases, but it is a good start).</p>
 <p id="p-1466">We can try to build an isomorphism. How about we say \(f(a) = b\text{,}\) \(f(b) = c\text{,}\) \(f(c) = d\) and \(f(d) = a\text{.}\) This is definitely a bijection, but to make sure that the function is an isomorphism, we must make sure it <em class="emphasis">respects the edge relation</em>. In \(G_1\text{,}\) vertices \(a\) and \(b\) are connected by an edge. In \(G_2\text{,}\) \(f(a) = b\) and \(f(b) = c\) are connected by an edge. So far, so good, but we must check the other three edges. The edge \(\{a,c\}\) in \(G_1\) corresponds to \(\{f(a), f(c)\} = \{b,d\}\text{,}\) but here we have a problem. There is no edge between \(b\) and \(d\) in \(G_2\text{.}\) Thus \(f\) is NOT an isomorphism.</p>
 <p id="p-1467">Not all hope is lost, however. Just because \(f\) is not an isomorphism does not mean that there is no isomorphism at all. We can try again. At this point it might be helpful to draw the graphs to see how they should match up.</p>
@@ -457,7 +457,7 @@ G_1 = (\{a,b,c\}, \{\{a,b\}, \{b,c\}\}); \qquad G_2 = (\{a,b,c\}, \{\{a,c\}, \{c
 <span class="type">Example</span> <span class="codenumber">3.1.8</span>.</h6>
 <p id="p-1505">At a recent math seminar, 9 mathematicians greeted each other by shaking hands. Is it possible that each mathematician shook hands with exactly 7 people at the seminar?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-214" id="solution-214"><span class="type">Solution</span></a><div id="hk-solution-214" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1506">It seems like this should be possible. Each mathematician chooses one person to not shake hands with. But this cannot happen. We are asking whether a graph with 9 vertices can have each vertex have degree 7. If such a graph existed, the sum of the degrees of the vertices would be \(9\cdot 7 = 63\text{.}\) This would be twice the number of edges (handshakes) resulting in a graph with \(31.5\) edges. That is impossible. Thus at least one (in fact an odd number) of the mathematicians must have shaken hands with an <em class="emphasis">even</em> number of people at the seminar.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-215" id="solution-215"><span class="type">Solution</span></a><div id="hk-solution-215" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1506">It seems like this should be possible. Each mathematician chooses one person to not shake hands with. But this cannot happen. We are asking whether a graph with 9 vertices can have each vertex have degree 7. If such a graph existed, the sum of the degrees of the vertices would be \(9\cdot 7 = 63\text{.}\) This would be twice the number of edges (handshakes) resulting in a graph with \(31.5\) edges. That is impossible. Thus at least one (in fact an odd number) of the mathematicians must have shaken hands with an <em class="emphasis">even</em> number of people at the seminar.</p></div></div>
 </div></article><p id="p-1507">One final definition: we say a graph is <dfn class="terminology">bipartite</dfn> if the vertices can be divided into two sets, \(A\) and \(B\text{,}\) with no two vertices in \(A\) adjacent and no two vertices in \(B\) adjacent. The vertices in \(A\) can be adjacent to some or all of the vertices in \(B\text{.}\) If each vertex in \(A\) is adjacent to all the vertices in \(B\text{,}\) then the graph is a <dfn class="terminology">complete bipartite graph</dfn>, and gets a special name: \(K_{m,n}\text{,}\) where \(|A| = m\) and \(|B| = n\text{.}\) The graph in the houses and utilities puzzle is \(K_{3,3}\text{.}\)</p>
 <article class="paragraphs" id="paragraphs-10"><h5 class="heading"><span class="title">Named Graphs.</span></h5>
 <p id="p-1508">Some graphs are used more than others, and get special names.</p>
