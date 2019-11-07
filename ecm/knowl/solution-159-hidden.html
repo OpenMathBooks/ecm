@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:03-06:00    *-->
+<!--*    on 2019-09-28T11:07:25-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>The \(\binom{k}{3}\) still counts the partitions in which one block has size three.  Now we can pick four elements to be in the two blocks of size 2 in \(\binom{k}{4}\) ways.  But these four elements can be broken into two equally sized blocks in 3 ways (pick the cell-mate of the first element).</p></div></body>
+<body><div class="solution"><p>\(S(k, k-2) = \binom{k}{3} + \frac{1}{2}\binom{k}{2}\binom{k-2}{2}\text{.}\)  Because we have two fewer blocks than we have elements, there will always either be a block of size three and \(k-3\) blocks of size one or two blocks of size two and \(k-4\) blocks of size 1.  The first case accounts for \(\binom{k}{3}\) partitions (once you have chosen the three elements to be in the large block, you are done).  The second case accounts for \(\frac{1}{2}\binom{k}{2}\binom{k-2}{2}\) partitions (pick 2 elements to be together, then 2 of the remaining to be together, but don't care which order you pick these in).</p></div></body>
 </html>

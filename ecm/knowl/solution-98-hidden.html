@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:50-06:00    *-->
+<!--*    on 2019-09-28T11:07:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,10 +12,10 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>We are counting derangements on 5 elements. There are \(5!\) ways for the gentlemen to grab hats in any order—but many of these permutations will result in someone getting their own hat. So we subtract all the ways in which one or more of the men get their own hat. In other words, we subtract the non-derangements. Doing so requires PIE. Thus the answer is:</p>
+<p>We count all permutations, and subtract those which are not derangements. There are \(4! = 24\) permutations of 4 elements. Now for a permutation to <em class="emphasis">not</em> be a derangement, at least one of the 4 elements must be fixed. There are \({4 \choose 1}\) choices for which single element we fix. Once fixed, we need to find a permutation of the other three elements. There are \(3!\) permutations on 3 elements. But now we have counted too many non-derangements, so we must subtract those permutations which fix two elements. There are \({4 \choose 2}\) choices for which two elements we fix, and then for each pair, \(2!\) permutations of the remaining elements. But this subtracts too many, so add back in permutations which fix 3 elements, all \({4 \choose 3}1!\) of them. Finally subtract the \({4 \choose 4}0!\) permutations (recall \(0! = 1\)) which fix all four elements. All together we get that the number of derangements of 4 elements is:</p>
 <div class="displaymath">
 \begin{equation*}
-5! - \left[{5 \choose 1}4! - {5 \choose 2}3! + {5 \choose 3}2! - {5 \choose 4}1! + {5 \choose 5}0!\right].
+4! - \left[{4 \choose 1}3! - {4 \choose 2}2! + {4 \choose 3} 1! - {4 \choose 4}0!\right] = 24 - 15 = 9.
 \end{equation*}
 </div>
 </div></body>

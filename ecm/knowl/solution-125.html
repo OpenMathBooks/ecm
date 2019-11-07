@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:56-06:00    *-->
+<!--*    on 2019-09-28T11:07:22-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,34 +14,24 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">176.1</span>.</h6>
+<span class="type">Solution</span> <span class="codenumber">2.2.3.1</span>.</h6>
+<p>In general, we have some generating function \(f(x) = a_0 + a_1x + a_2x^2 + \cdots\text{.}\)  In this case, we know that \(a_1 = 3\) and \(a_2 = 13\text{;}\) we can find \(a_3 = 51\) and, by working backwards, \(a_0 = 1\text{.}\)  Having these values makes writing the following out a little clearer.</p>
+<p>In addition to \(f(x)\) we will also consider \(3x\cdot f(x)\) and \(4x^2 f(x)\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
-\sum_{i=1}^\infty a_ix^i =\amp 3\sum_{i=1}^\infty
-a_{i-1}x^i +\sum_{i=1}^\infty 2^ix^i\\
-\sum_{i=0}^\infty a_ix^i -a_0  =\amp 3x\sum_{i=1}^\infty a_{i-1}x^{i-1}
-+\sum_{i=0}^\infty (2x)^i -1\\
-\sum_{i=0}^\infty a_ix^i -a_0  =\amp 3x\sum_{i=0}^\infty a_ix^i +\frac{1}{1-2x} -1\\
-(1-3x)\sum_{i=0}^\infty a_ix^i =\amp a_0 +\frac{1}{1-2x}-1\\
-\sum_{i=0}^\infty a_ix^i =\amp  \frac{a_0-1}{1-3x}+\frac{1}{(1-2x)(1-3x)}\\
-\sum_{i=0}^\infty a_ix^i =\amp (a_0-1)\sum_{i=0}^\infty 3^ix^i +\sum_{i=0}^\infty
-2^ix^i\sum_{j=0}^\infty 3^jx^j
+f(x) = \amp 1 + 3x + 13x^2 + 51 x^3 + \cdots \\
+3x f(x) = \amp 3x + 9x^2 + 39x^3 + 153 x^4 +  \\
+4x^2 f(x) = \amp 4x^2 + 12x^3 + 52x^4 + 204 x^5 +  
 \end{align*}
 </div>
-<p>But</p>
+<p>Now subtract: \(f(x) - 3xf(x) - 4x^2f(x) = 1\text{.}\)  That's it.  Everything else on the right and side cancels.  Why?  Well, if you consider the \(x^n\) term, it will be \(a_n x^n - 3a_{n-1}x^n - 4a_{n-2}x^n\text{.}\)  The recurrence relation tells us that the coefficient will be zero!</p>
+<p>Simplifying this a bit more, we find \([1- 3x - 4x^2]f(x) = 1\text{,}\) or that the generating function for the sequence is</p>
 <div class="displaymath">
-\begin{align*}
-\sum_{i=0}^\infty
-2^ix^i\sum_{j=0}^\infty 3^jx^j\amp=
-\sum_{k=0}^\infty
-\sum_{i=0}^k 2^i3^{k-i}x^k=
-\sum_{k=0}^\infty3^kx^k
-\sum_{i=0}^k \frac{2^i}{3^i}\\
-\amp=\sum_{k=0}^\infty \frac{1-\left(\frac{2}{3}\right)^{k+1}}{1-\frac{2}{3}}3^kx^k =\sum_{k=0}^\infty
-(3^{k+1}-2^{k+1})x^k\text{.}
-\end{align*}
+\begin{equation*}
+f(x) = \frac{1}{1-3x-4x^2}\text{.}
+\end{equation*}
 </div>
-<p>Substituting this into the equation for \(\sum_{i=0}^\infty a_ix^i\) gives us \(a_i =(a_0+2)3^i -2^{i+1}\text{.}\)</p>
+<p>Now the question becomes, why does this help?  We would like to find a closed formula for \(a_n\text{.}\)  Right now, we just know that \(a_n\) is the coefficient of \(x^n\) in the power series for \(\frac{1}{1-3x-4x^2}\text{.}\)  We will come back to this in the next subsection.</p>
 </div>
 <span class="incontext"><a href="sec_adv-genfunctions.html#solution-125">in-context</a></span>
 </body>

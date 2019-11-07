@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:14-06:00    *-->
+<!--*    on 2019-09-28T11:06:47-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -249,7 +249,7 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_basic-proofs"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Proofs in Combinatorics</span>
 </h2>
-<a href="sec_basic-proofs.html" class="permalink">¶</a><section class="introduction" id="introduction-8"><p id="p-97">We have already seen some basic proof techniques when we considered graph theory: direct proofs, proof by contrapositive, proof by contradiction, and proof by induction.  In this section, we will consider a few proof techniques particular to combinatorics.  Along the way we will establish some basic counting principles and further develop our understanding of binomial coefficients.</p>
+<a href="sec_basic-proofs.html" class="permalink">¶</a><section class="introduction" id="introduction-8"><p id="p-97"> In this section, we will consider a few proof techniques particular to combinatorics.  Along the way we will establish some basic counting principles and further develop our understanding of binomial coefficients.</p>
 <p id="p-98">Why do we care about proofs?  It is not because we doubt the truth of so called theorems or wish to establish new results to further mathematics as an academic discipline (although there is nothing wrong with doing that as well).  Rather, it is through creating proofs that we gain a deeper understanding of the big ideas present in this subject.</p></section><section class="subsection" id="subsec-basic-proofs-examples"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Two Motivating Examples</span>
 </h3>
@@ -483,7 +483,7 @@ n! =  \amp n!
 <p id="p-221">Slightly more mathematically speaking, we are counting the number of functions from a set of cardinality \(k\) (the fuits) to a set of cardinality \(n\) (the children).  Note that it does not make sense to think of the ways we can send the children to the fruit, since we do not require that every child gets a fruit, and we insist that all fruit is distributed.</p>
 </li>
 <li id="li-28">
-<p id="p-222">The only thing that changes for the secon part is that no child can get more than one piece of fruit.  So while we have \(n\) choices for the first piece of fruit, we only have \(n-1\) for the second, and \(n-2\) for the third.  Continuing until all the fruit is gone gives us a total of,</p>
+<p id="p-222">The only thing that changes for the second part is that no child can get more than one piece of fruit.  So while we have \(n\) choices for the first piece of fruit, we only have \(n-1\) for the second, and \(n-2\) for the third.  Continuing until all the fruit is gone gives us a total of,</p>
 <div class="displaymath">
 \begin{equation*}
 n \cdot (n-1) \cdot (n-2) \cdot \cdots \cdot (n-k+1) = \frac{n!}{(n-k)!} 
@@ -685,7 +685,7 @@ S = \frac{n}{2}\binom{2n}{n}\text{.}
 </div></div>
 </div></article><article class="project-like" id="exploration-16"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">37</span>.</h6>
-<p id="p-300">\(1 \cdot 1! + 2 \cdot 2! + 3 \cdot 3! + \ldots + n \cdot n! = \left( n + 1 \right)! - 1\text{.}\)</p>
+<p id="p-300">Prove \(1 \cdot 1! + 2 \cdot 2! + 3 \cdot 3! + \ldots + n \cdot n! = \left( n + 1 \right)! - 1\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-29" id="hint-29"><span class="type">Hint</span></a><div id="hk-hint-29" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-301">In how many ways can you arrange the \(n+1\) numbers \(0, 1, 2, \ldots, n\) so that they are <em class="emphasis">not</em> in ascending order?</p></div></div>
 </div></article><p id="p-303">The previous identity can also be established using an inductive proof, or through a clever collapsing sum as follows.</p>
@@ -698,12 +698,12 @@ S = \frac{n}{2}\binom{2n}{n}\text{.}
 \end{equation*}
 </div></article><article class="project-like" id="exploration-17"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">38</span>.</h6>
-<p id="p-305">\(k \binom{n}{k} = n \binom{n - 1}{k - 1}\text{.}\)</p>
+<p id="p-305">Prove the identity: \(k \binom{n}{k} = n \binom{n - 1}{k - 1}\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint</span></a><div id="hk-hint-30" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-306">Look back at <a data-knowl="./knowl/act_anysizecommittee.html" title="Example 1.2.10">Example 1.2.10</a>.  This one is easier.</p></div></div>
 </div></article><article class="project-like" id="act_derangement-binom"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">39</span>.</h6>
-<p id="p-309">\(\binom{n}{0} d_{0} + \binom{n}{1} d_{1} + \binom{n}{2} d_{2} + \ldots + \binom{n}{n} d_{n} = n!\) where \(d_{n}\) denotes the \(n\)th derangement number, \(d_{0} = 1,d_{1} = 0\text{.}\)</p>
+<p id="p-309">Prove \(\binom{n}{0} d_{0} + \binom{n}{1} d_{1} + \binom{n}{2} d_{2} + \ldots + \binom{n}{n} d_{n} = n!\) where \(d_{n}\) denotes the \(n\)th derangement number, \(d_{0} = 1,d_{1} = 0\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span></a><div id="hk-hint-31" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-310">Think of partitioning the \(n!\) permutations.</p></div></div>
 </div></article><p id="p-312">To close this section, let's return to a binomial identity we considered before, and consider a few additional proofs.</p>

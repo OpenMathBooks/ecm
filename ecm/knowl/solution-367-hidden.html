@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:38:19-06:00    *-->
+<!--*    on 2019-09-28T11:08:15-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,9 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>The problem with trying a direct proof is that it will be hard to separate \(a\) and \(b\) from knowing something about \(a+b\text{.}\) On the other hand, if we know something about \(a\) and \(b\) separately, then combining them might give us information about \(a+b\text{.}\) The contrapositive of the statement we are trying to prove is: for all integers \(a\) and \(b\text{,}\) if \(a\) and \(b\) are even, then \(a+b\) is even. Thus our proof will have the following format:</p>
-<p>Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are both even. la la la. Therefore \(a+b\) is even.</p>
-<p>Here is a complete proof:</p>
-<article class="hiddenproof"><a data-knowl="./knowl/proof-15-hidden.html" title="Proof B.5.5.1.1"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><p>Note that our assumption that \(a\) and \(b\) are even is really the negation of \(a\) or \(b\) is odd. We used De Morgan's law here.</p>
+<p>This is the converse of the statement we proved above using a direct proof. From trying a few examples, this statement definitely appears to be true. So let's prove it.</p>
+<p>A direct proof of this statement would require fixing an arbitrary \(n\) and assuming that \(n^2\) is even. But it is not at all clear how this would allow us to conclude anything about \(n\text{.}\) Just because \(n^2 = 2k\) does not in itself suggest how we could write \(n\) as a multiple of 2.</p>
+<p>Try something else: write the contrapositive of the statement. We get, for all integers \(n\text{,}\) if \(n\) is odd then \(n^2\) is odd. This looks much more promising. Our proof will look something like this:</p>
+<p>Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even. This means that …. In other words …. But this is the same as saying …. Therefore \(n^2\) is not even.</p>
+<p>Now we fill in the details:</p>
+<article class="hiddenproof"><a data-knowl="./knowl/proof-14-hidden.html" title="Proof B.5.4.1.1"><h6 class="heading"><span class="type">Proof.</span></h6></a></article>
 </div></body>
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:17-06:00    *-->
+<!--*    on 2019-09-28T11:07:33-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,9 +14,9 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">283.c.1</span>.</h6>
-<p>First, suppose a connected graph \(G\) has an Euler path.  If this path is an Euler circuit, we are done, since there will be no odd degree vertices.  Otherwise, by part (a), we can form a new graph \(G'\) that has an Euler circuit, and by <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorem 3.2.3</a>, this \(G'\) must have all vertices of even degree.  But part (a) tells us then that \(G\) will have exactly two odd degree vertices.</p>
-<p>Conversely, suppose \(G\) has at most two odd degree vertices.  If all vertices are even, then we are done by <a data-knowl="./knowl/thm-eulercircuit.html" title="Theorem 3.2.3">Theorem 3.2.3</a>.  There are no graphs with exactly one odd degree vertex.  So assume that \(G\) has exactly two odd degree vertices.  By part (b), we can build a graph \(G'\) that has all even degree vertices, which must therefore have an Euler circuit.  But this Euler circuit becomes an Euler path when you look back at \(G\text{,}\) as required.</p>
+<span class="type">Solution</span> <span class="codenumber">283.b.1</span>.</h6>
+<p>Let \(v_1\) and \(v_2\) be the two vertices with odd degree.  We can add a new vertex \(v'\) and edges \(\{v_1, v'\}\) and \(\{v_2, v'\}\text{,}\) which increases the degrees of \(v_1\) and \(v_2\) by 1, making their degrees even.  Also, \(d(v') = 2\text{,}\) so all vertices now have even degree.</p>
+<p>If this new graph has an Euler circuit, then we can “cut” out the path \((v_2, v', v_1)\text{.}\)  Specifically, rotate and possibly reverse the circuit so that it starts at \(v_1\) and ends with the sequence \(v_2, v', v_1\text{.}\)  Then simply remove \(v', v_1\) from that sequence, to get a Euler path.</p>
 </div>
 <span class="incontext"><a href="sec_paths.html#solution-217">in-context</a></span>
 </body>

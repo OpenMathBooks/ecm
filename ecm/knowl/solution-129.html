@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:57-06:00    *-->
+<!--*    on 2019-09-28T11:07:23-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,35 +14,20 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.2.4.1</span>.</h6>
-<p>Start with the generating function for the sequence \(1, 1, 2, 3, 5\text{,}\) which we saw in <a data-knowl="./knowl/originalFibonacci.html" title="Exercise 179">Exercise 179</a> is</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{1}{1-x-x^2} = 1 + x + 2x^2 + \cdots + F_{n+1}x^n+ \cdots\text{.}
-\end{equation*}
-</div>
-<p>Of course we also have</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{1}{1-x} = 1 + x + x^2 + \cdots
-\end{equation*}
-</div>
-<p>and this is almost the same thing.  In fact, if we replace \(x\) with \(x+x^2\) we get the Fibonacci generating function:</p>
+<span class="type">Solution</span> <span class="codenumber">179.1</span>.</h6>
+<p>Our recurrence becomes \(a_n=a_{n-1}+a_{n-2}\text{,}\) and following the pattern of <a data-knowl="./knowl/secondorderintroduction.html" title="Exercise 178">Exercise 178</a> we get</p>
 <div class="displaymath">
 \begin{align*}
-\frac{1}{1-(x+x^2)} = \amp 1 + (x+x^2) + (x+x^2)^2 + \cdots \\
-= \amp 1 + x(1+x) + x^2(1+x)^2 + x^3(1+x)^3 + \cdots\text{.}
+\sum_{n=2}^\infty a_nx^n \amp= \sum_{n=2}^\infty a_{n-1}x^n +
+\sum_{n=2}^\infty a_{n-2}x^n\\
+\sum_{n=0}^\infty a_nx^n-a_0-a_1x  \amp= x\left(\sum_{n=0}^\infty
+a_{n}x^{n}-a_0\right) + x^2\sum_{n=0}^\infty a_{n}x^n\\
+(1-x-x^2)\sum_{n=0}^\infty a_nx^n \amp= a_0+a_1x-a_0x\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-a_0x}{(1-x-x^2)}\text{.}
 \end{align*}
 </div>
-<p>Now use the binomial theorem on each of the \((1+x)^n\) terms and distribute:</p>
-<div class="displaymath">
-\begin{align*}
-1 + x + x^2 + (x^2 +\amp 2x^3 + x^4)\\
-+ (\amp x^3 + 3x^4 + 3x^5 + x^6)\\
-\amp + (x^4 + 4x^5 + 6x^6 + 4x^7 + x^8) + \cdots \text{.}
-\end{align*}
-</div>
-<p>Look at the coefficient of \(x^4\text{,}\) for example.  We have \(F_5 = 1 + 3 + 1 = \binom{4}{0} + \binom{3}{1} + \binom{2}{2}\text{.}\)  It should be clear that this works in general: the coefficient of \(x^n\) will be \(F_{n+1}\) on the one hand, and \(\binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2}+ \cdots\) on the other.</p>
+<p>Since now \(a_0=a_1=1\text{,}\) we have \(\displaystyle \sum_{n=0}^\infty a_nx^n=
+\frac{1}{1-x-x^2}\text{.}\)</p>
 </div>
 <span class="incontext"><a href="sec_adv-genfunctions.html#solution-129">in-context</a></span>
 </body>

@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:12-06:00    *-->
+<!--*    on 2019-09-28T11:07:30-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,8 +14,20 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">266.1</span>.</h6>
-<p>In the generating function \(\displaystyle\prod_{i=1}^\infty \sum_{j=0}^\infty x^{2ij}\text{,}\) we may interpret the \(2ij\) in \(x^{2ji}\) the value of using \(2i\) as a part \(j\) times or as the value of using \(i\) as a part \(2j\) times. Therefore this is the generating function both for the number of partitions of integers into parts that are even and the number of partitions into parts that are used an even number of times. Therefore the number of partitions of \(n\) in which each part is even equals the number of partitions of \(n\) in which each part is used an even number of times. In <a data-knowl="./knowl/partition-even-mult-even-use.html" title="Activity 250">Activity 250</a> we got the same result bijectively.</p>
+<span class="type">Solution</span> <span class="codenumber">2.4.12.1</span>.</h6>
+<p>By considering a Young diagram and its compliment, we saw that there is a one to one correspondence between partitions that have exactly \(m\) parts and partitions that have \(m\) as their largest part.</p>
+<p>The generating function for the number of partitions of integers having <em class="emphasis">largest</em> part \(m\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)}\text{.}
+\end{equation*}
+</div>
+<p>Thus this is also the number of partitions of integers having <em class="emphasis">at most</em> \(m\) parts. Now subtract those having at most \(m-1\) parts:</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)} - \frac{1}{(1-x)(1-x^2)\cdots (1-x^{m-1})} = \frac{x^m}{(1-x)(1-x^2)\cdots(1-x^m)}\text{.}
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec_adv-linearparts.html#solution-201">in-context</a></span>
 </body>

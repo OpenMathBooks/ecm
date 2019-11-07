@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:00-06:00    *-->
+<!--*    on 2019-09-28T11:07:24-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,17 +12,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>To solve for \(C_n\text{,}\) write</p>
 <div class="displaymath">
 \begin{align*}
-\sum_{n=0}^\infty C_nx^n \amp= 1+\sum_{n=1}^\infty\sum_{i=1}^nC_{i-1}C_{n-i}x^n\\
-\sum_{n=0}^\infty C_nx^n
-\amp= 1+x\sum_{n=1}^\infty\sum_{i=1}^nC_{i-1}x^{i-1}C_{n-i}x^{n-i}\\
-\sum_{n=0}^\infty C_nx^n
-\amp= 1+x\sum_{i=1}^\infty C_{i-1}x^{i-1}\sum_{j=0}^\infty C_{j}x^{j}\\
-y \amp= 1 + xy^2\text{.}
+\sum_{n=2}^\infty a_nx^n  \amp=  4\sum_{n=2}^\infty a_{n-1}x^n -
+4\sum_{n=2}^\infty a_{n-2}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x  \amp=  4x(\sum_{n=0}^\infty a_{n}x^n
+-a_0) - 4x^2\sum_{n=0}^\infty a_{n}x^n\\
+(1-4x+4x^2)\sum_{n=0}^\infty a_nx^n   \amp=
+a_0+a_1x-4a_0x\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-4a_0x}{(1-4x+4x^2)}\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-4a_0x}{(1-2x)^2}\\
+\sum_{n=0}^\infty a_nx^n \amp= (a_0+a_1x-4a_0x)\sum_{n=0}^\infty \binom{n+2-1}{n}
+2^nx^n\\
+\sum_{n=0}^\infty a_nx^n \amp= (a_0+a_1x-4a_0x)\sum_{n=0}^\infty (n+1)
+2^nx^n
 \end{align*}
 </div>
-<p>This gives us \(xy^2-y+1=0\text{,}\) and solving for \(y\) by the quadratic formula gives us \(y=\frac{1\pm \sqrt{1-4x}}{2x}\text{.}\)</p>
+<p>Thus \(a_n=a_0(n+1)2^n
++(a_1-4a_0)n2^{n-1}=a_02^n+(a_1-2a_0)n2^{n-1}\text{.}\)</p>
 </div></body>
 </html>

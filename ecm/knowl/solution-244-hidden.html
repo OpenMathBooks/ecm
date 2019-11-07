@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:23-06:00    *-->
+<!--*    on 2019-09-28T11:07:37-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,11 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>Represent the problem as a graph with vertices as the stations and edges when two stations are close enough to cause interference. We are looking for the chromatic number of the graph. Vertices that are colored identically represent stations that can have the same frequency.</p>
-<p>This graph has chromatic number 5. A proper 5-coloring is shown on the right. Notice that the graph contains a copy of the complete graph \(K_5\) so no fewer than 5 colors can be used.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:8.75%;margin-right:8.75%;">
-<div class="sbspanel" style="width:42.4242424242424%;justify-content:flex-end;"><img src="images/image-101.svg" style="width: 100%; height: auto;" alt=""></div>
-<div class="sbspanel" style="width:36.3636363636364%;justify-content:flex-end;"><img src="images/image-102.svg" style="width: 100%; height: auto;" alt=""></div>
-</div></div>
+<p>Note first that any graph with one vertex can be properly 6-colored (the base case).  Now let \(G\) be an arbitrary graph with \(n\) vertices, and assume that any graph with fewer than \(n\) vertices can be properly 6-colored.  Let \(v\) be a vertex of \(G\) of degree 5 or less.</p>
+<p>Consider the graph \(G' = G - v\) (the graph resulting from removing \(v\) and all its incident edges from \(G\)).  Since \(G'\) has \(n-1\) vertices, it is possible to properly 6-color its vertices.  Looking back at \(G\text{,}\) we see that \(v\) is only adjacent to at most 5 vertices, so there are at most 5 colors we cannot use to color \(v\text{.}\)  But we have 6 colors to work with, so we will be able to color \(v\text{,}\) and thus all of \(G\text{,}\) properly.</p>
 </div></body>
 </html>

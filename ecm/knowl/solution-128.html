@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:57-06:00    *-->
+<!--*    on 2019-09-28T11:07:22-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,20 +14,22 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">179.1</span>.</h6>
-<p>Our recurrence becomes \(a_n=a_{n-1}+a_{n-2}\text{,}\) and following the pattern of <a data-knowl="./knowl/secondorderintroduction.html" title="Exercise 178">Exercise 178</a> we get</p>
+<span class="type">Solution</span> <span class="codenumber">178.1</span>.</h6>
 <div class="displaymath">
 \begin{align*}
 \sum_{n=2}^\infty a_nx^n \amp= \sum_{n=2}^\infty a_{n-1}x^n +
-\sum_{n=2}^\infty a_{n-2}x^n\\
-\sum_{n=0}^\infty a_nx^n-a_0-a_1x  \amp= x\left(\sum_{n=0}^\infty
-a_{n}x^{n}-a_0\right) + x^2\sum_{n=0}^\infty a_{n}x^n\\
-(1-x-x^2)\sum_{n=0}^\infty a_nx^n \amp= a_0+a_1x-a_0x\\
-\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-a_0x}{(1-x-x^2)}\text{.}
+2\sum_{n=2}^\infty a_{n-2}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x  \amp= x\sum_{n=2}^\infty a_{n-1}x^{n-1} +
+2x^2\sum_{n=2}^\infty a_{n-2}x^{n-2}\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x \amp= x\sum_{n=1}^\infty a_{n}x^{n} +
+2x^2\sum_{n=0}^\infty a_{n}x^n\\
+\sum_{n=0}^\infty a_nx^n -a_0-a_1x \amp= x\left(\sum_{n=0}^\infty
+a_{n}x^{n}-a_0\right) + 2x^2\sum_{n=0}^\infty a_{n}x^n\\
+(1-x-2x^2)\sum_{n=0}^\infty a_nx^n \amp= a_0+a_1x-a_0x\\
+\sum_{n=0}^\infty a_nx^n \amp= \frac{a_0+a_1x-a_0x}{(1-x-2x^2)}
 \end{align*}
 </div>
-<p>Since now \(a_0=a_1=1\text{,}\) we have \(\displaystyle \sum_{n=0}^\infty a_nx^n=
-\frac{1}{1-x-x^2}\text{.}\)</p>
+<p>In this problem \(a_0=a_1=10\) because we start with ten pairs of baby rabbits, so they have to mature for a month before they begin reproducing. Thus \(\displaystyle\sum_{n=0}^\infty a_nx^n = \frac{10}{(1-x-2x^2)}\text{.}\)</p>
 </div>
 <span class="incontext"><a href="sec_adv-genfunctions.html#solution-128">in-context</a></span>
 </body>

@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:36:51-06:00    *-->
+<!--*    on 2019-09-28T11:07:20-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,8 +14,16 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">149.a.1</span>.</h6>
-<p>By the formula for the number of onto functions, we have \(\sum_{s=0}^6 (-1)^s\binom{6}{s}(6-s)^8\) sequences in which each number between one and six appears. Courtesy of Maple, this number is 191,520.</p>
+<span class="type">Solution</span> <span class="codenumber">148.1</span>.</h6>
+<p>An onto function is in none of these sets. Since we want the number of functions that are in none of these sets, we let our set \(A\) be the set of all functions from \(K\) to \([n]\text{.}\) Then the number of onto functions is \(|\overline{A_1\cup A_2\cup \cdots \cup A_n}|\text{.}\) For a nonempty subset \(S\) of \([n]\text{,}\) the set \(\bigcap_{i\colon i\in S} A_i\) is the set of functions functions from \(K\) to \([n]-S\text{.}\) The size of this set is \((n-|S|)^k\text{.}\) When \(S=\emptyset\) this gives the size of \(A\text{.}\) Thus by <a data-knowl="./knowl/nsetintersection.html" title="Activity 136">Activity 136</a></p>
+<div class="displaymath">
+\begin{align*}
+\left|\overline{\bigcup_{i=1}^n A_i}\right|&amp;=  \sum_{S:s\subseteq [n]} (-1)^{|S|}
+(n-|S|)^k\\
+&amp;= \sum_{s=0}^n (-1)^s\binom{n}{s}(n-s)^k
+\end{align*}
+</div>
+<p>is the number of functions from \(K\) onto \([n]\text{.}\)</p>
 </div>
 <span class="incontext"><a href="sec_adv-pie.html#solution-100">in-context</a></span>
 </body>

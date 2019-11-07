@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-15T14:37:18-06:00    *-->
+<!--*    on 2019-09-28T11:07:33-06:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,8 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>The graph on the left has a Hamilton path (many different ones, actually), as shown here:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-83.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p>The graph on the right does not have a Hamilton path.  You would need to visit each of the “outside” vertices, but as soon as you visit one, you get stuck.  Note that this graph does not have an Euler path, although there are graphs with Euler paths but no Hamilton paths.</p>
+<p>Suppose a graph has an Euler circuit, written \((v_0, v_1, v_2, \ldots, v_n)\text{.}\)  Since it is a circuit, we have \(v_0 = v_n\text{.}\)  Consider the edges used in this path.  They are \(\{v_0, v_1\}\text{,}\) \(\{v_1, v_2\}\text{,}\) and so on up to \(\{v_{n-1}, v_n\}\text{.}\)  Every time a vertex appears in the walk, it is part of two edges, except for \(v_0\) and \(v_n\text{.}\)  But these are the same vertex, so taken together, these constitute two edges as well.  Since every edges is used in an Euler circuit, we see that every vertex must have even degree.</p>
+<p>A simpler way to say all of this: in the Euler circuit, a vertex appearing \(k\) times must have degree \(2k\text{,}\) except for the starting and ending vertex, which will have degree \(2k\) if it appears \(k+1\) times.</p>
 </div></body>
 </html>
