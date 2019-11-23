@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:43-06:00    *-->
+<!--*    on 2019-11-23T09:45:47-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,12 +12,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>All four of the statements are true. Remember, the only way for an implication to be false is for the <em class="emphasis">if</em> part to be true and the <em class="emphasis">then</em> part to be false.</p>
-<ol class="decimal">
-<li><p>Here both the hypothesis and the conclusion are true, so the implication is true. It does not matter that there is no meaningful connection between the true mathematical fact and the fact about horses.</p></li>
-<li><p>Here the hypothesis is false and the conclusion is true, so the implication is true.</p></li>
-<li><p>I have no idea what the 7624th digit of \(\pi\) is, but this does not matter. Since the hypothesis is false, the implication is automatically true.</p></li>
-<li><p>Similarly here, regardless of the truth value of the hypothesis, the conclusion is true, making the implication true.</p></li>
-</ol>
+<p>Doing this directly would be difficult, but we can use the matching condition to help. Construct a graph \(G\) with 13 vertices in the set \(A\text{,}\) each representing one of the 13 card values, and 13 vertices in the set \(B\text{,}\) each representing one of the 13 piles. Draw an edge between a vertex \(a \in A\) to a vertex \(b \in B\) if a card with value \(a\) is in the pile \(b\text{.}\) Notice that we are just looking for a matching of \(A\text{;}\) each value needs to be found in the piles exactly once.</p>
+<p>We will have a matching if the matching condition holds. Given any set of card values (a set \(S \subseteq A\)) we must show that \(|N(S)| \ge |S|\text{.}\) That is, the number of piles that contain those values is at least the number of different values. But what if it wasn't? Say \(|S| = k\text{.}\) If \(|N(S)| \lt  k\text{,}\) then we would have fewer than \(4k\) different cards in those piles (since each pile contains 4 cards). But there are \(4k\) cards with the \(k\) different values, so at least one of these cards must be in another pile, a contradiction. Thus the matching condition holds, so there is a matching, as required.</p>
 </div></body>
 </html>

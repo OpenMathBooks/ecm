@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:08:12-06:00    *-->
+<!--*    on 2019-11-23T09:46:23-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,13 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(P(x,y)\) be the predicate \(x \lt y\text{.}\) It is true, in the natural numbers, that for all \(x\) there is some \(y\) greater than that \(x\) (since there are infinitely many numbers). However, there is not a natural number \(y\) which is greater than every number \(x\text{.}\) Thus it is possible for \(\forall x \exists y P(x,y)\) to be true while \(\exists y \forall x P(x,y)\) is false.</p>
-<span class="incontext"><a href="sec_background-logic.html#Fnn">in-context</a></span>
+<p>However, we know how negation interacts with quantifiers: we can pass a negation over a quantifier by switching the quantifier type (between universal and existential). So the statement above should be <em class="emphasis">logically equivalent</em> to</p>
+<div class="displaymath">
+\begin{equation*}
+\forall x \exists y (y \lt x)\text{.}
+\end{equation*}
+</div>
+<p>Notice that \(y \lt x\) is the negation of \(x \le y\text{.}\) This literally says, “for every number \(x\) there is a number \(y\) which is smaller than \(x\text{.}\)” We see that this is another way to make our original claim.</p>
+<span class="incontext"><a href="sec_background-logic.html#LMt">in-context</a></span>
 </body>
 </html>

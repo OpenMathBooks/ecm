@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:34-06:00    *-->
+<!--*    on 2019-11-23T09:45:42-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Notice that the thing we are proving for all \(n\) is itself a universally quantified statement. This means that our base case become, “for all graphs with 0 edges …” (which for not-necessarily connected graphs is infinitely many graphs).  To prove the inductive case we <em class="emphasis">get to</em> assume that for all graphs with \(n\) edges …, but then we <em class="emphasis">must</em> prove that for all graphs with \(n+1\) edges ….</p>
+<p>First note that \(0^2 + 0 = 0\) is even, so the case when \(n = 0\) is true.  Now assume for an arbitrary \(n\ge 0\) that \(n^2 + n\) is even.  Consider the case for \(n+1\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+(n+1)^2 + n+1 \amp = n^2 + 2n + 1 + n + 1\\
+\amp = n^2 + n + 2n + 2.
+\end{align*}
+</div>
+<p>But \(n^2 + n\) is even, and \(2n + 2\) is even, and the sum of two even numbers is even, so \((n+1)^2 + n+1\) is even.</p>
 <span class="incontext"><a href="sec_planar.html#p-1637">in-context</a></span>
 </body>
 </html>

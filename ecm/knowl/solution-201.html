@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:30-06:00    *-->
+<!--*    on 2019-11-23T09:45:37-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -25,9 +25,10 @@
 <p>Thus this is also the number of partitions of integers having <em class="emphasis">at most</em> \(m\) parts. Now subtract those having at most \(m-1\) parts:</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)} - \frac{1}{(1-x)(1-x^2)\cdots (1-x^{m-1})} = \frac{x^m}{(1-x)(1-x^2)\cdots(1-x^m)}\text{.}
+\frac{1}{(1-x)\cdots (1-x^m)} - \frac{1}{(1-x)\cdots (1-x^{m-1})} = \frac{x^m}{(1-x)\cdots(1-x^m)}\text{.}
 \end{equation*}
 </div>
+<p>Alternatively, instead of doing the algebra on the last step, we can use Young diagrams again.  There is a bijection between partitions of \(k\) into exactly \(m\) parts and partitions of \(k-m\) into at most \(m\) parts.  The bijection is: remove the first column!  So look at the infinite series for \(\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)}\text{.}\)  The coefficient of \(x^{k-m}\) is the number of partitions of \(k-m\) into at most \(m\) parts.  So if we multiply each term by \(x^m\text{,}\) then the coefficient of \(x^{k-m+m} = x^{k}\) is the number of partitions of \(k-m\) into at most \(m\) parts.  But this is the number of partitions of \(k\) into <em class="emphasis">exactly</em> \(m\) parts, as required.</p>
 </div>
 <span class="incontext"><a href="sec_adv-linearparts.html#solution-201">in-context</a></span>
 </body>

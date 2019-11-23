@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:49-06:00    *-->
+<!--*    on 2019-11-23T09:44:55-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -262,7 +263,7 @@ var js_version = 0.12;
 <span class="type">Activity</span> <span class="codenumber">110</span>.</h6>
 <p id="p-662">\(2n\) people stand in line at a old-timey movie theater. Admission is 50 cents, (denoted by H), and the box office starts with no change. \(n\) of the people have H and \(n\) have $1 (denoted D). In how many ways can the \(2n\) people line up so that all can be admitted?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div id="hk-hint-82" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-663">Here we enumerate the number of workable sequences of \(n\) H's and \(n\) D's such that at each point in the sequence the number of H's is not less than the number of D's.  Try writing out all HD sequences and see which ones are acceptable and which are not.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-82"><div class="solution"><p id="p-663">Here we enumerate the number of workable sequences of \(n\) H's and \(n\) D's such that at each point in the sequence the number of H's is not less than the number of D's.  Try writing out all HD sequences and see which ones are acceptable and which are not.</p></div></div>
 </div></article><article class="project-like" id="act-tableau"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">111</span>.</h6>
 <p id="p-665">Insert the integers \(1, 2, \ldots, 2n\) into a 2 by \(n\) rectangle of boxes such that the entries are monotonic in rows and columns.  We will call this an <dfn class="terminology">acceptable tableau insertion</dfn>. How many ways can you do this?</p>
@@ -337,7 +338,7 @@ var js_version = 0.12;
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div id="hk-hint-83" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-83"><div class="solution">
 <p id="p-669">Try working recursively.   For a product of \(n+1\) symbols \(a_{1}a_{2}\ldots a_{n+1}\text{,}\) break it at the \(k\)th symbol:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -356,7 +357,7 @@ var js_version = 0.12;
 <div class="sbspanel" style="width:15.7894736842105%;justify-content:flex-start;"><img src="images/image-20.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div id="hk-hint-84" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-671">You might have found a recursion for the sequence of answers in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a>.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-84"><div class="solution"><p id="p-671">You might have found a recursion for the sequence of answers in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a>.</p></div></div>
 </div></article><article class="project-like" id="act-rootedtrees"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">114</span>.</h6>
 <p id="p-672">Consider <dfn class="terminology">rooted binary trees</dfn>.  Rooted trees are trees in the graph theory sense, except that one vertex is designated as the root, which puts a natural ordering on the vertices.  Vertices adjacent to the root are its <dfn class="terminology">children</dfn>, and vertices adjacent to those (other than the root) are their children, and so on.  We are looking at <em class="emphasis">binary</em> trees, so each vertex will have either two children (designated the <dfn class="terminology">left child</dfn> and <dfn class="terminology">right child</dfn>) or no children at all (i.e., the vertex is a leaf).</p>
@@ -366,7 +367,7 @@ var js_version = 0.12;
 <div class="sbspanel" style="width:28.5714285714286%;justify-content:flex-start;"><img src="images/image-22.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div id="hk-hint-85" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-674">There should be 5 rooted binary trees with 4 leaves (the \(n = 3\) case).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-85"><div class="solution"><p id="p-674">There should be 5 rooted binary trees with 4 leaves (the \(n = 3\) case).</p></div></div>
 </div></article></section><section class="subsection" id="subsec-catalanseq"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.2</span> <span class="title">The Catalan Numbers</span>
 </h3>
@@ -383,7 +384,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">1.5.2</span>.</h6>
 <p id="p-678">Find a bijection between the set of lattice paths from \((0,0)\) to \((n,n)\) that do not rise above the line \(y = x\) (as in <a data-knowl="./knowl/act-lowerpaths.html" title="Activity 109">Activity 109</a>) and the set of ways that the movie patrons in <a data-knowl="./knowl/act-hdseq.html" title="Activity 110">Activity 110</a> can line up.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div id="hk-solution-70" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution">
 <p id="p-679">Represent each lattice path as a string of R's and U's.  Represent each way that the movie patrons can line up as a string of H's and D's.  The bijection will send each R to an H and each U to a D.</p>
 <p id="p-680">We need to verify that this bijection is both well defined, and that its inverse is well defined (that the function is injective and surjective).  The key to all of these is to consider what makes a string valid in each case.</p>
 <p id="p-681">First, notice that the lattice paths must have an equal number of R's and U's.  Similarly, the string of movie patrons must have an equal number of H's and D's. Further, every initial substring of R's and U's must have at least as many R's as U's, so that the path does not go above the line \(y=x\text{.}\)  Similarly, the every initial substring of H's and D's (half dollars and dollars) must have at least as many H's as D's, so that change can always be given.  The H's and R's must <em class="emphasis">dominate</em>.</p>
@@ -396,17 +397,17 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-133"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-685">Show that the number of acceptable tableau insertions from <a data-knowl="./knowl/act-tableau.html" title="Activity 111">Activity 111</a> is always a Catalan number.  That is, give a bijection between the set of Dyck words of length \(2n\) to the set of ways to insert the numbers 1 through \(2n\) into a \(2\times n\) tableau so that both rows and columns are increasing.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div id="hk-hint-86" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-686">If you put the numbers into the tableau in order, for each number, you must decide to put it in the top row or the bottom row.  Do you have any other choices?  What would constitute a mistake?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-86"><div class="solution"><p id="p-686">If you put the numbers into the tableau in order, for each number, you must decide to put it in the top row or the bottom row.  Do you have any other choices?  What would constitute a mistake?</p></div></div>
 </div></article><article class="exercise-like" id="task-134"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-687">Show the number of ways to parenthesize a product of \(n+1\) numbers is \(C_n\) (see <a data-knowl="./knowl/act-parenthesize.html" title="Activity 112">Activity 112</a>).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div id="hk-hint-87" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-688">One way to parenthesize the product \(abcd\) is \(a((bc)d)\text{,}\) but this is really \((a((bc)d))\text{,}\) so that the outer set set of parentheses belong with the product of \(a\) and \(((bc)d)\text{.}\)  Further, not that if we wrote this just as \((a((bcd\text{,}\) there would be only one way to insert the right parentheses that would make the product parse correctly.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-87"><div class="solution"><p id="p-688">One way to parenthesize the product \(abcd\) is \(a((bc)d)\text{,}\) but this is really \((a((bc)d))\text{,}\) so that the outer set set of parentheses belong with the product of \(a\) and \(((bc)d)\text{.}\)  Further, not that if we wrote this just as \((a((bcd\text{,}\) there would be only one way to insert the right parentheses that would make the product parse correctly.</p></div></div>
 </div></article></article><p id="p-689">Not all of the models for the Catalan numbers are easily represented by Dyck words (or at least not in an obvious way).</p>
 <article class="project-like" id="exploration-67"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">116</span>.</h6>
 <p id="p-690">Demonstrate a bijection between the set of acceptable ways to parenthesize the product of \(n+1\) terms and the set of rooted binary trees with \(n+1\) leaves (see <a data-knowl="./knowl/act-rootedtrees.html" title="Activity 114">Activity 114</a>).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-88" id="hint-88"><span class="type">Hint</span></a><div id="hk-hint-88" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-691">Think about how students are taught to factor numbers.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-88" id="hint-88"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-88"><div class="solution"><p id="p-691">Think about how students are taught to factor numbers.</p></div></div>
 </div></article><p id="p-692">We have now verified that all our sample problems are Catalan numbers, except for the triangulations of polygons problem.  There is a clever way to associate each triangulation with a binary tree, as suggested by <a data-knowl="./knowl/fig-triangulationtree.html" title="Figure 1.5.3">Figure 1.5.3</a>.  However, let's take this opportunity to illustrate another method for proving two problems have the same answers.</p>
 <figure class="figure-like" id="fig-triangulationtree"><div class="sidebyside"><div class="sbsrow" style="margin-left:12.5%;margin-right:12.5%;">
 <div class="sbspanel" style="width:33.3333333333333%;justify-content:flex-start;"><img src="images/image-23.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -427,11 +428,11 @@ C_{n + 1} = \sum_{i = 0}^n C_iC_{n-i} = C_{0}C_{n} + C_{1}C_{n - 1} + \ldots + C
 <p id="p-694">Calculate the first 6 values of the sequence from this recurrence relation, to verify that it appears to agree with the Catalan numbers.</p></article><article class="exercise-like" id="task-136"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-696">Prove that the Catalan numbers satisfy the recurrence relation.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-89" id="hint-89"><span class="type">Hint</span></a><div id="hk-hint-89" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-697">Look at rooted binary trees.  What happens when you remove the root?  You could also use the parenthesizing model by asking where “main product” occurs.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-89" id="hint-89"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-89"><div class="solution"><p id="p-697">Look at rooted binary trees.  What happens when you remove the root?  You could also use the parenthesizing model by asking where “main product” occurs.</p></div></div>
 </div></article><article class="exercise-like" id="task-137"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-701">Prove that the number of triangulations of a convex polygon with \(n+2\) sides also satisfies this recurrence relation (if you haven't already done so in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a>).  Conclude that the triangulations problem is also solved by the Catalan numbers.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-90" id="hint-90"><span class="type">Hint</span></a><div id="hk-hint-90" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-702">Fix an edge of the polygon.  There will be exactly \(n-2\) triangles this edge could be part of.  For each of those, can you count the number of triangles that can be made of what ?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-90" id="hint-90"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-90"><div class="solution"><p id="p-702">Fix an edge of the polygon.  There will be exactly \(n-2\) triangles this edge could be part of.  For each of those, can you count the number of triangles that can be made of what ?</p></div></div>
 </div></article></article><p id="p-704">Next, we would like to find a closed formula for \(C_n\text{.}\)  We can do so using lattice paths.</p>
 <article class="project-like" id="activity-51"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">118</span>.</h6>
@@ -440,18 +441,18 @@ C_{n + 1} = \sum_{i = 0}^n C_iC_{n-i} = C_{0}C_{n} + C_{1}C_{n - 1} + \ldots + C
 <p id="p-706">Explain why the number of lattice paths from \((0,0)\) to \((n,n)\) that <em class="emphasis">do</em> cross the line \(y = x\) is the same as the number of lattice paths from \((0,0)\) to \((n,n)\) that touch or cross the line \(y = x + 1\text{.}\)</p></article><article class="exercise-like" id="task-139"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-708">Find a bijection between lattice paths from \((0,0)\) to \((n,n)\) that touch (or cross) the line \(y=x+1\) and lattice paths from \((-1,1)\) to \((n,n)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-91" id="hint-91"><span class="type">Hint</span></a><div id="hk-hint-91" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-709">Given a path from \((0, 0)\) to \((n, n)\) which touches or crosses the line \(y = x + 1\text{,}\) how can you modify the part of the path from \((0, 0)\) to the first touch of \(y = x + 1\) so that the modified path starts instead at \((-1, 1)\text{?}\) The trick is to do this in a systematic way that will give you your bijection.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-91" id="hint-91"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-91"><div class="solution"><p id="p-709">Given a path from \((0, 0)\) to \((n, n)\) which touches or crosses the line \(y = x + 1\text{,}\) how can you modify the part of the path from \((0, 0)\) to the first touch of \(y = x + 1\) so that the modified path starts instead at \((-1, 1)\text{?}\) The trick is to do this in a systematic way that will give you your bijection.</p></div></div>
 </div></article><article class="exercise-like" id="task-140"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-711">Find a formula for the number of lattice paths from \((0,0)\) to \((n,n)\) that do not cross the line \(y=x\text{.}\) That is, a formula for \(C_n\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-712">A path either touches the line \(y = x + 1\) or it doesn't. This partitions the set of paths into two blocks.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-92"><div class="solution"><p id="p-712">A path either touches the line \(y = x + 1\) or it doesn't. This partitions the set of paths into two blocks.</p></div></div>
 </div></article></article><p id="p-714">So \(C_n = \binom{2n}{n} - \binom{2n}{n+1}\text{.}\)  Another formula you might run into is \(C_n = \frac{1}{n+1}\binom{2n}{n}\text{.}\)  Why is this also correct?</p>
 <article class="project-like" id="exploration-68"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">119</span>.</h6>
 <article class="exercise-like" id="task-141"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-715">Prove that \(\binom{2n}{n} - \binom{2n}{n+1} = \frac{1}{n+1}\binom{2n}{n}\) using a method of your choice.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div id="hk-hint-93" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-716">The algebraic formula for \(\binom{n}{k}\) would be appropriate here.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-93"><div class="solution"><p id="p-716">The algebraic formula for \(\binom{n}{k}\) would be appropriate here.</p></div></div>
 </div></article><article class="exercise-like" id="task-142"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-717">Challenge problem: explain the formula \(C_n = \frac{1}{n+1}\binom{2n}{n+1}\) using the quotient principle.  This would give an alternate proof for the closed formula for the Catalan numbers.</p></article></article></section><section class="subsection" id="subsec-catalanproblems"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.5.3</span> <span class="title">More Problems</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:46-06:00    *-->
+<!--*    on 2019-11-23T09:44:52-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -320,7 +321,7 @@ var js_version = 0.12;
 <p id="p-54">Explain why the number of \(n\)-bit strings of weight \(k\) is the same as the number of \(k\)-element subsets of \([n] = \{1,2,3,\ldots, n\}\text{.}\)   Again, an informal argument is fine.</p></article><article class="exercise-like" id="task-21"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-55">Explain why the number of \(k\)-element subsets of \([n]\) is the same as the coefficient of \(x^ky^{n-k}\) in the expansion of \((x+y)^n\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div id="hk-hint-1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-56">This is a little harder.  It might help to notice that there is really nothing special about \([n]\) except that it contains \(n\) elements.  In fact, what can you say about the number of \(k\)-element subsets of <em class="emphasis">any</em> \(n\)-element set?  Then, what \(n\)-element set would we look at when expanding \((x+y)^n\text{?}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="solution"><p id="p-56">This is a little harder.  It might help to notice that there is really nothing special about \([n]\) except that it contains \(n\) elements.  In fact, what can you say about the number of \(k\)-element subsets of <em class="emphasis">any</em> \(n\)-element set?  Then, what \(n\)-element set would we look at when expanding \((x+y)^n\text{?}\)</p></div></div>
 </div></article></article><p id="p-57">Are you satisfied with the explanations you gave above?  Do you think they would count as a formal mathematical proof that the counting questions have the same answer?  One way to make this sort of an argument more precise is to involve precisely defined mathematical objects.</p>
 <article class="project-like" id="activity-7"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">7</span>.</h6>
@@ -336,7 +337,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">1.1.1</span>.</h6>
 <p id="p-66">Define a bijection \(f:X \to Y\) where \(X\) is the set of lattice paths from \((0,0)\) to \((k,n-k)\) and \(Y\) is the set of \(n\)-bit strings of weight \(k\text{.}\) Prove that \(f\) really is a bijection.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution">
 <p id="p-67">This really comes down to how to represent the elements of the set \(X\text{.}\) We represent a lattice path from \((0,0)\) to \((k, n-k)\) as a sequence of <em class="emphasis">R</em>'s and <em class="emphasis">U</em>'s, representing a step to the right or a step up.  Note that this means that each lattice path will be a sequence containing a total of \(n\) symbols, of which \(k\) will be <em class="emphasis">R</em>'s.</p>
 <p id="p-68">Now we can define the bijection.  The function \(f\) takes a string of <em class="emphasis">R</em>'s and <em class="emphasis">U</em>'s, and replaces each <em class="emphasis">R</em> with a 1 and each <em class="emphasis">U</em> with a 0.</p>
 <p id="p-69">To prove this is a bijection, there are four things we need to check:</p>
@@ -357,7 +358,7 @@ var js_version = 0.12;
 <span class="type">Exercise</span> <span class="codenumber">9</span>.</h6>
 <p id="p-74">Can you now conclude that the number of lattice paths from \((0,0)\) to \((k,n-k)\) is the same as the number of \(k\)-element subsets of \([n]\text{?}\)  Can you easily give the bijection (and be sure it is really a bijection)?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div id="hk-hint-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-75">What can you say about the composition of two bijections?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="solution"><p id="p-75">What can you say about the composition of two bijections?</p></div></div>
 </div></article><p id="p-76">What the example and problems above say is that all these counting questions correspond to each other.  But why do the answers always appear in Pascal's triangle?  To answer this, we need to start with a definition for the numbers in Pascal's triangle.</p>
 <p id="p-77">First, some notation: let's write \(\binom{n}{k}\) for the \(k\)th entry in row \(n\text{.}\)  For both \(n\) and \(k\text{,}\) start counting at 0.  So for example \(\binom{5}{1} = 5\text{,}\) and \(\binom{n}{0} = \binom{n}{n} = 1\) for all \(n\) (or at least the ones we can see).  We will read \(\binom{n}{k}\) as “\(n\) choose \(k\)” for reasons that will become clear soon.</p>
 <p id="p-78">Now we need to decide what \(\binom{n}{k}\) should be defined as.  It is not enough to simply define it as the specific entry in Pascal's triangle, since we haven't yet defined Pascal's triangle (we will want to define Pascal's triangle as the triangle of the numbers \(\binom{n}{k}\)).  Here are some choices:</p>
@@ -397,7 +398,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">1.1.2</span>.</h6>
 <p id="p-91">Prove that bit strings satisfy the same recurrence as Pascal's triangle.  That is prove that \(|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-92">Partition the \(n\)-bit strings of weight \(k\) into two disjoint sets: those that start with a 0 and those that start with a 1.  Consider the remainder of each bit string (after that first bit). Each \(n\)-bit string that starts with a 1 ends with an \((n-1)\)-bit string of weight \(k-1\text{.}\)  There are \(|\B^{n-1}_{k-1}|\) of these. Each \(n\)-bit string that starts with a 0 ends with an \((n-1)\)-bit string of weight \(k\text{.}\)  There are \(|\B^{n-1}_k|\) of these.  So all together \(|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution"><p id="p-92">Partition the \(n\)-bit strings of weight \(k\) into two disjoint sets: those that start with a 0 and those that start with a 1.  Consider the remainder of each bit string (after that first bit). Each \(n\)-bit string that starts with a 1 ends with an \((n-1)\)-bit string of weight \(k-1\text{.}\)  There are \(|\B^{n-1}_{k-1}|\) of these. Each \(n\)-bit string that starts with a 0 ends with an \((n-1)\)-bit string of weight \(k\text{.}\)  There are \(|\B^{n-1}_k|\) of these.  So all together \(|\B^n_k| = |\B^{n-1}_{k-1}| + |\B^{n-1}_k|\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="exploration-3"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">10</span>.</h6>
 <article class="exercise-like" id="task-26"><h6 class="heading"><span class="codenumber">(a)</span></h6>

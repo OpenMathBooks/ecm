@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:31-06:00    *-->
+<!--*    on 2019-11-23T09:45:37-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,5 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><p>In the generating function \(\displaystyle\prod_{i=1}^\infty \sum_{j=0}^\infty x^{2ij}\text{,}\) we may interpret the \(2ij\) in \(x^{2ji}\) the value of using \(2i\) as a part \(j\) times or as the value of using \(i\) as a part \(2j\) times. Therefore this is the generating function both for the number of partitions of integers into parts that are even and the number of partitions into parts that are used an even number of times. Therefore the number of partitions of \(n\) in which each part is even equals the number of partitions of \(n\) in which each part is used an even number of times. In <a data-knowl="./knowl/partition-even-mult-even-use.html" title="Activity 250">Activity 250</a> we got the same result bijectively.</p></div></body>
+<body><div class="solution">
+<p>Thinking about the Young diagrams for partitions of \(k\) into exactly \(m\) distinct parts, each will have at least 1 sqaure in row \(m\text{,}\) at least 2 squares in row \(m-1\text{,}\) etc, and at least \(m\) squares in row 1.  If we remove these \(1 + 2 +\cdots + m = \frac{m(m+1)}{2}\) squares, we get a diagram for a partition of \(k-\frac{m(m+1)}{2}\) into at most \(m\) parts.  Further, if we started with a partition of \(k-\frac{m(m+1)}{2}\) into at most \(m\) parts, we can transform it into a partition for \(k\) into exactly \(m\) distinct parts by adding the triangle of \(\frac{m(m+1)}{2}\) squares.</p>
+<p>Let \(f(x)\) be the generating function for the number of partitions of integers into exactly \(m\) distinct parts.  That is, in \(f(x)\text{,}\) the coefficient of \(x^k\) is the number of partitions of \(k\) into exactly \(m\) distinct parts.  Then \(f(x)/x^{\frac{m(m+1)}{2}}\) is the generating function for the number of partitions of integers into at most \(m\) parts.  But that is \(\frac{1}{(1-x)(1-x^2)\cdots(1-x^m)}\text{.}\)</p>
+</div></body>
 </html>

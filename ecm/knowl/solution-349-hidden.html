@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:08:11-06:00    *-->
+<!--*    on 2019-11-23T09:46:21-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,8 +11,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution">
-<p>In general, there is no relationship between \(\card{B}\) and \(\card{f\inv(B)}\text{.}\) This is because \(B\) might contain elements that are not in the range of \(f\text{,}\) so we might even have \(f\inv(B) = \emptyset\text{.}\) On the other hand, there might be lots of elements from the domain that all get sent to a few elements in \(B\text{,}\) making \(f\inv(B)\) larger than \(B\text{.}\)</p>
-<p>More specifically, if \(f\) is injective, then \(\card{B} \ge \card{f\inv(B)}\) (since every element in \(B\) must come from at most one element from the domain). If \(f\) is surjective, then \(\card{B} \le \card{f\inv(B)}\) (since every element in \(B\) must come from at least one element of the domain). Thus if \(f\) is bijective then \(\card{B} = \card{f\inv(B)}\text{.}\)</p>
-</div></body>
+<body><div class="solution"><p>In general, \(\card{A} \ge \card{f(A)}\text{,}\) since you cannot get more outputs than you have inputs (each input goes to exactly one output), but you could have fewer outputs if the function is not injective. If the function is injective, then \(\card{A} = \card{f(A)}\text{,}\) although you can have equality even if \(f\) is not injective (it must be injective <em class="emphasis">restricted</em> to \(A\)).</p></div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:30-06:00    *-->
+<!--*    on 2019-11-23T09:45:37-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,25 +13,7 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>First,</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{1}{(1-x)(1-x^2)(1-x^3)} = 1 + x + 2x^2 + 3x^3 + 4x^5 + 7x^6 + \cdots\text{.}
-\end{equation*}
-</div>
-<p>This shows that the number of partitions of \(n = 6\) into at most 3 parts is \(7\text{.}\)  The are</p>
-<div class="displaymath">
-\begin{gather*}
-(6) \\
-(5,1) \\
-(4,2) \\
-(4,1,1) \\
-(3,3) \\
-(3,2,1) \\
-(2,2,2) \text{.}
-\end{gather*}
-</div>
-<p>Now multiply the series by \(x^3\text{.}\)  The term \(3x^6\) shows that there are \(3\) partitions of \(n=6\) into exactly 3 parts.</p>
+<p>Thinking about the Young diagrams for partitions of \(k\) into exactly \(m\) distinct parts, each will have at least 1 sqaure in row \(m\text{,}\) at least 2 squares in row \(m-1\text{,}\) etc, and at least \(m\) squares in row 1.  If we remove these \(1 + 2 +\cdots + m = \frac{m(m+1)}{2}\) squares, we get a diagram for a partition of \(k-\frac{m(m+1)}{2}\) into at most \(m\) parts.  Further, if we started with a partition of \(k-\frac{m(m+1)}{2}\) into at most \(m\) parts, we can transform it into a partition for \(k\) into exactly \(m\) distinct parts by adding the triangle of \(\frac{m(m+1)}{2}\) squares.</p>
 <span class="incontext"><a href="sec_adv-linearparts.html#p-1391">in-context</a></span>
 </body>
 </html>

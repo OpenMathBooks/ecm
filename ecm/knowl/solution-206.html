@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:31-06:00    *-->
+<!--*    on 2019-11-23T09:45:38-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,14 +14,20 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">271.b.1</span>.</h6>
-<p>We repeat the previous part, but this time show that</p>
+<span class="type">Solution</span> <span class="codenumber">271.a.1</span>.</h6>
+<p>If we write the right hand side using quotients, we get</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{1-x} = (1+x)(1+x^2)(1+x^4)(1+x^8)(1+x^{16})\cdots.
+\frac{1-x^10}{1-x}\cdot \frac{1-x^{100}}{1-x^{10}}\cdot \frac{1-x^{1000}}{1-x^{100}}\cdot\cdots.
 \end{equation*}
 </div>
-<p>Writing the right hand side as quotients, you see that again every term cancels except for the left hand side.</p>
+<p>We see that all terms will cancel excpt for</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{1-x}.
+\end{equation*}
+</div>
+<p>Now written as a polynomial, \(\frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots\text{.}\)  So the coefficient of \(x^k\) will be 1 for all \(k\text{.}\)  The right hand side though gives the genereting function for the number of ways to write a number as the sum of up to 9 ones, up to 9 tens, up to 9 one hundreds, and so on.  In other words, this generating function gives the number of ways to write a number in base 10.  And since the coefficients are all 1, we see that this number of ways is 1; that is, there is a unique base 10 representation of every natural number.</p>
 </div>
 <span class="incontext"><a href="sec_adv-linearparts.html#solution-206">in-context</a></span>
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:55-06:00    *-->
+<!--*    on 2019-11-23T09:45:00-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -249,23 +250,23 @@ var js_version = 0.12;
 <main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch_graphtheory"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Graph Theory</span>
 </h2>
-<a href="ch_graphtheory.html" class="permalink">¶</a><section class="introduction" id="introduction-71"><p id="p-1419">To start our journey into discrete mathematics, let's consider a few puzzles.</p>
+<a href="ch_graphtheory.html" class="permalink">¶</a><section class="introduction" id="introduction-71"><p id="p-1422">To start our journey into discrete mathematics, let's consider a few puzzles.</p>
 <article class="project-like" id="investigation-1"><h6 class="heading">
 <span class="type">Puzzle</span> <span class="codenumber">272</span>.</h6>
-<p id="p-1420">In the time of Euler, in the town of Königsberg in Prussia, there was a river containing two islands. The islands were connected to the banks of the river by seven bridges (as seen below). The bridges were very beautiful, and on their days off, townspeople would spend time walking over the bridges. As time passed, a question arose: was it possible to plan a walk so that you cross each bridge once and only once? Euler was able to answer this question. Are you?</p>
+<p id="p-1423">In the time of Euler, in the town of Königsberg in Prussia, there was a river containing two islands. The islands were connected to the banks of the river by seven bridges (as seen below). The bridges were very beautiful, and on their days off, townspeople would spend time walking over the bridges. As time passed, a question arose: was it possible to plan a walk so that you cross each bridge once and only once? Euler was able to answer this question. Are you?</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/gt-bridges-art.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="project-like" id="investigation-2"><h6 class="heading">
 <span class="type">Puzzle</span> <span class="codenumber">273</span>.</h6>
-<p id="p-1421">Professor Nefario has invited 25 unsuspecting discrete math students to his estate for an evening of escape room fun.  Some of these students are already friends, but no student is friends with more than 3 other students.  The Professor wants to ensure that no friends are sent to the same escape room.  Can he be sure that four escape rooms will be enough?</p></article><article class="project-like" id="investigation-3"><h6 class="heading">
+<p id="p-1424">Professor Nefario has invited 25 unsuspecting discrete math students to his estate for an evening of escape room fun.  Some of these students are already friends, but no student is friends with more than 3 other students.  The Professor wants to ensure that no friends are sent to the same escape room.  Can he be sure that four escape rooms will be enough?</p></article><article class="project-like" id="investigation-3"><h6 class="heading">
 <span class="type">Puzzle</span> <span class="codenumber">274</span>.</h6>
-<p id="p-1422">Is it possible that among the 25 students, everyone has <em class="emphasis">exactly</em> three friends?</p></article><article class="project-like" id="investigation-4"><h6 class="heading">
+<p id="p-1425">Is it possible that among the 25 students, everyone has <em class="emphasis">exactly</em> three friends?</p></article><article class="project-like" id="investigation-4"><h6 class="heading">
 <span class="type">Puzzle</span> <span class="codenumber">275</span>.</h6>
-<p id="p-1423">Take a regular deck of 52 cards, shuffle well, and deal the cards into 13 piles.  Will it always be possible to select one card from each pile so that the 13 cards you select all have different values (ace, 2, 3, etc.)?</p></article><p id="p-1424">All the puzzles above have a feature in common: they involve the ways in which individual (discrete) objects can be related to each other.  This is what graph theory studies, and we will see that each of the puzzles can be solved with the tools of the subject.  Before we start developing those tools, take a moment to see why graphs are applicable to these problems.</p>
-<p id="p-1425">In the bridges of Königsberg puzzle, all that really matters is which land masses are connected by bridges, and how many bridges connect them.  The length of the bridges and size of the land masses is unimportant.  So we can represent this puzzle with a graph like this:</p>
+<p id="p-1426">Take a regular deck of 52 cards, shuffle well, and deal the cards into 13 piles.  Will it always be possible to select one card from each pile so that the 13 cards you select all have different values (ace, 2, 3, etc.)?</p></article><p id="p-1427">All the puzzles above have a feature in common: they involve the ways in which individual (discrete) objects can be related to each other.  This is what graph theory studies, and we will see that each of the puzzles can be solved with the tools of the subject.  Before we start developing those tools, take a moment to see why graphs are applicable to these problems.</p>
+<p id="p-1428">In the bridges of Königsberg puzzle, all that really matters is which land masses are connected by bridges, and how many bridges connect them.  The length of the bridges and size of the land masses is unimportant.  So we can represent this puzzle with a graph like this:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:37.5%;margin-right:37.5%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/gt-bridges-graph.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-1426">Now we must decide whether it is possible to travel around that graph in a way that each edge is crossed exactly once.</p>
-<p id="p-1427">When it comes to friendship, if we assume that it is always reciprocated, we can represent the people as vertices and connect two vertices with an edge if the people they represent are friends.  We can ask whether it is possible to have such a graph in which each vertex is incident to exactly three edges or whether it is possible to “color” the vertices with just four colors so that no pair of same colored vertices are adjacent (connected by an edge).</p>
-<p id="p-1428">If we have thirteen piles of cards, we represent each pile as a vertex and each value as a vertex, and connect a pile vertex to a value vertex precisely when that value is in the pile.  We could then ask whether we could select a collection of thirteen edges that do not share any single vertex.</p>
-<p id="p-1429">These puzzles give you just a small glimpse into the myriad of applications graph theory can address.  For us, we will use our study of graph theory to see how reasoning in discrete mathematics works and as an excuse to remind ourselves of the basic mathematical objects and proof techniques required to study the subject in general.</p></section><nav class="summary-links"><ul>
+<p id="p-1429">Now we must decide whether it is possible to travel around that graph in a way that each edge is crossed exactly once.</p>
+<p id="p-1430">When it comes to friendship, if we assume that it is always reciprocated, we can represent the people as vertices and connect two vertices with an edge if the people they represent are friends.  We can ask whether it is possible to have such a graph in which each vertex is incident to exactly three edges or whether it is possible to “color” the vertices with just four colors so that no pair of same colored vertices are adjacent (connected by an edge).</p>
+<p id="p-1431">If we have thirteen piles of cards, we represent each pile as a vertex and each value as a vertex, and connect a pile vertex to a value vertex precisely when that value is in the pile.  We could then ask whether we could select a collection of thirteen edges that do not share any single vertex.</p>
+<p id="p-1432">These puzzles give you just a small glimpse into the myriad of applications graph theory can address.  For us, we will use our study of graph theory to see how reasoning in discrete mathematics works and as an excuse to remind ourselves of the basic mathematical objects and proof techniques required to study the subject in general.</p></section><nav class="summary-links"><ul>
 <li><a href="sec_gt-intro.html"><span class="codenumber">3.1</span> <span class="title">Definitions</span></a></li>
 <li><a href="sec_paths.html"><span class="codenumber">3.2</span> <span class="title">Walking Around Graphs</span></a></li>
 <li><a href="sec_planar.html"><span class="codenumber">3.3</span> <span class="title">Planar Graphs and Euler's Formula</span></a></li>

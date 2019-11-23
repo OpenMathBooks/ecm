@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:55-06:00    *-->
+<!--*    on 2019-11-23T09:45:00-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -269,14 +270,14 @@ var js_version = 0.12;
 <span class="type">Exercise</span> <span class="codenumber">237</span>.</h6>
 <p id="p-1251">Show that \(p_n(k)\) is at least \(\frac{1}{n!}\binom{k-1}{n-1}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-152" id="hint-152"><span class="type">Hint</span></a><div id="hk-hint-152" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1252">How many compositions are there of \(k\) into \(n\) parts? What is the maximum number of compositions that could correspond to a given partition of \(k\) into \(n\) parts?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-152" id="hint-152"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-152"><div class="solution"><p id="p-1252">How many compositions are there of \(k\) into \(n\) parts? What is the maximum number of compositions that could correspond to a given partition of \(k\) into \(n\) parts?</p></div></div>
 </div></article><article class="project-like" id="exploration-139"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">238</span>.</h6>
 <p id="p-1254">Describe the relationship between partitions of \(k\) and lists of vectors \((x_1,x_2,\ldots,x_n)\) such that \(x_1+2x_2+\ldots kx_k = k\text{.}\)  Such a representation of a partition is called a <dfn class="terminology">type vector</dfn> representation of a partition, and it is typical to leave the trailing zeros out of such a representation; for example \((2,1)\) stands for the same partition as \((2,1,0,0)\text{.}\) What is the decreasing list representation for this partition, and what number does it partition?</p></article><article class="project-like" id="exploration-140"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">239</span>.</h6>
 <p id="p-1256">How does the number of partitions of \(k\) relate to the number of partitions of \(k+1\) whose smallest part is one?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-153" id="hint-153"><span class="type">Hint</span></a><div id="hk-hint-153" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1257">How can you start with a partition of \(k\) and make it into a new partition of \(k+1\) that is guaranteed to have a part of size one, even if the original partition didn't?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-153" id="hint-153"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-153"><div class="solution"><p id="p-1257">How can you start with a partition of \(k\) and make it into a new partition of \(k+1\) that is guaranteed to have a part of size one, even if the original partition didn't?</p></div></div>
 </div></article><p id="p-1259">When we write a partition as \(\lambda = \lambda_1,\lambda_2,\ldots,\lambda_n\text{,}\) it is customary to write the list of \(\lambda_i\)s as a decreasing list. When we have a type vector \((t_1,t_2,\ldots,t_m)\) for a partition, we write either \(\lambda = 1^{t_1}2^{t_2}\cdots m^{t_m}\) or \(\lambda = m^{t_m}(m-1)^{t_{m-1}}\cdots 2^{t_2}1^{t_1}\text{.}\) Henceforth we will use the second of these. When we write \(\lambda=\lambda_1^{i_1}\lambda_2^{i_2}\cdots\lambda_n^{i_n}\text{,}\) we will assume that \(\lambda_i&gt;\lambda_i+1\text{.}\)</p>
 <p id="p-1260">It is remarkable that there is no known formula for \(p_n(k)\text{,}\) nor is there one for \(p(k)\text{.}\) We have computed a few values of \(p_n(k)\) by listing partitions.  If we continue to do so, we could build a triangle of partition numbers as follows.</p>
 <figure class="figure-like" id="fig_partition-numbers"><table>
@@ -392,7 +393,7 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-228"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-1276">Remove the left most column from each of your partitions of \(7\) into 3 parts.  Which partitions of what into how many parts do you get?  Comparing to the partition number triangle, does this allow you to compute \(p_3(7) = 4\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-154" id="hint-154"><span class="type">Hint</span></a><div id="hk-hint-154" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1277">Note that you get partitions always of the same number (which?) but into a different number of parts (why?).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-154" id="hint-154"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-154"><div class="solution"><p id="p-1277">Note that you get partitions always of the same number (which?) but into a different number of parts (why?).</p></div></div>
 </div></article><article class="exercise-like" id="task-229"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1278">Repeat the previous task with partitions of \(9\) into 4 parts.  Do we run into the same problem as when we removed the top row?</p></article></article><p id="p-1279">The previous activity suggests a recurrence for \(p_n(k)\text{.}\)  We might guess</p>
 <div class="displaymath">
@@ -413,7 +414,7 @@ p_4(9) = p_1(5) + p_2(5) + p_3(5)+ p_4(5) = 1+2+2+1 = 6
 <span class="type">Exercise</span> <span class="codenumber">244</span>.</h6>
 <p id="p-1281">Prove the recurrence for \(p_n(k)\) is correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-155" id="hint-155"><span class="type">Hint</span></a><div id="hk-hint-155" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1282">Since the recurrence is a sum of smaller partition numbers, we are claiming that we can break the partitions of \(k\) into \(n\) parts into different groups, and each group will correspond to a different collection of smaller partitions.  How can you describe these groups geometrically?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-155" id="hint-155"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-155"><div class="solution"><p id="p-1282">Since the recurrence is a sum of smaller partition numbers, we are claiming that we can break the partitions of \(k\) into \(n\) parts into different groups, and each group will correspond to a different collection of smaller partitions.  How can you describe these groups geometrically?</p></div></div>
 </div></article><p id="p-1283">Wikipedia (and almost every other textbook) gives another recursion for \(p_n(k)\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -437,19 +438,19 @@ p_n(k) = p_n(k-n) + p_{n-1}(k-1)\text{.}
 <span class="type">Activity</span> <span class="codenumber">247</span>.</h6>
 <p id="p-1292">Draw the Young diagram of the partition (4,4,3,1,1). Describe the geometric relationship between the Young diagram of (5,3,3,2) and the Young diagram of (4,4,3,1,1).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-156" id="hint-156"><span class="type">Hint</span></a><div id="hk-hint-156" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1293">Draw a line through the top-left corner and bottom-right corner of the top-left box.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-156" id="hint-156"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-156"><div class="solution"><p id="p-1293">Draw a line through the top-left corner and bottom-right corner of the top-left box.</p></div></div>
 </div></article><article class="project-like" id="activity-106"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">248</span>.</h6>
 <p id="p-1295">The partition \((\lambda_1,\lambda_2,\ldots, \lambda_n)\) is called the <dfn class="terminology">conjugate</dfn> of the partition \((\gamma_1,\gamma_2,\ldots, \gamma_m)\) if we obtain the Young diagram of one from the Young diagram of the other by flipping one around the line with slope -1 that extends the diagonal of the top left square. (Equivalently, simply interchanging rows and columns, like taking the transpose of a matrix.) See <a data-knowl="./knowl/conjugateYoung.html" title="Figure 2.4.5">Figure 2.4.5</a> for an example.</p>
 <figure class="figure-like" id="conjugateYoung"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/conjugateYoung.svg" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span> <span class="codenumber">2.4.5.</span> The Young diagram for the partition (5,3,3,2) and its conjugate.</figcaption></figure><p id="p-1296">What is the conjugate of (4,4,3,1,1)? How is the largest part of a partition related to the number of parts of its conjugate? What does this tell you about the number of partitions of a positive integer \(k\) with largest part \(m\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-157" id="hint-157"><span class="type">Hint</span></a><div id="hk-hint-157" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1297">The largest part of a partition is the maximum number of boxes in a row of its Young diagram. What does the maximum number of boxes in a column tell us?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-157" id="hint-157"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-157"><div class="solution"><p id="p-1297">The largest part of a partition is the maximum number of boxes in a row of its Young diagram. What does the maximum number of boxes in a column tell us?</p></div></div>
 </div></article><article class="project-like" id="activity-107"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">249</span>.</h6>
 <p id="p-1299">A partition is called <dfn class="terminology">self-conjugate</dfn> if it is equal to its conjugate. Find a relationship between the number of self-conjugate partitions of \(k\) and the number of partitions of \(k\) into distinct odd parts.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-158" id="hint-158"><span class="type">Hint</span></a><div id="hk-hint-158" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1300">Draw all self conjugate partitions of integers less than or equal to 8.  Draw all partitions of integers less than or equal to 8 into distinct odd parts (many of these will have just one part). Now try to see how to get from one set of drawings to the other in a consistent way.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-158" id="hint-158"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-158"><div class="solution"><p id="p-1300">Draw all self conjugate partitions of integers less than or equal to 8.  Draw all partitions of integers less than or equal to 8 into distinct odd parts (many of these will have just one part). Now try to see how to get from one set of drawings to the other in a consistent way.</p></div></div>
 </div></article><article class="example-like" id="example-35"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.4.7</span>.</h6>
 <p id="p-1303">Restricting the number or type of parts often leads to interesting relationships.</p>
@@ -500,12 +501,12 @@ p_n(k) = p_n(k-n) + p_{n-1}(k-1)\text{.}
 <span class="type">Activity</span> <span class="codenumber">250</span>.</h6>
 <p id="p-1308">Explain the relationship between the number of partitions of \(k\) into even parts and the number of partitions of \(k\) into parts of even multiplicity, i.e. parts which are each used an even number of times as in (3,3,3,3,2,2,1,1).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-159" id="hint-159"><span class="type">Hint</span></a><div id="hk-hint-159" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1309">Draw the partitions of six into even parts. Draw the partitions of six into parts used an even number of times. Look for a relationship between one set of diagrams and the other set of diagrams. If you have trouble, repeat the process using 8 or even 10 in place of 6.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-159" id="hint-159"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-159"><div class="solution"><p id="p-1309">Draw the partitions of six into even parts. Draw the partitions of six into parts used an even number of times. Look for a relationship between one set of diagrams and the other set of diagrams. If you have trouble, repeat the process using 8 or even 10 in place of 6.</p></div></div>
 </div></article><article class="project-like" id="rectanglecomplement"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">251</span>.</h6>
 <p id="p-1311">Show that the number of partitions of \(k\) into four parts equals the number of partitions of \(3k\) into four parts of size at most \(k-1\) (or \(3k-4\) into four parts of size at most \(k-2\) or \(3k-4\) into four parts of size at most \(k\)).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-160" id="hint-160"><span class="type">Hint</span></a><div id="hk-hint-160" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1312">Draw a partition of ten into four parts. Assume each square has area one. Then draw a rectangle of area 40 enclosing your diagram that touches the top of your diagram, the left side of your diagram and the bottom of your diagram. How does this rectangle give you a partition of 30 into four parts?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-160" id="hint-160"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-160"><div class="solution"><p id="p-1312">Draw a partition of ten into four parts. Assume each square has area one. Then draw a rectangle of area 40 enclosing your diagram that touches the top of your diagram, the left side of your diagram and the bottom of your diagram. How does this rectangle give you a partition of 30 into four parts?</p></div></div>
 </div></article><article class="project-like" id="exploration-144"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">252</span>.</h6>
 <div class="introduction" id="introduction-68">
@@ -518,19 +519,19 @@ p_n(k) = p_n(k-n) + p_{n-1}(k-1)\text{.}
 <p id="p-1317">What integer is being partitioned by the complement?</p></article><article class="exercise-like" id="task-235"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-1319">What conditions on \(m'\) and \(n'\) guarantee that the complement has the same number of parts as the original one?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-161" id="hint-161"><span class="type">Hint</span></a><div id="hk-hint-161" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1320">Consider two cases, \(m' \gt m\) and \(m' = m\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-161" id="hint-161"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-161"><div class="solution"><p id="p-1320">Consider two cases, \(m' \gt m\) and \(m' = m\text{.}\)</p></div></div>
 </div></article><article class="exercise-like" id="task-236"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-1322">What conditions on \(m'\) and \(n'\) guarantee that the complement has the same largest part as the original one?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-162" id="hint-162"><span class="type">Hint</span></a><div id="hk-hint-162" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1323">Consider two cases, \(n' \gt n\) and \(n' = n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-162" id="hint-162"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-162"><div class="solution"><p id="p-1323">Consider two cases, \(n' \gt n\) and \(n' = n\text{.}\)</p></div></div>
 </div></article><article class="exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <p id="p-1325">Is it possible for the complement to have both the same number of parts and the same largest part as the original one?</p></article><article class="exercise-like" id="task-238"><h6 class="heading"><span class="codenumber">(f)</span></h6>
 <p id="p-1327">If we complement a partition in an \(m'\) by \(n'\) box and then complement that partition in an \(m'\) by \(n'\) box again, do we get the same partition that we started with?</p></article></article><article class="project-like" id="exploration-145"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">253</span>.</h6>
 <p id="p-1329">Suppose we take a partition of \(k\) into \(n\) parts with largest part \(m\text{,}\) complement it in the smallest rectangle it will fit into, complement the result in the smallest rectangle it will fit into, and continue the process until we get the partition 1 of one into one part.  What can you say about the partition with which we started?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-163" id="hint-163"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-163" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1330">Suppose we take two repetitions of this complementation process. What rows and columns do we remove from the diagram?</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-164" id="hint-164"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-164" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1331">To deal with an odd number of repetitions of the complementation process, think of it as an even number plus 1. Thus ask what kind of partition gives us the partition of one into one part after this complementation process.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-163" id="hint-163"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-163"><div class="solution"><p id="p-1330">Suppose we take two repetitions of this complementation process. What rows and columns do we remove from the diagram?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-164" id="hint-164"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-164"><div class="solution"><p id="p-1331">To deal with an odd number of repetitions of the complementation process, think of it as an even number plus 1. Thus ask what kind of partition gives us the partition of one into one part after this complementation process.</p></div></div>
 </div></article></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">Partitions into distinct parts</span>
 </h3>
@@ -539,7 +540,7 @@ p_n(k) = p_n(k-n) + p_{n-1}(k-1)\text{.}
 <span class="type">Example</span> <span class="codenumber">2.4.9</span>.</h6>
 <p id="p-1337">Show that the number of partitions of 7 into three parts equals the number of partitions of 10 into three distinct parts.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span></a><div id="hk-solution-191" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-191" id="solution-191"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-191"><div class="solution">
 <p id="p-1338">To get a feel for this, list them out:</p>
 <div class="displaymath">
 \begin{align*}
@@ -558,24 +559,24 @@ p_n(k) = p_n(k-n) + p_{n-1}(k-1)\text{.}
 <span class="type">Exercise</span> <span class="codenumber">255</span>.</h6>
 <p id="p-1341">There is a relationship between \(p_n(k)\) and \(q_n(m)\) for some other number \(m\text{.}\) Find the number \(m\) that gives you the nicest possible relationship.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-165" id="hint-165"><span class="type">Hint</span></a><div id="hk-hint-165" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1342">In the case \(k=4\) and \(n=2\text{,}\) we have \(m=5\text{.}\) In the case \(k = 7\) and \(n = 3\text{,}\) we have \(m = 10\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-165" id="hint-165"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-165"><div class="solution"><p id="p-1342">In the case \(k=4\) and \(n=2\text{,}\) we have \(m=5\text{.}\) In the case \(k = 7\) and \(n = 3\text{,}\) we have \(m = 10\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="activity-109"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">256</span>.</h6>
 <p id="p-1344">Find a recurrence that expresses \(q_n(k)\) as a sum of \(q_m(k-n)\) for appropriate values of \(m\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-166" id="hint-166"><span class="type">Hint</span></a><div id="hk-hint-166" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1345">What can you do to a Young diagram for a partition of \(k\) into \(n\) distinct parts to get a Young diagram of a partition of \(k-n\) into some number of distinct parts?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-166" id="hint-166"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-166"><div class="solution"><p id="p-1345">What can you do to a Young diagram for a partition of \(k\) into \(n\) distinct parts to get a Young diagram of a partition of \(k-n\) into some number of distinct parts?</p></div></div>
 </div></article><p id="p-1347">The following exercise is interesting, but difficult.  The adventurous reader can try it directly here.  We will establish the same result using generating functions in the next section.</p>
 <article class="project-like" id="exploration-148"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">257</span>.</h6>
 <p id="p-1348">Show that the number of partitions of \(k\) into distinct parts equals the number of partitions of \(k\) into odd parts.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-167" id="hint-167"><span class="type">Hint</span></a><div id="hk-hint-167" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1349">For any partition of \(k\) into parts \(\lambda_1\text{,}\) \(\lambda_2\text{,}\) etc. we can get a partition of \(k\) into odd parts by factoring the highest power of two that we can from each \(\lambda_i\text{,}\) writing \(\lambda_i = \gamma_i\cdot 2^k_i\text{.}\)  Why is \(\gamma_i\) odd? Now partition \(k\) into \(2^{k_1}\) parts of size \(\gamma_1\text{,}\) \(2^{k_2}\) parts of size \(\gamma_2\text{,}\) etc. and you have a partition of \(k\) into odd parts.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-167" id="hint-167"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-167"><div class="solution"><p id="p-1349">For any partition of \(k\) into parts \(\lambda_1\text{,}\) \(\lambda_2\text{,}\) etc. we can get a partition of \(k\) into odd parts by factoring the highest power of two that we can from each \(\lambda_i\text{,}\) writing \(\lambda_i = \gamma_i\cdot 2^k_i\text{.}\)  Why is \(\gamma_i\) odd? Now partition \(k\) into \(2^{k_1}\) parts of size \(\gamma_1\text{,}\) \(2^{k_2}\) parts of size \(\gamma_2\text{,}\) etc. and you have a partition of \(k\) into odd parts.</p></div></div>
 </div></article><p id="p-1352">Here is another challenging exercise.</p>
 <article class="project-like" id="exploration-149"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">258</span>.</h6>
 <p id="p-1353">Euler showed that if \(k\not= \frac{3j^2+j}{2}\text{,}\) then the number of partitions of \(k\) into an even number of distinct parts is the same as the number of partitions of \(k\) into an odd number of distinct parts. Prove this, and in the exceptional case find out how the two numbers relate to each other.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-168" id="hint-168"><span class="type">Hint</span></a><div id="hk-hint-168" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1354">Suppose we have a partition of \(k\) into distinct parts. If the smallest part, say \(m\text{,}\) is smaller than the number of parts, we may add one to each of the \(m\) largest parts and delete the smallest part, and we have changed the parity of the number of parts, but we still have distinct parts. On the other hand, suppose the smallest part, again say \(m\text{,}\) is larger than or equal to the number of parts. Then we can subtract 1 from each part larger than \(m\text{,}\) and add a part equal to the number of parts larger than \(m\text{.}\) This changes the parity of the number of parts, but if the second smallest part is \(m+1\text{,}\) the resulting partition does not have distinct parts. Thus this method does not work. Further, if it did always work, the case \(k \ne \frac{3j^2+j}{2}\) would be covered also. However you can modify this method by comparing \(m\) not to the total number of parts, but to the number of rows at the top of the Young diagram that differ by exactly one from the row above. Even in this situation, there are certain slight additional assumptions you need to make, so this hint leaves you a lot of work to do. (It is reasonable to expect problems because of that exceptional case.) However, it should lead you in a useful direction.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-168" id="hint-168"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-168"><div class="solution"><p id="p-1354">Suppose we have a partition of \(k\) into distinct parts. If the smallest part, say \(m\text{,}\) is smaller than the number of parts, we may add one to each of the \(m\) largest parts and delete the smallest part, and we have changed the parity of the number of parts, but we still have distinct parts. On the other hand, suppose the smallest part, again say \(m\text{,}\) is larger than or equal to the number of parts. Then we can subtract 1 from each part larger than \(m\text{,}\) and add a part equal to the number of parts larger than \(m\text{.}\) This changes the parity of the number of parts, but if the second smallest part is \(m+1\text{,}\) the resulting partition does not have distinct parts. Thus this method does not work. Further, if it did always work, the case \(k \ne \frac{3j^2+j}{2}\) would be covered also. However you can modify this method by comparing \(m\) not to the total number of parts, but to the number of rows at the top of the Young diagram that differ by exactly one from the row above. Even in this situation, there are certain slight additional assumptions you need to make, so this hint leaves you a lot of work to do. (It is reasonable to expect problems because of that exceptional case.) However, it should lead you in a useful direction.</p></div></div>
 </div></article><p id="p-1360">And finally, a much simpler, purely combinatorial result.</p>
 <article class="project-like" id="exploration-150"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">259</span>.</h6>
@@ -586,7 +587,7 @@ q_n(k) \le \frac{1}{n!}\binom{k-1}{n-1}.
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-169" id="hint-169"><span class="type">Hint</span></a><div id="hk-hint-169" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1362">How does the number of compositions of \(k\) into \(n\) distinct parts compare to the number of compositions of \(k\) into \(n\) parts (not necessarily distinct)? What do compositions have to do with partitions?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-169" id="hint-169"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-169"><div class="solution"><p id="p-1362">How does the number of compositions of \(k\) into \(n\) distinct parts compare to the number of compositions of \(k\) into \(n\) parts (not necessarily distinct)? What do compositions have to do with partitions?</p></div></div>
 </div></article></section><section class="subsection" id="sec_genfns-int-parts"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4.4</span> <span class="title">Using Generating Functions</span>
 </h3>
@@ -595,23 +596,23 @@ q_n(k) \le \frac{1}{n!}\binom{k-1}{n-1}.
 <span class="type">Activity</span> <span class="codenumber">260</span>.</h6>
 <p id="p-1365">If we have five identical pennies, five identical nickels, five identical dimes, and five identical quarters, give the picture enumerator for the combinations of coins we can form and convert it to a generating function for the number of ways to make \(k\) cents with the coins we have. Do the same thing assuming we have an unlimited supply of pennies, nickels, dimes, and quarters.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-170" id="hint-170"><span class="type">Hint</span></a><div id="hk-hint-170" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1366">This is a good place to apply the product principle for picture enumerators.  Don't be afraid to use technology to finish the problem.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-170" id="hint-170"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-170"><div class="solution"><p id="p-1366">This is a good place to apply the product principle for picture enumerators.  Don't be afraid to use technology to finish the problem.</p></div></div>
 </div></article><article class="project-like" id="activity-111"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">261</span>.</h6>
 <div class="introduction" id="introduction-69"><p id="p-1370">In <a data-knowl="./knowl/change-making.html" title="Activity 260">Activity 260</a> we found the generating function for the number of partitions of an integer into parts of size 1, 5, 10, and 25. </p></div>
 <article class="exercise-like" id="task-239"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-1371">Give the generating function for the number partitions of an integer into parts of size one through ten.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-171" id="hint-171"><span class="type">Hint</span></a><div id="hk-hint-171" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1372">The product principle for generating functions helps you break the generating function into a product of ten simpler ones.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-171" id="hint-171"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-171"><div class="solution"><p id="p-1372">The product principle for generating functions helps you break the generating function into a product of ten simpler ones.</p></div></div>
 </div></article><article class="exercise-like" id="largestpartatmostm"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1374">Give the generating function for the number of partitions of an integer \(k\) into parts of size at most \(m\text{,}\) where \(m\) is fixed but \(k\) may vary. Notice this is the generating function for partitions whose Young diagram fits into the space between the line \(x=0\) and the line \(x=m\) in a coordinate plane. (We assume the boxes in the Young diagram are one unit by one unit.)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-172" id="hint-172"><span class="type">Hint</span></a><div id="hk-hint-172" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1375">\(m\) was 10 in the previous part of this problem.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-172" id="hint-172"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-172"><div class="solution"><p id="p-1375">\(m\) was 10 in the previous part of this problem.</p></div></div>
 </div></article></article><article class="project-like" id="atmostmparts"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">262</span>.</h6>
 <p id="p-1377">In <a data-knowl="./knowl/largestpartatmostm.html" title="Task 261.b">Task 261.b</a> you gave the generating function for the number of partitions of an integer into parts of size at most \(m\text{.}\) Can you see why this is also the generating function for partitions of an integer into at most \(m\) parts.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-173" id="hint-173"><span class="type">Hint</span></a><div id="hk-hint-173" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1378">Think about conjugate partitions. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/conjugateYoung.svg" style="width: 100%; height: auto;" alt=""></div></p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-173" id="hint-173"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-173"><div class="solution"><p id="p-1378">Think about conjugate partitions. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/conjugateYoung.svg" style="width: 100%; height: auto;" alt=""></div></p></div></div>
 </div></article><article class="example-like" id="genfunpartitions"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.4.10</span>.</h6>
 <p id="p-1380">The generating function for the number of partitions of an integer into parts of any size is</p>
@@ -635,7 +636,7 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 <span class="type">Exercise</span> <span class="codenumber">263</span>.</h6>
 <p id="p-1383">Illustrate the partitions of 5 and their correspondence to the ways to get \(x^5\) in the generating function for the number of partitions of an integer.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-174" id="hint-174"><span class="type">Hint</span></a><div id="hk-hint-174" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1384">Note that \(1+x^2+x^4+x^6+\cdots\) in the generating function is really \(1+x^2 + x^{2\cdot 2}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-174" id="hint-174"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-174"><div class="solution"><p id="p-1384">Note that \(1+x^2+x^4+x^6+\cdots\) in the generating function is really \(1+x^2 + x^{2\cdot 2}\)</p></div></div>
 </div></article><article class="example-like" id="example-38"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.4.11</span>.</h6>
 <p id="p-1385">The generating function for the number of partitions of an integer in which each part is even is</p>
@@ -652,7 +653,7 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span></a><div id="hk-solution-201" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution">
 <p id="p-1387">By considering a Young diagram and its compliment, we saw that there is a one to one correspondence between partitions that have exactly \(m\) parts and partitions that have \(m\) as their largest part.</p>
 <p id="p-1388">The generating function for the number of partitions of integers having <em class="emphasis">largest</em> part \(m\) is</p>
 <div class="displaymath">
@@ -663,21 +664,22 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 <p>Thus this is also the number of partitions of integers having <em class="emphasis">at most</em> \(m\) parts. Now subtract those having at most \(m-1\) parts:</p>
 <div class="displaymath">
 \begin{equation*}
-\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)} - \frac{1}{(1-x)(1-x^2)\cdots (1-x^{m-1})} = \frac{x^m}{(1-x)(1-x^2)\cdots(1-x^m)}\text{.}
+\frac{1}{(1-x)\cdots (1-x^m)} - \frac{1}{(1-x)\cdots (1-x^{m-1})} = \frac{x^m}{(1-x)\cdots(1-x^m)}\text{.}
 \end{equation*}
 </div>
+<p id="p-1389">Alternatively, instead of doing the algebra on the last step, we can use Young diagrams again.  There is a bijection between partitions of \(k\) into exactly \(m\) parts and partitions of \(k-m\) into at most \(m\) parts.  The bijection is: remove the first column!  So look at the infinite series for \(\frac{1}{(1-x)(1-x^2)\cdots (1-x^m)}\text{.}\)  The coefficient of \(x^{k-m}\) is the number of partitions of \(k-m\) into at most \(m\) parts.  So if we multiply each term by \(x^m\text{,}\) then the coefficient of \(x^{k-m+m} = x^{k}\) is the number of partitions of \(k-m\) into at most \(m\) parts.  But this is the number of partitions of \(k\) into <em class="emphasis">exactly</em> \(m\) parts, as required.</p>
 </div></div>
 </div></article><article class="project-like" id="exploration-152"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">264</span>.</h6>
-<p id="p-1389">Show that the generating function for the number of partitions of integers into <em class="emphasis">exactly</em> \(m\) <em class="emphasis">distinct</em> parts is</p>
+<p id="p-1390">Show that the generating function for the number of partitions of integers into <em class="emphasis">exactly</em> \(m\) <em class="emphasis">distinct</em> parts is</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{x^{\frac{m(m+1)}{2}}}{(1-x)(1-x^2)\cdots(1-x^m)}\text{.}
 \end{equation*}
 </div></article><article class="example-like" id="example-40"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.4.13</span>.</h6>
-<p id="p-1390">Let's illustrate these last few results with \(m = 3\text{.}\)</p>
-<p id="p-1391">First,</p>
+<p id="p-1393">Let's illustrate these last few results with \(m = 3\text{.}\)</p>
+<p id="p-1394">First,</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{(1-x)(1-x^2)(1-x^3)} = 1 + x + 2x^2 + 3x^3 + 4x^5 + 7x^6 + \cdots\text{.}
@@ -696,7 +698,7 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 \end{gather*}
 </div>
 <p>Now multiply the series by \(x^3\text{.}\)  The term \(3x^6\) shows that there are \(3\) partitions of \(n=6\) into exactly 3 parts.</p>
-<p id="p-1392">Finally, multiply instead by \(x^{\frac{m(m+1)}{2}} = x^6\) (when \(m = 3\)) to get \(x^6 + x^7 + 2x^8 + 3x^9+ 4x^{10} + \cdots\text{.}\)  This shows that only one of the partitions of \(n=6\) into 3 parts has its parts distinct.  Further, there are \(4\) partitions of \(n = 10\) into exactly 3 distinct parts:</p>
+<p id="p-1395">Finally, multiply instead by \(x^{\frac{m(m+1)}{2}} = x^6\) (when \(m = 3\)) to get \(x^6 + x^7 + 2x^8 + 3x^9+ 4x^{10} + \cdots\text{.}\)  This shows that only one of the partitions of \(n=6\) into 3 parts has its parts distinct.  Further, there are \(4\) partitions of \(n = 10\) into exactly 3 distinct parts:</p>
 <div class="displaymath">
 \begin{gather*}
 (7,2,1) \\
@@ -706,22 +708,22 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 \end{gather*}
 </div></article><article class="project-like" id="exploration-153"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">265</span>.</h6>
-<div class="introduction" id="introduction-70"><p id="p-1393">Give the generating function for the number of partitions of \(n\) with each of the following restrictions</p></div>
+<div class="introduction" id="introduction-70"><p id="p-1396">Give the generating function for the number of partitions of \(n\) with each of the following restrictions</p></div>
 <article class="exercise-like" id="task-241"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1394">Each part is used at most once (i.e., a partition into distinct parts).</p></article><article class="exercise-like" id="task-242"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1395">No part is larger than 3.</p></article><article class="exercise-like" id="task-243"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1396">All parts are odd.</p></article><article class="exercise-like" id="task-244"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1397">All parts are distinct and odd.</p></article><article class="exercise-like" id="task-245"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1398">Only even parts may be repeated.</p></article><article class="exercise-like" id="task-246"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<p id="p-1399">No part appears more than twice.</p></article><article class="exercise-like" id="task-247"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<p id="p-1400">All parts are in the set \(\{3,8\}\text{.}\)  (This might remind you of a stamp problem.)</p></article></article><article class="project-like" id="exploration-154"><h6 class="heading">
+<p id="p-1397">Each part is used at most once (i.e., a partition into distinct parts).</p></article><article class="exercise-like" id="task-242"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1398">No part is larger than 3.</p></article><article class="exercise-like" id="task-243"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1399">All parts are odd.</p></article><article class="exercise-like" id="task-244"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1400">All parts are distinct and odd.</p></article><article class="exercise-like" id="task-245"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1401">Only even parts may be repeated.</p></article><article class="exercise-like" id="task-246"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1402">No part appears more than twice.</p></article><article class="exercise-like" id="task-247"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1403">All parts are in the set \(\{3,8\}\text{.}\)  (This might remind you of a stamp problem.)</p></article></article><article class="project-like" id="exploration-154"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">266</span>.</h6>
-<p id="p-1401">Use generating functions to explain why the number of partitions of an integer in which each part is used an even number of times equals the number of partitions of an integer in which each part is even.</p>
+<p id="p-1404">Use generating functions to explain why the number of partitions of an integer in which each part is used an even number of times equals the number of partitions of an integer in which each part is even.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-175" id="hint-175"><span class="type">Hint</span></a><div id="hk-hint-175" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1402">In the power series \(\sum_{j=0}^\infty x^{2ij}\text{,}\) the \(2ij\) has a different interpretation if you think of it as \((2i) \cdot j\) or if you think of it as \(i \cdot (2j)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-175" id="hint-175"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-175"><div class="solution"><p id="p-1405">In the power series \(\sum_{j=0}^\infty x^{2ij}\text{,}\) the \(2ij\) has a different interpretation if you think of it as \((2i) \cdot j\) or if you think of it as \(i \cdot (2j)\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="exploration-155"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">267</span>.</h6>
-<p id="p-1404">Use the fact that</p>
+<p id="p-1407">Use the fact that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1-x^{2i}}{1-x^i}= 1+x^i
@@ -729,8 +731,8 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 </div>
 <p>and the generating function for the number of partitions of an integer into distinct parts to show how the number of partitions of an integer \(k\) into distinct parts is related to the number of partitions of an integer \(k\) into odd parts.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-176" id="hint-176"><span class="type">Hint</span></a><div id="hk-hint-176" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-1405">Note that</p>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-176" id="hint-176"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-176"><div class="solution">
+<p id="p-1408">Note that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1-x^2}{1-x}\cdot \frac{1-x^4}{1-x^2}\cdot \frac{1-x^6}{1-x^3}\cdot \frac{1-x^8}{1-x^4} = \frac{(1-x^6)(1-x^8)}{(1-x)(1-x^3)} \text{.}
@@ -739,14 +741,14 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 </div></div>
 </div></article><article class="project-like" id="exploration-156"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">268</span>.</h6>
-<p id="p-1407">Verify that the number of partitions of \(n=5\) is equal to the number of partitions of \(10\) into exactly 5 parts.  Generalize.</p></article><article class="project-like" id="exploration-157"><h6 class="heading">
+<p id="p-1410">Verify that the number of partitions of \(n=5\) is equal to the number of partitions of \(10\) into exactly 5 parts.  Generalize.</p></article><article class="project-like" id="exploration-157"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">269</span>.</h6>
-<p id="p-1408">Write down the generating function for the number of ways to partition an integer into parts of size no more than \(m\text{,}\) each used an odd number of times. Write down the generating function for the number of partitions of an integer into parts of size no more than \(m\text{,}\) each used an even number of times. Use these two generating functions to get a relationship between the two sequences for which you wrote down the generating functions.</p>
+<p id="p-1411">Write down the generating function for the number of ways to partition an integer into parts of size no more than \(m\text{,}\) each used an odd number of times. Write down the generating function for the number of partitions of an integer into parts of size no more than \(m\text{,}\) each used an even number of times. Use these two generating functions to get a relationship between the two sequences for which you wrote down the generating functions.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-177" id="hint-177"><span class="type">Hint</span></a><div id="hk-hint-177" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1409">Note that \(q^i + x^{3i} + x^{5i} + \cdots = x^i (1 + x^2 + x^4 + \cdots)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-177" id="hint-177"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-177"><div class="solution"><p id="p-1412">Note that \(x^i + x^{3i} + x^{5i} + \cdots = x^i (1 + x^2 + x^4 + \cdots)\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="exploration-158"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">270</span>.</h6>
-<p id="p-1411">Show algebraically that</p>
+<p id="p-1414"> Show algebraically that </p>
 <div class="displaymath">
 \begin{equation*}
 (1+x)(1+x^2)(1+x^4)(1+x^8)\cdots = \frac{1}{(1-x)(1-x^3)(1-x^5)\cdots}\text{.}
@@ -755,15 +757,15 @@ x^4 \cdot 1\cdot 1 \cdot 1 \amp \leftrightarrow  (1,1,1,1)
 <p>What does this identity tell you about partitions of integers?</p></article><article class="project-like" id="exploration-159"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">271</span>.</h6>
 <article class="exercise-like" id="task-248"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1412">Prove that</p>
+<p id="p-1415">Prove that</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{1-x} = (1 + x + x^2 +\cdots + x^9)(1 + x^{10} + \cdots + x^{90})(1 + x^{100} + \cdots + x^{900})\cdots.
 \end{equation*}
 </div>
 <p>What does this tell us about numbers?</p></article><article class="exercise-like" id="task-249"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1415">Prove that every non negative integer \(n\) has a unique binary representation.</p></article><article class="exercise-like" id="task-250"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1417">Find a simple expression for</p>
+<p id="p-1418">Prove that every non negative integer \(n\) has a unique binary representation.</p></article><article class="exercise-like" id="task-250"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1420">Find a simple expression for</p>
 <div class="displaymath">
 \begin{equation*}
 (1+x+x^2)(1+x^3+x^6)(1+x^9+x^{18})(1+x^{27}+x^{54})\cdots.

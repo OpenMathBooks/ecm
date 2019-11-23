@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:36-06:00    *-->
+<!--*    on 2019-11-23T09:45:44-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,20 +14,8 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">303.a.1</span>.</h6>
-<p>Case 1: Each face is a triangle. Let \(f\) be the number of faces. There are then \(3f/2\) edges. Using Euler's formula we have \(v - 3f/2 + f = 2\) so \(v = 2 + f/2\text{.}\) Now each vertex has the same degree, say \(k\text{.}\) So the number of edges is also \(kv/2\text{.}\) Putting this together gives</p>
-<div class="displaymath">
-\begin{equation*}
-e = \frac{3f}{2} = \frac{k(2+f/2)}{2}
-\end{equation*}
-</div>
-<p>which says</p>
-<div class="displaymath">
-\begin{equation*}
-k = \frac{6f}{4+f}
-\end{equation*}
-</div>
-<p>We need \(k\) and \(f\) to both be positive integers. Note that \(\frac{6f}{4+f}\) is an increasing function for positive \(f\text{,}\) and has a horizontal asymptote at 6. Thus the only possible values for \(k\) are 3, 4, and 5. Each of these are possible. To get \(k = 3\text{,}\) we need \(f = 4\) (this is the tetrahedron). For \(k = 4\) we take \(f = 8\) (the octahedron). For \(k = 5\) take \(f = 20\) (the icosahedron). Thus there are exactly three regular polyhedra with triangles for faces.</p>
+<span class="type">Solution</span> <span class="codenumber">302.c.1</span>.</h6>
+<p>So, let's assume for a contradiction that your friend really has constructed a convex polyhedron. Then, we would know that the polyhedron has \(15\) faces, \((2\times 3+2\times 4+6\times 5+5\times 8)/2 = 42\) edges, and \(V=2+42-15=29\) vertices. Now, using the hint, we also know that \(3V\leq F\) but \(3\times 29\) is not in fact less than \(15\text{.}\) So we have a contradiction, and your friend is lying.</p>
 </div>
 <span class="incontext"><a href="sec_eulerapps.html#solution-239">in-context</a></span>
 </body>

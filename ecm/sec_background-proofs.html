@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:08-06:00    *-->
+<!--*    on 2019-11-23T09:45:13-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -302,7 +303,7 @@ ab \amp =(2k+1)b\\
 <p id="eGV">Writing proofs is a bit of an art. Like any art, to be truly great at it, you need some sort of inspiration, as well as some foundational technique. Just as musicians can learn proper fingering, and painters can learn the proper way to hold a brush, we can look at the proper way to construct arguments. A good place to start might be to study a classic.</p>
 <article class="theorem-like" id="LFc"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">B.5.1</span>.</h6>
-<p id="wKz">There are infinitely many primes. </p></article><article class="hiddenproof" id="qGS"><a data-knowl="" class="id-ref" data-refid="hk-qGS"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-qGS" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="saG">Suppose this were not the case. That is, suppose there are only finitely many primes. Then there must be a last, largest prime, call it \(p\text{.}\) Consider the number</p>
+<p id="wKz">There are infinitely many primes. </p></article><article class="hiddenproof" id="qGS"><a data-knowl="" class="id-ref" data-refid="hk-qGS"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-qGS"><article class="hiddenproof"><p id="saG">Suppose this were not the case. That is, suppose there are only finitely many primes. Then there must be a last, largest prime, call it \(p\text{.}\) Consider the number</p>
 <div class="displaymath">
 \begin{equation*}
 N = p! + 1 = (p \cdot (p-1) \cdot \cdots 3\cdot 2 \cdot 1) + 1\text{.}
@@ -335,19 +336,19 @@ N = p! + 1 = (p \cdot (p-1) \cdot \cdots 3\cdot 2 \cdot 1) + 1\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.2</span>.</h6>
 <p id="cRI">Prove: For all integers \(n\text{,}\) if \(n\) is even, then \(n^2\) is even.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-EaD" id="EaD"><span class="type">Solution</span></a><div id="hk-EaD" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-EaD" id="EaD"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-EaD"><div class="solution">
 <p id="rqM">The format of the proof will be this: Let \(n\) be an arbitrary integer. Assume that \(n\) is even. Explain explain explain. Therefore \(n^2\) is even.</p>
 <p id="XxV">To fill in the details, we will basically just explain what it means for \(n\) to be even, and then see what that means for \(n^2\text{.}\) Here is a complete proof.</p>
-<article class="hiddenproof" id="khM"><a data-knowl="" class="id-ref" data-refid="hk-khM"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-khM" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="DFe">Let \(n\) be an arbitrary integer. Suppose \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) Now \(n^2 = (2k)^2 = 4k^2 = 2(2k^2)\text{.}\) Since \(2k^2\) is an integer, \(n^2\) is even.</p></article></div>
+<article class="hiddenproof" id="khM"><a data-knowl="" class="id-ref" data-refid="hk-khM"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-khM"><article class="hiddenproof"><p id="DFe">Let \(n\) be an arbitrary integer. Suppose \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) Now \(n^2 = (2k)^2 = 4k^2 = 2(2k^2)\text{.}\) Since \(2k^2\) is an integer, \(n^2\) is even.</p></article></div>
 </div></div>
 </div></article><article class="example-like" id="Clq"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">B.5.3</span>.</h6>
 <p id="IYR">Prove: For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a|b\) and \(b|c\) then \(a|c\text{.}\) (Here \(x|y\text{,}\) read “\(x\) divides \(y\)” means that \(y\) is a multiple of \(x\text{,}\) i.e., that \(x\) will divide into \(y\) without remainder).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-QoV" id="QoV"><span class="type">Solution</span></a><div id="hk-QoV" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-QoV" id="QoV"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-QoV"><div class="solution">
 <p id="jMn">Even before we know what the divides symbol means, we can set up a direct proof for this statement. It will go something like this: Let \(a\text{,}\) \(b\text{,}\) and \(c\) be arbitrary integers. Assume that \(a|b\) and \(b|c\text{.}\) Dot dot dot. Therefore \(a|c\text{.}\)</p>
 <p id="PTw">How do we connect the dots? We say what our hypothesis (\(a|b\) and \(b|c\)) really means and why this gives us what the conclusion (\(a|c\)) really means. Another way to say that \(a|b\) is to say that \(b = ka\) for some integer \(k\) (that is, that \(b\) is a multiple of \(a\)). What are we going for? That \(c = la\text{,}\) for some integer \(l\) (because we want \(c\) to be a multiple of \(a\)). Here is the complete proof.</p>
-<article class="hiddenproof" id="wwe"><a data-knowl="" class="id-ref" data-refid="hk-wwe"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-wwe" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="waF">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers. Assume that \(a|b\) and \(b|c\text{.}\) In other words, \(b\) is a multiple of \(a\) and \(c\) is a multiple of \(b\text{.}\) So there are integers \(k\) and \(j\) such that \(b = ka\) and \(c = jb\text{.}\) Combining these (through substitution) we get that \(c = jka\text{.}\) But \(jk\) is an integer, so this says that \(c\) is a multiple of \(a\text{.}\) Therefore \(a|c\text{.}\)</p></article></div>
+<article class="hiddenproof" id="wwe"><a data-knowl="" class="id-ref" data-refid="hk-wwe"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-wwe"><article class="hiddenproof"><p id="waF">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers. Assume that \(a|b\) and \(b|c\text{.}\) In other words, \(b\) is a multiple of \(a\) and \(c\) is a multiple of \(b\text{.}\) So there are integers \(k\) and \(j\) such that \(b = ka\) and \(c = jb\text{.}\) Combining these (through substitution) we get that \(c = jka\text{.}\) But \(jk\) is an integer, so this says that \(c\) is a multiple of \(a\text{.}\) Therefore \(a|c\text{.}\)</p></article></div>
 </div></div>
 </div></article></section><section class="subsection" id="xBx"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">B.5.2</span> <span class="title">Proof by Contrapositive</span>
@@ -360,23 +361,23 @@ N = p! + 1 = (p \cdot (p-1) \cdot \cdots 3\cdot 2 \cdot 1) + 1\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.4</span>.</h6>
 <p id="pga">Is the statement “for all integers \(n\text{,}\) if \(n^2\) is even, then \(n\) is even” true?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-cDn" id="cDn"><span class="type">Solution</span></a><div id="hk-cDn" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-cDn" id="cDn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-cDn"><div class="solution">
 <p id="chO">This is the converse of the statement we proved above using a direct proof. From trying a few examples, this statement definitely appears to be true. So let's prove it.</p>
 <p id="IoX">A direct proof of this statement would require fixing an arbitrary \(n\) and assuming that \(n^2\) is even. But it is not at all clear how this would allow us to conclude anything about \(n\text{.}\) Just because \(n^2 = 2k\) does not in itself suggest how we could write \(n\) as a multiple of 2.</p>
 <p id="owg">Try something else: write the contrapositive of the statement. We get, for all integers \(n\text{,}\) if \(n\) is odd then \(n^2\) is odd. This looks much more promising. Our proof will look something like this:</p>
 <p id="UDp">Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even. This means that …. In other words …. But this is the same as saying …. Therefore \(n^2\) is not even.</p>
 <p id="AKy">Now we fill in the details:</p>
-<article class="hiddenproof" id="IKw"><a data-knowl="" class="id-ref" data-refid="hk-IKw"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-IKw" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="gRH">We will prove the contrapositive. Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even, and thus odd. Then \(n= 2k+1\) for some integer \(k\text{.}\) Now \(n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\text{.}\) Since \(2k^2 + 2k\) is an integer, we see that \(n^2\) is odd and therefore not even.</p></article></div>
+<article class="hiddenproof" id="IKw"><a data-knowl="" class="id-ref" data-refid="hk-IKw"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-IKw"><article class="hiddenproof"><p id="gRH">We will prove the contrapositive. Let \(n\) be an arbitrary integer. Suppose that \(n\) is not even, and thus odd. Then \(n= 2k+1\) for some integer \(k\text{.}\) Now \(n^2 = (2k+1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1\text{.}\) Since \(2k^2 + 2k\) is an integer, we see that \(n^2\) is odd and therefore not even.</p></article></div>
 </div></div>
 </div></article><article class="example-like" id="OzI"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">B.5.5</span>.</h6>
 <p id="Vnj">Prove: for all integers \(a\) and \(b\text{,}\) if \(a + b\) is odd, then \(a\) is odd or \(b\) is odd.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-oRF" id="oRF"><span class="type">Solution</span></a><div id="hk-oRF" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-oRF" id="oRF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-oRF"><div class="solution">
 <p id="MYQ">The problem with trying a direct proof is that it will be hard to separate \(a\) and \(b\) from knowing something about \(a+b\text{.}\) On the other hand, if we know something about \(a\) and \(b\) separately, then combining them might give us information about \(a+b\text{.}\) The contrapositive of the statement we are trying to prove is: for all integers \(a\) and \(b\text{,}\) if \(a\) and \(b\) are even, then \(a+b\) is even. Thus our proof will have the following format:</p>
 <p id="tfZ">Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are both even. la la la. Therefore \(a+b\) is even.</p>
 <p id="Zni">Here is a complete proof:</p>
-<article class="hiddenproof" id="UYO"><a data-knowl="" class="id-ref" data-refid="hk-UYO"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-UYO" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="Fur">Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are even. Then \(a = 2k\) and \(b = 2l\) for some integers \(k\) and \(l\text{.}\) Now \(a + b = 2k + 2l = 2(k+1)\text{.}\) Since \(k + l\) is an integer, we see that \(a + b\) is even, completing the proof.</p></article></div>
+<article class="hiddenproof" id="UYO"><a data-knowl="" class="id-ref" data-refid="hk-UYO"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-UYO"><article class="hiddenproof"><p id="Fur">Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are even. Then \(a = 2k\) and \(b = 2l\) for some integers \(k\) and \(l\text{.}\) Now \(a + b = 2k + 2l = 2(k+1)\text{.}\) Since \(k + l\) is an integer, we see that \(a + b\) is even, completing the proof.</p></article></div>
 <p id="lBA">Note that our assumption that \(a\) and \(b\) are even is really the negation of \(a\) or \(b\) is odd. We used De Morgan's law here.</p>
 </div></div>
 </div></article><p id="UhQ">We have seen how to prove some statements in the form of implications: either directly or by contrapositive. Some statements are not written as implications to begin with.</p>
@@ -384,8 +385,8 @@ N = p! + 1 = (p \cdot (p-1) \cdot \cdots 3\cdot 2 \cdot 1) + 1\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.6</span>.</h6>
 <p id="Bus">Consider the following statement: for every prime number \(p\text{,}\) either \(p = 2\) or \(p\) is odd. We can rephrase this: for every prime number \(p\text{,}\) if \(p \ne 2\text{,}\) then \(p\) is odd. Now try to prove it.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-BfX" id="BfX"><span class="type">Solution</span></a><div id="hk-BfX" class="hidden-content tex2jax_ignore"><div class="solution">
-<article class="hiddenproof" id="hng"><a data-knowl="" class="id-ref" data-refid="hk-hng"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-hng" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="RIJ">Let \(p\) be an arbitrary prime number. Assume \(p\) is not odd. So \(p\) is divisible by 2. Since \(p\) is prime, it must have exactly two divisors, and it has 2 as a divisor, so \(p\) must be divisible by only 1 and 2. Therefore \(p = 2\text{.}\) This completes the proof (by contrapositive).</p></article></div>
+<a data-knowl="" class="id-ref" data-refid="hk-BfX" id="BfX"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BfX"><div class="solution">
+<article class="hiddenproof" id="hng"><a data-knowl="" class="id-ref" data-refid="hk-hng"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-hng"><article class="hiddenproof"><p id="RIJ">Let \(p\) be an arbitrary prime number. Assume \(p\) is not odd. So \(p\) is divisible by 2. Since \(p\) is prime, it must have exactly two divisors, and it has 2 as a divisor, so \(p\) must be divisible by only 1 and 2. Therefore \(p = 2\text{.}\) This completes the proof (by contrapositive).</p></article></div>
 </div></div>
 </div></article></section><section class="subsection" id="dIG"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">B.5.3</span> <span class="title">Proof by Contradiction</span>
@@ -397,8 +398,8 @@ N = p! + 1 = (p \cdot (p-1) \cdot \cdots 3\cdot 2 \cdot 1) + 1\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.7</span>.</h6>
 <p id="hBB">Prove that \(\sqrt{2}\) is irrational.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Nup" id="Nup"><span class="type">Solution</span></a><div id="hk-Nup" class="hidden-content tex2jax_ignore"><div class="solution">
-<article class="hiddenproof" id="tBy"><a data-knowl="" class="id-ref" data-refid="hk-tBy"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-tBy" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="xPS">Suppose not. Then \(\sqrt 2\) is equal to a fraction \(\frac{a}{b}\text{.}\) Without loss of generality, assume \(\frac{a}{b}\) is in lowest terms (otherwise reduce the fraction). So,</p>
+<a data-knowl="" class="id-ref" data-refid="hk-Nup" id="Nup"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Nup"><div class="solution">
+<article class="hiddenproof" id="tBy"><a data-knowl="" class="id-ref" data-refid="hk-tBy"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-tBy"><article class="hiddenproof"><p id="xPS">Suppose not. Then \(\sqrt 2\) is equal to a fraction \(\frac{a}{b}\text{.}\) Without loss of generality, assume \(\frac{a}{b}\) is in lowest terms (otherwise reduce the fraction). So,</p>
 <div class="displaymath">
 \begin{equation*}
 2 = \frac{a^2}{b^2}
@@ -426,22 +427,23 @@ b^2 = 2k^2\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.8</span>.</h6>
 <p id="NIK">Prove: There are no integers \(x\) and \(y\) such that \(x^2 = 4y + 2\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ZIH" id="ZIH"><span class="type">Solution</span></a><div id="hk-ZIH" class="hidden-content tex2jax_ignore"><div class="solution">
-<article class="hiddenproof" id="FPQ"><a data-knowl="" class="id-ref" data-refid="hk-FPQ"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-FPQ" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="qlt">We proceed by contradiction. So suppose there <em class="emphasis">are</em> integers \(x\) and \(y\) such that \(x^2 = 4y + 2 = 2(2y + 1)\text{.}\) So \(x^2\) is even. We have seen that this implies that \(x\) is even. So \(x = 2k\) for some integer \(k\text{.}\) Then \(x^2 = 4k^2\text{.}\) This in turn gives \(2k^2 = (2y + 1)\text{.}\) But \(2k^2\) is even, and \(2y + 1\) is odd, so these cannot be equal. Thus we have a contradiction, so there must not be any integers \(x\) and \(y\) such that \(x^2 = 4y + 2\text{.}\)</p></article></div>
+<a data-knowl="" class="id-ref" data-refid="hk-ZIH" id="ZIH"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZIH"><div class="solution">
+<article class="hiddenproof" id="FPQ"><a data-knowl="" class="id-ref" data-refid="hk-FPQ"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-FPQ"><article class="hiddenproof"><p id="qlt">We proceed by contradiction. So suppose there <em class="emphasis">are</em> integers \(x\) and \(y\) such that \(x^2 = 4y + 2 = 2(2y + 1)\text{.}\) So \(x^2\) is even. We have seen that this implies that \(x\) is even. So \(x = 2k\) for some integer \(k\text{.}\) Then \(x^2 = 4k^2\text{.}\) This in turn gives \(2k^2 = (2y + 1)\text{.}\) But \(2k^2\) is even, and \(2y + 1\) is odd, so these cannot be equal. Thus we have a contradiction, so there must not be any integers \(x\) and \(y\) such that \(x^2 = 4y + 2\text{.}\)</p></article></div>
 </div></div>
 </div></article><article class="example-like" id="ncs"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">B.5.9</span>.</h6>
 <p id="tPT">The <dfn class="terminology">Pigeonhole Principle</dfn>:  If more than \(n\) pigeons fly into \(n\) pigeon holes, then at least one pigeon hole will contain at least two pigeons. Prove this!</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-lWZ" id="lWZ"><span class="type">Solution</span></a><div id="hk-lWZ" class="hidden-content tex2jax_ignore"><div class="solution">
-<article class="hiddenproof" id="Sei"><a data-knowl="" class="id-ref" data-refid="hk-Sei"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-Sei" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="WsC">Suppose, contrary to stipulation, that each of the pigeon holes contains at most one pigeon. Then at most there will be \(n\) pigeons. But we assumed that there are more than \(n\) pigeons, so this is impossible. Thus there must be a pigeonhole with more than one pigeon.</p></article></div>
+<a data-knowl="" class="id-ref" data-refid="hk-lWZ" id="lWZ"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-lWZ"><div class="solution">
+<article class="hiddenproof" id="Sei"><a data-knowl="" class="id-ref" data-refid="hk-Sei"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Sei"><article class="hiddenproof"><p id="WsC">Suppose, contrary to stipulation, that each of the pigeon holes contains at most one pigeon. Then at most there will be \(n\) pigeons. But we assumed that there are more than \(n\) pigeons, so this is impossible. Thus there must be a pigeonhole with more than one pigeon.</p></article></div>
 <p id="CzL">While we phrased this proof as a proof by contradiction, we could have also used a proof by contrapositive since our contradiction was simply the negation of the hypothesis. Sometimes this will happen, in which case you can use either style of proof. There are examples however where the contradiction occurs “far away” from the original statement.</p>
 </div></div>
 </div></article></section><section class="subsection" id="JPP"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">B.5.4</span> <span class="title">Proof by (counter) Example</span>
 </h3>
 <p id="sKA">It is almost NEVER okay to prove a statement with just an example. Certainly none of the statements proved above can be proved through an example. This is because in each of those cases we are trying to prove that something holds of all integers. We claim that \(n^2\) being even implies that \(n\) is even, <em class="emphasis">no matter what integer</em> \(n\) we pick. Showing that this works for \(n = 4\) is not even close to enough.</p>
-<p id="YRJ">This cannot be stressed enough. If you are trying to prove a statement of the form \(\forall x P(x)\text{,}\) you absolutely CANNOT prove this with an example.<a data-knowl="" class="id-ref" data-refid="hk-fn-23" id="fn-23"><sup> 4 </sup></a><span id="hk-fn-23" class="hidden-content tex2jax_ignore"><span class="footnote">This is not to say that looking at examples is a waste of time. Doing so will often give you an idea of how to write a proof. But the examples do not belong in the proof.</span></span></p>
+<p id="YRJ">This cannot be stressed enough. If you are trying to prove a statement of the form \(\forall x P(x)\text{,}\) you absolutely CANNOT prove this with an example.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-23" id="fn-23"><sup> 4 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="footnote">This is not to say that looking at examples is a waste of time. Doing so will often give you an idea of how to write a proof. But the examples do not belong in the proof.</div></div>
 <p id="EYS">However, existential statements can be proven this way. If we want to prove that there is an integer \(n\) such that \(n^2-n+41\) is not prime, all we need to do is find one. This might seem like a silly thing to want to prove until you try a few values for \(n\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -471,7 +473,7 @@ b^2 = 2k^2\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.10</span>.</h6>
 <p id="ZXc">Above we proved, “for all integers \(a\) and \(b\text{,}\) if \(a+b\) is odd, then \(a\) is odd or \(b\) is odd.” Is the converse true?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ylr" id="ylr"><span class="type">Solution</span></a><div id="hk-ylr" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-ylr" id="ylr"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ylr"><div class="solution">
 <p id="iGU">The converse is the statement, “for all integers \(a\) and \(b\text{,}\) if \(a\) is odd or \(b\) is odd, then \(a + b\) is odd.” This is false! How do we prove it is false? We need to prove the negation of the converse. Let's look at the symbols. The converse is</p>
 <div class="displaymath">
 \begin{equation*}
@@ -502,9 +504,9 @@ b^2 = 2k^2\text{.}
 <span class="type">Example</span> <span class="codenumber">B.5.11</span>.</h6>
 <p id="Gel">Prove: For any integer \(n\text{,}\) the number \((n^3 -n)\) is even.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-esA" id="esA"><span class="type">Solution</span></a><div id="hk-esA" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-esA" id="esA"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-esA"><div class="solution">
 <p id="nqN">It is hard to know where to start this, because we don't know much of anything about \(n\text{.}\) We might be able to prove that \(n^3 - n\) is even if we knew that \(n\) was even. In fact, we could probably prove that \(n^3-n\) was even if \(n\) was odd. But since \(n\) must either be even or odd, this will be enough. Here's the proof.</p>
-<article class="hiddenproof" id="KzJ"><a data-knowl="" class="id-ref" data-refid="hk-KzJ"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-KzJ" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="TxW">We consider two cases: if \(n\) is even or if \(n\) is odd.</p>
+<article class="hiddenproof" id="KzJ"><a data-knowl="" class="id-ref" data-refid="hk-KzJ"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-KzJ"><article class="hiddenproof"><p id="TxW">We consider two cases: if \(n\) is even or if \(n\) is odd.</p>
 <p id="zFf">Case 1: \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) This give</p>
 <div class="displaymath">
 \begin{align*}
@@ -539,7 +541,7 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="JbR"><p id="OvE">Is the negation of the original statement true or false? Prove your answer.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-jPn" id="jPn"><span class="type">Solution</span></a><div id="hk-jPn" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="vmH" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-jPn" id="jPn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jPn"><div class="solution"><ol id="vmH" class="lower-alpha">
 <li id="pja"><p id="uCN">For all integers \(a\) and \(b\text{,}\) if \(a\) or \(b\) is not even, then \(a+b\) is not even.</p></li>
 <li id="Vqj"><p id="aJW">For all integers \(a\) and \(b\text{,}\) if \(a\) and \(b\) are even, then \(a+b\) is even.</p></li>
 <li id="Bxs"><p id="GRf">There are numbers \(a\) and \(b\) such that \(a+b\) is even but \(a\) and \(b\) are not both even.</p></li>
@@ -556,7 +558,7 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="SvD"><p id="DWz">For all integers \(a\) and \(b\text{,}\) if \(a^2 + b^2\) is odd, then \(a\) or \(b\) is odd.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-PWw" id="PWw"><span class="type">Solution</span></a><div id="hk-PWw" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="btQ" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-PWw" id="PWw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-PWw"><div class="solution"><ol id="btQ" class="lower-alpha">
 <li id="yCM"><p id="kdI">Proof by contradiction. Start of proof: Assume, for the sake of contradiction, that there are integers \(x\) and \(y\) such that \(x\) is a prime greater than 5 and \(x = 6y + 3\text{.}\) End of proof: … this is a contradiction, so there are no such integers.</p></li>
 <li id="eJV"><p id="QkR">Direct proof. Start of proof: Let \(n\) be an integer. Assume \(n\) is a multiple of 3. End of proof: Therefore \(n\) can be written as the sum of consecutive integers.</p></li>
 <li id="KRe"><p id="wsa">Proof by contrapositive. Start of proof: Let \(a\) and \(b\) be integers. Assume that \(a\) and \(b\) are even. End of proof: Therefore \(a^2 + b^2\) is even.</p></li>
@@ -568,8 +570,8 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="Xfw"><p id="IGs">Is the converse true? Prove or disprove.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-wdF" id="wdF"><span class="type">Solution</span></a><div id="hk-wdF" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="HAZ" class="lower-alpha">
-<li id="DmF"><p id="oNB">Direct proof. <article class="hiddenproof" id="ckO"><a data-knowl="" class="id-ref" data-refid="hk-ckO"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-ckO" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="Jqm">Let \(n\) be an integer. Assume \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) Thus \(8n = 16k = 2(8k)\text{.}\) Therefore \(8n\) is even.</p></article></div></p></li>
+<a data-knowl="" class="id-ref" data-refid="hk-wdF" id="wdF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-wdF"><div class="solution"><ol id="HAZ" class="lower-alpha">
+<li id="DmF"><p id="oNB">Direct proof. <article class="hiddenproof" id="ckO"><a data-knowl="" class="id-ref" data-refid="hk-ckO"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ckO"><article class="hiddenproof"><p id="Jqm">Let \(n\) be an integer. Assume \(n\) is even. Then \(n = 2k\) for some integer \(k\text{.}\) Thus \(8n = 16k = 2(8k)\text{.}\) Therefore \(8n\) is even.</p></article></div></p></li>
 <li id="jtO"><p id="UUK">The converse is false. That is, there is an integer \(n\) such that \(8n\) is even but \(n\) is odd. For example, consider \(n = 3\text{.}\) Then \(8n = 24\) which is even but \(n = 3\) is odd.</p></li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="xiY"><h6 class="heading"><span class="codenumber">4.</span></h6>
@@ -579,24 +581,24 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="vIg"><p id="BbT">How many dice would you have to roll before you were guaranteed that some four of them would all match or all be different? Prove your answer.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-IrX" id="IrX"><span class="type">Solution</span></a><div id="hk-IrX" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="nIi" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-IrX" id="IrX"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-IrX"><div class="solution"><ol id="nIi" class="lower-alpha">
 <li id="bPp">
 <p id="hjc">This is an example of the pigeonhole principle. We can prove it by contrapositive.</p>
-<article class="hiddenproof" id="ozg"><a data-knowl="" class="id-ref" data-refid="hk-ozg"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-ozg" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="Nql">Suppose that each number only came up 6 or fewer times. So there are at most six 1's, six 2's, and so on. That's a total of 36 dice, so you must not have rolled all 40 dice.</p></article></div>
+<article class="hiddenproof" id="ozg"><a data-knowl="" class="id-ref" data-refid="hk-ozg"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-ozg"><article class="hiddenproof"><p id="Nql">Suppose that each number only came up 6 or fewer times. So there are at most six 1's, six 2's, and so on. That's a total of 36 dice, so you must not have rolled all 40 dice.</p></article></div>
 </li>
 <li id="HWy">
 <p id="txu">We can have 9 dice without any four matching or any four being all different: three 1's, three 2's, three 3's. We will prove that whenever you roll 10 dice, you will always get four matching or all being different.</p>
-<article class="hiddenproof" id="UGp"><a data-knowl="" class="id-ref" data-refid="hk-UGp"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-UGp" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="ZED">Suppose you roll 10 dice, but that there are NOT four matching rolls. This means at most, there are three of any given value. If we only had three different values, that would be only 9 dice, so there must be 4 different values, giving 4 dice that are all different.</p></article></div>
+<article class="hiddenproof" id="UGp"><a data-knowl="" class="id-ref" data-refid="hk-UGp"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-UGp"><article class="hiddenproof"><p id="ZED">Suppose you roll 10 dice, but that there are NOT four matching rolls. This means at most, there are three of any given value. If we only had three different values, that would be only 9 dice, so there must be 4 different values, giving 4 dice that are all different.</p></article></div>
 </li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="dqh"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <p id="aox">Prove that for all integers \(n\text{,}\) it is the case that \(n\) is  even if and only if \(3n\) is even.  That is, prove both implications: if \(n\) is even, then \(3n\) is even, and if \(3n\) is even, then \(n\) is even.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ANy" id="ANy"><span class="type">Hint</span></a><div id="hk-ANy" class="hidden-content tex2jax_ignore"><div class="solution"><p id="TPr">One of the implications will be a direct proof, the other will be a proof by contrapositive.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-ANy" id="ANy"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ANy"><div class="solution"><p id="TPr">One of the implications will be a direct proof, the other will be a proof by contrapositive.</p></div></div>
 </div></article><article class="exercise-like" id="Jxq"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <p id="GvG">Prove that \(\sqrt 3\) is irrational.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-gUH" id="gUH"><span class="type">Hint</span></a><div id="hk-gUH" class="hidden-content tex2jax_ignore"><div class="solution"><p id="zWA">This is really an exercise in modifying the proof that \(\sqrt{2}\) is irrational.  There you proved things were even; here they will be multiples of 3.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-gUH" id="gUH"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-gUH"><div class="solution"><p id="zWA">This is really an exercise in modifying the proof that \(\sqrt{2}\) is irrational.  There you proved things were even; here they will be multiples of 3.</p></div></div>
 </div></article><article class="exercise-like" id="pEz"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <p id="mCP">Consider the statement: for all integers \(a\) and \(b\text{,}\) if \(a\) is even and \(b\) is a multiple of 3, then \(ab\) is a multiple of 6.</p>
 <ol class="lower-alpha">
@@ -604,12 +606,12 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="UkQ"><p id="lSV">State the converse. Is it true? Prove or disprove.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-NbQ" id="NbQ"><span class="type">Hint</span></a><div id="hk-NbQ" class="hidden-content tex2jax_ignore"><div class="solution"><p id="gdJ">Part (a) should be a relatively easy direct proof.  Look for a counterexample for part (b).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-NbQ" id="NbQ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-NbQ"><div class="solution"><p id="gdJ">Part (a) should be a relatively easy direct proof.  Look for a counterexample for part (b).</p></div></div>
 </div></article><article class="exercise-like" id="VLI"><h6 class="heading"><span class="codenumber">8.</span></h6>
 <p id="SJY">Prove the statement: For all integers \(n\text{,}\) if \(5n\) is odd, then \(n\) is odd. Clearly state the style of proof you are using.</p></article><article class="exercise-like" id="BSR"><h6 class="heading"><span class="codenumber">9.</span></h6>
 <p id="yRh">Prove the statement: For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a^2 + b^2 = c^2\text{,}\) then \(a\) or \(b\) is even.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-tiZ" id="tiZ"><span class="type">Hint</span></a><div id="hk-tiZ" class="hidden-content tex2jax_ignore"><div class="solution"><p id="MkS">A proof by contradiction would be reasonable here, because then you get to assume that both \(a\) <em class="emphasis">and</em> \(b\) are odd.  Deduce that \(c^2\) is even, and therefore a multiple of 4 (why? and why is that a contradiction?).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-tiZ" id="tiZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-tiZ"><div class="solution"><p id="MkS">A proof by contradiction would be reasonable here, because then you get to assume that both \(a\) <em class="emphasis">and</em> \(b\) are odd.  Deduce that \(c^2\) is even, and therefore a multiple of 4 (why? and why is that a contradiction?).</p></div></div>
 </div></article><article class="exercise-like" id="iaa"><h6 class="heading"><span class="codenumber">10.</span></h6>
 <p id="eYq">Suppose that you would like to prove the following implication:</p>
 <blockquote class="blockquote" id="Zqi"><p id="VEE">For all numbers \(n\text{,}\) if \(n\) is prime then \(n\) is solitary.</p></blockquote>
@@ -627,26 +629,26 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 <li id="FbS"><p id="WJX">Suppose you made exactly 72 cents of postage. Prove that you used at least 6 of one type of stamp.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Fxr" id="Fxr"><span class="type">Hint</span></a><div id="hk-Fxr" class="hidden-content tex2jax_ignore"><div class="solution"><p id="ssb">Use a different style of proof for each part.  The last part should remind you of the pigeonhole principle, so mimicking that proof might be helpful.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-Fxr" id="Fxr"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Fxr"><div class="solution"><p id="ssb">Use a different style of proof for each part.  The last part should remind you of the pigeonhole principle, so mimicking that proof might be helpful.</p></div></div>
 </div></article><article class="exercise-like" id="uos"><h6 class="heading"><span class="codenumber">12.</span></h6>
 <p id="DBa">Prove: \(x=y\) if and only if \(xy=\dfrac{(x+y)^2}{4}\text{.}\) Note, you will need to prove two “directions” here: the “if” and the “only if” part.</p></article><article class="exercise-like" id="avB"><h6 class="heading"><span class="codenumber">13.</span></h6>
 <p id="jIj">Prove that \(\log(7)\) is irrational.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-lEA" id="lEA"><span class="type">Hint</span></a><div id="hk-lEA" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Yzk">Note that if \(\log(7) = \frac{a}{b}\text{,}\) then \(7 = 10^\frac{a}{b}\text{.}\)  Can any power of 7 be the same as a power of 10?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-lEA" id="lEA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-lEA"><div class="solution"><p id="Yzk">Note that if \(\log(7) = \frac{a}{b}\text{,}\) then \(7 = 10^\frac{a}{b}\text{.}\)  Can any power of 7 be the same as a power of 10?</p></div></div>
 </div></article><article class="exercise-like" id="GCK"><h6 class="heading"><span class="codenumber">14.</span></h6>
 <p id="PPs">Prove that there are no integer solutions to the equation \(x^2 = 4y + 3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-RLJ" id="RLJ"><span class="type">Hint</span></a><div id="hk-RLJ" class="hidden-content tex2jax_ignore"><div class="solution"><p id="EGt">What if there were?  Deduce that \(x\) must be odd, and continue towards a contradiction.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-RLJ" id="RLJ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-RLJ"><div class="solution"><p id="EGt">What if there were?  Deduce that \(x\) must be odd, and continue towards a contradiction.</p></div></div>
 </div></article><article class="exercise-like" id="mJT"><h6 class="heading"><span class="codenumber">15.</span></h6>
 <p id="vWB">Prove that every prime number greater than 3 is either one more or one less than a multiple of 6.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-xSS" id="xSS"><span class="type">Hint</span></a><div id="hk-xSS" class="hidden-content tex2jax_ignore"><div class="solution"><p id="kNC">Prove the contrapositive by cases.  There will be 4 cases to consider.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-xSS" id="xSS"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-xSS"><div class="solution"><p id="kNC">Prove the contrapositive by cases.  There will be 4 cases to consider.</p></div></div>
 </div></article><article class="exercise-like" id="SRc"><h6 class="heading"><span class="codenumber">16.</span></h6>
 <p id="cdK">Your “friend” has shown you a “proof” he wrote to show that \(1 = 3\text{.}\) Here is the proof:</p>
-<article class="hiddenproof" id="Khk"><a data-knowl="" class="id-ref" data-refid="hk-Khk"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-Khk" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="pxv">I claim that \(1 = 3\text{.}\) Of course we can do anything to one side of an equation as long as we also do it to the other side. So subtract 2 from both sides. This gives \(-1 = 1\text{.}\) Now square both sides, to get \(1 = 1\text{.}\) And we all agree this is true.</p></article></div>
+<article class="hiddenproof" id="Khk"><a data-knowl="" class="id-ref" data-refid="hk-Khk"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Khk"><article class="hiddenproof"><p id="pxv">I claim that \(1 = 3\text{.}\) Of course we can do anything to one side of an equation as long as we also do it to the other side. So subtract 2 from both sides. This gives \(-1 = 1\text{.}\) Now square both sides, to get \(1 = 1\text{.}\) And we all agree this is true.</p></article></div>
 <p id="IkT">What is going on here? Is your friend's argument valid? Is the argument a proof of the claim \(1=3\text{?}\) Carefully explain using what we know about logic.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-eab" id="eab"><span class="type">Hint</span></a><div id="hk-eab" class="hidden-content tex2jax_ignore"><div class="solution"><p id="QUL">Your friend's proof a proof, but of what?  What implication follows from the given proof?  Is that helpful?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-eab" id="eab"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-eab"><div class="solution"><p id="QUL">Your friend's proof a proof, but of what?  What implication follows from the given proof?  Is that helpful?</p></div></div>
 </div></article><article class="exercise-like" id="yYl"><h6 class="heading"><span class="codenumber">17.</span></h6>
 <p id="osc">A standard deck of 52 cards consists of 4 suites (hearts, diamonds, spades and clubs) each containing 13 different values (Ace, 2, 3, …, 10, J, Q, K). If you draw some number of cards at random you might or might not have a pair (two cards with the same value) or three cards all of the same suit. However, if you draw enough cards, you will be guaranteed to have these. For each of the following, find the smallest number of cards you would need to draw to be guaranteed having the specified cards. Prove your answers.</p>
 <ol class="lower-alpha">
@@ -656,11 +658,11 @@ n^3 - n \amp = (2k+1)^3 - (2k+1)\\
 </ol></article><article class="exercise-like" id="ffu"><h6 class="heading"><span class="codenumber">18.</span></h6>
 <p id="Uzl">Suppose you are at a party with 19 of your closest friends (so including you, there are 20 people there). Explain why there must be least two people at the party who are friends with the same number of people at the party. Assume friendship is always reciprocated.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-qot" id="qot"><span class="type">Hint</span></a><div id="hk-qot" class="hidden-content tex2jax_ignore"><div class="solution"><p id="xbU">Consider the set of <em class="emphasis">numbers</em> of friends that everyone has.  If everyone had a different number of friends, this set must contain 20 elements.  Is that possible?  Why not?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-qot" id="qot"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-qot"><div class="solution"><p id="xbU">Consider the set of <em class="emphasis">numbers</em> of friends that everyone has.  If everyone had a different number of friends, this set must contain 20 elements.  Is that possible?  Why not?</p></div></div>
 </div></article><article class="exercise-like" id="LmD"><h6 class="heading"><span class="codenumber">19.</span></h6>
 <p id="AGu">Your friend has given you his list of 115 best Doctor Who episodes (in order of greatness). It turns out that you have seen 60 of them. Prove that there are at least two episodes you have seen that are exactly four episodes apart on your friend's list.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-WvC" id="WvC"><span class="type">Hint</span></a><div id="hk-WvC" class="hidden-content tex2jax_ignore"><div class="solution"><p id="djd">This feels like the pigeonhole principle, although a bit more complicated.  At least, you could try to replicate the style of proof used by the pigeonhole principle.  How would the episodes need to be spaced out so that no two of your sixty were exactly 4 apart?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-WvC" id="WvC"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-WvC"><div class="solution"><p id="djd">This feels like the pigeonhole principle, although a bit more complicated.  At least, you could try to replicate the style of proof used by the pigeonhole principle.  How would the episodes need to be spaced out so that no two of your sixty were exactly 4 apart?</p></div></div>
 </div></article><article class="exercise-like" id="rtM"><h6 class="heading"><span class="codenumber">20.</span></h6>
 <p id="gND">Suppose you have an \(n\times n\) chessboard but your dog has eaten one of the corner squares. Can you still cover the remaining squares with dominoes? What needs to be true about \(n\text{?}\) Give necessary and sufficient conditions (that is, say exactly which values of \(n\) work and which do not work). Prove your answers.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:40%;margin-right:40%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-143.svg" style="width: 100%; height: auto;" alt=""></div></div></div></article><article class="exercise-like" id="XAV"><h6 class="heading"><span class="codenumber">21.</span></h6>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:07-06:00    *-->
+<!--*    on 2019-11-23T09:45:13-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -395,7 +396,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">B.4.1</span>.</h6>
 <p id="CsH">Make a truth table for the statement \(\neg P \vee Q\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-QRL" id="QRL"><span class="type">Solution</span></a><div id="hk-QRL" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-QRL" id="QRL"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-QRL"><div class="solution">
 <p id="mzP">Note that this statement is not \(\neg(P \vee Q)\text{,}\) the negation belongs to \(P\) alone. Here is the truth table:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -436,7 +437,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">B.4.2</span>.</h6>
 <p id="izQ">Analyze the statement, “if you get more doubles than any other player you will lose, or that if you lose you must have bought the most properties,” using truth tables.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-wYU" id="wYU"><span class="type">Solution</span></a><div id="hk-wYU" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-wYU" id="wYU"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-wYU"><div class="solution">
 <p id="yOh">Represent the statement in symbols as \((P \imp Q) \vee (Q \imp R)\text{,}\) where \(P\) is the statement “you get more doubles than any other player,” \(Q\) is the statement “you will lose,” and \(R\) is the statement “you must have bought the most properties.” Now make a truth table.</p>
 <p id="eVq">The truth table needs to contain 8 rows in order to account for every possible combination of truth and falsity among the three statements. Here is the full truth table:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
@@ -560,7 +561,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">B.4.3</span>.</h6>
 <p id="OGZ">Are the statements, “it will not rain or snow” and “it will not rain and it will not snow” logically equivalent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-dgd" id="dgd"><span class="type">Solution</span></a><div id="hk-dgd" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-dgd" id="dgd"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-dgd"><div class="solution">
 <p id="XqR">We want to know whether \(\neg(P \vee Q)\) is logically equivalent to \(\neg P \wedge \neg Q\text{.}\) Make a truth table which includes both statements:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -627,7 +628,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <span class="type">Example</span> <span class="codenumber">B.4.4</span>.</h6>
 <p id="uOi">Prove that the statements \(\neg(P \imp Q)\) and \(P\wedge \neg Q\) are logically equivalent without using truth tables.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Jnm" id="Jnm"><span class="type">Solution</span></a><div id="hk-Jnm" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-Jnm" id="Jnm"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Jnm"><div class="solution">
 <p id="jFj">We want to start with one of the statements, and transform it into the other through a sequence of logically equivalent statements. Start with \(\neg(P \imp Q)\text{.}\) We can rewrite the implication as a disjunction this is logically equivalent to</p>
 <div class="displaymath">
 \begin{equation*}
@@ -655,7 +656,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <span class="type">Example</span> <span class="codenumber">B.4.5</span>.</h6>
 <p id="aVr">Are the statements \((P \vee Q) \imp R\) and \((P \imp R) \vee (Q \imp R)\) logically equivalent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-puv" id="puv"><span class="type">Solution</span></a><div id="hk-puv" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-puv" id="puv"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-puv"><div class="solution">
 <p id="vTB">Note that while we could start rewriting these statements with logically equivalent replacements in the hopes of transforming one into another, we will never be sure that our failure is due to their lack of logical equivalence rather than our lack of imagination. So instead, let's make a truth table:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -797,7 +798,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </table></div></div></div>
 <p id="njJ">is a valid deduction rule.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-VBE" id="VBE"><span class="type">Solution</span></a><div id="hk-VBE" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-VBE" id="VBE"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-VBE"><div class="solution">
 <p id="opc">We make a truth table which contains all the lines of the argument form:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -862,7 +863,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </table></div></div></div>
 <p id="zyb">is a valid deduction rule.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-BIN" id="BIN"><span class="type">Solution</span></a><div id="hk-BIN" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-BIN" id="BIN"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-BIN"><div class="solution">
 <p id="gKD">Let's make a truth table containing all four statements.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -998,7 +999,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </div>
 <p>Are these logically equivalent?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hPW" id="hPW"><span class="type">Solution</span></a><div id="hk-hPW" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hPW" id="hPW"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hPW"><div class="solution">
 <p id="Zge">These statements are NOT logically equivalent. To see this, we should provide an interpretation of the predicate \(P(x,y)\) which makes one of the statements true and the other false.</p>
 <p id="Fnn">Let \(P(x,y)\) be the predicate \(x \lt y\text{.}\) It is true, in the natural numbers, that for all \(x\) there is some \(y\) greater than that \(x\) (since there are infinitely many numbers). However, there is not a natural number \(y\) which is greater than every number \(x\text{.}\) Thus it is possible for \(\forall x \exists y P(x,y)\) to be true while \(\exists y \forall x P(x,y)\) is false.</p>
 <p id="luw">We cannot do the reverse of this though. If there is some \(y\) for which every \(x\) satisfies \(P(x,y)\text{,}\) then certainly for every \(x\) there is some \(y\) which satisfies \(P(x,y)\text{.}\) The first is saying we can find one \(y\) that works for every \(x\text{.}\) The second allows different \(y\)'s to work for different \(x\)'s, but there is nothing preventing us from using the same \(y\) that work for every \(x\text{.}\) In other words, while we don't have logical equivalence between the two statements, we do have a valid deduction rule:</p>
@@ -1033,7 +1034,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="JEH"><p id="zPw">Suppose you found out that the statement was a lie. What can you conclude?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Bqo" id="Bqo"><span class="type">Solution</span></a><div id="hk-Bqo" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="bWG" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-Bqo" id="Bqo"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Bqo"><div class="solution"><ol id="bWG" class="lower-alpha">
 <li id="pLQ">\(P\text{:}\) it's your birthday; \(Q\text{:}\) there will be cake. \((P \vee Q) \imp Q\)</li>
 <li id="VSZ"><p id="fWF">Hint: you should get three T's and one F.</p></li>
 <li id="Cai"><p id="MdO">Only that there will be cake.</p></li>
@@ -1043,7 +1044,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </div></article><article class="exercise-like" id="OJZ"><h6 class="heading"><span class="codenumber">2.</span></h6>
 <p id="qal">Make a truth table for the statement \((P \vee Q) \imp (P \wedge Q)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hxx" id="hxx"><span class="type">Solution</span></a><div id="hk-hxx" class="hidden-content tex2jax_ignore"><div class="solution"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<a data-knowl="" class="id-ref" data-refid="hk-hxx" id="hxx"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-hxx"><div class="solution"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
 <td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
@@ -1073,7 +1074,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </div></article><article class="exercise-like" id="uRi"><h6 class="heading"><span class="codenumber">3.</span></h6>
 <p id="Whu">Make a truth table for the statement \(\neg P \wedge (Q \imp P)\text{.}\) What can you conclude about \(P\) and \(Q\) if you know the statement is true?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-NEG" id="NEG"><span class="type">Solution</span></a><div id="hk-NEG" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-NEG" id="NEG"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-NEG"><div class="solution">
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="c m b1 r1 l0 t0 lines">\(P\)</td>
@@ -1106,7 +1107,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </div></article><article class="exercise-like" id="aYr"><h6 class="heading"><span class="codenumber">4.</span></h6>
 <p id="CoD">Make a truth table for the statement \(\neg P \imp (Q \wedge R)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-tLP" id="tLP"><span class="type">Hint</span></a><div id="hk-tLP" class="hidden-content tex2jax_ignore"><div class="solution"><p id="MNI">Like above, only now you will need 8 rows instead of just 4.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-tLP" id="tLP"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-tLP"><div class="solution"><p id="MNI">Like above, only now you will need 8 rows instead of just 4.</p></div></div>
 </div></article><article class="exercise-like" id="HfA"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <p id="ivM">Geoff Poshingten is out at a fancy pizza joint, and decides to order a calzone. When the waiter asks what he would like in it, he replies, “I want either pepperoni or sausage. Also, if I have sausage, then I must also include quail. Oh, and if I have pepperoni or quail then I must also have ricotta cheese.”</p>
 <ol class="lower-alpha">
@@ -1115,14 +1116,14 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="GKb"><p id="QNH">What, if anything, can the waiter conclude about the ingredients in Geoff's desired calzone?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ZSY" id="ZSY"><span class="type">Hint</span></a><div id="hk-ZSY" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-ZSY" id="ZSY"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZSY"><div class="solution">
 <p id="sUR">You should write down three statements using the symbols \(P, Q, R, S\text{.}\)  If Geoff is a truth-teller, then all three statements would be true.  If he was a liar, then all three statements would be false.  But in either case, we don't yet know whether the four atomic statements are true or false, since he hasn't said them by themselves.</p>
 <p id="Zca">A truth table might help, although is probably not entirely necessary.</p>
 </div></div>
 </div></article><article class="exercise-like" id="nmJ"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <p id="OCV">Determine whether the following two statements are logically equivalent: \(\neg(P \imp Q)\) and \(P \wedge \neg Q\text{.}\) Explain how you know you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Gah" id="Gah"><span class="type">Solution</span></a><div id="hk-Gah" class="hidden-content tex2jax_ignore"><div class="solution"><p id="okY">Make a truth table for each and compare. The statements are logically equivalent.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-Gah" id="Gah"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Gah"><div class="solution"><p id="okY">Make a truth table for each and compare. The statements are logically equivalent.</p></div></div>
 </div></article><article class="exercise-like" id="TtS"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <p id="uKe">Are the statements \(P \imp (Q\vee R)\) and \((P \imp Q) \vee (P \imp R)\) logically equivalent?</p></article><article class="exercise-like" id="zBb"><h6 class="heading"><span class="codenumber">8.</span></h6>
 <p id="aRn">Simplify the following statements (so that negation only appears right before variables).</p>
@@ -1133,7 +1134,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="fmL"><p id="wUQ">It is false that if Sam is not a man then Chris is a woman, and that Chris is not a woman.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-mhq" id="mhq"><span class="type">Solution</span></a><div id="hk-mhq" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="Ush" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-mhq" id="mhq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-mhq"><div class="solution"><ol id="Ush" class="lower-alpha">
 <li id="LtU">\(P \wedge Q\text{.}\)</li>
 <li id="rBd">\((\neg P \vee \neg R) \imp (Q \vee \neg R)\) or, replacing the implication with a disjunction first: \((P \wedge Q) \vee (Q \vee \neg R)\text{.}\)</li>
 <li id="XIm"><p id="dbZ">\((P \wedge Q) \wedge (R \wedge \neg R)\text{.}\) This is necessarily false, so it is also equivalent to \(P \wedge \neg P\text{.}\)</p></li>
@@ -1153,7 +1154,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="oGx"><p id="hLS">If the statement were true, what could you conclude about the number 5657, which is definitely prime? Again, explain using the truth table.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Soz" id="Soz"><span class="type">Hint</span></a><div id="hk-Soz" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="Fjj" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-Soz" id="Soz"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Soz"><div class="solution"><ol id="Fjj" class="lower-alpha">
 <li id="UNG"><p id="NTb">There will be three rows in which the statement is false.</p></li>
 <li id="AUP"><p id="uak">Consider the three rows that evaluate to false and say what the truth values of \(T\text{,}\) \(S\text{,}\) and \(P\) are there.</p></li>
 <li id="hbY"><p id="aht">You are looking for a row in which \(P\) is true, and the whole statement is true.</p></li>
@@ -1162,7 +1163,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <p id="TmO">Tommy Flanagan was telling you what he ate yesterday afternoon. He tells you, “I had either popcorn or raisins. Also, if I had cucumber sandwiches, then I had soda. But I didn't drink soda or tea.” Of course you know that Tommy is the worlds worst liar, and everything he says is false. What did Tommy eat?</p>
 <p id="ztX">Justify your answer by writing all of Tommy's statements using sentence variables (\(P, Q, R, S, T\)), taking their negations, and using these to deduce what Tommy actually ate.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-yvI" id="yvI"><span class="type">Hint</span></a><div id="hk-yvI" class="hidden-content tex2jax_ignore"><div class="solution"><p id="lqs">Write down three statements, and then take the negation of each (since he is a liar).  You should find that Tommy ate one item and drank one item.  (\(Q\) is for cucumber sandwiches.)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-yvI" id="yvI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-yvI"><div class="solution"><p id="lqs">Write down three statements, and then take the negation of each (since he is a liar).  You should find that Tommy ate one item and drank one item.  (\(Q\) is for cucumber sandwiches.)</p></div></div>
 </div></article><article class="exercise-like" id="YdL"><h6 class="heading"><span class="codenumber">12.</span></h6>
 <p id="fBg">Determine if the following deduction rule is valid:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
@@ -1180,7 +1181,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </tr>
 </table></div></div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-eCR" id="eCR"><span class="type">Solution</span></a><div id="hk-eCR" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Azq">The deduction rule is valid. To see this, make a truth table which contains \(P \vee Q\) and \(\neg P\) (and \(P\) and \(Q\) of course). Look at the truth value of \(Q\) in each of the rows that have \(P \vee Q\) and \(\neg P\) true.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-eCR" id="eCR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-eCR"><div class="solution"><p id="Azq">The deduction rule is valid. To see this, make a truth table which contains \(P \vee Q\) and \(\neg P\) (and \(P\) and \(Q\) of course). Look at the truth value of \(Q\) in each of the rows that have \(P \vee Q\) and \(\neg P\) true.</p></div></div>
 </div></article><article class="exercise-like" id="EkU"><h6 class="heading"><span class="codenumber">13.</span></h6>
 <p id="LIp">Determine if the following is a valid deduction rule:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
@@ -1259,7 +1260,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-KKa" id="KKa"><span class="type">Hint</span></a><div id="hk-KKa" class="hidden-content tex2jax_ignore"><div class="solution"><p id="RxB">For the second part, you can inductively assume that from the first \(n-2\) implications you can deduce \(P_1 \imp P_{n-1}\text{.}\)  Then you are back in the case in part (a) again.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-KKa" id="KKa"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-KKa"><div class="solution"><p id="RxB">For the second part, you can inductively assume that from the first \(n-2\) implications you can deduce \(P_1 \imp P_{n-1}\text{.}\)  Then you are back in the case in part (a) again.</p></div></div>
 </div></article><article class="exercise-like" id="wGv"><h6 class="heading"><span class="codenumber">16.</span></h6>
 <p id="EdQ">We can also simplify statements in predicate logic using our rules for passing negations over quantifiers, and then applying propositional logical equivalence to the “inside” propositional part. Simplify the statements below (so negation appears only directly next to predicates).</p>
 <ol class="lower-alpha">
@@ -1269,7 +1270,7 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="RTa"><p id="eRm">It is false that for every number \(n\) there are two other numbers which \(n\) is between.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-qRj" id="qRj"><span class="type">Solution</span></a><div id="hk-qRj" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="gGz" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-qRj" id="qRj"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-qRj"><div class="solution"><ol id="gGz" class="lower-alpha">
 <li id="yaj">\(\forall x \exists y (O(x) \wedge \neg E(y))\text{.}\)</li>
 <li id="ehs">\(\exists x \forall y (x \ge y \vee \forall z (x \ge z \wedge y \ge z))\text{.}\)</li>
 <li id="KoB"><p id="KYv">There is a number \(n\) for which every other number is strictly greater than \(n\text{.}\)</p></li>
@@ -1288,11 +1289,11 @@ P \imp Q \text{ is logically equivalent to } \neg P \vee Q\text{.}
 <li id="vfD"><p id="vPx">For all numbers \(n\text{,}\) if \(n\) is prime, then \(n+3\) is not prime.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-WYs" id="WYs"><span class="type">Hint</span></a><div id="hk-WYs" class="hidden-content tex2jax_ignore"><div class="solution"><p id="xEK">It might help to translate the statements into symbols and then use the formulaic rules to simplify negations (i.e., rules for quantifiers and De Morgan's laws).  After simplifying, you should get \(\forall x(\neg E(x) \wedge \neg O(x))\text{,}\) for the first one, for example.  Then translate this back into English.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-WYs" id="WYs"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-WYs"><div class="solution"><p id="xEK">It might help to translate the statements into symbols and then use the formulaic rules to simplify negations (i.e., rules for quantifiers and De Morgan's laws).  After simplifying, you should get \(\forall x(\neg E(x) \wedge \neg O(x))\text{,}\) for the first one, for example.  Then translate this back into English.</p></div></div>
 </div></article><article class="exercise-like" id="pbW"><h6 class="heading"><span class="codenumber">19.</span></h6>
 <p id="wzr">Suppose \(P\) and \(Q\) are (possibly molecular) propositional statements. Prove that \(P\) and \(Q\) are logically equivalent if any only if \(P \iff Q\) is a tautology.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-DfB" id="DfB"><span class="type">Hint</span></a><div id="hk-DfB" class="hidden-content tex2jax_ignore"><div class="solution"><p id="dLT">What do these concepts mean in terms of truth tables?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-DfB" id="DfB"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DfB"><div class="solution"><p id="dLT">What do these concepts mean in terms of truth tables?</p></div></div>
 </div></article><article class="exercise-like" id="Vjf"><h6 class="heading"><span class="codenumber">20.</span></h6>
 <p id="cGA">Suppose \(P_1, P_2, \ldots, P_n\) and \(Q\) are (possibly molecular) propositional statements. Suppose further that</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>

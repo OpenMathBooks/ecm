@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:53-06:00    *-->
+<!--*    on 2019-11-23T09:44:59-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -254,7 +255,7 @@ var js_version = 0.12;
 <p id="p-1054">Finite sets also have natural partitions: the set of all 4-bit strings can be partitioned according to weight:</p>
 <div class="displaymath">
 \begin{equation*}
-\B^4_0 \cup \B^4_1 \cup B^4_2 \cup \B^4_3 \cup \B^4_4 = \B^4\text{.}
+\B^4_0 \cup \B^4_1 \cup \B^4_2 \cup \B^4_3 \cup \B^4_4 = \B^4\text{.}
 \end{equation*}
 </div>
 <p>Using the sum principle on these disjoint sets leads directly to the identity \(\binom{4}{0} + \binom{4}{1} + \binom{4}{2} + \binom{4}{3} + \binom{4}{4} = 2^4\) (and of course the 4 can be replaced with any \(n\) here).</p>
@@ -304,7 +305,7 @@ var js_version = 0.12;
 <p id="p-1076">Compute \(S(3,3)\text{,}\) and \(S(4,3)\text{.}\)</p></article><article class="exercise-like" id="task-206"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-1077">Find formulas and give proofs for \(S(k,k)\) and \(S(k,k - 1)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-132" id="hint-132"><span class="type">Hint</span></a><div id="hk-hint-132" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1078">What are the possible sizes of parts?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-132" id="hint-132"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-132"><div class="solution"><p id="p-1078">What are the possible sizes of parts?</p></div></div>
 </div></article></article><p id="p-1080">We can arrange the Stirling numbers into a triangle (called <dfn class="terminology">Stirling's second triangle</dfn>).  The first five rows are shown below.  The entries are indexed differently than in Pascal's triangle: the top 1 represents \(S(1,1)\text{,}\) so for example, \(S(5,2) = 15\text{.}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -407,12 +408,12 @@ var js_version = 0.12;
 <span class="type">Activity</span> <span class="codenumber">195</span>.</h6>
 <p id="p-1092">Now generalize.  In a partition of the set \([k]\text{,}\) the number \(k\) is either in a block by itself, or it is not.  Find a two variable recurrence for \(S(k,n)\text{,}\) valid for \(k\) and \(n\) larger than one.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-133" id="hint-133"><span class="type">Hint</span></a><div id="hk-hint-133" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1093">The number of partitions of \([k]\) into \(n\) parts in which \(k\) is not in a block relates to the number of partitions of \(k-1\) into some number of blocks in a way that involves \(n\text{.}\) With this in mind, review how you proved Pascal's (recurrence) equation.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-133" id="hint-133"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-133"><div class="solution"><p id="p-1093">The number of partitions of \([k]\) into \(n\) parts in which \(k\) is not in a block relates to the number of partitions of \(k-1\) into some number of blocks in a way that involves \(n\text{.}\) With this in mind, review how you proved Pascal's (recurrence) equation.</p></div></div>
 </div></article><article class="project-like" id="exploration-113"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">196</span>.</h6>
 <p id="p-1095">Find a recurrence for the Lah numbers \(L(k,n)\) similar to the one in <a data-knowl="./knowl/secondstirlingrecurrence.html" title="Activity 195">Activity 195</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-134" id="hint-134"><span class="type">Hint</span></a><div id="hk-hint-134" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1096">To see how many broken permutations of a \(k\) element set into \(n\) parts do not have \(k\) is a part by itself, ask yourself how many broken permutations of \([7]\) result from adding 7 to the one of the two permutations in the broken permutation \(\{14, 2356\}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-134" id="hint-134"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-134"><div class="solution"><p id="p-1096">To see how many broken permutations of a \(k\) element set into \(n\) parts do not have \(k\) is a part by itself, ask yourself how many broken permutations of \([7]\) result from adding 7 to the one of the two permutations in the broken permutation \(\{14, 2356\}\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="sandwiches"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">197</span>.</h6>
 <p id="p-1098">Extend Stirling's triangle enough to allow you to answer the following question and answer it. (Don't fill in the rows all the way; the work becomes quite tedious if you do. Only fill in what you need to answer this question.) A caterer is preparing three bag lunches for hikers. The caterer has nine different sandwiches. In how many ways can these nine sandwiches be distributed into three identical lunch bags so that each bag gets at least one?</p></article><p id="p-1101">We have often thought of counting problems as asking about how many functions there are from a \(k\)-elements set to an \(n\)-element set.  The answer to this question is \(n^k\) for all functions and \(P(n,k)\) for injective functions.  What about surjective functions?  There is a reason we haven't asked this question yet, but now we can at least get an expression for the number of surjections in terms of Stirling numbers.</p>
@@ -420,13 +421,13 @@ var js_version = 0.12;
 <span class="type">Exercise</span> <span class="codenumber">198</span>.</h6>
 <p id="p-1102">Given a function \(f\) from a \(k\)-element set \(K\) to an \(n\)-element set, we can define a partition of \(K\) by putting \(x\) and \(y\) in the same block of the partition if and only if \(f(x)=f(y)\text{.}\) How many blocks does the partition have if \(f\) is surjective? How is the number of functions from a \(k\)-element set <em class="emphasis">onto</em> an \(n\)-element set related to a Stirling number? Be as precise in your answer as you can.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-135" id="hint-135"><span class="type">Hint</span></a><div id="hk-hint-135" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1103">You can think of a function as assigning values to the blocks of its partition. If you permute the values assigned to the blocks, do you always change the function?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-135" id="hint-135"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-135"><div class="solution"><p id="p-1103">You can think of a function as assigning values to the blocks of its partition. If you permute the values assigned to the blocks, do you always change the function?</p></div></div>
 </div></article><p id="p-1105">We do not have an explicit formula for either the number of surjections or for \(S(k,n)\) yet, but note that if we could find either, we would now have both.  We will see one approach to this soon.</p>
 <article class="project-like" id="Stirlingfalling"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">199</span>.</h6>
 <p id="p-1106">Each function from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) is a function from \(K\) onto <em class="emphasis">some</em> subset of \(N\text{.}\) If \(J\) is a subset of \(N\) of size \(j\text{,}\) you know how to compute the number of functions that map onto \(J\) in terms of Stirling numbers. Suppose you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\text{.}\) What simple value should this sum equal? Write the equation this gives you.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-136" id="hint-136"><span class="type">Hint</span></a><div id="hk-hint-136" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1107">When you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\text{,}\) what is the set of functions whose size you are computing?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-136" id="hint-136"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-136"><div class="solution"><p id="p-1107">When you add the number of functions mapping onto \(J\) over all possible subsets \(J\) of \(N\text{,}\) what is the set of functions whose size you are computing?</p></div></div>
 </div></article><article class="project-like" id="exploration-117"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">200</span>.</h6>
 <p id="p-1109">In how many ways can the sandwiches of <a data-knowl="./knowl/sandwiches.html" title="Exercise 197">Exercise 197</a> be placed into three distinct bags so that each bag gets at least one?</p></article><p id="p-1111">We will further investigate Stirling numbers in the rest of this section, but first, notice that we have not looked at the number of ways to partition a set into <em class="emphasis">any</em> number of blocks.</p>
@@ -447,11 +448,11 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-207"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-1114">Why is \(B_k = \sum_{n=1}^{k} S(k,n)\text{,}\) but \(n^k \ne \sum_{n=1}^k S(k,n)n!\text{?}\)  Why is this a meaningful question?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-137" id="hint-137"><span class="type">Hint</span></a><div id="hk-hint-137" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1115">As to why this is a reasonable question, think of distributing \(k\) items to \(n\) recipients.  All four expressions count the number of ways to do this under different restrictions.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-137" id="hint-137"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-137"><div class="solution"><p id="p-1115">As to why this is a reasonable question, think of distributing \(k\) items to \(n\) recipients.  All four expressions count the number of ways to do this under different restrictions.</p></div></div>
 </div></article><article class="exercise-like" id="task-208"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1116">Find a recurrence that expresses \(B_k\) in terms of \(B_n\) for \(n\lt  k\) and prove your formula correct in as many ways as you can.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-138" id="hint-138"><span class="type">Hint</span></a><div id="hk-hint-138" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1117">Here it is helpful to think about what happens if you delete the entire block containing \(k\) rather than thinking about whether \(k\) is in a block by itself or not.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-138" id="hint-138"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-138"><div class="solution"><p id="p-1117">Here it is helpful to think about what happens if you delete the entire block containing \(k\) rather than thinking about whether \(k\) is in a block by itself or not.</p></div></div>
 </div></article><article class="exercise-like" id="task-209"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-1120">Find \(B_k\) for \(k=1,2,4,5,6\text{.}\)</p></article></article><p id="p-1122">The Bell numbers are interesting in their own right, and we will look at them more in <a href="sec_adv-stirling.html#subsec_bell" class="internal" title="Subsection 2.3.4: Bell Numbers">Subsection 2.3.4</a>.</p></section><section class="subsection" id="subsec-stirlingformulas"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Formulas for Stirling Numbers (of the second kind)</span>
@@ -530,7 +531,7 @@ S(k,n) = nS(k-1,n) + S(k-1, n-1).
 <span class="type">Exercise</span> <span class="codenumber">203</span>.</h6>
 <p id="p-1129">Prove \(S(k, k-1) = \binom{k}{2}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-139" id="hint-139"><span class="type">Hint</span></a><div id="hk-hint-139" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1130">What are the possible sizes of parts?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-139" id="hint-139"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-139"><div class="solution"><p id="p-1130">What are the possible sizes of parts?</p></div></div>
 </div></article><p id="p-1132">The proof of the formula above suggests that looking at the sizes of the blocks might be helpful.  Let's see what this might look like with an example.</p>
 <article class="project-like" id="activity-85"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">204</span>.</h6>
@@ -539,13 +540,13 @@ S(k,n) = nS(k-1,n) + S(k-1, n-1).
 <p id="p-1134">How many partitions of \([5]\) have two blocks of size 1 and one block of size 3?</p></article><article class="exercise-like" id="task-211"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1136">How many partitions of \([5]\) have one block of size 1 and two of size 2?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-140" id="hint-140"><span class="type">Hint</span></a><div id="hk-hint-140" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1137">Careful here.  The answer is NOT \(\binom{5}{2}\binom{3}{2}\text{.}\)  Do you see why?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-140" id="hint-140"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-140"><div class="solution"><p id="p-1137">Careful here.  The answer is NOT \(\binom{5}{2}\binom{3}{2}\text{.}\)  Do you see why?</p></div></div>
 </div></article><article class="exercise-like" id="task-212"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-1139">Are there any other types of partitions we need to consider?  What is \(S(5,3)\text{?}\)</p></article><article class="exercise-like" id="task-213"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-1141">Generalize! Find a formula for \(S(k, k-2)\text{.}\)</p></article><article class="exercise-like" id="task-214"><h6 class="heading"><span class="codenumber">(e)</span></h6>
 <p id="p-1143">A friend tells you that \(S(k,k-2) = \binom{k}{3} + 3 \binom{k}{4}\text{.}\)  Prove this is correct also.  If this is the formula you found for the previous part, see the hint.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-141" id="hint-141"><span class="type">Hint</span></a><div id="hk-hint-141" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1144">If you found this formula for \(S(k,k-2)\) in part (e), then pretend your friend claims that \(S(k, k-2) = \binom{k}{3} + \frac{1}{2}\binom{k}{2}\binom{k-2}{2}\) and prove why that is correct too.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-141" id="hint-141"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-141"><div class="solution"><p id="p-1144">If you found this formula for \(S(k,k-2)\) in part (e), then pretend your friend claims that \(S(k, k-2) = \binom{k}{3} + \frac{1}{2}\binom{k}{2}\binom{k-2}{2}\) and prove why that is correct too.</p></div></div>
 </div></article></article><p id="p-1146"> Whenever we want to partition \(k\) items in \(n\) blocks, we can consider cases.  We will represent each type of case with a <dfn class="terminology">type vector</dfn> consisting of a sequence \((a_1, a_2, \ldots, a_k)\) where each \(a_i\) is the number of blocks that have size \(i\text{.}\)  For example, in partitioning \([5]\) into 3 blocks, the previous activity first asked for the number of partitions with type vector \((2,0,1,0,0)\text{,}\) two blocks of size 1 and one of size 3, and then for the number of partitions with type vector \((1,2,0,0,0)\text{,}\) one block of size 1 and two of size 2.  Note that \(\sum_{i=1}^k a_i = n\) and \(\sum_{i=1}^k ia_i = k\text{.}\)</p>
 <article class="project-like" id="activity-86"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">205</span>.</h6>
@@ -553,12 +554,12 @@ S(k,n) = nS(k-1,n) + S(k-1, n-1).
 <p id="p-1147">How many partitions of \([6]\) are there into 3 blocks?  List all the type vectors and the number of partitions for each.</p></article><article class="exercise-like" id="task-216"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1148">Generalize to find a formula for \(S(k,k-3)\text{.}\)  Then clean up the formula so it is a linear combination of \(\binom{k}{4}\text{,}\) \(\binom{k}{5}\text{,}\) and \(\binom{k}{6}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-142" id="hint-142"><span class="type">Hint</span></a><div id="hk-hint-142" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1149">While you might not get this formula by conisdering type vectors, you should be shooting to prove \(S(k, k-3) = \binom{k}{4} + 10 \binom{k}{5} + 16 \binom{k}{6}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-142" id="hint-142"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-142"><div class="solution"><p id="p-1149">While you might not get this formula by conisdering type vectors, you should be shooting to prove \(S(k, k-3) = \binom{k}{4} + 10 \binom{k}{5} + 15 \binom{k}{6}\)</p></div></div>
 </div></article></article><article class="project-like" id="partitionsgivenpartsize"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">206</span>.</h6>
 <p id="p-1150">In how many ways can we partition \(k\) items into \(n\) blocks so that we have \(a_i\) blocks of size \(i\) for each \(i\text{?}\) That is, given the type vector \((a_1, a_2, \ldots, a_k)\text{,}\) how many partitions of \([k]\) into \(n\) blocks have that type vector.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-143" id="hint-143"><span class="type">Hint</span></a><div id="hk-hint-143" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1151">Suppose we make a list of the \(k\) items. We take the first \(a_1\) elements to be the blocks of size 1. How many elements do we need to take to get \(a_2\) blocks of size two? Which elements does it make sense to choose for this purpose?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-143" id="hint-143"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-143"><div class="solution"><p id="p-1151">Suppose we make a list of the \(k\) items. We take the first \(a_1\) elements to be the blocks of size 1. How many elements do we need to take to get \(a_2\) blocks of size two? Which elements does it make sense to choose for this purpose?</p></div></div>
 </div></article><article class="project-like" id="activity-88"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">207</span>.</h6>
 <p id="p-1153">Describe how to compute \(S(k,n)\) in terms of quantities given by the formula you found in <a data-knowl="./knowl/partitionsgivenpartsize.html" title="Activity 206">Activity 206</a>.</p></article><article class="project-like" id="activity-89"><h6 class="heading">
@@ -569,7 +570,7 @@ S(k,n) = nS(k-1,n) + S(k-1, n-1).
 <span class="type">Activity</span> <span class="codenumber">209</span>.</h6>
 <p id="p-1157">In how many ways may the caterer distribute the nine sandwiches into three identical bags so that each bag gets exactly three? Answer this question.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-144" id="hint-144"><span class="type">Hint</span></a><div id="hk-hint-144" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1158">What if the question asked about six sandwiches and two distinct bags? How does having identical bags change the answer?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-144" id="hint-144"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-144"><div class="solution"><p id="p-1158">What if the question asked about six sandwiches and two distinct bags? How does having identical bags change the answer?</p></div></div>
 </div></article><article class="project-like" id="activity-91"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">210</span>.</h6>
 <p id="p-1160">In how many ways can the sandwiches of <a data-knowl="./knowl/caterer2.html" title="Activity 209">Activity 209</a> be placed into <em class="emphasis">distinct</em> bags so that each bag gets exactly three?</p></article><p id="p-1163">This is an example of a <dfn class="terminology">multinomial coefficient</dfn>.  Although these are not directly related to Stirling numbers, we can use the ideas of type vectors to investigate them.  Let's do that now.</p>
@@ -582,27 +583,28 @@ S(k,n) = nS(k-1,n) + S(k-1, n-1).
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-145" id="hint-145"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-145" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1165">What if the \(j_i\)'s don't add to \(k\text{?}\)</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-146" id="hint-146"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-146" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1166">Think about listing the elements of the \(k\)-element set and labeling the first \(j_1\) elements with label number 1.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-145" id="hint-145"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-145"><div class="solution"><p id="p-1165">What if the \(j_i\)'s don't add to \(k\text{?}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-146" id="hint-146"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-146"><div class="solution"><p id="p-1166">Think about listing the elements of the \(k\)-element set and labeling the first \(j_1\) elements with label number 1.</p></div></div>
 </div></article><article class="project-like" id="activity-93"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">212</span>.</h6>
 <p id="p-1168">Explain how to compute the number of functions from a \(k\)-element set \(K\) to an \(n\)-element set \(N\) by using multinomial coefficients.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-147" id="hint-147"><span class="type">Hint</span></a><div id="hk-hint-147" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1169">The sum principle will help here.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-147" id="hint-147"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-147"><div class="solution"><p id="p-1169">The sum principle will help here.</p></div></div>
 </div></article><article class="project-like" id="activity-94"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">213</span>.</h6>
 <p id="p-1171">Explain how to compute the number of functions from a \(k\)-element set \(K\) onto an \(n\)-element set \(N\) by using multinomial coefficients.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-148" id="hint-148"><span class="type">Hint</span></a><div id="hk-hint-148" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1172">How are the relevant \(j_i\)'s in the multinomial coefficients you use here different from the \(j_i\)'s in the previous problem.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-148" id="hint-148"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-148"><div class="solution"><p id="p-1172">How are the relevant \(j_i\)'s in the multinomial coefficients you use here different from the \(j_i\)'s in the previous problem.</p></div></div>
 </div></article><article class="project-like" id="activity-95"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">214</span>.</h6>
 <p id="p-1174">What do multinomial coefficients have to do with expanding the \(k\)th power of a multinomial \(x_1+x_2+\cdots+x_n\text{?}\) This result is called the <dfn class="terminology">multinomial theorem</dfn>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-149" id="hint-149"><span class="type">Hint</span></a><div id="hk-hint-149" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1175">Think about how binomial coefficients relate to expanding a power of a binomial and note that the binomial coefficient \(\binom{n}{k}\) and the multinomial coefficient \(\binom{n}{k,n-k}\) are the same.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-149" id="hint-149"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-149"><div class="solution"><p id="p-1175">Think about how binomial coefficients relate to expanding a power of a binomial and note that the binomial coefficient \(\binom{n}{k}\) and the multinomial coefficient \(\binom{n}{k,n-k}\) are the same.</p></div></div>
 </div></article></article></section><section class="subsection" id="subsec-stirlingidentities"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Identities with Stirling Numbers</span>
 </h3>
-<a href="sec_adv-stirling.html#subsec-stirlingidentities" class="permalink">¶</a><p id="p-1177">The entries in the Pascal Triangle, \(\binom{n}{k}\text{,}\) satisfy the nice recursion \(\binom{n}{k} = \binom{n - 1}{k} + \binom{n - 1}{k - 1}\) and also have a closed formula: \(\binom{n}{k} = \frac{n!}{k!(n - k)!}\text{.}\) <a data-knowl="./knowl/secondstirlingrecurrence.html" title="Activity 195">Activity 195</a> gives us a recursion for the Stirling numbers \(S(k,n)\) and, unfortunately, the best we can do for a “closed” formula is the following.<a data-knowl="" class="id-ref" data-refid="hk-fn-10" id="fn-10"><sup> 7 </sup></a><span id="hk-fn-10" class="hidden-content tex2jax_ignore"><span class="footnote">This is not really a closed formula since the number of terms in the summation is not fixed.</span></span></p>
+<a href="sec_adv-stirling.html#subsec-stirlingidentities" class="permalink">¶</a><p id="p-1177">The entries in the Pascal Triangle, \(\binom{n}{k}\text{,}\) satisfy the nice recursion \(\binom{n}{k} = \binom{n - 1}{k} + \binom{n - 1}{k - 1}\) and also have a closed formula: \(\binom{n}{k} = \frac{n!}{k!(n - k)!}\text{.}\) <a data-knowl="./knowl/secondstirlingrecurrence.html" title="Activity 195">Activity 195</a> gives us a recursion for the Stirling numbers \(S(k,n)\) and, unfortunately, the best we can do for a “closed” formula is the following.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-10" id="fn-10"><sup> 7 </sup></a></p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="footnote">This is not really a closed formula since the number of terms in the summation is not fixed.</div></div>
 <article class="theorem-like" id="thm-stirling-closed"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.3.5</span>.</h6>
 <div class="displaymath" id="p-1178">
@@ -616,7 +618,7 @@ S(k,n) = \frac{1}{n!}\left[n^{k} - \binom{n}{1} \left( n - 1 \right)^{k} + \bino
 <article class="exercise-like" id="task-217"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-1181">Use the principle of inclusion and exclusion to write a formula for the number of ways to paint the houses.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-150" id="hint-150"><span class="type">Hint</span></a><div id="hk-hint-150" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1182">In what way is this problem like counting functions?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-150" id="hint-150"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-150"><div class="solution"><p id="p-1182">In what way is this problem like counting functions?</p></div></div>
 </div></article><article class="exercise-like" id="task-218"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-1183">What about the paint colors and the houses does \(S(k,n)\) count?  Why does this NOT answer the question?  By what factor are we off?</p></article><article class="exercise-like" id="task-219"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-1184">Conclude that a formula for the Stirling numbers is</p>
@@ -634,7 +636,7 @@ S(k,n) = \frac{1}{n!}\sum_{s=0}^n (-1)^s\binom{n}{s}(n-s)^k.\text{.}
 <span class="type">Exercise</span> <span class="codenumber">217</span>.</h6>
 <p id="p-1190">Prove <a data-knowl="./knowl/thm-stirling-polynomial.html" title="Theorem 2.3.6">Theorem 2.3.6</a></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-151" id="hint-151"><span class="type">Hint</span></a><div id="hk-hint-151" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-1191">You have already done this as well, although not with \(x\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-151" id="hint-151"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-151"><div class="solution"><p id="p-1191">You have already done this as well, although not with \(x\text{.}\)</p></div></div>
 </div></article><p id="p-1193">It is in this form that James Stirling originally developed these numbers. \(S(k,n)\) is used to convert from powers to binomial  coefficients as shown in the following:</p>
 <article class="theorem-like" id="thm-stirling-polynomial2"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.3.7</span>.</h6>
@@ -658,7 +660,7 @@ x^3 = \binom{x}{1} + 3\binom{x}{2}2! + \binom{x}{3}3! = \binom{x}{1} + 6\binom{x
 <span class="type">Example</span> <span class="codenumber">2.3.8</span>.</h6>
 <p id="p-1199">Prove that \(1^3 + 2^3 + 3^3 + \cdots + n^3 = \left(\frac{n(n+1)}{2}\right)^2\text{.}\)  In other words, the square of any triangular number is the sum of cubes!</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span></a><div id="hk-solution-171" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-171"><div class="solution">
 <p id="p-1200">We recognize that each cube on the left-hand side can be expressed as \(\binom{x}{1} + 6 \binom{x}{2} + 6\binom{x}{3}\text{.}\)  Thus</p>
 <div class="displaymath">
 \begin{align*}
@@ -708,7 +710,8 @@ x^3 = \binom{x}{1} + 3\binom{x}{2}2! + \binom{x}{3}3! = \binom{x}{1} + 6\binom{x
 1, 1, 2, 5, 15, 52, 203, 877, 4140, 21147, 115975, \ldots
 \end{equation*}
 </div>
-<p>Notice that the first four numbers look like Catalan numbers.  In fact, one of the many things the Catalan numbers count are <em class="emphasis">non-crossing</em> set partitions.<a data-knowl="" class="id-ref" data-refid="hk-fn-11" id="fn-11"><sup> 8 </sup></a><span id="hk-fn-11" class="hidden-content tex2jax_ignore"><span class="footnote">A set partition is said to be <dfn class="terminology">non-crossing</dfn> as long as whenever \(a,b\) belong to one block and \(c,d\) belong to another, we have that \(a\) and \(b\) are both either larger or smaller than both of \(c\) and \(d\text{.}\)</span></span>  So if \(C_n\) counts only some of the set partitions, then it must be that \(C_n \le B_n\) for all \(n\text{.}\)</p>
+<p>Notice that the first four numbers look like Catalan numbers.  In fact, one of the many things the Catalan numbers count are <em class="emphasis">non-crossing</em> set partitions.<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-11" id="fn-11"><sup> 8 </sup></a>  So if \(C_n\) counts only some of the set partitions, then it must be that \(C_n \le B_n\) for all \(n\text{.}\)</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="footnote">A set partition is said to be <dfn class="terminology">non-crossing</dfn> as long as whenever \(a,b\) belong to one block and \(c,d\) belong to another, we have that \(a\) and \(b\) are both either larger or smaller than both of \(c\) and \(d\text{.}\)</div></div>
 <p id="p-1213">The Bell numbers can be generated by constructing what is called the Bell Triangle. To construct this triangle, begin with a 1 at the top and a 1 below it. Add these two numbers together and put the sum 2, to the right of the 1 in the second column. This 2 is also the first entry of the third row. The second entry in the third row is found by adding the 2 to the number 1 above it. This sum is 3 and goes to the right of the 2. The 3 is now below a 2. Adding these two numbers produces the last number, 5, in the third row. Since 5 has no number above it, the third row is complete. 5 now becomes the first number in the fourth row and the process continues.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>

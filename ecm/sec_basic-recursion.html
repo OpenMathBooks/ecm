@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:06:48-06:00    *-->
+<!--*    on 2019-11-23T09:44:54-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -257,14 +258,14 @@ var js_version = 0.12;
 <span class="type">Activity</span> <span class="codenumber">67</span>.</h6>
 <p id="p-513">List all stool seating charts with 1, 2, and 3 stools.  Let the number of seating charts be called \(S_1\text{,}\) \(S_2\text{,}\) and \(S_3\) respectively.  Do you notice a pattern among these numbers?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span></a><div id="hk-hint-59" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-514">You should find 3 seating arrangements with 2 stools.  There are 5 with three stools.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="solution"><p id="p-514">You should find 3 seating arrangements with 2 stools.  There are 5 with three stools.</p></div></div>
 </div></article><p id="p-515">We get a sequence \((S_n)_{n \ge 1}\) which gives the number of seating charts.</p>
 <p id="p-516">The sequence we get is \(2, 3, 5, 8, 13, \ldots\text{.}\)  It <em class="emphasis">appears</em> that this sequence satisfies a familiar recurrence relation of the <dfn class="terminology">Fibonacci sequence</dfn>: \(S_n = S_{n-1} + S_{n-2}\text{.}\)  But unlike the Fibonacci sequence, here the initial terms are \(S_1 = 2\) and \(S_2 = 3\text{.}\)  Is this appearance deceiving?  Can we explain why this sequence should satisfy this recurrence?</p>
 <article class="project-like" id="activity-35"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">68</span>.</h6>
 <p id="p-517">Explain why \(S_n\) satisfies the recurrence \(S_n = S_{n-1} + S_{n-2}\text{.}\)  You will need to consider seating charts with \(n\text{,}\) \(n-1\) and \(n-2\) stools.  Show how you can “find” the seating charts for \(n-1\) and \(n-2\) stools among those for \(n\) stools (perhaps using some sort of bijection).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span></a><div id="hk-hint-60" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-518">Which seating charts have someone on stool \(n+1\text{?}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="solution"><p id="p-518">Which seating charts have someone on stool \(n+1\text{?}\)</p></div></div>
 </div></article><p id="p-519">Once we have a proof that our sequence really does give the answers to all the versions of the counting question we are interested in, then  we can start investigating properties of this sequence.  Sometimes, we might even be able to find a closed formula for the \(n\)th term of the sequence, so we can compute values without relying on the recurrence.</p></section><section class="subsection" id="subsec-recursionfinding"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Finding Recurrence Relations</span>
 </h3>
@@ -274,7 +275,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">1.4.1</span>.</h6>
 <p id="p-522">Let \(a_n\) be the number of subsets of \([n]\text{.}\)  Find a recurrence relation for the sequence \((a_n)_{n \ge 0}\text{.}\)  Prove the recurrence relation is correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div id="hk-solution-57" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution">
 <p id="p-523">Start by enumerating the sequence \((a_n)_{n \ge 0}\text{.}\)  There is only 1 subset of the empty set (so \(a_0 = 1\)).  There are two subsets of \([1]\text{,}\) and four subsets of \([2]\text{.}\)  So the sequence looks like \(1, 2, 4, 8, \ldots\text{.}\)  It <em class="emphasis">appears</em> that the recurrence relation should be \(a_n = 2a_{n-1}\) with initial condition \(a_0 = 1\text{.}\)</p>
 <p id="p-524">To prove this is correct, we <em class="emphasis">must</em> reference the things we are counting (saying that the recurrence agrees with the finitely many terms we have listed is NOT enough).  Consider the \(a_{n-1}\) different subsets of \([n-1]\text{.}\)  Each of these is a subset of \([n]\text{,}\) in particular, a subset of \([n]\) that does not include the number \(n\) as an element.  Further, to each of these sets, we can add the element \(n\) to get another distinct subset of \([n]\text{.}\)  So far, we have found \(2a_{n-1}\) subsets of \([n]\text{.}\)  Actually, we have found all of them: every subset of \([n]\) either includes \(n\) or it does not.</p>
 </div></div>
@@ -283,24 +284,24 @@ var js_version = 0.12;
 <span class="type">Exercise</span> <span class="codenumber">69</span>.</h6>
 <p id="p-526">Let \(k_n\) be the number of handshakes that take place if all \(n\) people in a room shake hands with everyone there exactly once.  Find a recurrence relation for the sequence \((k_n)_{n \ge 1}\) and prove you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span></a><div id="hk-hint-61" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-527">How many new handshakes occur when a new person enters the room?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="solution"><p id="p-527">How many new handshakes occur when a new person enters the room?</p></div></div>
 </div></article><article class="project-like" id="exploration-35"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">70</span>.</h6>
 <p id="p-528">Let \(b_n\) be the number of bijections from an \(n\)-element set to an \(n\)-element set.  Find a recurrence relation for the sequence \((b_n)_{n \ge 1}\) and prove you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span></a><div id="hk-hint-62" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-529">To determine a bijection \(f:[n] \to [n]\text{,}\) you could first say what \(f(n)\) is.  What do you still need to do?  Your answer to this question should be one single step (that inductively, you know how to do).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="solution"><p id="p-529">To determine a bijection \(f:[n] \to [n]\text{,}\) you could first say what \(f(n)\) is.  What do you still need to do?  Your answer to this question should be one single step (that inductively, you know how to do).</p></div></div>
 </div></article><article class="project-like" id="HanoiProblem"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">71</span>.</h6>
 <p id="p-530">The “Towers of Hanoi” puzzle has three rods rising from a rectangular base with \(n\) rings of different sizes stacked in decreasing order of size on one rod. A legal move consists of moving a ring from one rod to another so that it does not land on top of a smaller ring. If \(m_n\) is the number of moves required to move all the rings from the initial rod to another rod that you choose, give a recurrence for \(m_n\text{.}\)</p>
 <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/Hanoi.svg" style="width: 100%; height: auto;" alt=""></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-63" id="hint-63"><span class="type">Hint</span></a><div id="hk-hint-63" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-531">Suppose you already knew the number of moves needed to solve the puzzle with \(n-1\) rings.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-63" id="hint-63"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-63"><div class="solution"><p id="p-531">Suppose you already knew the number of moves needed to solve the puzzle with \(n-1\) rings.</p></div></div>
 </div></article><article class="project-like" id="circlesinplane"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">72</span>.</h6>
 <p id="p-533">We draw \(n\) mutually intersecting circles in the plane so that each one crosses each other one exactly twice and no three intersect in the same point. (As examples, think of Venn diagrams with two or three mutually intersecting sets.) Find a recurrence for the number \(r_n\) of regions into which the plane is divided by \(n\) circles. (One circle divides the plane into two regions, the inside and the outside.) Find the number of regions with \(n\) circles. For what values of \(n\) can you draw a Venn diagram showing all the possible intersections of \(n\) sets using circles to represent each of the sets?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-64" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-534">If we have \(n - 1\) circles drawn in such a way that they define \(r_{n-1}\) regions, and we draw a new circle, each time it crosses another circle, except for the last time, it finishes dividing one region into two parts and starts dividing a new region into two parts.</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-65" id="hint-65"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-65" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-535">Compare \(r_n\) with the number of subsets of an \(n\)-element set.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-64"><div class="solution"><p id="p-534">If we have \(n - 1\) circles drawn in such a way that they define \(r_{n-1}\) regions, and we draw a new circle, each time it crosses another circle, except for the last time, it finishes dividing one region into two parts and starts dividing a new region into two parts.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-65" id="hint-65"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-65"><div class="solution"><p id="p-535">Compare \(r_n\) with the number of subsets of an \(n\)-element set.</p></div></div>
 </div></article><p id="p-538">The sequences above all have relatively simple recurrence relations.  In particular, the recursions all make reference only to one previous term.  This need not be the case, as we saw when counting bar stool seating charts and as the next few problems demonstrate.</p>
 <article class="project-like" id="act-dominoes"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">73</span>.</h6>
@@ -308,7 +309,7 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-110"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-540">Let \(a_n\) be the number of ways to tile the \(1 \times n\) path.  Find a recurrence relation for the sequence \((a_n)_{n \ge 1}\text{,}\) and prove you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-66" id="hint-66"><span class="type">Hint</span></a><div id="hk-hint-66" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-541">List out the first few values of \(a_n\) by enumerating all paths.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-66" id="hint-66"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-66"><div class="solution"><p id="p-541">List out the first few values of \(a_n\) by enumerating all paths.</p></div></div>
 </div></article><article class="exercise-like" id="task-111"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-542">Now suppose your squares come in 3 colors and the dominoes come in 4 colors.  Let \(b_n\) count the number of paths you can tile.  Find and justify a recurrence relation for \((b_n)_{n \ge 1}\text{.}\)</p></article></article><article class="project-like" id="act-catalanfirst"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">74</span>.</h6>
@@ -322,15 +323,15 @@ var js_version = 0.12;
 </div></div>
 <figcaption><span class="type">Figure</span> <span class="codenumber">1.4.2.</span> The five triangulations of a convex pentagon.</figcaption></figure><p id="p-544">Let \(t_n\) be the number of triangulations.  Find a recurrence relation for \((t_n)_{n \ge 3}\text{.}\)  Justify your answer.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-67" id="hint-67"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-67" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-545">Your recurrence relation will not have a fixed number of terms, but rather be in terms of all previous terms.</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-68" id="hint-68"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-68" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-546">Fix an edge of the polygon.  There will be exactly \(n-2\) triangles this edge could be part of.  For each of those, can you count the number of triangles that can be made of what is left?</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-67" id="hint-67"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-67"><div class="solution"><p id="p-545">Your recurrence relation will not have a fixed number of terms, but rather be in terms of all previous terms.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-68" id="hint-68"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-68"><div class="solution"><p id="p-546">Fix an edge of the polygon.  There will be exactly \(n-2\) triangles this edge could be part of.  For each of those, can you count the number of triangles that can be made of what is left?</p></div></div>
 </div></article><p id="p-547">We will study the recurrence relation in <a data-knowl="./knowl/act-catalanfirst.html" title="Exercise 74">Exercise 74</a> again in <a href="sec_basic-catalan.html" class="internal" title="Section 1.5: The Catalan Numbers">Section 1.5</a>.  We mention it here because it is a nice example of how sometimes recurrence relations use all the previous terms of the sequence.  Sometimes we can find a simpler recurrence relation that captures the same sequence.</p>
 <article class="project-like" id="exploration-40"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">75</span>.</h6>
 <p id="p-548">Consider the sequence \((a_n)_{n \ge 1}\) which satisfies the recurrence relation \(a_n = \sum_{i = 1}^{n-1} a_i\text{.}\)  That is, each term of the sequence is the sum of <em class="emphasis">all</em> previous terms in the sequence.</p>
 <p id="p-549">Find a recurrence relation in terms of only the previous term for this sequence.  Prove that you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-69" id="hint-69"><span class="type">Hint</span></a><div id="hk-hint-69" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-550">Try this out with some different initial conditions.  Once you see what the recurrence should be, proving it by induction should be easy.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-69" id="hint-69"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-69"><div class="solution"><p id="p-550">Try this out with some different initial conditions.  Once you see what the recurrence should be, proving it by induction should be easy.</p></div></div>
 </div></article></section><section class="subsection" id="subsec-recursionclosed"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Using Recurrence Relations</span>
 </h3>
@@ -340,12 +341,12 @@ var js_version = 0.12;
 <span class="type">Activity</span> <span class="codenumber">76</span>.</h6>
 <p id="p-553">Let \((a_n)_{n \le 0}\) satisfy \(a_n = a_{n-1} + 3\) with \(a_0 = 2\text{.}\)  For example, \(a_n\) might give the number of push-ups you can do \(n\) days into your training, assuming you can do 3 more push-ups each day, if you could do 2 push-ups before you started training.  Find a closed formula for \(a_n\) and justify your answer.  Show how the recurrence relation is used.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-70" id="hint-70"><span class="type">Hint</span></a><div id="hk-hint-70" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-554">If you write out the sequence, it would be easy to guess at a closed formula, but the point here is to <em class="emphasis">use</em> the recurrence relation somehow.  Consider rewriting the recurrence relation as \(a_n - a_{n-1} = 2\text{.}\)  Note that \(a_n - a_0 = (a_n - a_{n-1}) + (a_{n-1} + a_{n-2}) + \cdots + (a_2 - a_1) + (a_1 - a_0)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-70" id="hint-70"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-70"><div class="solution"><p id="p-554">If you write out the sequence, it would be easy to guess at a closed formula, but the point here is to <em class="emphasis">use</em> the recurrence relation somehow.  Consider rewriting the recurrence relation as \(a_n - a_{n-1} = 2\text{.}\)  Note that \(a_n - a_0 = (a_n - a_{n-1}) + (a_{n-1} + a_{n-2}) + \cdots + (a_2 - a_1) + (a_1 - a_0)\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="act-geometric"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">77</span>.</h6>
 <p id="p-555">Let \((a_n)_{n \le 0}\) satisfy \(a_n = 3a_{n-1}\) with \(a_0 = 2\text{.}\)  For example, \(a_n\) might give the number of \(n\)-scoop ice-cream cones you can make from 3 available flavors in one of two kinds of cones.  Find a closed formula for \(a_n\) and justify your answer.  Show how the recurrence relation is used.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-71" id="hint-71"><span class="type">Hint</span></a><div id="hk-hint-71" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-556">Again, if you write out the sequence, it would be easy to guess at a closed formula.  To see how the recurrence relation is used, try substituting in earlier values.  For example, \(a_2 = 3a_1\text{,}\) but \(a_1 = 3a_0\text{,}\) so \(a_2 = 3(3a_0) = 3^2a_0\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-71" id="hint-71"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-71"><div class="solution"><p id="p-556">Again, if you write out the sequence, it would be easy to guess at a closed formula.  To see how the recurrence relation is used, try substituting in earlier values.  For example, \(a_2 = 3a_1\text{,}\) but \(a_1 = 3a_0\text{,}\) so \(a_2 = 3(3a_0) = 3^2a_0\text{.}\)</p></div></div>
 </div></article><p id="p-557">The sequence in <a data-knowl="./knowl/act-arithmetic.html" title="Activity 76">Activity 76</a> is an example of an <dfn class="terminology">arithmetic sequence</dfn> (or arithmetic progression) in that the difference between terms is constant.  The sequence in <a data-knowl="./knowl/act-geometric.html" title="Activity 77">Activity 77</a> is an example of a <dfn class="terminology">geometric sequence</dfn> (or geometric progression) because the <em class="emphasis">ratio</em> between terms is constant.  Of course there is nothing special about 2 and 3 in the activities, so you should now see how to find the closed formula for any arithmetic or geometric sequence.</p>
 <p id="p-558">The techniques used to get those closed formulas are also worth pointing out.  The method suggested in the hint to <a data-knowl="./knowl/act-arithmetic.html" title="Activity 76">Activity 76</a> is called <dfn class="terminology">telescoping</dfn> and the method suggested for <a data-knowl="./knowl/act-geometric.html" title="Activity 77">Activity 77</a> is called <dfn class="terminology">iteration</dfn>.</p>
 <p id="p-559">Most sequences are not arithmetic, but it is still helpful to look at the difference between terms.  Often if we know something about the sequence of differences, we can deduce something about the original sequence.   We can also think about this as starting with the sequence of differences.</p>
@@ -355,7 +356,7 @@ var js_version = 0.12;
 <span class="type">Example</span> <span class="codenumber">1.4.3</span>.</h6>
 <p id="p-562">If \((a_n)_{n \ge 1}\) is the familiar sequence \(1, 2, 3, 4, \ldots,\text{,}\) what is the sequence of partial sums?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span></a><div id="hk-solution-60" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-60" id="solution-60"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-60"><div class="solution">
 <p id="p-563">The sequence of partial sums is \(1, 3, 6, 10, 15, \ldots\text{;}\) the <dfn class="terminology">triangular numbers</dfn> (so called because you can arrange those numbers of dots into equilateral triangles).  A closed formula for these is \(T_n = \frac{n(n+1)}{2}\text{,}\) which can be found as follows:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -443,7 +444,7 @@ var js_version = 0.12;
 </table></div></div></div>
 <p id="p-572">Why is that helpful?  What is the sum?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span></a><div id="hk-hint-72" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-573">You will need to decide how many terms are on the right-hand side.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-72"><div class="solution"><p id="p-573">You will need to decide how many terms are on the right-hand side.</p></div></div>
 </div></article><article class="exercise-like" id="task-116"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-574">Generalize the previous computation to find the closed formula for \(b_n = \sum_{i=1}^n a_i\text{.}\)</p></article><article class="exercise-like" id="task-117"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-575">What is special about sums of arithmetic sequences that allows you to do this computation?  Explain.</p></article></article><p id="p-576">The previous activity shows that the sequence of partial sums of an arithmetic sequence is always a quadratic sequence.  Conversely, any quadratic sequence should arise in this way.</p>
@@ -479,7 +480,7 @@ var js_version = 0.12;
 <span class="type">Exercise</span> <span class="codenumber">82</span>.</h6>
 <p id="p-584">Find a closed formula for \(S_n = 2 + 10 + 50 + \cdots + 2\cdot 5^n\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-73" id="hint-73"><span class="type">Hint</span></a><div id="hk-hint-73" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-585">Compute \(S_n - 5S_n\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-73" id="hint-73"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-73"><div class="solution"><p id="p-585">Compute \(S_n - 5S_n\)</p></div></div>
 </div></article><p id="p-588">Notice that this is precisely the standard method used for converting repeating decimals to fractions.</p>
 <article class="project-like" id="exploration-43"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">83</span>.</h6>
@@ -490,7 +491,7 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-118"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-594">First answer this question by considering different cases: how many of the license plates contain no numerals?  How many contain one numeral, etc.  Find the sum.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-74" id="hint-74"><span class="type">Hint</span></a><div id="hk-hint-74" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-595">The number of plates that have 2 numerals and (therefore) 4 letters is \(3^2\cdot 4^4\text{,}\) as there are 3 choices for each of the numerals, and 4 choices for each of the letters.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-74" id="hint-74"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-74"><div class="solution"><p id="p-595">The number of plates that have 2 numerals and (therefore) 4 letters is \(3^2\cdot 4^4\text{,}\) as there are 3 choices for each of the numerals, and 4 choices for each of the letters.</p></div></div>
 </div></article><article class="exercise-like" id="task-119"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-596">Recognize that that the total \(S\) when written this way is the sum of a (finite) geometric sequence.  Compute \(S - \frac{3}{4}S\) to conclude that the answer can be expressed as \(4^7 - 3^7\text{.}\)</p></article><article class="exercise-like" id="task-120"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-597">Generalize! What if a license plate has \(n\) symbols?</p></article></article><p id="p-598">Guessing the form of a closed formula is also reasonable when we believe a sequence to be exponential.</p>
@@ -500,18 +501,18 @@ var js_version = 0.12;
 <article class="exercise-like" id="task-121"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-600">Show that \(a_n = 2^n\) and \(a_n = 3^n\) are both solutions to the recurrence relation.  That is, they are sequences for which the recurrence relation holds.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-75" id="hint-75"><span class="type">Hint</span></a><div id="hk-hint-75" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-601">You could do a full proof by induction here, but really you are just plugging these in to see if the recurrence works for them.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-75" id="hint-75"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-75"><div class="solution"><p id="p-601">You could do a full proof by induction here, but really you are just plugging these in to see if the recurrence works for them.</p></div></div>
 </div></article><article class="exercise-like" id="task-122"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-602">Show that if \(\alpha\) and \(\beta\) are any constants, \(a_n = \alpha 2^n + \beta 3^n\) is also a solution to the recurrence relation.</p></article><article class="exercise-like" id="task-123"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-603">Might there be another solution to the recurrence relation?  Suppose \(a_n = r^n\) for some non-zero constant \(r\text{.}\)  Show that \(r = 2\) or \(r = 3\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span></a><div id="hk-hint-76" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-604">If you do the substitution, you will get a degree \(n\) polynomial equation in the variable \(r\text{.}\)  Solving that equation amounts to finding the roots of the polynomial.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-76"><div class="solution"><p id="p-604">If you do the substitution, you will get a degree \(n\) polynomial equation in the variable \(r\text{.}\)  Solving that equation amounts to finding the roots of the polynomial.</p></div></div>
 </div></article></article><p id="p-605">This is a partial justification of the <dfn class="terminology">characteristic root technique</dfn> (the polynomial whose roots are the base of the exponentials is called the <dfn class="terminology">characteristic polynomial</dfn>).  Making the reasonable guess that recurrence relations which give \(a_n\) as a linear combination of \(a_{n-1}\) and \(a_{n-2}\) should have exponential closed formulas allows you to find the bases of those exponentials.  You can then use the initial conditions to find the constants \(\alpha\) and \(\beta\text{.}\)  Let's illustrate this process with an example.</p>
 <article class="example-like" id="eg_char-roots"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.4.4</span>.</h6>
 <p id="p-606">Find a closed formula for the sequence \((a_n)_{n \ge 1}\) given recursively by \(a_n = 3a_{n-1} + 4a_{n-2}\) with initial conditions \(a_1 = 3\) and \(a_2 = 13\text{.}\)  (This is the sequence of colorful square/domino paths from <a data-knowl="./knowl/act-dominoes.html" title="Exercise 73">Exercise 73</a>.)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div id="hk-solution-64" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution">
 <p id="p-607">From the recurrence relation we have \(a_n - 3a_{n-1} - 4a_{n-2} = 0\text{.}\)  We transform this into the characteristic equation \(x^2 - 3x - 4 = 0\text{.}\) This has roots \(x = 4\) and \(x = -1\text{.}\)  So we guess that the closed formula for \(a_n\) will be \(a_n = \alpha 4^n + \beta (-1)^n\text{.}\)</p>
 <p id="p-608">To find \(\alpha\) and \(\beta\text{,}\) we use the initial conditions.   When \(n = 1\) we have \(3 = 4\alpha -\beta\text{.}\)  When \(n = 2\) we have \(13 = 16\alpha + \beta\text{.}\)  It is easy to solve this system of two equations and two unknowns (simply adding them together eliminates the \(\beta\)).  We find \(\alpha = \frac{4}{5}\) and \(\beta = \frac{1}{5}\text{.}\)</p>
 <p id="p-609">Thus the closed formula is</p>
@@ -530,7 +531,7 @@ a_n = \frac{4}{5} 4^n + \frac{1}{5} (-1)^n\text{.}
 <span class="type">Exercise</span> <span class="codenumber">87</span>.</h6>
 <p id="p-613">Find a closed formula for the \(n\)th Fibonacci number \(F_n\text{,}\) where \(F_1 = 1 = F_2\) and \(F_n = F_{n-1} + F_{n-2}\text{.}\)  From the form of this recurrence, the characteristic root technique should work here.  (The formula you will find is called Binet's Formula.)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-77" id="hint-77"><span class="type">Hint</span></a><div id="hk-hint-77" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-614">You will need to use the quadratic formula to find the roots, and some careful algebra to find the coefficients.  The closed formula will include \(\frac{1+\sqrt{5}}{2}\text{,}\) the <em class="emphasis">Golden Ratio</em>.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-77" id="hint-77"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-77"><div class="solution"><p id="p-614">You will need to use the quadratic formula to find the roots, and some careful algebra to find the coefficients.  The closed formula will include \(\frac{1+\sqrt{5}}{2}\text{,}\) the <em class="emphasis">Golden Ratio</em>.</p></div></div>
 </div></article><p id="p-615">There are many subtle and interesting variations on solving recurrence relations, and we will not explore them all here.  To conclude though, we consider one interesting case that will show up later as well.</p>
 <article class="project-like" id="activity-42"><h6 class="heading">
 <span class="type">Activity</span> <span class="codenumber">88</span>.</h6>
@@ -559,7 +560,7 @@ a_n = \alpha r^n + \beta nr^n\text{,}
 <span class="type">Example</span> <span class="codenumber">1.4.5</span>.</h6>
 <p id="p-626">Determine a formula for the sum \(F_{0} + F_{1} + F_{2} + \ldots + F_{n}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div id="hk-solution-65" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution">
 <p id="p-627">If we collect some initial data we see that the sequence of partial sums is \(0, 1, 2, 4, 7, 12, 20, \ldots\text{.}\)  We might recognize these numbers as always one less than a Fibonacci number, and guess that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -603,7 +604,7 @@ F_{n-1}F_{n+2}\) using <a data-knowl="./knowl/diff-fib-squares.html" title="Task
 1 \amp 1
 \end{pmatrix}.\) Using standard matrix multiplication, compute \(Q^2 = Q\cdot Q\text{,}\) \(Q^3\text{,}\) and so on.  Conjecture a formula for \(Q^n\) and prove you are correct.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span></a><div id="hk-hint-78" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-637">You should find that \(Q^n = \begin{pmatrix}
+<a data-knowl="" class="id-ref" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-78"><div class="solution"><p id="p-637">You should find that \(Q^n = \begin{pmatrix}
 F_{n - 1} \amp F_{n}\\
 F_{n} \amp F_{n + 1}
 \end{pmatrix}\text{.}\)  Now prove this by induction.</p></div></div>
@@ -624,7 +625,7 @@ F_n = \frac{a^n-b^n}{a-b}
 <span class="type">Example</span> <span class="codenumber">1.4.6</span>.</h6>
 <p id="p-642">Prove \(\binom{n}{0}F_{0} + \binom{n}{1}F_{1} + \ldots + \binom{n}{n}F_{n} = F_{2n}\) in two ways.  First, use the Binet Formula from <a data-knowl="./knowl/act-binet.html" title="Exercise 87">Exercise 87</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div id="hk-solution-66" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution">
 <p id="p-643">Starting on the right side, use the Binet formula and the fact that \(a\) and \(b\) satisfy \(x^2 - x - 1 = 0\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -650,7 +651,7 @@ F_{2n} = \amp \binom{n}{0}\frac{a^0-b^0}{a-b} + \binom{n}{1}\frac{a-b}{a-b} + \b
 <span class="type">Exercise</span> <span class="codenumber">99</span>.</h6>
 <p id="p-645">Prove that \(\sum_{n = 2}^{\infty}\frac{1}{F_{n - 1}F_{n + 1}} = 1\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span></a><div id="hk-hint-79" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-646">Show first that \(\frac{1}{F_{n - 1}F_{n + 1}} = \frac{1}{F_{n - 1}F_{n}} -
+<a data-knowl="" class="id-ref" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-79"><div class="solution"><p id="p-646">Show first that \(\frac{1}{F_{n - 1}F_{n + 1}} = \frac{1}{F_{n - 1}F_{n}} -
 \frac{1}{F_{n}F_{n + 1}}\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="exploration-58"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">100</span>.</h6>
@@ -660,7 +661,7 @@ F_{2n} = \amp \binom{n}{0}\frac{a^0-b^0}{a-b} + \binom{n}{1}\frac{a-b}{a-b} + \b
 <span class="type">Exercise</span> <span class="codenumber">102</span>.</h6>
 <p id="p-649">For which values of \(n\) is \(F^{n}\) a multiple of 3?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-80" id="hint-80"><span class="type">Hint</span></a><div id="hk-hint-80" class="hidden-content tex2jax_ignore"><div class="solution">Make a table of Fibonacci numbers to get your conjecture.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-80" id="hint-80"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-80"><div class="solution">Make a table of Fibonacci numbers to get your conjecture.</div></div>
 </div></article><article class="project-like" id="exploration-61"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">103</span>.</h6>
 <p id="p-650">Can you have four distinct positive Fibonacci numbers in arithmetic progression?</p></article><article class="project-like" id="exploration-62"><h6 class="heading">
@@ -671,7 +672,7 @@ F_{2n} = \amp \binom{n}{0}\frac{a^0-b^0}{a-b} + \binom{n}{1}\frac{a-b}{a-b} + \b
 <span class="type">Exercise</span> <span class="codenumber">106</span>.</h6>
 <p id="p-653">Prove that \(F_{5n + 5} = 3F_{5n} + 5F_{5n + 1}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-81" id="hint-81"><span class="type">Hint</span></a><div id="hk-hint-81" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-654">Use \(Q^{5n + 5}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-81" id="hint-81"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-81"><div class="solution"><p id="p-654">Use \(Q^{5n + 5}\text{.}\)</p></div></div>
 </div></article><article class="project-like" id="exploration-65"><h6 class="heading">
 <span class="type">Exercise</span> <span class="codenumber">107</span>.</h6>
 <p id="p-655">Let \(\varphi\) be the positive root of \(x^{2} - x - 1 = 0\text{.}\) Prove that \(\varphi^{n} = F_{n}\varphi + F_{n - 1}\text{.}\)</p></article><article class="project-like" id="exploration-66"><h6 class="heading">

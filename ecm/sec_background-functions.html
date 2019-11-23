@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-09-28T11:07:07-06:00    *-->
+<!--*    on 2019-11-23T09:45:12-07:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -50,6 +50,7 @@ MathJax.Hub.Config({
 <link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
@@ -339,7 +340,7 @@ f = \twoline{0 \amp 1 \amp 2\amp 3 \amp 4}{3 \amp 3 \amp 2 \amp 4 \amp 1}\text{.
 <div class="sbspanel" style="width:27.2727272727273%;justify-content:flex-start;"><img src="images/h-arrows.svg" style="width: 100%; height: auto;" alt=""></div>
 </div></div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ykR" id="ykR"><span class="type">Solution</span></a><div id="hk-ykR" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-ykR" id="ykR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ykR"><div class="solution">
 <p id="IYr">\(f\) is a function. So is \(g\text{.}\) There is no problem with an element of the codomain not being the image of any input, and there is no problem with \(a\) from the codomain being the image of both 2 and 3 from the domain. We could use our two-line notation to write these as</p>
 <div class="displaymath">
 \begin{equation*}
@@ -390,7 +391,7 @@ h=\twoline{1 \amp 2 \amp 3 \amp 4}{\amp a,c? \amp d \amp b}\text{.}
 <span class="type">Example</span> <span class="codenumber">B.3.4</span>.</h6>
 <p id="bLP">Consider the function \(f:\N \to \N\) given by \(f(0) = 0\) and \(f(n+1) = f(n) + 2n+1\text{.}\) Find \(f(6)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-esa" id="esa"><span class="type">Solution</span></a><div id="hk-esa" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-esa" id="esa"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-esa"><div class="solution">
 <p id="BtS">The rule says that \(f(6) = f(5) + 11\) (we are using \(6 = n+1\) so \(n = 5\)). We don't know what \(f(5)\) is though. Well, we know that \(f(5) = f(4) + 9\text{.}\) So we need to compute \(f(4)\text{,}\) which will require knowing \(f(3)\text{,}\) which will require \(f(2)\text{,}\)… will it ever end?</p>
 <p id="hBb">Yes! In fact, this process will always end because we have \(\N\) as our domain, so there is a least element. And we gave the value of \(f(0)\) explicitly, so we are good. In fact, we might decide to work up to \(f(6)\) instead of working down from \(f(6)\text{:}\)</p>
 <div class="displaymath">
@@ -416,7 +417,7 @@ f(6) = \amp f(5) + 11 = \amp 25 + 11 = 36
 <li id="Ljd"><p id="Czl">\(h:\N \to \N\) defined by \(f(n) = n!\text{.}\) Recall that \(n! = 1 \cdot 2 \cdot 3 \cdot \cdots \cdot (n-1)\cdot n\) is the product of all numbers from \(1\) through \(n\text{.}\) We also define \(0! = 1\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Kzj" id="Kzj"><span class="type">Solution</span></a><div id="hk-Kzj" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="tPt" class="decimal">
+<a data-knowl="" class="id-ref" data-refid="hk-Kzj" id="Kzj"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Kzj"><div class="solution"><ol id="tPt" class="decimal">
 <li id="rqm">
 <p id="iGu">The initial condition is \(f(0) = 3\text{.}\) To get \(f(n+1)\) we would double the number of snails in the terrarium the previous year, which is given by \(f(n)\text{.}\) Thus \(f(n+1) = 2f(n)\text{.}\) The full recursive definition contains both of these, and would be written,</p>
 <div class="displaymath">
@@ -464,7 +465,7 @@ f(0) = 1;~ f(n+1) = (n+1)\cdot f(n)\text{.}
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-qGs" id="qGs"><span class="type">Solution</span></a><div id="hk-qGs" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="ZWC" class="decimal">
+<a data-knowl="" class="id-ref" data-refid="hk-qGs" id="qGs"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-qGs"><div class="solution"><ol id="ZWC" class="decimal">
 <li id="cho">\(f\) is not surjective. There are elements in the codomain which are not in the range. For example, no \(n \in \Z\) gets mapped to the number 1 (the rule would say that \(\frac{1}{3}\) would be sent to 1, but \(\frac{1}{3}\) is not in the domain). In fact, the range of the function is \(3\Z\) (the integer multiples of 3), which is not equal to \(\Z\text{.}\)</li>
 <li id="Iox">\(g\) is not surjective. There is no \(x \in \{1,2,3\}\) (the domain) for which \(g(x) = b\text{,}\) so \(b\text{,}\) which is in the codomain, is not in the range. Notice that there is an element from the codomain “missing” from the bottom row of the matrix.</li>
 <li id="ovG">\(h\) is surjective. Every element of the codomain is also in the range. Nothing in the codomain is missed.</li>
@@ -487,7 +488,7 @@ f(0) = 1;~ f(n+1) = (n+1)\cdot f(n)\text{.}
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-WNB" id="WNB"><span class="type">Solution</span></a><div id="hk-WNB" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="GdL" class="decimal">
+<a data-knowl="" class="id-ref" data-refid="hk-WNB" id="WNB"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-WNB"><div class="solution"><ol id="GdL" class="decimal">
 <li id="MYq">\(f\) is injective. Each element in the codomain is assigned to at <em class="emphasis">most</em> one element from the domain. If \(x\) is a multiple of three, then only \(x/3\) is mapped to \(x\text{.}\) If \(x\) is not a multiple of 3, then there is no input corresponding to the output \(x\text{.}\)</li>
 <li id="tfz">\(g\) is not injective. Both inputs \(2\) and \(3\) are assigned the output \(a\text{.}\) Notice that there is an element from the codomain that appears more than once on the bottom row of the matrix.</li>
 <li id="ZmI">\(h\) is injective. Each output is only an output once.</li>
@@ -514,7 +515,7 @@ f = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\ a \amp a \amp b \amp 
 </div>
 <p>Find \(f(\{1,2,3\})\text{,}\) \(f\inf(\{a,b\})\text{,}\) and \(f\inv(d)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-CUK" id="CUK"><span class="type">Solution</span></a><div id="hk-CUK" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-CUK" id="CUK"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-CUK"><div class="solution">
 <p id="mkU">\(f(\{1,2,3\}) = \{a,b\}\) since \(a\) and \(b\) are the elements in the codomain to which \(f\) sends \(1\) and \(2\text{.}\)</p>
 <p id="Ssd">\(f\inf(\{a,b\}) = \{1,2,3,4,5\}\) since these are exactly the elements that \(f\) sends to \(a\) and \(b\text{.}\)</p>
 <p id="yzm">\(f\inf(d) = \emptyset\) since \(d\) is not in the range of \(f\text{.}\)</p>
@@ -523,7 +524,7 @@ f = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\ a \amp a \amp b \amp 
 <span class="type">Example</span> <span class="codenumber">B.3.9</span>.</h6>
 <p id="gvI">Consider the function \(g:\Z \to \Z\) defined by \(g(n) = n^2 + 1\text{.}\) Find \(g(1)\) and \(g(\{1\})\text{.}\) Then find \(g\inv(1)\text{,}\) \(g\inv(2)\text{,}\) and \(g\inv(3)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-jbT" id="jbT"><span class="type">Solution</span></a><div id="hk-jbT" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-jbT" id="jbT"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jbT"><div class="solution">
 <p id="eGv">Note that \(g(1) \ne g(\{1\})\text{.}\) The first is an element: \(g(1) = 2\text{.}\) The second is a set: \(g(\{1\}) = \{2\}\text{.}\)</p>
 <p id="KNE">To find \(g\inv(1)\text{,}\) we need to find all integers \(n\) such that \(n^2 + 1 = 1\text{.}\) Clearly only 0 works, so \(g\inv(1) = \{0\}\) (note that even though there is only one element, we still write it as a set with one element in it).</p>
 <p id="qUN">To find \(g\inv(2)\text{,}\) we need to find all \(n\) such that \(n^2 + 1 = 2\text{.}\) We see \(g\inv(2) = \{-1,1\}\text{.}\)</p>
@@ -534,7 +535,7 @@ f = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \\ a \amp a \amp b \amp 
 <span class="type">Example</span> <span class="codenumber">B.3.10</span>.</h6>
 <p id="MCR">Find a function \(f:\{1,2,3,4,5\} \to \N\) such that \(\card{f\inv(7)} = 5\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Pjc" id="Pjc"><span class="type">Solution</span></a><div id="hk-Pjc" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-Pjc" id="Pjc"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pjc"><div class="solution">
 <p id="Djf">There is only one such function. We need five elements of the domain to map to the number \(7 \in \N\text{.}\) Since there are only five elements in the domain, all of them must map to 7. So</p>
 <div class="displaymath">
 \begin{equation*}
@@ -568,117 +569,117 @@ f = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \\ 2 \amp 1 \amp 3 \amp 1 \end{pmatrix
 <span class="type">Exercises</span> <span class="codenumber">B.3.4</span> <span class="title">Exercises</span>
 </h3>
 <a href="sec_background-functions.html#XHz" class="permalink">¶</a><article class="exercise-like" id="blM"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<p id="p-3009">Consider the function \(f:\{1,2,3,4\} \to \{1,2,3,4\}\) given by</p>
-<div class="displaymath" id="p-3010">
+<p id="p-3012">Consider the function \(f:\{1,2,3,4\} \to \{1,2,3,4\}\) given by</p>
+<div class="displaymath" id="p-3013">
 \begin{equation*}
 f(n) = \twoline{1 \amp 2 \amp 3 \amp 4}{4 \amp 1 \amp 3 \amp 4}
 \text{.}
 \end{equation*}
 </div>
-<ol id="p-3011" class="lower-alpha">
-<li id="li-798"><p id="p-3012">Find \(f(1)\text{.}\)</p></li>
-<li id="li-799"><p id="p-3014">Find an element \(n\) in the domain such that \(f(n) = 1\text{.}\)</p></li>
-<li id="li-800"><p id="p-3016">Find an element \(n\) of the domain such that \(f(n) = n\text{.}\)</p></li>
-<li id="li-801"><p id="p-3018">Find an element of the codomain that is not in the range.</p></li>
+<ol id="p-3014" class="lower-alpha">
+<li id="li-798"><p id="p-3015">Find \(f(1)\text{.}\)</p></li>
+<li id="li-799"><p id="p-3017">Find an element \(n\) in the domain such that \(f(n) = 1\text{.}\)</p></li>
+<li id="li-800"><p id="p-3019">Find an element \(n\) of the domain such that \(f(n) = n\text{.}\)</p></li>
+<li id="li-801"><p id="p-3021">Find an element of the codomain that is not in the range.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-330" id="solution-330"><span class="type">Solution</span></a><div id="hk-solution-330" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-3024" class="lower-alpha">
-<li id="li-802"><p id="p-3025">\(f(1) = 4\text{,}\) since \(4\) is the number below 1 in the two-line notation.</p></li>
-<li id="li-803"><p id="p-3026">Such an \(n\) is \(n= 2\text{,}\) since \(f(2) = 1\text{.}\) Note that 2 is above a 1 in the notation.</p></li>
-<li id="li-804"><p id="p-3027">\(n = 4\) has this property. We say that 4 is a fixed point of \(f\text{.}\) Not all functions have such a point.</p></li>
-<li id="li-805"><p id="p-3028">Such an element is 2 (in fact, that is the only element in the codomain that is not in the range). In other words, 2 is not the image of any element under \(f\text{;}\) nothing is sent to 2.</p></li>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-331" id="solution-331"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-331"><div class="solution"><ol id="p-3027" class="lower-alpha">
+<li id="li-802"><p id="p-3028">\(f(1) = 4\text{,}\) since \(4\) is the number below 1 in the two-line notation.</p></li>
+<li id="li-803"><p id="p-3029">Such an \(n\) is \(n= 2\text{,}\) since \(f(2) = 1\text{.}\) Note that 2 is above a 1 in the notation.</p></li>
+<li id="li-804"><p id="p-3030">\(n = 4\) has this property. We say that 4 is a fixed point of \(f\text{.}\) Not all functions have such a point.</p></li>
+<li id="li-805"><p id="p-3031">Such an element is 2 (in fact, that is the only element in the codomain that is not in the range). In other words, 2 is not the image of any element under \(f\text{;}\) nothing is sent to 2.</p></li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="HsV"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<p id="p-3039">The following functions all have \(\{1,2,3,4,5\}\) as both their domain and codomain. For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
+<p id="p-3042">The following functions all have \(\{1,2,3,4,5\}\) as both their domain and codomain. For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
 <ol class="lower-alpha">
-<li id="li-814"><p id="p-3040">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{3 \amp 3 \amp 3 \amp 3 \amp 3}\text{.}\) <ul style="list-style:circle;">
-<li id="li-816"><p id="p-3042">Injective</p></li>
-<li id="li-817"><p id="p-3043">Surjective</p></li>
-<li id="li-818"><p id="p-3044">Bijective</p></li>
-<li id="li-819"><p id="p-3045">Neither</p></li>
+<li id="li-814"><p id="p-3043">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{3 \amp 3 \amp 3 \amp 3 \amp 3}\text{.}\) <ul style="list-style:circle;">
+<li id="li-816"><p id="p-3045">Injective</p></li>
+<li id="li-817"><p id="p-3046">Surjective</p></li>
+<li id="li-818"><p id="p-3047">Bijective</p></li>
+<li id="li-819"><p id="p-3048">Neither</p></li>
 </ul></p></li>
-<li id="li-820"><p id="p-3046">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{2 \amp 3 \amp 1 \amp 5 \amp 4}\text{.}\) <ul style="list-style:circle;">
-<li id="li-822"><p id="p-3048">Injective</p></li>
-<li id="li-823"><p id="p-3049">Surjective</p></li>
-<li id="li-824"><p id="p-3050">Bijective</p></li>
-<li id="li-825"><p id="p-3051">Neither</p></li>
+<li id="li-820"><p id="p-3049">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{2 \amp 3 \amp 1 \amp 5 \amp 4}\text{.}\) <ul style="list-style:circle;">
+<li id="li-822"><p id="p-3051">Injective</p></li>
+<li id="li-823"><p id="p-3052">Surjective</p></li>
+<li id="li-824"><p id="p-3053">Bijective</p></li>
+<li id="li-825"><p id="p-3054">Neither</p></li>
 </ul></p></li>
-<li id="li-826"><p id="p-3052">\(f(x) = 6 - x\text{.}\) <ul style="list-style:circle;">
-<li id="li-828"><p id="p-3054">Injective</p></li>
-<li id="li-829"><p id="p-3055">Surjective</p></li>
-<li id="li-830"><p id="p-3056">Bijective</p></li>
-<li id="li-831"><p id="p-3057">Neither</p></li>
+<li id="li-826"><p id="p-3055">\(f(x) = 6 - x\text{.}\) <ul style="list-style:circle;">
+<li id="li-828"><p id="p-3057">Injective</p></li>
+<li id="li-829"><p id="p-3058">Surjective</p></li>
+<li id="li-830"><p id="p-3059">Bijective</p></li>
+<li id="li-831"><p id="p-3060">Neither</p></li>
 </ul></p></li>
-<li id="li-832"><p id="p-3058">\(f(x) = \begin{cases} x/2 \amp \text{ if } x \text{ is even} \\ (x+1)/2 \amp \text{ if } x \text{ is odd}\end{cases}\text{.}\) <ul style="list-style:circle;">
-<li id="li-834"><p id="p-3060">Injective</p></li>
-<li id="li-835"><p id="p-3061">Surjective</p></li>
-<li id="li-836"><p id="p-3062">Bijective</p></li>
-<li id="li-837"><p id="p-3063">Neither</p></li>
+<li id="li-832"><p id="p-3061">\(f(x) = \begin{cases} x/2 \amp \text{ if } x \text{ is even} \\ (x+1)/2 \amp \text{ if } x \text{ is odd}\end{cases}\text{.}\) <ul style="list-style:circle;">
+<li id="li-834"><p id="p-3063">Injective</p></li>
+<li id="li-835"><p id="p-3064">Surjective</p></li>
+<li id="li-836"><p id="p-3065">Bijective</p></li>
+<li id="li-837"><p id="p-3066">Neither</p></li>
 </ul></p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-332" id="solution-332"><span class="type">Solution</span></a><div id="hk-solution-332" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-3068" class="lower-alpha">
-<li id="li-838"><p id="p-3069">This is neither injective nor surjective. It is not injective because more than one element from the domain has 3 as its image. It is not surjective because there are elements of the codomain (1, 2, 4, and 5) that are not images of anything from the domain.</p></li>
-<li id="li-839"><p id="p-3070">This is a bijection. Every element in the codomain is the image of <em class="emphasis">exactly</em> one element of the domain.</p></li>
-<li id="li-840"><p id="p-3071">This is a bijection. Note that we can write this function in two line notation as \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{5 \amp 4 \amp 3 \amp 2 \amp 1}\text{.}\)</p></li>
-<li id="li-841"><p id="p-3072">In two line notation, this function is \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 1 \amp 2 \amp 2 \amp 3}\text{.}\) From this we can quickly see it is neither injective (for example, 1 is the image of both 1 and 2) nor surjective (for example, 4 is not the image of anything).</p></li>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-333" id="solution-333"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-333"><div class="solution"><ol id="p-3071" class="lower-alpha">
+<li id="li-838"><p id="p-3072">This is neither injective nor surjective. It is not injective because more than one element from the domain has 3 as its image. It is not surjective because there are elements of the codomain (1, 2, 4, and 5) that are not images of anything from the domain.</p></li>
+<li id="li-839"><p id="p-3073">This is a bijection. Every element in the codomain is the image of <em class="emphasis">exactly</em> one element of the domain.</p></li>
+<li id="li-840"><p id="p-3074">This is a bijection. Note that we can write this function in two line notation as \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{5 \amp 4 \amp 3 \amp 2 \amp 1}\text{.}\)</p></li>
+<li id="li-841"><p id="p-3075">In two line notation, this function is \(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 1 \amp 2 \amp 2 \amp 3}\text{.}\) From this we can quickly see it is neither injective (for example, 1 is the image of both 1 and 2) nor surjective (for example, 4 is not the image of anything).</p></li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="nAe"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<p id="p-3077">The following functions all have domain \(\{1,2,3,4,5\}\) and codomain \(\{1,2,3\}\text{.}\) For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
+<p id="p-3080">The following functions all have domain \(\{1,2,3,4,5\}\) and codomain \(\{1,2,3\}\text{.}\) For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
 <ol class="lower-alpha">
-<li id="li-845"><p id="p-3078">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 2 \amp 1 \amp 2 \amp 1}\text{.}\) <ul style="list-style:circle;">
-<li id="li-847"><p id="p-3080">Injective</p></li>
-<li id="li-848"><p id="p-3081">Surjective</p></li>
-<li id="li-849"><p id="p-3082">Bijective</p></li>
-<li id="li-850"><p id="p-3083">Neither</p></li>
+<li id="li-845"><p id="p-3081">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 2 \amp 1 \amp 2 \amp 1}\text{.}\) <ul style="list-style:circle;">
+<li id="li-847"><p id="p-3083">Injective</p></li>
+<li id="li-848"><p id="p-3084">Surjective</p></li>
+<li id="li-849"><p id="p-3085">Bijective</p></li>
+<li id="li-850"><p id="p-3086">Neither</p></li>
 </ul></p></li>
-<li id="li-851"><p id="p-3084">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 2 \amp 3 \amp 1 \amp 2}\text{.}\) <ul style="list-style:circle;">
-<li id="li-853"><p id="p-3086">Injective</p></li>
-<li id="li-854"><p id="p-3087">Surjective</p></li>
-<li id="li-855"><p id="p-3088">Bijective</p></li>
-<li id="li-856"><p id="p-3089">Neither</p></li>
+<li id="li-851"><p id="p-3087">\(f = \twoline{1 \amp 2 \amp 3 \amp 4 \amp 5}{1 \amp 2 \amp 3 \amp 1 \amp 2}\text{.}\) <ul style="list-style:circle;">
+<li id="li-853"><p id="p-3089">Injective</p></li>
+<li id="li-854"><p id="p-3090">Surjective</p></li>
+<li id="li-855"><p id="p-3091">Bijective</p></li>
+<li id="li-856"><p id="p-3092">Neither</p></li>
 </ul></p></li>
-<li id="li-857"><p id="p-3090">\(f(x) = \begin{cases} x \amp \text{ if } x \le 3 \\ x-3 \amp \text{ if } x \gt 3\end{cases}\text{.}\) <ul style="list-style:circle;">
-<li id="li-859"><p id="p-3092">Injective</p></li>
-<li id="li-860"><p id="p-3093">Surjective</p></li>
-<li id="li-861"><p id="p-3094">Bijective</p></li>
-<li id="li-862"><p id="p-3095">Neither</p></li>
+<li id="li-857"><p id="p-3093">\(f(x) = \begin{cases} x \amp \text{ if } x \le 3 \\ x-3 \amp \text{ if } x \gt 3\end{cases}\text{.}\) <ul style="list-style:circle;">
+<li id="li-859"><p id="p-3095">Injective</p></li>
+<li id="li-860"><p id="p-3096">Surjective</p></li>
+<li id="li-861"><p id="p-3097">Bijective</p></li>
+<li id="li-862"><p id="p-3098">Neither</p></li>
 </ul></p></li>
 </ol></article><article class="exercise-like" id="THn"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<p id="p-3103">The following functions all have domain \(\{1,2,3,4\}\) and codomain \(\{1,2,3,4,5\}\text{.}\) For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
+<p id="p-3106">The following functions all have domain \(\{1,2,3,4\}\) and codomain \(\{1,2,3,4,5\}\text{.}\) For each, determine whether it is (only) injective, (only) surjective, bijective, or neither injective nor surjective.</p>
 <ol class="lower-alpha">
-<li id="li-866"><p id="p-3104">\(f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 5 \amp 4}\text{.}\) <ul style="list-style:circle;">
-<li id="li-868"><p id="p-3106">Injective</p></li>
-<li id="li-869"><p id="p-3107">Surjective</p></li>
-<li id="li-870"><p id="p-3108">Bijective</p></li>
-<li id="li-871"><p id="p-3109">Neither</p></li>
+<li id="li-866"><p id="p-3107">\(f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 5 \amp 4}\text{.}\) <ul style="list-style:circle;">
+<li id="li-868"><p id="p-3109">Injective</p></li>
+<li id="li-869"><p id="p-3110">Surjective</p></li>
+<li id="li-870"><p id="p-3111">Bijective</p></li>
+<li id="li-871"><p id="p-3112">Neither</p></li>
 </ul></p></li>
-<li id="li-872"><p id="p-3110">\(f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 3 \amp 2}\text{.}\) <ul style="list-style:circle;">
-<li id="li-874"><p id="p-3112">Injective</p></li>
-<li id="li-875"><p id="p-3113">Surjective</p></li>
-<li id="li-876"><p id="p-3114">Bijective</p></li>
-<li id="li-877"><p id="p-3115">Neither</p></li>
+<li id="li-872"><p id="p-3113">\(f = \twoline{1 \amp 2 \amp 3 \amp 4}{1 \amp 2 \amp 3 \amp 2}\text{.}\) <ul style="list-style:circle;">
+<li id="li-874"><p id="p-3115">Injective</p></li>
+<li id="li-875"><p id="p-3116">Surjective</p></li>
+<li id="li-876"><p id="p-3117">Bijective</p></li>
+<li id="li-877"><p id="p-3118">Neither</p></li>
 </ul></p></li>
-<li id="li-878"><p id="p-3116">\(f(x)\) gives the number of letters in the English word for the number \(x\text{.}\) For example, \(f(1) = 3\) since “one” contains three letters. <ul style="list-style:circle;">
-<li id="li-880"><p id="p-3118">Injective</p></li>
-<li id="li-881"><p id="p-3119">Surjective</p></li>
-<li id="li-882"><p id="p-3120">Bijective</p></li>
-<li id="li-883"><p id="p-3121">Neither</p></li>
+<li id="li-878"><p id="p-3119">\(f(x)\) gives the number of letters in the English word for the number \(x\text{.}\) For example, \(f(1) = 3\) since “one” contains three letters. <ul style="list-style:circle;">
+<li id="li-880"><p id="p-3121">Injective</p></li>
+<li id="li-881"><p id="p-3122">Surjective</p></li>
+<li id="li-882"><p id="p-3123">Bijective</p></li>
+<li id="li-883"><p id="p-3124">Neither</p></li>
 </ul></p></li>
 </ol></article><article class="exercise-like" id="zOw"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<p id="p-3135">Write out all functions \(f: \{1,2,3\} \to \{a,b\}\) (using two-line notation).</p>
-<p id="p-3136">How many functions are there?</p>
-<p id="p-3138">How many are injective?</p>
-<p id="p-3140">How many are surjective?</p>
-<p id="p-3142">How many are bijective?</p>
+<p id="p-3138">Write out all functions \(f: \{1,2,3\} \to \{a,b\}\) (using two-line notation).</p>
+<p id="p-3139">How many functions are there?</p>
+<p id="p-3141">How many are injective?</p>
+<p id="p-3143">How many are surjective?</p>
+<p id="p-3145">How many are bijective?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-334" id="solution-334"><span class="type">Solution</span></a><div id="hk-solution-334" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-3148">There are 8 functions, including 6 surjective and zero injective funtions.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-335" id="solution-335"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-335"><div class="solution"><p id="p-3151">There are 8 functions, including 6 surjective and zero injective funtions.</p></div></div>
 </div></article><article class="exercise-like" id="fVF"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<p id="p-3158">Write out all functions \(f: \{1,2\} \to \{a,b,c\}\) (in two-line notation).</p>
-<p id="p-3159">How many functions are there?</p>
-<p id="p-3161">How many are injective?</p>
-<p id="p-3163">How many are surjective?</p>
-<p id="p-3165">How many are bijective?</p></article><article class="exercise-like" id="McO"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<p id="p-3161">Write out all functions \(f: \{1,2\} \to \{a,b,c\}\) (in two-line notation).</p>
+<p id="p-3162">How many functions are there?</p>
+<p id="p-3164">How many are injective?</p>
+<p id="p-3166">How many are surjective?</p>
+<p id="p-3168">How many are bijective?</p></article><article class="exercise-like" id="McO"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <p id="Ptg">Consider the function \(f:\{1,2,3,4,5\} \to \{1,2,3,4\}\) given by the table below:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
@@ -704,7 +705,7 @@ f(n) = \twoline{1 \amp 2 \amp 3 \amp 4}{4 \amp 1 \amp 3 \amp 4}
 <li id="pDM"><p id="kcV">Write the function using two-line notation.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-vOx" id="vOx"><span class="type">Solution</span></a><div id="hk-vOx" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="JZt" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-vOx" id="vOx"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-vOx"><div class="solution"><ol id="JZt" class="lower-alpha">
 <li id="VKV"><p id="Qke">\(f\) is not injective, since \(f(2) = f(5)\text{;}\) two different inputs have the same output.</p></li>
 <li id="BSe"><p id="wrn">\(f\) is surjective, since every element of the codomain is an element of the range.</p></li>
 <li id="hZn"><p id="cyw">\(f=\begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \\ 3 \amp 2 \amp 4 \amp 1 \amp 2\end{pmatrix}\text{.}\)</p></li>
@@ -717,25 +718,25 @@ f(n) = \twoline{1 \amp 2 \amp 3 \amp 4}{4 \amp 1 \amp 3 \amp 4}
 <li id="unF"><p id="oMO">Is \(f\) surjective? Explain.</p></li>
 <li id="auO"><p id="UTX">Write the function using two-line notation.</p></li>
 </ol></article><article class="exercise-like" id="Yrg"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<p id="p-3188">Consider the function \(f:\N \to \N\) given <em class="emphasis">recursively</em> by \(f(0) = 1\) and \(f(n+1) = 2\cdot f(n)\text{.}\) Find \(f(10)\text{.}\)</p>
+<p id="p-3191">Consider the function \(f:\N \to \N\) given <em class="emphasis">recursively</em> by \(f(0) = 1\) and \(f(n+1) = 2\cdot f(n)\text{.}\) Find \(f(10)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-337" id="solution-337"><span class="type">Solution</span></a><div id="hk-solution-337" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-3191">\(f(10) = 1024\text{.}\) To find \(f(10)\text{,}\) we need to know \(f(9)\text{,}\) for which we need \(f(8)\text{,}\) and so on. So build up from \(f(0) = 1\text{.}\) Then \(f(1) = 2\text{,}\) \(f(2) = 4\text{,}\) \(f(3) = 8\text{,}\) .... In fact, it looks like a closed formula for \(f\) is \(f(n) = 2^n\text{.}\) Later we will see how to prove this is correct.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-338" id="solution-338"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-338"><div class="solution"><p id="p-3194">\(f(10) = 1024\text{.}\) To find \(f(10)\text{,}\) we need to know \(f(9)\text{,}\) for which we need \(f(8)\text{,}\) and so on. So build up from \(f(0) = 1\text{.}\) Then \(f(1) = 2\text{,}\) \(f(2) = 4\text{,}\) \(f(3) = 8\text{,}\) .... In fact, it looks like a closed formula for \(f\) is \(f(n) = 2^n\text{.}\) Later we will see how to prove this is correct.</p></div></div>
 </div></article><article class="exercise-like" id="Eyp"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<p id="p-3202">Suppose \(f:\N \to \N\) satisfies the recurrence \(f(n+1) = f(n) + 3\text{.}\) Note that this is not enough information to define the function, since we don’t have an initial condition. For each of the initial conditions below, find the value of \(f(5)\text{.}\)</p>
+<p id="p-3205">Suppose \(f:\N \to \N\) satisfies the recurrence \(f(n+1) = f(n) + 3\text{.}\) Note that this is not enough information to define the function, since we don’t have an initial condition. For each of the initial conditions below, find the value of \(f(5)\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-901"><p id="p-3203">\(f(0) = 0\text{.}\)</p></li>
-<li id="li-902"><p id="p-3204">\(f(0) = 1\text{.}\)</p></li>
-<li id="li-903"><p id="p-3205">\(f(0) = 2\text{.}\)</p></li>
-<li id="li-904"><p id="p-3206">\(f(0) = 100\text{.}\)</p></li>
+<li id="li-901"><p id="p-3206">\(f(0) = 0\text{.}\)</p></li>
+<li id="li-902"><p id="p-3207">\(f(0) = 1\text{.}\)</p></li>
+<li id="li-903"><p id="p-3208">\(f(0) = 2\text{.}\)</p></li>
+<li id="li-904"><p id="p-3209">\(f(0) = 100\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-339" id="solution-339"><span class="type">Solution</span></a><div id="hk-solution-339" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-3207">For each case, you must use the recurrence to find \(f(1)\text{,}\) \(f(2)\) ... \(f(5)\text{.}\) But notice each time you just add three to the previous. We do this 5 times.</p>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-340" id="solution-340"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-340"><div class="solution">
+<p id="p-3210">For each case, you must use the recurrence to find \(f(1)\text{,}\) \(f(2)\) ... \(f(5)\text{.}\) But notice each time you just add three to the previous. We do this 5 times.</p>
 <ol class="lower-alpha">
-<li id="li-905"><p id="p-3208">\(f(5) = 15\text{.}\)</p></li>
-<li id="li-906"><p id="p-3209">\(f(5) = 16\text{.}\)</p></li>
-<li id="li-907"><p id="p-3210">\(f(5) = 17\text{.}\)</p></li>
-<li id="li-908"><p id="p-3211">\(f(5) = 115\text{.}\)</p></li>
+<li id="li-905"><p id="p-3211">\(f(5) = 15\text{.}\)</p></li>
+<li id="li-906"><p id="p-3212">\(f(5) = 16\text{.}\)</p></li>
+<li id="li-907"><p id="p-3213">\(f(5) = 17\text{.}\)</p></li>
+<li id="li-908"><p id="p-3214">\(f(5) = 115\text{.}\)</p></li>
 </ol>
 </div></div>
 </div></article><article class="exercise-like" id="kFy"><h6 class="heading"><span class="codenumber">11.</span></h6>
@@ -745,13 +746,14 @@ f(n) = \twoline{1 \amp 2 \amp 3 \amp 4}{4 \amp 1 \amp 3 \amp 4}
 f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3f(n) + 1 \amp \text{ if } f(n) \text{ is odd}\end{cases}\text{.}
 \end{equation*}
 </div>
-<p>Note that with the initial condition \(f(0) = 1\text{,}\) the values of the function are: \(f(1) = 4\text{,}\) \(f(2) = 2\text{,}\) \(f(3) = 1\text{,}\) \(f(4) = 4\text{,}\) and so on, the images cycling through those three numbers. Thus \(f\) is NOT injective (and also certainly not surjective). Might it be under other initial conditions?<a data-knowl="" class="id-ref" data-refid="hk-fn-22" id="fn-22"><sup> 3 </sup></a><span id="hk-fn-22" class="hidden-content tex2jax_ignore"><span class="footnote">It turns out this is a <em class="emphasis">really</em> hard question to answer in general. The <em class="emphasis">Collatz conjecture</em> is that no matter what the initial condition is, the function will eventually produce 1 as an output. This is an open problem in mathematics: nobody knows the answer.</span></span></p>
+<p>Note that with the initial condition \(f(0) = 1\text{,}\) the values of the function are: \(f(1) = 4\text{,}\) \(f(2) = 2\text{,}\) \(f(3) = 1\text{,}\) \(f(4) = 4\text{,}\) and so on, the images cycling through those three numbers. Thus \(f\) is NOT injective (and also certainly not surjective). Might it be under other initial conditions?<a data-knowl="" class="id-ref fn-knowl" data-refid="hk-fn-22" id="fn-22"><sup> 3 </sup></a></p>
 <ol class="lower-alpha">
 <li id="DHr"><p id="ygA">If \(f\) satisfies the initial condition \(f(0) = 5\text{,}\) is \(f\) injective? Explain why or give a specific example of two elements from the domain with the same image.</p></li>
 <li id="jOA"><p id="enJ">If \(f\) satisfies the initial condition \(f(0) = 3\text{,}\) is \(f\) injective? Explain why or give a specific example of two elements from the domain with the same image.</p></li>
 <li id="PVJ"><p id="KuS">If \(f\) satisfies the initial condition \(f(0) = 27\text{,}\) then it turns out that \(f(105) = 10\) and no two numbers less than 105 have the same image. Could \(f\) be injective? Explain.</p></li>
 <li id="wcS"><p id="qCb">Prove that no matter what initial condition you choose, the function cannot be surjective.</p></li>
-</ol></article><article class="exercise-like" id="QMH"><h6 class="heading"><span class="codenumber">12.</span></h6>
+</ol>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="footnote">It turns out this is a <em class="emphasis">really</em> hard question to answer in general. The <em class="emphasis">Collatz conjecture</em> is that no matter what the initial condition is, the function will eventually produce 1 as an output. This is an open problem in mathematics: nobody knows the answer.</div></div></article><article class="exercise-like" id="QMH"><h6 class="heading"><span class="codenumber">12.</span></h6>
 <p id="MyA">For each function given below, determine whether or not the function is injective and whether or not the function is surjective.</p>
 <ol class="lower-alpha">
 <li id="ckb">\(f:\N \to \N\) given by \(f(n) = n+4\text{.}\)</li>
@@ -760,7 +762,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="UFC">\(f:\Z \to \Z\) given by \(f(n) = \begin{cases}n/2 \amp \text{ if } n \text{ is even} \\ (n+1)/2 \amp \text{ if } n \text{ is odd} . \end{cases}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-ojY" id="ojY"><span class="type">Solution</span></a><div id="hk-ojY" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="CuU" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-ojY" id="ojY"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ojY"><div class="solution"><ol id="CuU" class="lower-alpha">
 <li id="AML">\(f\) is injective, but not surjective (since 0, for example, is never an output).</li>
 <li id="gTU">\(f\) is injective and surjective. Unlike in the previous question, every integers is an output (of the integer 4 less than it).</li>
 <li id="Nbd">\(f\) is injective, but not surjective (10 is not 8 less than a multiple of 5, for example).</li>
@@ -776,7 +778,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="xSf"><p id="vlU">Find \(f\inv(12)\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Urh" id="Urh"><span class="type">Solution</span></a><div id="hk-Urh" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="iCd" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-Urh" id="Urh"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Urh"><div class="solution"><ol id="iCd" class="lower-alpha">
 <li id="dZo"><p id="btd">\(f\) is not injective. To prove this, we must simply find two different elements of the domain which map to the same element of the codomain. Since \(f(\{1\}) = 1\) and \(f(\{2\}) = 1\text{,}\) we see that \(f\) is not injective.</p></li>
 <li id="Kgx"><p id="HAm">\(f\) is not surjective. The largest subset of \(A\) is \(A\) itself, and \(|A| = 10\text{.}\) So no natural number greater than 10 will ever be an output.</p></li>
 <li id="qnG"><p id="nHv">\(f\inv(1) = \{\{1\}, \{2\}, \{3\}, \ldots \{10\}\}\) (the set of all the singleton subsets of \(A\)).</p></li>
@@ -784,14 +786,14 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="CBY"><p id="zVN">\(f\inv(12) = \emptyset\text{,}\) since there are no subsets of \(A\) with cardinality 12.</p></li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="daZ"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<p id="p-3242">Let \(X = \{n \in \N \st 0 \le n \le 999\}\) be the set of all numbers with three or fewer digits. Define the function \(f:X \to \N\) by \(f(abc) = a+b+c\text{,}\) where \(a\text{,}\) \(b\text{,}\) and \(c\) are the digits of the number in \(X\) (write numbers less than 100 with leading 0’s to make them three digits). For example, \(f(253) = 2 + 5 + 3 = 10\text{.}\)</p>
+<p id="p-3245">Let \(X = \{n \in \N \st 0 \le n \le 999\}\) be the set of all numbers with three or fewer digits. Define the function \(f:X \to \N\) by \(f(abc) = a+b+c\text{,}\) where \(a\text{,}\) \(b\text{,}\) and \(c\) are the digits of the number in \(X\) (write numbers less than 100 with leading 0’s to make them three digits). For example, \(f(253) = 2 + 5 + 3 = 10\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-937"><p id="p-3243">Let \(A = \{n \in X \st 113 \le x \le 122\}\text{.}\) Find \(f(A)\text{.}\)</p></li>
-<li id="li-938"><p id="p-3245">Find \(f\inv(\{1,2\})\)</p></li>
-<li id="li-939"><p id="p-3247">Find \(f\inv(3)\text{.}\)</p></li>
-<li id="li-940"><p id="p-3249">Find \(f\inv(28)\text{.}\)</p></li>
-<li id="li-941"><p id="p-3251">Is \(f\) injective? Explain.</p></li>
-<li id="li-942"><p id="p-3252">Is \(f\) surjective? Explain.</p></li>
+<li id="li-937"><p id="p-3246">Let \(A = \{n \in X \st 113 \le x \le 122\}\text{.}\) Find \(f(A)\text{.}\)</p></li>
+<li id="li-938"><p id="p-3248">Find \(f\inv(\{1,2\})\)</p></li>
+<li id="li-939"><p id="p-3250">Find \(f\inv(3)\text{.}\)</p></li>
+<li id="li-940"><p id="p-3252">Find \(f\inv(28)\text{.}\)</p></li>
+<li id="li-941"><p id="p-3254">Is \(f\) injective? Explain.</p></li>
+<li id="li-942"><p id="p-3255">Is \(f\) surjective? Explain.</p></li>
 </ol></article><article class="exercise-like" id="Jii"><h6 class="heading"><span class="codenumber">15.</span></h6>
 <p id="EUb">Consider the set \(\N^2 = \N \times \N\text{,}\) the set of all ordered pairs \((a,b)\) where \(a\) and \(b\) are natural numbers. Consider a function \(f: \N^2 \to \N\) given by \(f((a,b)) =a+b\text{.}\)</p>
 <ol class="lower-alpha">
@@ -807,7 +809,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="Erl"><p id="anK">\(f\) is bijective? Explain.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Ayq" id="Ayq"><span class="type">Solution</span></a><div id="hk-Ayq" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="OJm" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-Ayq" id="Ayq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Ayq"><div class="solution"><ol id="OJm" class="lower-alpha">
 <li id="kyu"><p id="GuT">\(|f\inv(3)| \le 1\text{.}\) In other words, either \(f\inv(3)\) is the empty set or is a set containing exactly one element. Injective functions cannot have two elements from the domain both map to 3.</p></li>
 <li id="QFD"><p id="mCc">\(|f\inv(3)| \ge 1\text{.}\) In other words, \(f\inv(3)\) is a set containing at least one elements, possibly more. Surjective functions must have something map to 3.</p></li>
 <li id="wMM"><p id="SJl">\(|f\inv(3)| = 1\text{.}\) There is exactly one element from \(X\) which gets mapped to 3, so \(f\inv(3)\) is the set containing that one element.</p></li>
@@ -815,7 +817,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 </div></article><article class="exercise-like" id="VwA"><h6 class="heading"><span class="codenumber">17.</span></h6>
 <p id="Rit">Find a set \(X\) and a function \(f:X \to \N\) so that \(f\inv(0) \cup f\inv(1) = X\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-gFz" id="gFz"><span class="type">Solution</span></a><div id="hk-gFz" class="hidden-content tex2jax_ignore"><div class="solution"><p id="uQv">\(X\) can really be any set, as long as \(f(x) = 0\) or \(f(x) = 1\) for every \(x \in X\text{.}\) For example, \(X = \N\) and \(f(n) = 0\) works.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-gFz" id="gFz"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-gFz"><div class="solution"><p id="uQv">\(X\) can really be any set, as long as \(f(x) = 0\) or \(f(x) = 1\) for every \(x \in X\text{.}\) For example, \(X = \N\) and \(f(n) = 0\) works.</p></div></div>
 </div></article><article class="exercise-like" id="BDJ"><h6 class="heading"><span class="codenumber">18.</span></h6>
 <p id="xpC">What can you deduce about the sets \(X\) and \(Y\) if you know,</p>
 <ol class="lower-alpha">
@@ -840,7 +842,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="yBZ"><p id="jHw">Suppose \(g\circ f\) is surjective. What, if anything, can you say about \(f\) and \(g\text{?}\) Explain.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-MMI" id="MMI"><span class="type">Hint</span></a><div id="hk-MMI" class="hidden-content tex2jax_ignore"><div class="solution"><p id="rVP">Work with some examples. What if \(f = \twoline{1\amp 2 \amp 3}{a \amp a \amp b}\) and \(g = \twoline{a\amp b \amp c}{5 \amp 6 \amp 7}\text{?}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-MMI" id="MMI"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-MMI"><div class="solution"><p id="rVP">Work with some examples. What if \(f = \twoline{1\amp 2 \amp 3}{a \amp a \amp b}\) and \(g = \twoline{a\amp b \amp c}{5 \amp 6 \amp 7}\text{?}\)</p></div></div>
 </div></article><article class="exercise-like" id="tZk"><h6 class="heading"><span class="codenumber">21.</span></h6>
 <p id="pLd">Consider the function \(f:\Z \to \Z\) given by \(f(n) = \begin{cases}n+1 \amp \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}\)</p>
 <ol class="lower-alpha">
@@ -848,38 +850,38 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="KQr"><p id="vVO">Is \(f\) surjective? Prove your answer.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-sTR" id="sTR"><span class="type">Solution</span></a><div id="hk-sTR" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="aXE" class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-sTR" id="sTR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-sTR"><div class="solution"><ol id="aXE" class="lower-alpha">
 <li id="qXA">
 <p id="ccX">\(f\) is injective.</p>
-<article class="hiddenproof" id="Zba"><a data-knowl="" class="id-ref" data-refid="hk-Zba"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-Zba" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="Ikg">Let \(x\) and \(y\) be elements of the domain \(\Z\text{.}\) Assume \(f(x) = f(y)\text{.}\) If \(x\) and \(y\) are both even, then \(f(x) = x+1\) and \(f(y) = y+1\text{.}\) Since \(f(x) = f(y)\text{,}\) we have \(x + 1 = y + 1\) which implies that \(x = y\text{.}\) Similarly, if \(x\) and \(y\) are both odd, then \(x - 3 = y-3\) so again \(x = y\text{.}\) The only other possibility is that \(x\) is even an \(y\) is odd (or visa-versa). But then \(x + 1\) would be odd and \(y - 3\) would be even, so it cannot be that \(f(x) = f(y)\text{.}\) Therefore if \(f(x) = f(y)\) we then have \(x = y\text{,}\) which proves that \(f\) is injective.</p></article></div>
+<article class="hiddenproof" id="Zba"><a data-knowl="" class="id-ref" data-refid="hk-Zba"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Zba"><article class="hiddenproof"><p id="Ikg">Let \(x\) and \(y\) be elements of the domain \(\Z\text{.}\) Assume \(f(x) = f(y)\text{.}\) If \(x\) and \(y\) are both even, then \(f(x) = x+1\) and \(f(y) = y+1\text{.}\) Since \(f(x) = f(y)\text{,}\) we have \(x + 1 = y + 1\) which implies that \(x = y\text{.}\) Similarly, if \(x\) and \(y\) are both odd, then \(x - 3 = y-3\) so again \(x = y\text{.}\) The only other possibility is that \(x\) is even an \(y\) is odd (or visa-versa). But then \(x + 1\) would be odd and \(y - 3\) would be even, so it cannot be that \(f(x) = f(y)\text{.}\) Therefore if \(f(x) = f(y)\) we then have \(x = y\text{,}\) which proves that \(f\) is injective.</p></article></div>
 </li>
 <li id="XeJ">
 <p id="orp">\(f\) is surjective.</p>
-<article class="hiddenproof" id="Fij"><a data-knowl="" class="id-ref" data-refid="hk-Fij"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div id="hk-Fij" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="Uyy">Let \(y\) be an element of the codomain \(\Z\text{.}\) We will show there is an element \(n\) of the domain (\(\Z\)) such that \(f(n) = y\text{.}\) There are two cases: First, if \(y\) is even, then let \(n = y+3\text{.}\) Since \(y\) is even, \(n\) is odd, so \(f(n) = n-3 = y+3-3 = y\) as desired. Second, if \(y\) is odd, then let \(n = y-1\text{.}\) Since \(y\) is odd, \(n\) is even, so \(f(n) = n+1 = y-1+1 = y\) as needed. Therefore \(f\) is surjective.</p></article></div>
+<article class="hiddenproof" id="Fij"><a data-knowl="" class="id-ref" data-refid="hk-Fij"><h6 class="heading"><span class="type">Proof.</span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-Fij"><article class="hiddenproof"><p id="Uyy">Let \(y\) be an element of the codomain \(\Z\text{.}\) We will show there is an element \(n\) of the domain (\(\Z\)) such that \(f(n) = y\text{.}\) There are two cases: First, if \(y\) is even, then let \(n = y+3\text{.}\) Since \(y\) is even, \(n\) is odd, so \(f(n) = n-3 = y+3-3 = y\) as desired. Second, if \(y\) is odd, then let \(n = y-1\text{.}\) Since \(y\) is odd, \(n\) is even, so \(f(n) = n+1 = y-1+1 = y\) as needed. Therefore \(f\) is surjective.</p></article></div>
 </li>
 </ol></div></div>
 </div></article><article class="exercise-like" id="agt"><h6 class="heading"><span class="codenumber">22.</span></h6>
 <p id="VSm">At the end of the semester a teacher assigns letter grades to each of her students. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-lps" id="lps"><span class="type">Solution</span></a><div id="hk-lps" class="hidden-content tex2jax_ignore"><div class="solution"><p id="HeN">Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective – it will be if there is at least one student who gets each grade.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-lps" id="lps"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-lps"><div class="solution"><p id="HeN">Yes, this is a function, if you choose the domain and codomain correctly. The domain will be the set of students, and the codomain will be the set of possible grades. The function is almost certainly not injective, because it is likely that two students will get the same grade. The function might be surjective – it will be if there is at least one student who gets each grade.</p></div></div>
 </div></article><article class="exercise-like" id="GnC"><h6 class="heading"><span class="codenumber">23.</span></h6>
 <p id="BZv">In the game of <em class="emphasis">Hearts</em>, four players are each dealt 13 cards from a deck of 52. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither?</p></article><article class="exercise-like" id="muL"><h6 class="heading"><span class="codenumber">24.</span></h6>
 <p id="igE">Seven players are playing 5-card stud. Each player initially receives 5 cards from a deck of 52. Is this a function? If so, what sets make up the domain and codomain, and is the function injective, surjective, bijective, or neither?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-RwB" id="RwB"><span class="type">Solution</span></a><div id="hk-RwB" class="hidden-content tex2jax_ignore"><div class="solution"><p id="nlW">This is not a function.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-RwB" id="RwB"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-RwB"><div class="solution"><p id="nlW">This is not a function.</p></div></div>
 </div></article><article class="exercise-like" id="SBU"><h6 class="heading"><span class="codenumber">25.</span></h6>
 <p id="OnN">Consider the function \(f:\N \to \N\) that gives the number of handshakes that take place in a room of \(n\) people assuming everyone shakes hands with everyone else. Give a recursive definition for this function.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-dKT" id="dKT"><span class="type">Hint</span></a><div id="hk-dKT" class="hidden-content tex2jax_ignore"><div class="solution"><p id="YcY">To find the recurrence relation, consider how many <em class="emphasis">new</em> handshakes occur when person \(n+1\) enters the room.</p></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-xDK" id="xDK"><span class="type">Solution</span></a><div id="hk-xDK" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Ttf">The recurrence relation is \(f(n+1) = f(n) + n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-dKT" id="dKT"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-dKT"><div class="solution"><p id="YcY">To find the recurrence relation, consider how many <em class="emphasis">new</em> handshakes occur when person \(n+1\) enters the room.</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-xDK" id="xDK"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-xDK"><div class="solution"><p id="Ttf">The recurrence relation is \(f(n+1) = f(n) + n\text{.}\)</p></div></div>
 </div></article><article class="exercise-like" id="yJd"><h6 class="heading"><span class="codenumber">26.</span></h6>
 <p id="uuW">Let \(f:X \to Y\) be a function and \(A \subseteq X\) be a finite subset of the domain. What can you say about the relationship between \(\card{A}\) and \(\card{f(A)}\text{?}\) Consider both the general case and what happens when you know \(f\) is injective, surjective, or bijective.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-JSc" id="JSc"><span class="type">Solution</span></a><div id="hk-JSc" class="hidden-content tex2jax_ignore"><div class="solution"><p id="zAo">In general, \(\card{A} \ge \card{f(A)}\text{,}\) since you cannot get more outputs than you have inputs (each input goes to exactly one output), but you could have fewer outputs if the function is not injective. If the function is injective, then \(\card{A} = \card{f(A)}\text{,}\) although you can have equality even if \(f\) is not injective (it must be injective <em class="emphasis">restricted</em> to \(A\)).</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-JSc" id="JSc"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-JSc"><div class="solution"><p id="zAo">In general, \(\card{A} \ge \card{f(A)}\text{,}\) since you cannot get more outputs than you have inputs (each input goes to exactly one output), but you could have fewer outputs if the function is not injective. If the function is injective, then \(\card{A} = \card{f(A)}\text{,}\) although you can have equality even if \(f\) is not injective (it must be injective <em class="emphasis">restricted</em> to \(A\)).</p></div></div>
 </div></article><article class="exercise-like" id="eQm"><h6 class="heading"><span class="codenumber">27.</span></h6>
 <p id="aCf">Let \(f:X \to Y\) be a function and \(B \subseteq Y\) be a finite subset of the codomain. What can you say about the relationship between \(\card{B}\) and \(\card{f\inv(B)}\text{?}\) Consider both the general case and what happens when you know \(f\) is injective, surjective, or bijective.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-pZl" id="pZl"><span class="type">Solution</span></a><div id="hk-pZl" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-pZl" id="pZl"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-pZl"><div class="solution">
 <p id="fHx">In general, there is no relationship between \(\card{B}\) and \(\card{f\inv(B)}\text{.}\) This is because \(B\) might contain elements that are not in the range of \(f\text{,}\) so we might even have \(f\inv(B) = \emptyset\text{.}\) On the other hand, there might be lots of elements from the domain that all get sent to a few elements in \(B\text{,}\) making \(f\inv(B)\) larger than \(B\text{.}\)</p>
 <p id="LOG">More specifically, if \(f\) is injective, then \(\card{B} \ge \card{f\inv(B)}\) (since every element in \(B\) must come from at most one element from the domain). If \(f\) is surjective, then \(\card{B} \le \card{f\inv(B)}\) (since every element in \(B\) must come from at least one element of the domain). Thus if \(f\) is bijective then \(\card{B} = \card{f\inv(B)}\text{.}\)</p>
 </div></div>
@@ -896,7 +898,7 @@ f(n+1) = \begin{cases} \frac{f(n)}{2} \amp \text{ if } f(n) \text{ is even} \\ 3
 <li id="bOC"><p id="Zir">Is \(f(A \cap B) = f(A) \cap f(B)\text{?}\) Always, sometimes, or never? Explain.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-Wgu" id="Wgu"><span class="type">Hint</span></a><div id="hk-Wgu" class="hidden-content tex2jax_ignore"><div class="solution"><p id="Ekh">One of these is not always true.  Try some examples!</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-Wgu" id="Wgu"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Wgu"><div class="solution"><p id="Ekh">One of these is not always true.  Try some examples!</p></div></div>
 </div></article><article class="exercise-like" id="XlN"><h6 class="heading"><span class="codenumber">30.</span></h6>
 <p id="SXG">Let \(f:X \to Y\) be a function and \(A, B \subseteq Y\) be subsets of the codomain.</p>
 <ol class="lower-alpha">
